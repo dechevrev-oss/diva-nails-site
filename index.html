@@ -848,16 +848,27 @@
                     return;
                 }
 
-                // Basculer vers l'onglet professionnels
-                showTab('professionnels');
+                // Cacher immédiatement les catégories avant de changer d'onglet
+                document.getElementById('pro-categories-view').style.display = 'none';
                 
                 // Copier le terme de recherche
                 document.getElementById('searchInput').value = searchTerm;
                 
-                // Effectuer la recherche
-                setTimeout(() => {
-                    searchProfessionals();
-                }, 200);
+                // Effectuer la recherche avant de basculer
+                const searchTerm2 = searchTerm; // Garder la valeur
+                const results = professionals.filter(pro => {
+                    return pro.name.toLowerCase().includes(searchTerm2) ||
+                           pro.specialty.toLowerCase().includes(searchTerm2) ||
+                           pro.description.toLowerCase().includes(searchTerm2) ||
+                           pro.tags.some(tag => tag.toLowerCase().includes(searchTerm2)) ||
+                           pro.location.toLowerCase().includes(searchTerm2);
+                });
+                
+                // Préparer l'affichage des résultats
+                displaySearchResults(results);
+                
+                // Basculer vers l'onglet professionnels
+                showTab('professionnels');
             }
         }
     </script>
