@@ -722,8 +722,11 @@
             document.getElementById('btn-' + tab).classList.add('active');
             if (tab === 'accompagnements') backToCategories();
             if (tab === 'professionnels') {
-                backToProCats();
-                clearSearch();
+                // Ne pas réinitialiser si on vient d'une recherche
+                const searchInput = document.getElementById('searchInput');
+                if (!searchInput || searchInput.value === '') {
+                    backToProCats();
+                }
             }
         }
 
@@ -848,24 +851,47 @@
                     return;
                 }
 
-                // Cacher immédiatement les catégories avant de changer d'onglet
-                document.getElementById('pro-categories-view').style.display = 'none';
-                
-                // Copier le terme de recherche
+                // Copier le terme de recherche dans l'autre barre
                 document.getElementById('searchInput').value = searchTerm;
                 
-                // Effectuer la recherche avant de basculer
-                const searchTerm2 = searchTerm; // Garder la valeur
+                // Filtrer les professionnels
                 const results = professionals.filter(pro => {
-                    return pro.name.toLowerCase().includes(searchTerm2) ||
-                           pro.specialty.toLowerCase().includes(searchTerm2) ||
-                           pro.description.toLowerCase().includes(searchTerm2) ||
-                           pro.tags.some(tag => tag.toLowerCase().includes(searchTerm2)) ||
-                           pro.location.toLowerCase().includes(searchTerm2);
+                    return pro.name.toLowerCase().includes(searchTerm) ||
+                           pro.specialty.toLowerCase().includes(searchTerm) ||
+                           pro.description.toLowerCase().includes(searchTerm) ||
+                           pro.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
+                           pro.location.toLowerCase().includes(searchTerm);
                 });
                 
-                // Préparer l'affichage des résultats
-                displaySearchResults(results);
+                // Cacher les catégories
+                document.getElementById('pro-categories-view').style.display = 'none';
+                document.querySelectorAll('#professionnels .articles-section').forEach(s => s.classList.remove('active'));
+                
+                // Afficher les résultats
+                const resultsGrid = document.getElementById('search-results-grid');
+                const searchResultsDiv = document.getElementById('search-results');
+                searchResultsDiv.style.display = 'block';
+
+                if (results.length === 0) {
+                    resultsGrid.innerHTML = '<div class="no-results"><p>Aucun professionnel trouvé pour votre recherche.</p><p>Essayez avec d\'autres mots-clés (doula, sage-femme, Paris...)</p></div>';
+                } else {
+                    resultsGrid.innerHTML = results.map(pro => `
+                        <div class="pro-card" onclick="showDetailFromSearch('${pro.id}', '${pro.category}')">
+                            <div class="pro-header">
+                                <div class="pro-avatar">${pro.avatar}</div>
+                                <div class="pro-info">
+                                    <h4>${pro.name}</h4>
+                                    <div class="specialty">${pro.specialty}</div>
+                                </div>
+                            </div>
+                            <p>${pro.description}</p>
+                            <div class="pro-tags">
+                                ${pro.tags.map(tag => `<span class="pro-tag">${tag}</span>`).join('')}
+                                <span class="pro-tag">📍 ${pro.location}</span>
+                            </div>
+                        </div>
+                    `).join('');
+                }
                 
                 // Basculer vers l'onglet professionnels
                 showTab('professionnels');
