@@ -397,9 +397,13 @@
                            class="search-box" 
                            id="searchInputHome" 
                            placeholder="Rechercher un professionnel (ex: doula, sophrologue, Paris...)"
-                           onkeyup="searchFromHome()">
+                           onkeyup="searchFromHome(event)">
                     <span class="search-icon">🔍</span>
                 </div>
+                
+                <p style="max-width: 800px; margin: 2rem auto; color: var(--text-light); font-size: 0.95rem;">
+                    💡 Appuyez sur Entrée pour lancer la recherche
+                </p>
             </div>
         </div>
 
@@ -832,6 +836,29 @@
             document.getElementById('searchInput').value = '';
             document.getElementById('search-results').style.display = 'none';
             document.getElementById('pro-categories-view').style.display = 'block';
+        }
+
+        function searchFromHome(event) {
+            // Si la touche Entrée est pressée (code 13)
+            if (event && event.keyCode === 13) {
+                const searchTerm = document.getElementById('searchInputHome').value.toLowerCase().trim();
+                
+                if (searchTerm === '') {
+                    alert('Veuillez entrer un terme de recherche');
+                    return;
+                }
+
+                // Basculer vers l'onglet professionnels
+                showTab('professionnels');
+                
+                // Copier le terme de recherche
+                document.getElementById('searchInput').value = searchTerm;
+                
+                // Effectuer la recherche
+                setTimeout(() => {
+                    searchProfessionals();
+                }, 200);
+            }
         }
     </script>
 </body>
