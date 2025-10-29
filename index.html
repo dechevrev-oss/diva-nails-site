@@ -28,7 +28,6 @@
             background-color: var(--light);
         }
 
-        /* Header */
         header {
             background: var(--primary);
             color: var(--white);
@@ -51,12 +50,11 @@
         .logo {
             font-size: 2rem;
             font-weight: bold;
-            color: var(--white);
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
             list-style: none;
         }
 
@@ -76,7 +74,6 @@
             background: var(--primary-dark);
         }
 
-        /* Hero Section */
         .hero {
             background: var(--primary);
             color: var(--white);
@@ -89,20 +86,12 @@
             margin-bottom: 1rem;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
 
-        /* Tabs Content */
         .tab-content {
             display: none;
         }
@@ -111,12 +100,10 @@
             display: block;
         }
 
-        /* Categories Grid */
         .categories-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
 
         .category-card {
@@ -131,7 +118,6 @@
 
         .category-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
             border-color: var(--primary);
         }
 
@@ -139,17 +125,8 @@
             color: var(--primary);
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
-        .category-card p {
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        /* Articles Section */
         .articles-section {
             display: none;
         }
@@ -165,12 +142,7 @@
             padding: 0.8rem 1.5rem;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1rem;
             margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: background 0.3s;
         }
 
         .back-button:hover {
@@ -189,56 +161,149 @@
             gap: 2rem;
         }
 
-        .article-card {
+        .pro-card {
             background: var(--white);
             border-radius: 10px;
-            padding: 2rem;
-            border-left: 5px solid var(--primary);
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s;
         }
 
-        .article-card h4 {
-            color: var(--primary);
-            font-size: 1.5rem;
+        .pro-card:hover {
+            transform: translateY(-3px);
+            border: 2px solid var(--primary);
+        }
+
+        .pro-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             margin-bottom: 1rem;
         }
 
-        .article-card p {
-            color: var(--text);
-            line-height: 1.8;
-            margin-bottom: 0.8rem;
+        .pro-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: bold;
         }
 
-        .article-card .metier-tag {
-            display: inline-block;
-            background: var(--primary);
-            color: var(--white);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
+        .pro-info h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .pro-info .specialty {
+            color: var(--text-light);
             font-size: 0.9rem;
+        }
+
+        .pro-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
             margin-top: 1rem;
         }
 
-        /* Welcome Section */
-        .welcome-section {
-            text-align: center;
-            margin-top: 3rem;
+        .pro-tag {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
         }
 
-        .welcome-section h2 {
-            font-size: 2rem;
+        .pro-detail {
+            display: none;
+        }
+
+        .pro-detail.active {
+            display: block;
+        }
+
+        .pro-detail-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        .pro-detail-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
             color: var(--primary);
+            font-weight: bold;
+        }
+
+        .pro-detail-contact {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-button {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .pro-section {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
             margin-bottom: 1.5rem;
         }
 
-        .welcome-section p {
-            font-size: 1.1rem;
-            color: var(--text);
-            max-width: 800px;
-            margin: 0 auto 1rem;
-            line-height: 1.8;
+        .pro-section h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
         }
 
-        /* Footer */
+        .pro-section ul {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+
+        .pro-section ul li:before {
+            content: "✓ ";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .tarif-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem;
+            background: var(--light);
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .tarif-item span:last-child {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
         footer {
             background: var(--primary-dark);
             color: var(--white);
@@ -247,21 +312,11 @@
             margin-top: 4rem;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                gap: 0.5rem;
-            }
-
             .nav-links button {
                 padding: 0.5rem;
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
             .categories-grid {
                 grid-template-columns: 1fr;
             }
@@ -269,7 +324,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <div class="logo">Vianata</div>
@@ -281,263 +335,328 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <h1>Votre accompagnement vers la vie</h1>
-        <p>Découvrez les professionnels qui vous accompagnent tout au long de votre parcours de parentalité</p>
+        <p>Découvrez les professionnels qui vous accompagnent</p>
     </section>
 
-    <!-- Main Content -->
     <div class="container">
-        <!-- Accueil Tab -->
+        <!-- ACCUEIL -->
         <div id="accueil" class="tab-content active">
-            <div class="welcome-section">
-                <h2>Bienvenue chez Vianata</h2>
-                <p>Vianata est votre plateforme de référence pour découvrir et comprendre les différents métiers de la parentalité. Que vous soyez en projet de conception, enceinte, ou jeunes parents, nous vous accompagnons en vous présentant les professionnels qui peuvent vous soutenir.</p>
-                <p>Explorez nos différentes catégories d'accompagnement pour trouver le soutien dont vous avez besoin à chaque étape de votre parcours.</p>
-                <p>Chaque professionnel a un rôle unique et précieux dans votre aventure parentale. Découvrez-les dans la section "Nos Accompagnements".</p>
+            <div style="text-align: center; margin-top: 3rem;">
+                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Bienvenue chez Vianata</h2>
+                <p style="max-width: 800px; margin: 0 auto;">Vianata est votre plateforme de référence pour découvrir les professionnels de la parentalité.</p>
             </div>
         </div>
 
-        <!-- Nos Accompagnements Tab -->
+        <!-- NOS ACCOMPAGNEMENTS -->
         <div id="accompagnements" class="tab-content">
-            <!-- Categories View -->
             <div id="categories-view">
                 <div class="categories-grid">
                     <div class="category-card" onclick="showArticles('accompagnement')">
                         <h3>🤝 Accompagnement</h3>
-                        <p>Découvrez les professionnels qui vous accompagnent de manière globale tout au long de votre parcours de parentalité.</p>
+                        <p>Professionnels qui vous accompagnent.</p>
                     </div>
-
                     <div class="category-card" onclick="showArticles('pma')">
                         <h3>🔬 PMA & Fertilité</h3>
-                        <p>Les spécialistes qui vous soutiennent dans votre projet de conception et votre parcours de fertilité.</p>
+                        <p>Spécialistes de la fertilité.</p>
                     </div>
-
                     <div class="category-card" onclick="showArticles('grossesse')">
                         <h3>🤰 Grossesse</h3>
-                        <p>Les professionnels qui suivent et accompagnent votre grossesse mois après mois.</p>
+                        <p>Suivi de grossesse.</p>
                     </div>
-
                     <div class="category-card" onclick="showArticles('bienetre')">
                         <h3>💆‍♀️ Bien-être</h3>
-                        <p>Les experts du bien-être physique et corporel pendant la grossesse et après l'accouchement.</p>
+                        <p>Experts du bien-être.</p>
                     </div>
-
                     <div class="category-card" onclick="showArticles('psychologie')">
                         <h3>💭 Psychologie</h3>
-                        <p>Le soutien psychologique et émotionnel pour traverser sereinement les étapes de la parentalité.</p>
+                        <p>Soutien psychologique.</p>
                     </div>
-
                     <div class="category-card" onclick="showArticles('postpartum')">
                         <h3>👶 Post-Partum</h3>
-                        <p>L'accompagnement après la naissance pour vous et votre bébé.</p>
+                        <p>Accompagnement post-natal.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Articles Views -->
             <div id="articles-accompagnement" class="articles-section">
-                <button class="back-button" onclick="backToCategories()">← Retour aux catégories</button>
+                <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Accompagnement</h2>
-                <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>La Doula : votre compagne de naissance</h4>
-                        <p>La doula est une professionnelle formée qui accompagne les futurs parents de manière non médicale. Elle offre un soutien continu, émotionnel et pratique avant, pendant et après l'accouchement.</p>
-                        <p>Son rôle est de créer un environnement sécurisant et bienveillant. Elle respecte vos choix, vous informe sans juger et s'adapte à vos besoins spécifiques. La doula peut vous aider à préparer votre projet de naissance, vous soutenir pendant le travail et faciliter votre adaptation en post-partum.</p>
-                        <p>De nombreuses études montrent que la présence d'une doula peut réduire les interventions médicales, diminuer la durée du travail et améliorer l'expérience globale de l'accouchement.</p>
-                        <span class="metier-tag">Doula</span>
-                    </div>
-
-                    <div class="article-card">
-                        <h4>L'accompagnante périnatale</h4>
-                        <p>L'accompagnante périnatale propose un accompagnement global autour de la naissance. Elle combine différentes approches : préparation à la naissance, techniques de relaxation, sophrologie, yoga prénatal, etc.</p>
-                        <p>Son accompagnement est personnalisé et peut inclure des séances individuelles ou en groupe. Elle aide les futurs parents à se préparer physiquement et mentalement à l'accouchement et à l'arrivée du bébé.</p>
-                        <p>L'accompagnante périnatale travaille souvent en complémentarité avec les professionnels médicaux pour offrir un soutien holistique.</p>
-                        <span class="metier-tag">Accompagnante périnatale</span>
-                    </div>
-                </div>
+                <p style="color: var(--text); padding: 1rem;">Articles sur l'accompagnement...</p>
             </div>
 
             <div id="articles-pma" class="articles-section">
-                <button class="back-button" onclick="backToCategories()">← Retour aux catégories</button>
+                <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">PMA & Fertilité</h2>
-                <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>Le gynécologue spécialisé en fertilité</h4>
-                        <p>Le gynécologue spécialisé en fertilité accompagne les couples dans leur projet de conception. Il réalise les bilans nécessaires, propose des traitements adaptés et suit les parcours de PMA (Procréation Médicalement Assistée).</p>
-                        <p>Ce spécialiste coordonne les différentes étapes du parcours : stimulations ovariennes, inséminations, FIV, etc. Il travaille en équipe avec des biologistes et des psychologues pour offrir un accompagnement complet.</p>
-                        <p>Le parcours de PMA peut être long et émotionnellement difficile. Le gynécologue est là pour vous soutenir médicalement et répondre à toutes vos questions.</p>
-                        <span class="metier-tag">Gynécologue</span>
-                    </div>
-
-                    <div class="article-card">
-                        <h4>La naturopathe spécialisée en fertilité</h4>
-                        <p>La naturopathe spécialisée en fertilité propose un accompagnement naturel pour optimiser la fertilité. Elle travaille sur l'hygiène de vie, l'alimentation, la gestion du stress et l'équilibre hormonal.</p>
-                        <p>Son approche est complémentaire aux traitements médicaux. Elle peut vous aider à préparer votre corps à la conception, soutenir votre fertilité naturellement ou accompagner un parcours de PMA.</p>
-                        <p>La naturopathe utilise des outils comme la phytothérapie, la micronutrition et des techniques de gestion du stress pour favoriser un terrain fertile.</p>
-                        <span class="metier-tag">Naturopathe</span>
-                    </div>
-                </div>
+                <p style="color: var(--text); padding: 1rem;">Articles sur la PMA...</p>
             </div>
 
             <div id="articles-grossesse" class="articles-section">
-                <button class="back-button" onclick="backToCategories()">← Retour aux catégories</button>
+                <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Grossesse</h2>
-                <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>La sage-femme : au cœur de la grossesse</h4>
-                        <p>La sage-femme est la professionnelle de santé spécialisée dans le suivi des grossesses physiologiques. Elle assure les consultations prénatales, les échographies, la préparation à la naissance et l'accouchement.</p>
-                        <p>Elle accompagne la femme enceinte tout au long de sa grossesse avec une approche globale et humaine. La sage-femme peut suivre les grossesses à bas risque de manière autonome et travaille en collaboration avec les obstétriciens pour les situations plus complexes.</p>
-                        <p>Après l'accouchement, elle assure également le suivi post-natal de la mère et du bébé, ainsi que la rééducation périnéale.</p>
-                        <span class="metier-tag">Sage-femme</span>
-                    </div>
-
-                    <div class="article-card">
-                        <h4>L'obstétricien : expert de la grossesse à risque</h4>
-                        <p>L'obstétricien est un médecin spécialisé dans la grossesse, l'accouchement et les suites de couches. Il prend en charge les grossesses pathologiques ou à risque nécessitant une surveillance médicale particulière.</p>
-                        <p>Il intervient en cas de complications : diabète gestationnel, hypertension, grossesse multiple, etc. L'obstétricien réalise aussi les césariennes et les interventions chirurgicales si nécessaire.</p>
-                        <p>Il travaille en équipe avec les sages-femmes pour offrir le meilleur suivi possible aux femmes enceintes.</p>
-                        <span class="metier-tag">Obstétricien</span>
-                    </div>
-                </div>
+                <p style="color: var(--text); padding: 1rem;">Articles sur la grossesse...</p>
             </div>
 
             <div id="articles-bienetre" class="articles-section">
-                <button class="back-button" onclick="backToCategories()">← Retour aux catégories</button>
+                <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Bien-être</h2>
-                <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>L'ostéopathe périnatal</h4>
-                        <p>L'ostéopathe périnatal est spécialisé dans le suivi des femmes enceintes et des nouveau-nés. Pendant la grossesse, il aide à soulager les douleurs liées aux changements posturaux et prépare le bassin à l'accouchement.</p>
-                        <p>Après la naissance, il peut traiter les tensions corporelles de la mère liées à l'accouchement et accompagner le bébé pour favoriser son bien-être (coliques, tensions crâniennes, troubles du sommeil, etc.).</p>
-                        <p>L'ostéopathie est une approche douce et non invasive qui complète parfaitement le suivi médical.</p>
-                        <span class="metier-tag">Ostéopathe</span>
-                    </div>
-
-                    <div class="article-card">
-                        <h4>Le chiropracteur périnatal</h4>
-                        <p>Le chiropracteur périnatal aide à maintenir l'équilibre du système nerveux et de la colonne vertébrale pendant la grossesse. Ses ajustements doux peuvent soulager les douleurs lombaires et optimiser la position du bébé.</p>
-                        <p>Après l'accouchement, il accompagne la récupération physique de la maman et peut aussi traiter les nouveaux-nés pour favoriser leur développement optimal.</p>
-                        <p>La chiropraxie périnatale est reconnue pour améliorer le confort pendant la grossesse et faciliter l'accouchement.</p>
-                        <span class="metier-tag">Chiropracteur</span>
-                    </div>
-                </div>
+                <p style="color: var(--text); padding: 1rem;">Articles sur le bien-être...</p>
             </div>
 
             <div id="articles-psychologie" class="articles-section">
-                <button class="back-button" onclick="backToCategories()">← Retour aux catégories</button>
+                <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Psychologie</h2>
-                <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>Le psychologue périnatal</h4>
-                        <p>Le psychologue périnatal accompagne les futurs et jeunes parents dans les difficultés émotionnelles liées à la grossesse, l'accouchement et la parentalité. Il offre un espace d'écoute bienveillant et sans jugement.</p>
-                        <p>Il peut intervenir dans de nombreuses situations : anxiété pendant la grossesse, deuil périnatal, dépression post-partum, difficultés d'attachement, traumatisme lié à l'accouchement, etc.</p>
-                        <p>Le soutien psychologique est essentiel pour traverser sereinement les bouleversements émotionnels de la période périnatale. N'hésitez jamais à consulter si vous en ressentez le besoin.</p>
-                        <span class="metier-tag">Psychologue</span>
-                    </div>
+                <p style="color: var(--text); padding: 1rem;">Articles sur la psychologie...</p>
+            </div>
 
-                    <div class="article-card">
-                        <h4>Le psychiatre périnatal</h4>
-                        <p>Le psychiatre périnatal est un médecin spécialisé dans les troubles mentaux liés à la période périnatale. Il peut diagnostiquer et traiter des pathologies comme la dépression sévère, les troubles anxieux ou les psychoses du post-partum.</p>
-                        <p>Contrairement au psychologue, le psychiatre peut prescrire des médicaments si nécessaire. Il travaille souvent en collaboration avec d'autres professionnels pour offrir une prise en charge complète.</p>
-                        <p>Consulter un psychiatre périnatal ne signifie pas que vous êtes "fou" ou "faible", mais que vous prenez soin de votre santé mentale, tout aussi importante que votre santé physique.</p>
-                        <span class="metier-tag">Psychiatre</span>
+            <div id="articles-postpartum" class="articles-section">
+                <button class="back-button" onclick="backToCategories()">← Retour</button>
+                <h2 class="category-title">Post-Partum</h2>
+                <p style="color: var(--text); padding: 1rem;">Articles sur le post-partum...</p>
+            </div>
+        </div>
+
+        <!-- TROUVER UN PROFESSIONNEL -->
+        <div id="professionnels" class="tab-content">
+            <div id="pro-categories-view">
+                <div class="categories-grid">
+                    <div class="category-card" onclick="showPros('accompagnement')">
+                        <h3>🤝 Accompagnement</h3>
+                        <p>Doulas et accompagnantes.</p>
+                    </div>
+                    <div class="category-card" onclick="showPros('pma')">
+                        <h3>🔬 PMA & Fertilité</h3>
+                        <p>Spécialistes fertilité.</p>
+                    </div>
+                    <div class="category-card" onclick="showPros('grossesse')">
+                        <h3>🤰 Grossesse</h3>
+                        <p>Sages-femmes.</p>
+                    </div>
+                    <div class="category-card" onclick="showPros('bienetre')">
+                        <h3>💆‍♀️ Bien-être</h3>
+                        <p>Ostéopathes, etc.</p>
+                    </div>
+                    <div class="category-card" onclick="showPros('psychologie')">
+                        <h3>💭 Psychologie</h3>
+                        <p>Psychologues.</p>
+                    </div>
+                    <div class="category-card" onclick="showPros('postpartum')">
+                        <h3>👶 Post-Partum</h3>
+                        <p>Consultantes lactation.</p>
                     </div>
                 </div>
             </div>
 
-            <div id="articles-postpartum" class="articles-section">
-                <button class="back-button" onclick="backToCategories()">← Retour aux catégories</button>
-                <h2 class="category-title">Post-Partum</h2>
-                <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>La conseillère en lactation IBCLC</h4>
-                        <p>La conseillère en lactation certifiée IBCLC est la spécialiste reconnue internationalement de l'allaitement maternel. Elle accompagne les mères dans leur projet d'allaitement dès la naissance et tout au long de l'allaitement.</p>
-                        <p>Elle peut résoudre les difficultés courantes : douleurs, crevasses, engorgement, problèmes de prise du sein, faible prise de poids du bébé, etc. Son expertise permet d'éviter les sevrages prématurés non désirés.</p>
-                        <p>L'allaitement est un apprentissage pour la mère et le bébé. Un soutien qualifié peut faire toute la différence pour vivre un allaitement serein et épanouissant.</p>
-                        <span class="metier-tag">Consultante en lactation</span>
+            <div id="pro-list-accompagnement" class="articles-section">
+                <button class="back-button" onclick="backToProCats()">← Retour</button>
+                <h2 class="category-title">Professionnels - Accompagnement</h2>
+                
+                <div id="pro-cards-accompagnement" class="articles-grid">
+                    <div class="pro-card" onclick="showDetail('sophie')">
+                        <div class="pro-header">
+                            <div class="pro-avatar">SM</div>
+                            <div class="pro-info">
+                                <h4>Sophie Martin</h4>
+                                <div class="specialty">Doula certifiée</div>
+                            </div>
+                        </div>
+                        <p>Accompagnement bienveillant pendant la grossesse et le post-partum.</p>
+                        <div class="pro-tags">
+                            <span class="pro-tag">Grossesse</span>
+                            <span class="pro-tag">Post-partum</span>
+                        </div>
                     </div>
 
-                    <div class="article-card">
-                        <h4>Le pédiatre : le médecin de votre bébé</h4>
-                        <p>Le pédiatre est le médecin spécialiste de l'enfant de la naissance à l'adolescence. Il assure le suivi médical régulier de votre bébé : examens de croissance, développement psychomoteur, vaccinations.</p>
-                        <p>Il est votre interlocuteur privilégié pour toutes les questions de santé de votre enfant. Le pédiatre diagnostique et traite les maladies infantiles, dépiste les troubles du développement et accompagne les parents dans leurs questionnements.</p>
-                        <p>Une relation de confiance avec votre pédiatre est essentielle pour le suivi de votre enfant. N'hésitez pas à poser toutes vos questions, même celles qui vous semblent "bêtes".</p>
-                        <span class="metier-tag">Pédiatre</span>
-                    </div>
-
-                    <div class="article-card">
-                        <h4>L'auxiliaire de puériculture</h4>
-                        <p>L'auxiliaire de puériculture prend soin des bébés et jeunes enfants. En maternité ou en structure d'accueil, elle accompagne les parents dans les soins du nouveau-né et répond à leurs questions pratiques.</p>
-                        <p>Elle peut vous montrer comment donner le bain, changer une couche, habiller bébé ou reconnaître ses besoins. Son expérience pratique est très rassurante pour les jeunes parents.</p>
-                        <p>À domicile, certaines auxiliaires de puériculture proposent aussi un accompagnement post-natal pour vous aider dans les premiers jours avec bébé.</p>
-                        <span class="metier-tag">Auxiliaire de puériculture</span>
-                    </div>
-
-                    <div class="article-card">
-                        <h4>Le soutien en post-partum : essentiel et souvent négligé</h4>
-                        <p>La période du post-partum, souvent appelée "quatrième trimestre", est une phase de transition majeure. C'est un moment de bouleversements physiques (cicatrisation, fatigue, hormones) et émotionnels intenses.</p>
-                        <p>Un accompagnement adapté pendant cette période peut prévenir la dépression post-partum, favoriser l'attachement avec le bébé et aider la famille à trouver son équilibre. Que ce soit par une doula post-natale, une sage-femme, ou d'autres professionnels, ce soutien est précieux.</p>
-                        <p>Dans de nombreuses cultures, le post-partum est une période sacrée où la mère est "maternée" à son tour. Ne sous-estimez pas l'importance de prendre soin de vous et de vous entourer de bienveillance pendant ces premières semaines.</p>
-                        <span class="metier-tag">Accompagnement post-partum</span>
+                    <div class="pro-card" onclick="showDetail('claire')">
+                        <div class="pro-header">
+                            <div class="pro-avatar">CD</div>
+                            <div class="pro-info">
+                                <h4>Claire Dubois</h4>
+                                <div class="specialty">Accompagnante périnatale</div>
+                            </div>
+                        </div>
+                        <p>Spécialisée en sophrologie et yoga prénatal.</p>
+                        <div class="pro-tags">
+                            <span class="pro-tag">Sophrologie</span>
+                            <span class="pro-tag">Yoga</span>
+                        </div>
                     </div>
                 </div>
+
+                <div id="detail-sophie" class="pro-detail">
+                    <button class="back-button" onclick="hideDetail()">← Retour à la liste</button>
+                    
+                    <div class="pro-detail-header">
+                        <div class="pro-detail-avatar">SM</div>
+                        <div>
+                            <h2 style="color: var(--primary);">Sophie Martin</h2>
+                            <div class="specialty">Doula certifiée - 8 ans d'expérience</div>
+                            <div class="pro-detail-contact">
+                                <a href="mailto:sophie@example.com" class="contact-button">📧 Email</a>
+                                <a href="tel:+33612345678" class="contact-button">📞 Téléphone</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pro-section">
+                        <h3>Présentation</h3>
+                        <p>Passionnée par l'accompagnement des familles, je suis devenue doula après la naissance de mes enfants. Mon approche est centrée sur l'écoute et le respect de vos choix.</p>
+                    </div>
+
+                    <div class="pro-section">
+                        <h3>Services proposés</h3>
+                        <ul>
+                            <li>Accompagnement prénatal</li>
+                            <li>Présence à l'accouchement</li>
+                            <li>Soutien post-partum</li>
+                            <li>Cercles de femmes</li>
+                        </ul>
+                    </div>
+
+                    <div class="pro-section">
+                        <h3>Tarifs</h3>
+                        <div class="tarif-item">
+                            <span>Forfait complet</span>
+                            <span>800€</span>
+                        </div>
+                        <div class="tarif-item">
+                            <span>Prénatal (5 séances)</span>
+                            <span>350€</span>
+                        </div>
+                        <div class="tarif-item">
+                            <span>Présence accouchement</span>
+                            <span>400€</span>
+                        </div>
+                    </div>
+
+                    <div class="pro-section">
+                        <h3>Zone d'intervention</h3>
+                        <p>Paris et petite couronne (92, 93, 94)</p>
+                    </div>
+                </div>
+
+                <div id="detail-claire" class="pro-detail">
+                    <button class="back-button" onclick="hideDetail()">← Retour à la liste</button>
+                    
+                    <div class="pro-detail-header">
+                        <div class="pro-detail-avatar">CD</div>
+                        <div>
+                            <h2 style="color: var(--primary);">Claire Dubois</h2>
+                            <div class="specialty">Accompagnante périnatale - Sophrologue</div>
+                            <div class="pro-detail-contact">
+                                <a href="mailto:claire@example.com" class="contact-button">📧 Email</a>
+                                <a href="tel:+33612345679" class="contact-button">📞 Téléphone</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pro-section">
+                        <h3>Présentation</h3>
+                        <p>Sophrologue et professeure de yoga certifiée, j'accompagne les futures mamans depuis 5 ans.</p>
+                    </div>
+
+                    <div class="pro-section">
+                        <h3>Services proposés</h3>
+                        <ul>
+                            <li>Sophrologie prénatale</li>
+                            <li>Yoga prénatal</li>
+                            <li>Préparation à la naissance</li>
+                        </ul>
+                    </div>
+
+                    <div class="pro-section">
+                        <h3>Tarifs</h3>
+                        <div class="tarif-item">
+                            <span>Sophrologie (1h)</span>
+                            <span>65€</span>
+                        </div>
+                        <div class="tarif-item">
+                            <span>Yoga (1h30)</span>
+                            <span>25€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pro-list-pma" class="articles-section">
+                <button class="back-button" onclick="backToProCats()">← Retour</button>
+                <h2 class="category-title">Professionnels - PMA & Fertilité</h2>
+                <p style="text-align: center; color: var(--text-light);">Professionnels à venir...</p>
+            </div>
+
+            <div id="pro-list-grossesse" class="articles-section">
+                <button class="back-button" onclick="backToProCats()">← Retour</button>
+                <h2 class="category-title">Professionnels - Grossesse</h2>
+                <p style="text-align: center; color: var(--text-light);">Professionnels à venir...</p>
+            </div>
+
+            <div id="pro-list-bienetre" class="articles-section">
+                <button class="back-button" onclick="backToProCats()">← Retour</button>
+                <h2 class="category-title">Professionnels - Bien-être</h2>
+                <p style="text-align: center; color: var(--text-light);">Professionnels à venir...</p>
+            </div>
+
+            <div id="pro-list-psychologie" class="articles-section">
+                <button class="back-button" onclick="backToProCats()">← Retour</button>
+                <h2 class="category-title">Professionnels - Psychologie</h2>
+                <p style="text-align: center; color: var(--text-light);">Professionnels à venir...</p>
+            </div>
+
+            <div id="pro-list-postpartum" class="articles-section">
+                <button class="back-button" onclick="backToProCats()">← Retour</button>
+                <h2 class="category-title">Professionnels - Post-Partum</h2>
+                <p style="text-align: center; color: var(--text-light);">Professionnels à venir...</p>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Vianata - Tous droits réservés</p>
-        <p>Votre accompagnement vers la vie</p>
     </footer>
 
     <script>
-        function showTab(tabName) {
-            // Hide all tabs
-            const tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('.nav-links button');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            // Show selected tab
-            document.getElementById(tabName).classList.add('active');
-            document.getElementById('btn-' + tabName).classList.add('active');
-            
-            // Reset to categories view if showing accompagnements
-            if (tabName === 'accompagnements') {
-                backToCategories();
-            }
+        function showTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
+            document.getElementById(tab).classList.add('active');
+            document.getElementById('btn-' + tab).classList.add('active');
+            if (tab === 'accompagnements') backToCategories();
+            if (tab === 'professionnels') backToProCats();
         }
 
-        function showArticles(category) {
-            // Hide categories view
+        function showArticles(cat) {
             document.getElementById('categories-view').style.display = 'none';
-            
-            // Hide all articles sections
-            const articlesSections = document.querySelectorAll('.articles-section');
-            articlesSections.forEach(section => section.classList.remove('active'));
-            
-            // Show selected articles section
-            document.getElementById('articles-' + category).classList.add('active');
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.querySelectorAll('#accompagnements .articles-section').forEach(s => s.classList.remove('active'));
+            document.getElementById('articles-' + cat).classList.add('active');
         }
 
         function backToCategories() {
-            // Show categories view
             document.getElementById('categories-view').style.display = 'block';
-            
-            // Hide all articles sections
-            const articlesSections = document.querySelectorAll('.articles-section');
-            articlesSections.forEach(section => section.classList.remove('active'));
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.querySelectorAll('#accompagnements .articles-section').forEach(s => s.classList.remove('active'));
+        }
+
+        function showPros(cat) {
+            document.getElementById('pro-categories-view').style.display = 'none';
+            document.querySelectorAll('#professionnels .articles-section').forEach(s => s.classList.remove('active'));
+            document.getElementById('pro-list-' + cat).classList.add('active');
+        }
+
+        function backToProCats() {
+            document.getElementById('pro-categories-view').style.display = 'block';
+            document.querySelectorAll('#professionnels .articles-section').forEach(s => s.classList.remove('active'));
+            hideDetail();
+        }
+
+        function showDetail(id) {
+            document.getElementById('pro-cards-accompagnement').style.display = 'none';
+            document.querySelectorAll('.pro-detail').forEach(d => d.classList.remove('active'));
+            document.getElementById('detail-' + id).classList.add('active');
+        }
+
+        function hideDetail() {
+            document.getElementById('pro-cards-accompagnement').style.display = 'grid';
+            document.querySelectorAll('.pro-detail').forEach(d => d.classList.remove('active'));
         }
     </script>
 </body>
