@@ -304,6 +304,50 @@
             font-weight: bold;
         }
 
+        .search-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            position: relative;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            padding-right: 3rem;
+            border: 2px solid var(--secondary);
+            border-radius: 30px;
+            font-size: 1rem;
+            color: var(--text);
+            background: var(--white);
+            transition: border-color 0.3s;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            font-size: 1.2rem;
+        }
+
+        .search-results {
+            margin-top: 2rem;
+        }
+
+        .no-results {
+            text-align: center;
+            color: var(--text-light);
+            padding: 3rem;
+            background: var(--white);
+            border-radius: 10px;
+        }
+
         footer {
             background: var(--primary-dark);
             color: var(--white);
@@ -345,20 +389,16 @@
         <div id="accueil" class="tab-content active">
             <div style="text-align: center; margin-top: 3rem;">
                 <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Bienvenue chez Vianata</h2>
-                <p style="max-width: 800px; margin: 0 auto 3rem;">Vianata est votre plateforme de référence pour découvrir les professionnels de la parentalité.</p>
+                <p style="max-width: 800px; margin: 0 auto 2rem;">Vianata est votre plateforme de référence pour découvrir les professionnels de la parentalité.</p>
                 
-                <!-- Search Section -->
-                <div style="max-width: 600px; margin: 0 auto; background: var(--white); padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Trouver un professionnel près de chez vous</h3>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <input type="text" id="city-search" placeholder="Entrez votre ville (ex: Paris, Lyon...)" style="flex: 1; min-width: 200px; padding: 1rem; border: 2px solid var(--secondary); border-radius: 5px; font-size: 1rem;">
-                        <button onclick="searchByCity()" style="background: var(--primary); color: var(--white); border: none; padding: 1rem 2rem; border-radius: 5px; cursor: pointer; font-size: 1rem; transition: background 0.3s;">
-                            🔍 Rechercher
-                        </button>
-                    </div>
-                    <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 1rem;">
-                        Vous pouvez également rechercher par département (ex: 75, 92, 69)
-                    </p>
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" 
+                           class="search-box" 
+                           id="searchInputHome" 
+                           placeholder="Rechercher un professionnel (ex: doula, sophrologue, Paris...)"
+                           onkeyup="searchFromHome()">
+                    <span class="search-icon">🔍</span>
                 </div>
             </div>
         </div>
@@ -433,6 +473,23 @@
 
         <!-- TROUVER UN PROFESSIONNEL -->
         <div id="professionnels" class="tab-content">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" 
+                       class="search-box" 
+                       id="searchInput" 
+                       placeholder="Rechercher un professionnel (ex: doula, sophrologue, Paris...)"
+                       onkeyup="searchProfessionals()">
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <!-- Search Results -->
+            <div id="search-results" class="search-results" style="display: none;">
+                <button class="back-button" onclick="clearSearch()">← Voir toutes les catégories</button>
+                <h2 class="category-title">Résultats de recherche</h2>
+                <div id="search-results-grid" class="articles-grid"></div>
+            </div>
+
             <div id="pro-categories-view">
                 <div class="categories-grid">
                     <div class="category-card" onclick="showPros('accompagnement')">
@@ -467,7 +524,7 @@
                 <h2 class="category-title">Professionnels - Accompagnement</h2>
                 
                 <div id="pro-cards-accompagnement" class="articles-grid">
-                    <div class="pro-card" onclick="showDetail('sophie')" data-city="Paris" data-dept="75">
+                    <div class="pro-card" onclick="showDetail('sophie')">
                         <div class="pro-header">
                             <div class="pro-avatar">SM</div>
                             <div class="pro-info">
@@ -477,13 +534,12 @@
                         </div>
                         <p>Accompagnement bienveillant pendant la grossesse et le post-partum.</p>
                         <div class="pro-tags">
-                            <span class="pro-tag">📍 Paris (75)</span>
                             <span class="pro-tag">Grossesse</span>
                             <span class="pro-tag">Post-partum</span>
                         </div>
                     </div>
 
-                    <div class="pro-card" onclick="showDetail('claire')" data-city="Lyon" data-dept="69">
+                    <div class="pro-card" onclick="showDetail('claire')">
                         <div class="pro-header">
                             <div class="pro-avatar">CD</div>
                             <div class="pro-info">
@@ -493,7 +549,6 @@
                         </div>
                         <p>Spécialisée en sophrologie et yoga prénatal.</p>
                         <div class="pro-tags">
-                            <span class="pro-tag">📍 Lyon (69)</span>
                             <span class="pro-tag">Sophrologie</span>
                             <span class="pro-tag">Yoga</span>
                         </div>
@@ -632,7 +687,29 @@
     </footer>
 
     <script>
-        let cityFilter = '';
+        // Base de données des professionnels
+        const professionals = [
+            {
+                id: 'sophie',
+                name: 'Sophie Martin',
+                specialty: 'Doula certifiée',
+                category: 'accompagnement',
+                description: 'Accompagnement bienveillant pendant la grossesse et le post-partum.',
+                tags: ['Grossesse', 'Post-partum', 'Doula'],
+                location: 'Paris',
+                avatar: 'SM'
+            },
+            {
+                id: 'claire',
+                name: 'Claire Dubois',
+                specialty: 'Accompagnante périnatale',
+                category: 'accompagnement',
+                description: 'Spécialisée en sophrologie et yoga prénatal.',
+                tags: ['Sophrologie', 'Yoga', 'Accompagnante'],
+                location: 'Lyon',
+                avatar: 'CD'
+            }
+        ];
 
         function showTab(tab) {
             document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
@@ -642,54 +719,8 @@
             if (tab === 'accompagnements') backToCategories();
             if (tab === 'professionnels') {
                 backToProCats();
-                // Si on a une recherche active, aller directement à la catégorie avec filtrage
-                if (cityFilter) {
-                    document.getElementById('pro-categories-view').style.display = 'block';
-                }
+                clearSearch();
             }
-        }
-
-        function searchByCity() {
-            const input = document.getElementById('city-search').value.trim();
-            if (!input) {
-                alert('Veuillez entrer une ville ou un département');
-                return;
-            }
-            
-            cityFilter = input.toLowerCase();
-            
-            // Aller à l'onglet professionnels
-            showTab('professionnels');
-            
-            // Afficher un message de recherche
-            const categoryGrid = document.querySelector('#pro-categories-view .categories-grid');
-            let searchMessage = document.getElementById('search-message');
-            
-            if (!searchMessage) {
-                searchMessage = document.createElement('div');
-                searchMessage.id = 'search-message';
-                searchMessage.style.cssText = 'background: var(--secondary); padding: 1rem; border-radius: 5px; margin-bottom: 2rem; text-align: center; color: var(--primary); font-weight: bold;';
-                categoryGrid.parentNode.insertBefore(searchMessage, categoryGrid);
-            }
-            
-            searchMessage.innerHTML = `
-                🔍 Recherche pour: <strong>${input}</strong> 
-                <button onclick="clearSearch()" style="background: var(--primary); color: var(--white); border: none; padding: 0.5rem 1rem; border-radius: 5px; margin-left: 1rem; cursor: pointer;">
-                    ✕ Effacer
-                </button>
-            `;
-        }
-
-        function clearSearch() {
-            cityFilter = '';
-            document.getElementById('city-search').value = '';
-            const searchMessage = document.getElementById('search-message');
-            if (searchMessage) searchMessage.remove();
-            
-            // Réafficher toutes les cartes
-            document.querySelectorAll('.pro-card').forEach(card => {
-                card.style.display = 'block';
-            });
         }
 
         function showArticles(cat) {
@@ -704,62 +735,18 @@
         }
 
         function showPros(cat) {
+            clearSearch();
             document.getElementById('pro-categories-view').style.display = 'none';
+            document.getElementById('search-results').style.display = 'none';
             document.querySelectorAll('#professionnels .articles-section').forEach(s => s.classList.remove('active'));
             document.getElementById('pro-list-' + cat).classList.add('active');
-            
-            // Appliquer le filtre par ville si actif
-            if (cityFilter) {
-                filterProsByCity(cat);
-            }
-        }
-
-        function filterProsByCity(category) {
-            const container = document.getElementById('pro-list-' + category);
-            if (!container) return;
-            
-            const cards = container.querySelectorAll('.pro-card');
-            let visibleCount = 0;
-            
-            cards.forEach(card => {
-                const city = card.getAttribute('data-city')?.toLowerCase() || '';
-                const dept = card.getAttribute('data-dept')?.toLowerCase() || '';
-                
-                if (city.includes(cityFilter) || dept.includes(cityFilter) || cityFilter.includes(city) || cityFilter.includes(dept)) {
-                    card.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-            
-            // Afficher un message si aucun résultat
-            let noResultMsg = container.querySelector('.no-result-message');
-            if (visibleCount === 0) {
-                if (!noResultMsg) {
-                    noResultMsg = document.createElement('p');
-                    noResultMsg.className = 'no-result-message';
-                    noResultMsg.style.cssText = 'text-align: center; color: var(--text-light); padding: 2rem; background: var(--white); border-radius: 10px;';
-                    noResultMsg.innerHTML = `Aucun professionnel trouvé pour "<strong>${cityFilter}</strong>" dans cette catégorie.`;
-                    container.querySelector('.articles-grid').appendChild(noResultMsg);
-                }
-            } else if (noResultMsg) {
-                noResultMsg.remove();
-            }
         }
 
         function backToProCats() {
             document.getElementById('pro-categories-view').style.display = 'block';
+            document.getElementById('search-results').style.display = 'none';
             document.querySelectorAll('#professionnels .articles-section').forEach(s => s.classList.remove('active'));
             hideDetail();
-            
-            // Réafficher toutes les cartes quand on revient aux catégories
-            document.querySelectorAll('.pro-card').forEach(card => {
-                card.style.display = 'block';
-            });
-            
-            // Supprimer les messages "aucun résultat"
-            document.querySelectorAll('.no-result-message').forEach(msg => msg.remove());
         }
 
         function showDetail(id) {
@@ -769,21 +756,83 @@
         }
 
         function hideDetail() {
-            document.getElementById('pro-cards-accompagnement').style.display = 'grid';
+            const proCards = document.getElementById('pro-cards-accompagnement');
+            if (proCards) proCards.style.display = 'grid';
             document.querySelectorAll('.pro-detail').forEach(d => d.classList.remove('active'));
         }
 
-        // Permettre la recherche avec la touche Entrée
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('city-search');
-            if (searchInput) {
-                searchInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter') {
-                        searchByCity();
-                    }
-                });
+        function searchProfessionals() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                clearSearch();
+                return;
             }
-        });
+
+            // Filtrer les professionnels
+            const results = professionals.filter(pro => {
+                return pro.name.toLowerCase().includes(searchTerm) ||
+                       pro.specialty.toLowerCase().includes(searchTerm) ||
+                       pro.description.toLowerCase().includes(searchTerm) ||
+                       pro.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
+                       pro.location.toLowerCase().includes(searchTerm);
+            });
+
+            // Afficher les résultats
+            displaySearchResults(results);
+        }
+
+        function displaySearchResults(results) {
+            const resultsGrid = document.getElementById('search-results-grid');
+            const searchResultsDiv = document.getElementById('search-results');
+            
+            // Cacher les catégories et autres sections
+            document.getElementById('pro-categories-view').style.display = 'none';
+            document.querySelectorAll('#professionnels .articles-section').forEach(s => s.classList.remove('active'));
+            
+            // Afficher la section de résultats
+            searchResultsDiv.style.display = 'block';
+
+            if (results.length === 0) {
+                resultsGrid.innerHTML = '<div class="no-results"><p>Aucun professionnel trouvé pour votre recherche.</p><p>Essayez avec d\'autres mots-clés (doula, sage-femme, Paris...)</p></div>';
+                return;
+            }
+
+            // Générer les cartes de résultats
+            resultsGrid.innerHTML = results.map(pro => `
+                <div class="pro-card" onclick="showDetailFromSearch('${pro.id}', '${pro.category}')">
+                    <div class="pro-header">
+                        <div class="pro-avatar">${pro.avatar}</div>
+                        <div class="pro-info">
+                            <h4>${pro.name}</h4>
+                            <div class="specialty">${pro.specialty}</div>
+                        </div>
+                    </div>
+                    <p>${pro.description}</p>
+                    <div class="pro-tags">
+                        ${pro.tags.map(tag => `<span class="pro-tag">${tag}</span>`).join('')}
+                        <span class="pro-tag">📍 ${pro.location}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showDetailFromSearch(proId, category) {
+            // Afficher la liste de la catégorie correspondante
+            document.getElementById('search-results').style.display = 'none';
+            document.getElementById('pro-list-' + category).classList.add('active');
+            
+            // Afficher le détail du professionnel
+            setTimeout(() => {
+                showDetail(proId);
+            }, 100);
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('search-results').style.display = 'none';
+            document.getElementById('pro-categories-view').style.display = 'block';
+        }
     </script>
 </body>
 </html>
