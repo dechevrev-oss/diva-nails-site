@@ -50,6 +50,14 @@
         .logo {
             font-size: 2rem;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
         }
 
         .nav-links {
@@ -370,7 +378,9 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Vianata</div>
+            <div class="logo">
+                <img src="logosite.png" alt="Vianata">
+            </div>
             <ul class="nav-links">
                 <li><button onclick="showTab('accueil')" class="active" id="btn-accueil">Accueil</button></li>
                 <li><button onclick="showTab('professionnels')" id="btn-professionnels">Trouver un Professionnel</button></li>
