@@ -393,6 +393,19 @@
     <section class="hero">
         <h1>Votre accompagnement vers la vie</h1>
         <p>Découvrez les professionnels qui vous accompagnent</p>
+        
+        <!-- Search Bar -->
+        <div class="search-container" style="margin-top: 2rem;">
+            <input type="text" 
+                   class="search-box" 
+                   id="searchInputHome" 
+                   placeholder="Rechercher un professionnel (ex: doula, sophrologue, Paris...)"
+                   onkeyup="searchFromHome(event)">
+            <span class="search-icon">🔍</span>
+        </div>
+        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-top: 1rem;">
+            💡 Appuyez sur Entrée pour lancer la recherche
+        </p>
     </section>
 
     <div class="container">
@@ -401,20 +414,6 @@
             <div style="text-align: center; margin-top: 3rem;">
                 <h2 style="color: #6f4545; margin-bottom: 1.5rem;">Bienvenue chez Vianata</h2>
                 <p style="max-width: 800px; margin: 0 auto 2rem; color: #6f4545;">Vianata est votre plateforme de référence pour découvrir les professionnels de la parentalité.</p>
-                
-                <!-- Search Bar -->
-                <div class="search-container">
-                    <input type="text" 
-                           class="search-box" 
-                           id="searchInputHome" 
-                           placeholder="Rechercher un professionnel (ex: doula, sophrologue, Paris...)"
-                           onkeyup="searchFromHome(event)">
-                    <span class="search-icon">🔍</span>
-                </div>
-                
-                <p style="max-width: 800px; margin: 2rem auto; color: #6f4545; font-size: 0.95rem;">
-                    💡 Appuyez sur Entrée pour lancer la recherche
-                </p>
             </div>
         </div>
 
