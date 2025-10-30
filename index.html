@@ -36,7 +36,7 @@ nav{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:s
 .category-card p{margin-bottom:0.8rem;line-height:1.7}
 .category-card p strong{color:var(--primary);display:block;margin-bottom:0.5rem}
 .pro-card{background:var(--white);border-radius:10px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;transition:all 0.3s ease}
-.pro-card:hover{transform:translateY(-3px);border:2px solid var(--primary)}
+.pro-card:hover{transform:translateY(-3px);box-shadow:0 4px 15px rgba(0,0,0,.15)}
 .pro-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
 .pro-avatar{width:60px;height:60px;border-radius:50%;background:var(--secondary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--primary);font-weight:bold}
 .pro-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
@@ -74,6 +74,7 @@ footer{background:#6f4545;color:var(--white);text-align:center;padding:2rem}
 </section>
 
 <div class="container">
+<!-- ACCUEIL -->
 <div id="accueil" class="tab-content active">
 <div class="welcome-hero" style="margin:-3rem -2rem 3rem -2rem">
 <div class="welcome-content">
@@ -125,18 +126,269 @@ footer{background:#6f4545;color:var(--white);text-align:center;padding:2rem}
 </div>
 </div>
 
+<!-- PROFESSIONNELS -->
 <div id="professionnels" class="tab-content">
+<div id="professionnels-categories">
 <h2 style="color:var(--primary);text-align:center;margin-bottom:2rem">Trouver un Professionnel</h2>
 <div class="categories-grid">
-<div class="category-card"><h3>🤝 Accompagnement</h3><p>Doulas et accompagnantes</p></div>
-<div class="category-card"><h3>🔬 PMA & Fertilité</h3></div>
-<div class="category-card"><h3>🤰 Grossesse</h3></div>
-<div class="category-card"><h3>💆‍♀️ Bien-être</h3></div>
-<div class="category-card"><h3>💭 Psychologie</h3></div>
-<div class="category-card"><h3>👶 Post-Partum</h3></div>
+<div class="category-card" onclick="showProCategory('accompagnement')">
+<h3>🤝 Accompagnement</h3>
+<p>Doulas et accompagnantes</p>
+</div>
+<div class="category-card" onclick="showProCategory('pma')">
+<h3>🔬 PMA & Fertilité</h3>
+</div>
+<div class="category-card" onclick="showProCategory('grossesse')">
+<h3>🤰 Grossesse</h3>
+</div>
+<div class="category-card" onclick="showProCategory('bien-etre')">
+<h3>💆‍♀️ Bien-être</h3>
+</div>
+<div class="category-card" onclick="showProCategory('psychologie')">
+<h3>💭 Psychologie</h3>
+</div>
+<div class="category-card" onclick="showProCategory('post-partum')">
+<h3>👶 Post-Partum</h3>
+</div>
 </div>
 </div>
 
+<!-- Professionnels Accompagnement -->
+<div id="pro-accompagnement" class="pro-category" style="display:none">
+<button onclick="backToProCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">🤝 Accompagnement - Doulas et accompagnantes</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem">
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">HP</div>
+<div>
+<h4 style="color:var(--primary)">Hélène Poughon</h4>
+<div style="color:var(--text-light);font-size:.9rem">Doula - Ôm Doula</div>
+</div>
+</div>
+<p>Accompagne les femmes et couples pour reprendre le pouvoir sur leur parcours de parentalité.</p>
+<div class="pro-tags">
+<span class="pro-tag">Grossesse</span>
+<span class="pro-tag">Post-partum</span>
+<span class="pro-tag">📍 Lille</span>
+</div>
+</div>
+
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">CD</div>
+<div>
+<h4 style="color:var(--primary)">Claire Dubois</h4>
+<div style="color:var(--text-light);font-size:.9rem">Accompagnante périnatale</div>
+</div>
+</div>
+<p>Spécialisée en sophrologie et yoga prénatal pour une grossesse sereine.</p>
+<div class="pro-tags">
+<span class="pro-tag">Yoga prénatal</span>
+<span class="pro-tag">Sophrologie</span>
+<span class="pro-tag">📍 Lyon</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Professionnels PMA -->
+<div id="pro-pma" class="pro-category" style="display:none">
+<button onclick="backToProCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">🔬 PMA & Fertilité</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem">
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">AL</div>
+<div>
+<h4 style="color:var(--primary)">Anne Leroy</h4>
+<div style="color:var(--text-light);font-size:.9rem">Psychologue périnatale</div>
+</div>
+</div>
+<p>Accompagnement psychologique pour le désir d'enfant, la grossesse et le post-partum.</p>
+<div class="pro-tags">
+<span class="pro-tag">PMA</span>
+<span class="pro-tag">Psychologie</span>
+<span class="pro-tag">📍 Bordeaux</span>
+</div>
+</div>
+
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">JD</div>
+<div>
+<h4 style="color:var(--primary)">Julie Dupont</h4>
+<div style="color:var(--text-light);font-size:.9rem">Naturopathe spécialisée fertilité</div>
+</div>
+</div>
+<p>Accompagnement naturel pour optimiser la fertilité et préparer la conception.</p>
+<div class="pro-tags">
+<span class="pro-tag">Fertilité</span>
+<span class="pro-tag">Naturopathie</span>
+<span class="pro-tag">📍 Nantes</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Professionnels Grossesse -->
+<div id="pro-grossesse" class="pro-category" style="display:none">
+<button onclick="backToProCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">🤰 Grossesse</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem">
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">SM</div>
+<div>
+<h4 style="color:var(--primary)">Sophie Martin</h4>
+<div style="color:var(--text-light);font-size:.9rem">Sage-femme libérale</div>
+</div>
+</div>
+<p>Suivi de grossesse, préparation à la naissance et accompagnement post-natal.</p>
+<div class="pro-tags">
+<span class="pro-tag">Grossesse</span>
+<span class="pro-tag">Accouchement</span>
+<span class="pro-tag">📍 Paris</span>
+</div>
+</div>
+
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">EM</div>
+<div>
+<h4 style="color:var(--primary)">Emma Moreau</h4>
+<div style="color:var(--text-light);font-size:.9rem">Professeure de yoga prénatal</div>
+</div>
+</div>
+<p>Cours de yoga adaptés à chaque trimestre pour une grossesse en douceur.</p>
+<div class="pro-tags">
+<span class="pro-tag">Yoga</span>
+<span class="pro-tag">Relaxation</span>
+<span class="pro-tag">📍 Strasbourg</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Professionnels Bien-être -->
+<div id="pro-bien-etre" class="pro-category" style="display:none">
+<button onclick="backToProCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">💆‍♀️ Bien-être</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem">
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">LB</div>
+<div>
+<h4 style="color:var(--primary)">Laura Bernard</h4>
+<div style="color:var(--text-light);font-size:.9rem">Ostéopathe périnatale</div>
+</div>
+</div>
+<p>Soins ostéopathiques pour la femme enceinte, le post-partum et les bébés.</p>
+<div class="pro-tags">
+<span class="pro-tag">Ostéopathie</span>
+<span class="pro-tag">Bien-être</span>
+<span class="pro-tag">📍 Marseille</span>
+</div>
+</div>
+
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">CB</div>
+<div>
+<h4 style="color:var(--primary)">Camille Blanc</h4>
+<div style="color:var(--text-light);font-size:.9rem">Réflexologue</div>
+</div>
+</div>
+<p>Réflexologie plantaire pour soulager les maux de grossesse et favoriser la détente.</p>
+<div class="pro-tags">
+<span class="pro-tag">Réflexologie</span>
+<span class="pro-tag">Relaxation</span>
+<span class="pro-tag">📍 Nice</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Professionnels Psychologie -->
+<div id="pro-psychologie" class="pro-category" style="display:none">
+<button onclick="backToProCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">💭 Psychologie</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem">
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">AL</div>
+<div>
+<h4 style="color:var(--primary)">Anne Leroy</h4>
+<div style="color:var(--text-light);font-size:.9rem">Psychologue périnatale</div>
+</div>
+</div>
+<p>Accompagnement psychologique pour le désir d'enfant, la grossesse et le post-partum.</p>
+<div class="pro-tags">
+<span class="pro-tag">PMA</span>
+<span class="pro-tag">Psychologie</span>
+<span class="pro-tag">📍 Bordeaux</span>
+</div>
+</div>
+
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">TC</div>
+<div>
+<h4 style="color:var(--primary)">Thomas Chevalier</h4>
+<div style="color:var(--text-light);font-size:.9rem">Psychologue clinicien</div>
+</div>
+</div>
+<p>Thérapie de couple et accompagnement des futurs parents.</p>
+<div class="pro-tags">
+<span class="pro-tag">Couple</span>
+<span class="pro-tag">Parentalité</span>
+<span class="pro-tag">📍 Montpellier</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Professionnels Post-Partum -->
+<div id="pro-post-partum" class="pro-category" style="display:none">
+<button onclick="backToProCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">👶 Post-Partum</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem">
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">MR</div>
+<div>
+<h4 style="color:var(--primary)">Marie Rousseau</h4>
+<div style="color:var(--text-light);font-size:.9rem">Consultante en lactation</div>
+</div>
+</div>
+<p>Soutien à l'allaitement et accompagnement des jeunes mamans.</p>
+<div class="pro-tags">
+<span class="pro-tag">Allaitement</span>
+<span class="pro-tag">Post-partum</span>
+<span class="pro-tag">📍 Toulouse</span>
+</div>
+</div>
+
+<div class="pro-card">
+<div class="pro-header">
+<div class="pro-avatar">SF</div>
+<div>
+<h4 style="color:var(--primary)">Sarah Fournier</h4>
+<div style="color:var(--text-light);font-size:.9rem">Sage-femme spécialisée</div>
+</div>
+</div>
+<p>Rééducation périnéale et suivi post-natal personnalisé.</p>
+<div class="pro-tags">
+<span class="pro-tag">Rééducation</span>
+<span class="pro-tag">Suivi post-natal</span>
+<span class="pro-tag">📍 Rennes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ACCOMPAGNEMENTS -->
 <div id="accompagnements" class="tab-content">
 <div id="accompagnements-categories">
 <h2 style="color:var(--primary);text-align:center;margin-bottom:2rem">Nos Accompagnements</h2>
@@ -307,6 +559,7 @@ footer{background:#6f4545;color:var(--white);text-align:center;padding:2rem}
 </div>
 </div>
 
+<!-- FORMULAIRE PROFESSIONNEL -->
 <div id="professionnel-form" class="tab-content">
 <div style="text-align:center;margin-bottom:2rem">
 <h2 style="color:#6f4545;margin-bottom:1rem">Rejoignez Vianata</h2>
@@ -360,10 +613,14 @@ document.querySelectorAll('.nav-links button').forEach(b=>b.classList.remove('ac
 document.getElementById(tab).classList.add('active');
 const btn=document.getElementById('btn-'+tab);
 if(btn)btn.classList.add('active');
-// Réinitialiser la vue des catégories quand on revient sur Accompagnements
+// Réinitialiser la vue des catégories
 if(tab === 'accompagnements'){
 document.getElementById('accompagnements-categories').style.display = 'block';
 document.querySelectorAll('.category-articles').forEach(art=>art.style.display='none');
+}
+if(tab === 'professionnels'){
+document.getElementById('professionnels-categories').style.display = 'block';
+document.querySelectorAll('.pro-category').forEach(pro=>pro.style.display='none');
 }
 }
 
@@ -377,6 +634,19 @@ window.scrollTo(0, 0);
 function backToCategories(){
 document.getElementById('accompagnements-categories').style.display = 'block';
 document.querySelectorAll('.category-articles').forEach(art=>art.style.display='none');
+window.scrollTo(0, 0);
+}
+
+function showProCategory(category){
+document.getElementById('professionnels-categories').style.display = 'none';
+document.querySelectorAll('.pro-category').forEach(pro=>pro.style.display='none');
+document.getElementById('pro-'+category).style.display = 'block';
+window.scrollTo(0, 0);
+}
+
+function backToProCategories(){
+document.getElementById('professionnels-categories').style.display = 'block';
+document.querySelectorAll('.pro-category').forEach(pro=>pro.style.display='none');
 window.scrollTo(0, 0);
 }
 </script>
