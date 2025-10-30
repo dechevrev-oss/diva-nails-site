@@ -17,7 +17,8 @@
         .nav-links button:hover,.nav-links button.active{background:var(--secondary)}
         .pro-link{background:var(--primary);color:var(--white);padding:.6rem 1.2rem;border-radius:5px;text-decoration:none;font-size:.95rem;white-space:nowrap;transition:opacity .3s}
         .pro-link:hover{opacity:.9}
-        .hero{background:#6f4545;color:var(--white);text-align:center;padding:4rem 2rem}
+        .hero{background:#6f4545;color:var(--white);text-align:center;padding:4rem 2rem;display:none}
+        .hero.active{display:block}
         .hero h1{font-size:2.5rem;margin-bottom:1rem}
         .search-container{max-width:600px;margin:2rem auto 0;position:relative}
         .search-box{width:100%;padding:1rem 3rem 1rem 1.5rem;border:2px solid var(--secondary);border-radius:30px;font-size:1rem;background:var(--white)}
@@ -96,7 +97,7 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero active" id="hero-banner">
         <h1>Votre accompagnement vers la vie</h1>
         <p>Découvrez les professionnels qui vous accompagnent</p>
         <div class="search-container">
@@ -490,6 +491,15 @@
             document.getElementById(tab).classList.add('active');
             const btn=document.getElementById('btn-'+tab);
             if(btn)btn.classList.add('active');
+            
+            // Gérer l'affichage du bandeau hero
+            const heroBanner = document.getElementById('hero-banner');
+            if(tab === 'accueil') {
+                heroBanner.classList.add('active');
+            } else {
+                heroBanner.classList.remove('active');
+            }
+            
             if(tab==='accompagnements')backToCategories();
             if(tab==='professionnels')backToProCats();
         }
