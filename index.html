@@ -17,12 +17,19 @@
         .nav-links button:hover,.nav-links button.active{background:var(--secondary)}
         .pro-link{background:var(--primary);color:var(--white);padding:.6rem 1.2rem;border-radius:5px;text-decoration:none;font-size:.95rem;white-space:nowrap;transition:opacity .3s}
         .pro-link:hover{opacity:.9}
-        .hero{background:#6f4545;color:var(--white);text-align:center;padding:4rem 2rem;display:none}
+        .hero{background:var(--white);color:var(--text);padding:4rem 2rem 2rem;display:none}
         .hero.active{display:block}
-        .hero h1{font-size:2.5rem;margin-bottom:1rem}
-        .search-container{max-width:600px;margin:2rem auto 0;position:relative}
-        .search-box{width:100%;padding:1rem 3rem 1rem 1.5rem;border:2px solid var(--secondary);border-radius:30px;font-size:1rem;background:var(--white)}
-        .search-icon{position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);font-size:1.2rem}
+        .hero-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+        .hero-text{text-align:left}
+        .hero h1{font-size:3rem;color:var(--primary);margin-bottom:1rem;line-height:1.2}
+        .hero p{font-size:1.2rem;color:var(--text-light);margin-bottom:2rem}
+        .hero-image{text-align:center}
+        .hero-image img{max-width:100%;width:400px;border-radius:20px;box-shadow:0 10px 40px rgba(111,69,69,0.15)}
+        .search-container{max-width:100%;margin:2rem 0 0;position:relative}
+        .search-box{width:100%;padding:1rem 3rem 1rem 1.5rem;border:2px solid var(--secondary);border-radius:30px;font-size:1rem;background:var(--white);box-shadow:0 4px 15px rgba(0,0,0,0.08);transition:all .3s}
+        .search-box:focus{border-color:var(--primary);box-shadow:0 4px 20px rgba(111,69,69,0.2)}
+        .search-icon{position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);font-size:1.2rem;color:var(--primary)}
+        @media(max-width:768px){.hero-content{grid-template-columns:1fr;gap:2rem}.hero h1{font-size:2rem;text-align:center}.hero p{text-align:center}.hero-text{text-align:center}.hero-image img{width:100%;max-width:300px}}
         .container{max-width:1200px;margin:0 auto;padding:3rem 2rem}
         .tab-content{display:none}
         .tab-content.active{display:block}
@@ -98,20 +105,25 @@
     </header>
 
     <section class="hero active" id="hero-banner">
-        <h1>Votre accompagnement vers la vie</h1>
-        <p>Découvrez les professionnels qui vous accompagnent</p>
-        <div class="search-container">
-            <input type="text" class="search-box" id="searchInputHome" placeholder="Rechercher un professionnel..." onkeyup="searchFromHome(event)">
-            <span class="search-icon">🔍</span>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Votre accompagnement vers la vie</h1>
+                <p>Découvrez les professionnels de la parentalité qui vous correspondent</p>
+                <div class="search-container">
+                    <input type="text" class="search-box" id="searchInputHome" placeholder="Rechercher un professionnel, une ville..." onkeyup="searchFromHome(event)">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="photoaccueil" alt="Vianata - Accompagnement périnatal">
+            </div>
         </div>
     </section>
 
     <div class="container">
         <div id="accueil" class="tab-content active">
-            <div style="text-align:center;margin-top:3rem">
-                <h2 style="color:#6f4545;margin-bottom:1.5rem">Bienvenue chez Vianata</h2>
-                <img src="photoaccueil" alt="Vianata" style="max-width:600px;width:100%;border-radius:15px;margin:2rem auto;display:block;box-shadow:0 4px 15px rgba(0,0,0,0.1)">
-                <p style="max-width:800px;margin:0 auto 3rem;color:#6f4545">Vianata est votre plateforme de référence pour découvrir les professionnels de la parentalité.</p>
+            <div style="text-align:center;margin-top:2rem">
+                <p style="max-width:800px;margin:0 auto 3rem;color:var(--text);font-size:1.1rem">Vianata est votre plateforme de référence pour découvrir et contacter les professionnels de la parentalité près de chez vous.</p>
             </div>
             
             <h3 style="color:#6f4545;font-size:1.8rem;margin-bottom:2rem;text-align:center">⭐ Professionnels populaires</h3>
