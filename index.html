@@ -7,381 +7,66 @@
     <style>
         :root {
             --primary: #6f4545;
-            --primary-dark: #6D5F54;
             --secondary: #E8E3DF;
-            --light: #F8F6F4;
             --white: #FFFFFF;
             --text: #6f4545;
             --text-light: #8A7A70;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: var(--white);
-        }
-
-        header {
-            background: #f4e8e7;
-            color: var(--text);
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo img {
-            height: 80px;
-            width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-            list-style: none;
-        }
-
-        .nav-links button {
-            background: none;
-            border: none;
-            color: var(--text);
-            font-size: 1rem;
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .nav-links button:hover,
-        .nav-links button.active {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-
-        .hero {
-            background: #6f4545;
-            color: var(--white);
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .category-card {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: all 0.3s;
-            border: 3px solid transparent;
-        }
-
-        .category-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .category-card h3 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .articles-section {
-            display: none;
-        }
-
-        .articles-section.active {
-            display: block;
-        }
-
-        .back-button {
-            background: var(--primary);
-            color: var(--white);
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-bottom: 2rem;
-        }
-
-        .back-button:hover {
-            background: var(--primary-dark);
-        }
-
-        .category-title {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .articles-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .pro-card {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .pro-card:hover {
-            transform: translateY(-3px);
-            border: 2px solid var(--primary);
-        }
-
-        .pro-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .pro-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        .pro-info h4 {
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        .pro-info .specialty {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        .pro-tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
-        .pro-tag {
-            background: var(--secondary);
-            color: var(--primary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.85rem;
-        }
-
-        .pro-detail {
-            display: none;
-        }
-
-        .pro-detail.active {
-            display: block;
-        }
-
-        .pro-detail-header {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 2px solid var(--secondary);
-        }
-
-        .pro-detail-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: var(--secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        .pro-detail-contact {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .contact-button {
-            background: var(--primary);
-            color: var(--white);
-            padding: 0.6rem 1.2rem;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        .pro-section {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin-bottom: 1.5rem;
-        }
-
-        .pro-section h3 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            border-left: 4px solid var(--primary);
-            padding-left: 1rem;
-        }
-
-        .pro-section ul {
-            list-style: none;
-            padding-left: 1.5rem;
-        }
-
-        .pro-section ul li:before {
-            content: "✓ ";
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        .tarif-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.8rem;
-            background: var(--light);
-            border-radius: 5px;
-            margin-bottom: 0.5rem;
-        }
-
-        .tarif-item span:last-child {
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        .search-container {
-            max-width: 600px;
-            margin: 2rem auto;
-            position: relative;
-        }
-
-        .search-box {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            padding-right: 3rem;
-            border: 2px solid var(--secondary);
-            border-radius: 30px;
-            font-size: 1rem;
-            color: var(--text);
-            background: var(--white);
-            transition: border-color 0.3s;
-        }
-
-        .search-box:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .search-icon {
-            position: absolute;
-            right: 1.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-light);
-            font-size: 1.2rem;
-        }
-
-        .search-results {
-            margin-top: 2rem;
-        }
-
-        .no-results {
-            text-align: center;
-            color: var(--text-light);
-            padding: 3rem;
-            background: var(--white);
-            border-radius: 10px;
-        }
-
-        footer {
-            background: #6f4545;
-            color: var(--white);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links button {
-                padding: 0.5rem;
-                font-size: 0.85rem;
-            }
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background: var(--white); }
+        header { background: #f4e8e7; padding: 1rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 80px; }
+        .nav-links { display: flex; gap: 1rem; list-style: none; }
+        .nav-links button { background: none; border: none; color: var(--text); font-size: 1rem; cursor: pointer; padding: 0.5rem 1rem; border-radius: 5px; transition: background 0.3s; }
+        .nav-links button:hover, .nav-links button.active { background: var(--secondary); }
+        .hero { background: #6f4545; color: var(--white); text-align: center; padding: 4rem 2rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .search-container { max-width: 600px; margin: 2rem auto 0; position: relative; }
+        .search-box { width: 100%; padding: 1rem 3rem 1rem 1.5rem; border: 2px solid var(--secondary); border-radius: 30px; font-size: 1rem; background: var(--white); }
+        .search-icon { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); font-size: 1.2rem; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .category-card { background: var(--white); border-radius: 10px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.3s; border: 3px solid transparent; }
+        .category-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .category-card h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 1rem; }
+        .articles-section { display: none; }
+        .articles-section.active { display: block; }
+        .back-button { background: var(--primary); color: var(--white); border: none; padding: 0.8rem 1.5rem; border-radius: 5px; cursor: pointer; margin-bottom: 2rem; }
+        .category-title { font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center; }
+        .articles-grid { display: grid; gap: 2rem; }
+        .article-card { background: var(--white); border-radius: 10px; padding: 2rem; border-left: 5px solid var(--primary); box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .article-card h4 { color: var(--primary); font-size: 1.5rem; margin-bottom: 1rem; }
+        .metier-tag { display: inline-block; background: var(--primary); color: var(--white); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; margin-top: 1rem; }
+        .pro-card { background: var(--white); border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.08); cursor: pointer; transition: all 0.3s; }
+        .pro-card:hover { transform: translateY(-3px); border: 2px solid var(--primary); }
+        .pro-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+        .pro-avatar { width: 60px; height: 60px; border-radius: 50%; background: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--primary); font-weight: bold; }
+        .pro-info h4 { color: var(--primary); font-size: 1.2rem; }
+        .pro-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+        .pro-tag { background: var(--secondary); color: var(--primary); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; }
+        .pro-detail { display: none; }
+        .pro-detail.active { display: block; }
+        .pro-detail-header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--secondary); }
+        .pro-detail-avatar { width: 100px; height: 100px; border-radius: 50%; background: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--primary); font-weight: bold; }
+        .pro-detail-contact { display: flex; gap: 1rem; margin-top: 1rem; }
+        .contact-button { background: var(--primary); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; }
+        .pro-section { background: var(--white); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .pro-section h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 1rem; border-left: 4px solid var(--primary); padding-left: 1rem; }
+        .pro-section ul { list-style: none; padding-left: 1.5rem; }
+        .pro-section ul li:before { content: "✓ "; color: var(--primary); font-weight: bold; }
+        .tarif-item { display: flex; justify-content: space-between; padding: 0.8rem; background: #f8f8f8; border-radius: 5px; margin-bottom: 0.5rem; }
+        .tarif-item span:last-child { color: var(--primary); font-weight: bold; }
+        footer { background: #6f4545; color: var(--white); text-align: center; padding: 2rem; margin-top: 4rem; }
+        @media (max-width: 768px) { .nav-links button { padding: 0.5rem; font-size: 0.85rem; } .categories-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <img src="logosite.png" alt="Vianata">
-            </div>
+            <div class="logo"><img src="logosite.png" alt="Vianata"></div>
             <ul class="nav-links">
                 <li><button onclick="showTab('accueil')" class="active" id="btn-accueil">Accueil</button></li>
                 <li><button onclick="showTab('professionnels')" id="btn-professionnels">Trouver un Professionnel</button></li>
@@ -393,140 +78,156 @@
     <section class="hero">
         <h1>Votre accompagnement vers la vie</h1>
         <p>Découvrez les professionnels qui vous accompagnent</p>
-        
-        <!-- Search Bar -->
-        <div class="search-container" style="margin-top: 2rem;">
-            <input type="text" 
-                   class="search-box" 
-                   id="searchInputHome" 
-                   placeholder="Rechercher un professionnel (ex: doula, sophrologue, Paris...)"
-                   onkeyup="searchFromHome(event)">
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchInputHome" placeholder="Rechercher un professionnel (ex: doula, sophrologue, Paris...)" onkeyup="searchFromHome(event)">
             <span class="search-icon">🔍</span>
         </div>
     </section>
 
     <div class="container">
-        <!-- ACCUEIL -->
         <div id="accueil" class="tab-content active">
             <div style="text-align: center; margin-top: 3rem;">
                 <h2 style="color: #6f4545; margin-bottom: 1.5rem;">Bienvenue chez Vianata</h2>
-                <p style="max-width: 800px; margin: 0 auto 2rem; color: #6f4545;">Vianata est votre plateforme de référence pour découvrir les professionnels de la parentalité.</p>
+                <p style="max-width: 800px; margin: 0 auto; color: #6f4545;">Vianata est votre plateforme de référence pour découvrir les professionnels de la parentalité.</p>
             </div>
         </div>
 
-        <!-- NOS ACCOMPAGNEMENTS -->
         <div id="accompagnements" class="tab-content">
             <div id="categories-view">
                 <div class="categories-grid">
-                    <div class="category-card" onclick="showArticles('accompagnement')">
-                        <h3>🤝 Accompagnement</h3>
-                        <p>Professionnels qui vous accompagnent.</p>
-                    </div>
-                    <div class="category-card" onclick="showArticles('pma')">
-                        <h3>🔬 PMA & Fertilité</h3>
-                        <p>Spécialistes de la fertilité.</p>
-                    </div>
-                    <div class="category-card" onclick="showArticles('grossesse')">
-                        <h3>🤰 Grossesse</h3>
-                        <p>Suivi de grossesse.</p>
-                    </div>
-                    <div class="category-card" onclick="showArticles('bienetre')">
-                        <h3>💆‍♀️ Bien-être</h3>
-                        <p>Experts du bien-être.</p>
-                    </div>
-                    <div class="category-card" onclick="showArticles('psychologie')">
-                        <h3>💭 Psychologie</h3>
-                        <p>Soutien psychologique.</p>
-                    </div>
-                    <div class="category-card" onclick="showArticles('postpartum')">
-                        <h3>👶 Post-Partum</h3>
-                        <p>Accompagnement post-natal.</p>
-                    </div>
+                    <div class="category-card" onclick="showArticles('accompagnement')"><h3>🤝 Accompagnement</h3><p>Doulas et accompagnantes périnatales.</p></div>
+                    <div class="category-card" onclick="showArticles('pma')"><h3>🔬 PMA & Fertilité</h3><p>Spécialistes de la fertilité.</p></div>
+                    <div class="category-card" onclick="showArticles('grossesse')"><h3>🤰 Grossesse</h3><p>Sages-femmes et obstétriciens.</p></div>
+                    <div class="category-card" onclick="showArticles('bienetre')"><h3>💆‍♀️ Bien-être</h3><p>Ostéopathes, yoga, sophrologie.</p></div>
+                    <div class="category-card" onclick="showArticles('psychologie')"><h3>💭 Psychologie</h3><p>Soutien psychologique.</p></div>
+                    <div class="category-card" onclick="showArticles('postpartum')"><h3>👶 Post-Partum</h3><p>Accompagnement après la naissance.</p></div>
                 </div>
             </div>
 
             <div id="articles-accompagnement" class="articles-section">
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Accompagnement</h2>
-                <p style="color: var(--text); padding: 1rem;">Articles sur l'accompagnement...</p>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <h4>La Doula : votre compagne de naissance</h4>
+                        <p>La doula accompagne les futurs parents de manière non médicale. Elle offre un soutien continu, émotionnel et pratique avant, pendant et après l'accouchement.</p>
+                        <p>Son rôle : créer un environnement sécurisant, respecter vos choix, s'adapter à vos besoins. Les études montrent que sa présence réduit les interventions de 50%.</p>
+                        <span class="metier-tag">Doula</span>
+                    </div>
+                    <div class="article-card">
+                        <h4>L'accompagnante périnatale</h4>
+                        <p>Accompagnement holistique : sophrologie, yoga prénatal, préparation à la naissance. Elle aide à se préparer physiquement et mentalement à l'accouchement.</p>
+                        <span class="metier-tag">Accompagnante</span>
+                    </div>
+                </div>
             </div>
 
             <div id="articles-pma" class="articles-section">
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">PMA & Fertilité</h2>
-                <p style="color: var(--text); padding: 1rem;">Articles sur la PMA...</p>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <h4>Le gynécologue spécialisé en fertilité</h4>
+                        <p>Accompagne les couples dans leur projet de conception. Réalise les bilans, propose des traitements et suit les parcours de PMA (FIV, inséminations...).</p>
+                        <span class="metier-tag">Gynécologue</span>
+                    </div>
+                    <div class="article-card">
+                        <h4>La naturopathe spécialisée</h4>
+                        <p>Accompagnement naturel pour optimiser la fertilité : alimentation, phytothérapie, gestion du stress, micronutrition.</p>
+                        <span class="metier-tag">Naturopathe</span>
+                    </div>
+                </div>
             </div>
 
             <div id="articles-grossesse" class="articles-section">
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Grossesse</h2>
-                <p style="color: var(--text); padding: 1rem;">Articles sur la grossesse...</p>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <h4>La sage-femme</h4>
+                        <p>Suivi des grossesses physiologiques : consultations, échographies, préparation à la naissance, accouchement et post-partum.</p>
+                        <span class="metier-tag">Sage-femme</span>
+                    </div>
+                    <div class="article-card">
+                        <h4>L'obstétricien</h4>
+                        <p>Prend en charge les grossesses à risque : diabète gestationnel, hypertension, grossesse multiple. Réalise les césariennes si nécessaire.</p>
+                        <span class="metier-tag">Obstétricien</span>
+                    </div>
+                </div>
             </div>
 
             <div id="articles-bienetre" class="articles-section">
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Bien-être</h2>
-                <p style="color: var(--text); padding: 1rem;">Articles sur le bien-être...</p>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <h4>L'ostéopathe périnatal</h4>
+                        <p>Soulage les douleurs de grossesse et prépare le bassin à l'accouchement. Accompagne aussi les bébés pour les coliques, tensions crâniennes...</p>
+                        <span class="metier-tag">Ostéopathe</span>
+                    </div>
+                    <div class="article-card">
+                        <h4>Le yoga prénatal</h4>
+                        <p>Postures, respiration et relaxation pour préparer le corps et l'esprit. Soulage les maux de grossesse et réduit le stress.</p>
+                        <span class="metier-tag">Yoga</span>
+                    </div>
+                </div>
             </div>
 
             <div id="articles-psychologie" class="articles-section">
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Psychologie</h2>
-                <p style="color: var(--text); padding: 1rem;">Articles sur la psychologie...</p>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <h4>Le psychologue périnatal</h4>
+                        <p>Accompagne les difficultés émotionnelles : anxiété, deuil périnatal, dépression post-partum, traumatisme d'accouchement.</p>
+                        <span class="metier-tag">Psychologue</span>
+                    </div>
+                    <div class="article-card">
+                        <h4>La dépression post-partum</h4>
+                        <p>Touche 10-15% des mères. Ce n'est pas votre faute. Avec un suivi adapté, on en sort et on peut profiter de son bébé.</p>
+                        <span class="metier-tag">DPP</span>
+                    </div>
+                </div>
             </div>
 
             <div id="articles-postpartum" class="articles-section">
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Post-Partum</h2>
-                <p style="color: var(--text); padding: 1rem;">Articles sur le post-partum...</p>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <h4>La consultante en lactation IBCLC</h4>
+                        <p>Spécialiste de l'allaitement. Résout les difficultés : douleurs, crevasses, engorgement, problèmes de prise du sein...</p>
+                        <span class="metier-tag">IBCLC</span>
+                    </div>
+                    <div class="article-card">
+                        <h4>Le quatrième trimestre</h4>
+                        <p>Les 3 premiers mois : transition majeure. Acceptez de l'aide, reposez-vous, mangez bien. Prendre soin de vous est essentiel.</p>
+                        <span class="metier-tag">Post-partum</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- TROUVER UN PROFESSIONNEL -->
         <div id="professionnels" class="tab-content">
-            <!-- Search Bar -->
-            <div class="search-container">
-                <input type="text" 
-                       class="search-box" 
-                       id="searchInput" 
-                       placeholder="Rechercher un professionnel (ex: doula, sophrologue, Paris...)"
-                       onkeyup="searchProfessionals()">
+            <div class="search-container" style="margin-bottom: 2rem;">
+                <input type="text" class="search-box" id="searchInput" placeholder="Rechercher..." onkeyup="searchProfessionals()">
                 <span class="search-icon">🔍</span>
             </div>
 
-            <!-- Search Results -->
-            <div id="search-results" class="search-results" style="display: none;">
-                <button class="back-button" onclick="clearSearch()">← Voir toutes les catégories</button>
-                <h2 class="category-title">Résultats de recherche</h2>
+            <div id="search-results" style="display: none;">
+                <button class="back-button" onclick="clearSearch()">← Catégories</button>
+                <h2 class="category-title">Résultats</h2>
                 <div id="search-results-grid" class="articles-grid"></div>
             </div>
 
             <div id="pro-categories-view">
                 <div class="categories-grid">
-                    <div class="category-card" onclick="showPros('accompagnement')">
-                        <h3>🤝 Accompagnement</h3>
-                        <p>Doulas et accompagnantes.</p>
-                    </div>
-                    <div class="category-card" onclick="showPros('pma')">
-                        <h3>🔬 PMA & Fertilité</h3>
-                        <p>Spécialistes fertilité.</p>
-                    </div>
-                    <div class="category-card" onclick="showPros('grossesse')">
-                        <h3>🤰 Grossesse</h3>
-                        <p>Sages-femmes.</p>
-                    </div>
-                    <div class="category-card" onclick="showPros('bienetre')">
-                        <h3>💆‍♀️ Bien-être</h3>
-                        <p>Ostéopathes, etc.</p>
-                    </div>
-                    <div class="category-card" onclick="showPros('psychologie')">
-                        <h3>💭 Psychologie</h3>
-                        <p>Psychologues.</p>
-                    </div>
-                    <div class="category-card" onclick="showPros('postpartum')">
-                        <h3>👶 Post-Partum</h3>
-                        <p>Consultantes lactation.</p>
-                    </div>
+                    <div class="category-card" onclick="showPros('accompagnement')"><h3>🤝 Accompagnement</h3><p>Doulas et accompagnantes.</p></div>
+                    <div class="category-card" onclick="showPros('pma')"><h3>🔬 PMA & Fertilité</h3><p>Spécialistes fertilité.</p></div>
+                    <div class="category-card" onclick="showPros('grossesse')"><h3>🤰 Grossesse</h3><p>Sages-femmes.</p></div>
+                    <div class="category-card" onclick="showPros('bienetre')"><h3>💆‍♀️ Bien-être</h3><p>Ostéopathes...</p></div>
+                    <div class="category-card" onclick="showPros('psychologie')"><h3>💭 Psychologie</h3><p>Psychologues.</p></div>
+                    <div class="category-card" onclick="showPros('postpartum')"><h3>👶 Post-Partum</h3><p>Consultantes.</p></div>
                 </div>
             </div>
 
@@ -540,7 +241,7 @@
                             <div class="pro-avatar">SM</div>
                             <div class="pro-info">
                                 <h4>Sophie Martin</h4>
-                                <div class="specialty">Doula certifiée</div>
+                                <div style="color: var(--text-light); font-size: 0.9rem;">Doula certifiée</div>
                             </div>
                         </div>
                         <p>Accompagnement bienveillant pendant la grossesse et le post-partum.</p>
@@ -555,7 +256,7 @@
                             <div class="pro-avatar">CD</div>
                             <div class="pro-info">
                                 <h4>Claire Dubois</h4>
-                                <div class="specialty">Accompagnante périnatale</div>
+                                <div style="color: var(--text-light); font-size: 0.9rem;">Accompagnante périnatale</div>
                             </div>
                         </div>
                         <p>Spécialisée en sophrologie et yoga prénatal.</p>
@@ -567,159 +268,99 @@
                 </div>
 
                 <div id="detail-sophie" class="pro-detail">
-                    <button class="back-button" onclick="hideDetail()">← Retour à la liste</button>
-                    
+                    <button class="back-button" onclick="hideDetail()">← Liste</button>
                     <div class="pro-detail-header">
                         <div class="pro-detail-avatar">SM</div>
                         <div>
-                            <h2 style="color: var(--primary);">Sophie Martin</h2>
-                            <div class="specialty">Doula certifiée - 8 ans d'expérience</div>
+                            <h2>Sophie Martin</h2>
+                            <div style="color: var(--text-light); margin-bottom: 0.5rem;">Doula certifiée - 8 ans</div>
                             <div class="pro-detail-contact">
                                 <a href="mailto:sophie@example.com" class="contact-button">📧 Email</a>
                                 <a href="tel:+33612345678" class="contact-button">📞 Téléphone</a>
                             </div>
                         </div>
                     </div>
-
                     <div class="pro-section">
                         <h3>Présentation</h3>
                         <p>Passionnée par l'accompagnement des familles, je suis devenue doula après la naissance de mes enfants. Mon approche est centrée sur l'écoute et le respect de vos choix.</p>
                     </div>
-
                     <div class="pro-section">
-                        <h3>Services proposés</h3>
-                        <ul>
-                            <li>Accompagnement prénatal</li>
-                            <li>Présence à l'accouchement</li>
-                            <li>Soutien post-partum</li>
-                            <li>Cercles de femmes</li>
-                        </ul>
+                        <h3>Services</h3>
+                        <ul><li>Accompagnement prénatal</li><li>Présence à l'accouchement</li><li>Soutien post-partum</li></ul>
                     </div>
-
                     <div class="pro-section">
                         <h3>Tarifs</h3>
-                        <div class="tarif-item">
-                            <span>Forfait complet</span>
-                            <span>800€</span>
-                        </div>
-                        <div class="tarif-item">
-                            <span>Prénatal (5 séances)</span>
-                            <span>350€</span>
-                        </div>
-                        <div class="tarif-item">
-                            <span>Présence accouchement</span>
-                            <span>400€</span>
-                        </div>
-                    </div>
-
-                    <div class="pro-section">
-                        <h3>Zone d'intervention</h3>
-                        <p>Paris et petite couronne (92, 93, 94)</p>
+                        <div class="tarif-item"><span>Forfait complet</span><span>800€</span></div>
+                        <div class="tarif-item"><span>Prénatal (5 séances)</span><span>350€</span></div>
                     </div>
                 </div>
 
                 <div id="detail-claire" class="pro-detail">
-                    <button class="back-button" onclick="hideDetail()">← Retour à la liste</button>
-                    
+                    <button class="back-button" onclick="hideDetail()">← Liste</button>
                     <div class="pro-detail-header">
                         <div class="pro-detail-avatar">CD</div>
                         <div>
-                            <h2 style="color: var(--primary);">Claire Dubois</h2>
-                            <div class="specialty">Accompagnante périnatale - Sophrologue</div>
+                            <h2>Claire Dubois</h2>
+                            <div style="color: var(--text-light); margin-bottom: 0.5rem;">Accompagnante - Sophrologue</div>
                             <div class="pro-detail-contact">
                                 <a href="mailto:claire@example.com" class="contact-button">📧 Email</a>
                                 <a href="tel:+33612345679" class="contact-button">📞 Téléphone</a>
                             </div>
                         </div>
                     </div>
-
                     <div class="pro-section">
                         <h3>Présentation</h3>
-                        <p>Sophrologue et professeure de yoga certifiée, j'accompagne les futures mamans depuis 5 ans.</p>
+                        <p>Sophrologue et professeure de yoga, j'accompagne les futures mamans depuis 5 ans.</p>
                     </div>
-
                     <div class="pro-section">
-                        <h3>Services proposés</h3>
-                        <ul>
-                            <li>Sophrologie prénatale</li>
-                            <li>Yoga prénatal</li>
-                            <li>Préparation à la naissance</li>
-                        </ul>
+                        <h3>Services</h3>
+                        <ul><li>Sophrologie prénatale</li><li>Yoga prénatal</li></ul>
                     </div>
-
                     <div class="pro-section">
                         <h3>Tarifs</h3>
-                        <div class="tarif-item">
-                            <span>Sophrologie (1h)</span>
-                            <span>65€</span>
-                        </div>
-                        <div class="tarif-item">
-                            <span>Yoga (1h30)</span>
-                            <span>25€</span>
-                        </div>
+                        <div class="tarif-item"><span>Sophrologie (1h)</span><span>65€</span></div>
                     </div>
                 </div>
             </div>
 
             <div id="pro-list-pma" class="articles-section">
                 <button class="back-button" onclick="backToProCats()">← Retour</button>
-                <h2 class="category-title">Professionnels - PMA & Fertilité</h2>
+                <h2 class="category-title">PMA & Fertilité</h2>
                 <p style="text-align: center; color: var(--text-light);">Professionnels à venir...</p>
             </div>
 
             <div id="pro-list-grossesse" class="articles-section">
                 <button class="back-button" onclick="backToProCats()">← Retour</button>
-                <h2 class="category-title">Professionnels - Grossesse</h2>
+                <h2 class="category-title">Grossesse</h2>
                 <p style="text-align: center; color: var(--text-light);">Professionnels à venir...</p>
             </div>
 
             <div id="pro-list-bienetre" class="articles-section">
                 <button class="back-button" onclick="backToProCats()">← Retour</button>
-                <h2 class="category-title">Professionnels - Bien-être</h2>
+                <h2 class="category-title">Bien-être</h2>
                 <p style="text-align: center; color: var(--text-light);">Professionnels à venir...</p>
             </div>
 
             <div id="pro-list-psychologie" class="articles-section">
                 <button class="back-button" onclick="backToProCats()">← Retour</button>
-                <h2 class="category-title">Professionnels - Psychologie</h2>
+                <h2 class="category-title">Psychologie</h2>
                 <p style="text-align: center; color: var(--text-light);">Professionnels à venir...</p>
             </div>
 
             <div id="pro-list-postpartum" class="articles-section">
                 <button class="back-button" onclick="backToProCats()">← Retour</button>
-                <h2 class="category-title">Professionnels - Post-Partum</h2>
+                <h2 class="category-title">Post-Partum</h2>
                 <p style="text-align: center; color: var(--text-light);">Professionnels à venir...</p>
             </div>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Vianata - Tous droits réservés</p>
-    </footer>
+    <footer><p>&copy; 2025 Vianata - Tous droits réservés</p></footer>
 
     <script>
-        // Base de données des professionnels
         const professionals = [
-            {
-                id: 'sophie',
-                name: 'Sophie Martin',
-                specialty: 'Doula certifiée',
-                category: 'accompagnement',
-                description: 'Accompagnement bienveillant pendant la grossesse et le post-partum.',
-                tags: ['Grossesse', 'Post-partum', 'Doula'],
-                location: 'Paris',
-                avatar: 'SM'
-            },
-            {
-                id: 'claire',
-                name: 'Claire Dubois',
-                specialty: 'Accompagnante périnatale',
-                category: 'accompagnement',
-                description: 'Spécialisée en sophrologie et yoga prénatal.',
-                tags: ['Sophrologie', 'Yoga', 'Accompagnante'],
-                location: 'Lyon',
-                avatar: 'CD'
-            }
+            {id: 'sophie', name: 'Sophie Martin', specialty: 'Doula certifiée', category: 'accompagnement', description: 'Accompagnement bienveillant pendant la grossesse et le post-partum.', tags: ['Grossesse', 'Post-partum', 'Doula'], location: 'Paris', avatar: 'SM'},
+            {id: 'claire', name: 'Claire Dubois', specialty: 'Accompagnante périnatale', category: 'accompagnement', description: 'Spécialisée en sophrologie et yoga prénatal.', tags: ['Sophrologie', 'Yoga', 'Accompagnante'], location: 'Lyon', avatar: 'CD'}
         ];
 
         function showTab(tab) {
@@ -728,13 +369,7 @@
             document.getElementById(tab).classList.add('active');
             document.getElementById('btn-' + tab).classList.add('active');
             if (tab === 'accompagnements') backToCategories();
-            if (tab === 'professionnels') {
-                // Ne pas réinitialiser si on vient d'une recherche
-                const searchInput = document.getElementById('searchInput');
-                if (!searchInput || searchInput.value === '') {
-                    backToProCats();
-                }
-            }
+            if (tab === 'professionnels') { const si = document.getElementById('searchInput'); if (!si || si.value === '') backToProCats(); }
         }
 
         function showArticles(cat) {
@@ -764,82 +399,42 @@
         }
 
         function showDetail(id) {
-            document.getElementById('pro-cards-accompagnement').style.display = 'none';
+            const pc = document.getElementById('pro-cards-accompagnement');
+            if(pc) pc.style.display = 'none';
             document.querySelectorAll('.pro-detail').forEach(d => d.classList.remove('active'));
             document.getElementById('detail-' + id).classList.add('active');
         }
 
         function hideDetail() {
-            const proCards = document.getElementById('pro-cards-accompagnement');
-            if (proCards) proCards.style.display = 'grid';
+            const pc = document.getElementById('pro-cards-accompagnement');
+            if(pc) pc.style.display = 'grid';
             document.querySelectorAll('.pro-detail').forEach(d => d.classList.remove('active'));
         }
 
         function searchProfessionals() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
-            
-            if (searchTerm === '') {
-                clearSearch();
-                return;
-            }
-
-            // Filtrer les professionnels
-            const results = professionals.filter(pro => {
-                return pro.name.toLowerCase().includes(searchTerm) ||
-                       pro.specialty.toLowerCase().includes(searchTerm) ||
-                       pro.description.toLowerCase().includes(searchTerm) ||
-                       pro.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
-                       pro.location.toLowerCase().includes(searchTerm);
-            });
-
-            // Afficher les résultats
+            const term = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (term === '') { clearSearch(); return; }
+            const results = professionals.filter(p => p.name.toLowerCase().includes(term) || p.specialty.toLowerCase().includes(term) || p.description.toLowerCase().includes(term) || p.tags.some(t => t.toLowerCase().includes(term)) || p.location.toLowerCase().includes(term));
             displaySearchResults(results);
         }
 
         function displaySearchResults(results) {
-            const resultsGrid = document.getElementById('search-results-grid');
-            const searchResultsDiv = document.getElementById('search-results');
-            
-            // Cacher les catégories et autres sections
+            const grid = document.getElementById('search-results-grid');
+            const div = document.getElementById('search-results');
             document.getElementById('pro-categories-view').style.display = 'none';
             document.querySelectorAll('#professionnels .articles-section').forEach(s => s.classList.remove('active'));
-            
-            // Afficher la section de résultats
-            searchResultsDiv.style.display = 'block';
-
+            div.style.display = 'block';
             if (results.length === 0) {
-                resultsGrid.innerHTML = '<div class="no-results"><p>Aucun professionnel trouvé pour votre recherche.</p><p>Essayez avec d\'autres mots-clés (doula, sage-femme, Paris...)</p></div>';
+                grid.innerHTML = '<div style="text-align: center; color: var(--text-light); padding: 3rem; background: var(--white); border-radius: 10px;"><p>Aucun professionnel trouvé.</p><p>Essayez : doula, sage-femme, Paris...</p></div>';
                 return;
             }
-
-            // Générer les cartes de résultats
-            resultsGrid.innerHTML = results.map(pro => `
-                <div class="pro-card" onclick="showDetailFromSearch('${pro.id}', '${pro.category}')">
-                    <div class="pro-header">
-                        <div class="pro-avatar">${pro.avatar}</div>
-                        <div class="pro-info">
-                            <h4>${pro.name}</h4>
-                            <div class="specialty">${pro.specialty}</div>
-                        </div>
-                    </div>
-                    <p>${pro.description}</p>
-                    <div class="pro-tags">
-                        ${pro.tags.map(tag => `<span class="pro-tag">${tag}</span>`).join('')}
-                        <span class="pro-tag">📍 ${pro.location}</span>
-                    </div>
-                </div>
-            `).join('');
+            grid.innerHTML = results.map(p => `<div class="pro-card" onclick="showDetailFromSearch('${p.id}', '${p.category}')"><div class="pro-header"><div class="pro-avatar">${p.avatar}</div><div class="pro-info"><h4>${p.name}</h4><div style="color: var(--text-light); font-size: 0.9rem;">${p.specialty}</div></div></div><p>${p.description}</p><div class="pro-tags">${p.tags.map(t => `<span class="pro-tag">${t}</span>`).join('')}<span class="pro-tag">📍 ${p.location}</span></div></div>`).join('');
         }
 
-        function showDetailFromSearch(proId, category) {
-            // Afficher la liste de la catégorie correspondante
+        function showDetailFromSearch(id, cat) {
             document.getElementById('search-results').style.display = 'none';
-            document.getElementById('pro-list-' + category).classList.add('active');
-            
-            // Afficher le détail du professionnel
-            setTimeout(() => {
-                showDetail(proId);
-            }, 100);
+            document.getElementById('pro-list-' + cat).classList.add('active');
+            setTimeout(() => showDetail(id), 100);
         }
 
         function clearSearch() {
@@ -849,58 +444,21 @@
         }
 
         function searchFromHome(event) {
-            // Si la touche Entrée est pressée (code 13)
             if (event && event.keyCode === 13) {
-                const searchTerm = document.getElementById('searchInputHome').value.toLowerCase().trim();
-                
-                if (searchTerm === '') {
-                    alert('Veuillez entrer un terme de recherche');
-                    return;
-                }
-
-                // Copier le terme de recherche dans l'autre barre
-                document.getElementById('searchInput').value = searchTerm;
-                
-                // Filtrer les professionnels
-                const results = professionals.filter(pro => {
-                    return pro.name.toLowerCase().includes(searchTerm) ||
-                           pro.specialty.toLowerCase().includes(searchTerm) ||
-                           pro.description.toLowerCase().includes(searchTerm) ||
-                           pro.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
-                           pro.location.toLowerCase().includes(searchTerm);
-                });
-                
-                // Cacher les catégories
+                const term = document.getElementById('searchInputHome').value.toLowerCase().trim();
+                if (term === '') { alert('Entrez un terme de recherche'); return; }
+                document.getElementById('searchInput').value = term;
+                const results = professionals.filter(p => p.name.toLowerCase().includes(term) || p.specialty.toLowerCase().includes(term) || p.description.toLowerCase().includes(term) || p.tags.some(t => t.toLowerCase().includes(term)) || p.location.toLowerCase().includes(term));
                 document.getElementById('pro-categories-view').style.display = 'none';
                 document.querySelectorAll('#professionnels .articles-section').forEach(s => s.classList.remove('active'));
-                
-                // Afficher les résultats
-                const resultsGrid = document.getElementById('search-results-grid');
-                const searchResultsDiv = document.getElementById('search-results');
-                searchResultsDiv.style.display = 'block';
-
+                const grid = document.getElementById('search-results-grid');
+                const div = document.getElementById('search-results');
+                div.style.display = 'block';
                 if (results.length === 0) {
-                    resultsGrid.innerHTML = '<div class="no-results"><p>Aucun professionnel trouvé pour votre recherche.</p><p>Essayez avec d\'autres mots-clés (doula, sage-femme, Paris...)</p></div>';
+                    grid.innerHTML = '<div style="text-align: center; color: var(--text-light); padding: 3rem; background: var(--white); border-radius: 10px;"><p>Aucun professionnel trouvé.</p></div>';
                 } else {
-                    resultsGrid.innerHTML = results.map(pro => `
-                        <div class="pro-card" onclick="showDetailFromSearch('${pro.id}', '${pro.category}')">
-                            <div class="pro-header">
-                                <div class="pro-avatar">${pro.avatar}</div>
-                                <div class="pro-info">
-                                    <h4>${pro.name}</h4>
-                                    <div class="specialty">${pro.specialty}</div>
-                                </div>
-                            </div>
-                            <p>${pro.description}</p>
-                            <div class="pro-tags">
-                                ${pro.tags.map(tag => `<span class="pro-tag">${tag}</span>`).join('')}
-                                <span class="pro-tag">📍 ${pro.location}</span>
-                            </div>
-                        </div>
-                    `).join('');
+                    grid.innerHTML = results.map(p => `<div class="pro-card" onclick="showDetailFromSearch('${p.id}', '${p.category}')"><div class="pro-header"><div class="pro-avatar">${p.avatar}</div><div class="pro-info"><h4>${p.name}</h4><div style="color: var(--text-light); font-size: 0.9rem;">${p.specialty}</div></div></div><p>${p.description}</p><div class="pro-tags">${p.tags.map(t => `<span class="pro-tag">${t}</span>`).join('')}<span class="pro-tag">📍 ${p.location}</span></div></div>`).join('');
                 }
-                
-                // Basculer vers l'onglet professionnels
                 showTab('professionnels');
             }
         }
