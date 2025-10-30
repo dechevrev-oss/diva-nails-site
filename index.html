@@ -679,10 +679,22 @@
             document.getElementById('search-results').style.display = 'none';
             document.querySelectorAll('#professionnels .articles-section').forEach(s => s.classList.remove('active'));
             document.getElementById('pro-list-' + cat).classList.add('active');
+            
+            // Réinitialiser l'affichage des sous-catégories
             if (cat === 'accompagnement') {
                 document.getElementById('sub-categories-accompagnement').style.display = 'block';
                 document.getElementById('pro-cards-doulas').style.display = 'none';
                 document.getElementById('pro-cards-accompagnantes').style.display = 'none';
+            } else if (cat === 'grossesse') {
+                document.getElementById('sub-categories-grossesse').style.display = 'block';
+            } else if (cat === 'bienetre') {
+                document.getElementById('sub-categories-bienetre').style.display = 'block';
+            } else if (cat === 'pma') {
+                document.getElementById('sub-categories-pma').style.display = 'block';
+            } else if (cat === 'psychologie') {
+                document.getElementById('sub-categories-psychologie').style.display = 'block';
+            } else if (cat === 'postpartum') {
+                document.getElementById('sub-categories-postpartum').style.display = 'block';
             }
         }
 
@@ -698,6 +710,61 @@
             document.getElementById('pro-cards-doulas').style.display = 'none';
             document.getElementById('pro-cards-accompagnantes').style.display = 'none';
             hideDetail();
+        }
+
+        function showSubCategoryGrossesse(subcat) {
+            document.getElementById('sub-categories-grossesse').style.display = 'none';
+            document.querySelectorAll('[id^="pro-cards-"]').forEach(el => el.style.display = 'none');
+            document.getElementById('pro-cards-' + subcat).style.display = 'block';
+        }
+
+        function backToSubCategoriesGrossesse() {
+            document.getElementById('sub-categories-grossesse').style.display = 'block';
+            document.querySelectorAll('[id^="pro-cards-"]').forEach(el => el.style.display = 'none');
+        }
+
+        function showSubCategoryBienetre(subcat) {
+            document.getElementById('sub-categories-bienetre').style.display = 'none';
+            document.querySelectorAll('[id^="pro-cards-"]').forEach(el => el.style.display = 'none');
+            document.getElementById('pro-cards-' + subcat).style.display = 'block';
+        }
+
+        function backToSubCategoriesBienetre() {
+            document.getElementById('sub-categories-bienetre').style.display = 'block';
+            document.querySelectorAll('[id^="pro-cards-"]').forEach(el => el.style.display = 'none');
+        }
+
+        function showSubCategoryPma(subcat) {
+            document.getElementById('sub-categories-pma').style.display = 'none';
+            document.querySelectorAll('[id^="pro-cards-"]').forEach(el => el.style.display = 'none');
+            document.getElementById('pro-cards-' + subcat).style.display = 'block';
+        }
+
+        function backToSubCategoriesPma() {
+            document.getElementById('sub-categories-pma').style.display = 'block';
+            document.querySelectorAll('[id^="pro-cards-"]').forEach(el => el.style.display = 'none');
+        }
+
+        function showSubCategoryPsychologie(subcat) {
+            document.getElementById('sub-categories-psychologie').style.display = 'none';
+            document.querySelectorAll('[id^="pro-cards-"]').forEach(el => el.style.display = 'none');
+            document.getElementById('pro-cards-' + subcat).style.display = 'block';
+        }
+
+        function backToSubCategoriesPsychologie() {
+            document.getElementById('sub-categories-psychologie').style.display = 'block';
+            document.querySelectorAll('[id^="pro-cards-"]').forEach(el => el.style.display = 'none';
+        }
+
+        function showSubCategoryPostpartum(subcat) {
+            document.getElementById('sub-categories-postpartum').style.display = 'none';
+            document.querySelectorAll('[id^="pro-cards-"]').forEach(el => el.style.display = 'none');
+            document.getElementById('pro-cards-' + subcat).style.display = 'block';
+        }
+
+        function backToSubCategoriesPostpartum() {
+            document.getElementById('sub-categories-postpartum').style.display = 'block';
+            document.querySelectorAll('[id^="pro-cards-"]').forEach(el => el.style.display = 'none');
         }
 
         function backToProCats() {
