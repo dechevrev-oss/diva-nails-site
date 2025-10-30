@@ -30,10 +30,12 @@ nav{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:s
 .shape-1{width:300px;height:300px;top:-50px;left:-50px}
 .shape-2{width:200px;height:200px;bottom:-30px;right:-30px;background:rgba(232,227,223,0.5)}
 .categories-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
-.category-card{background:var(--white);border-radius:10px;padding:2rem;box-shadow:0 4px 15px rgba(0,0,0,.1);cursor:pointer;border:3px solid transparent}
+.category-card{background:var(--white);border-radius:10px;padding:2rem;box-shadow:0 4px 15px rgba(0,0,0,.1);cursor:pointer;border:3px solid transparent;transition:all 0.3s ease}
 .category-card:hover{transform:translateY(-5px);border-color:var(--primary)}
 .category-card h3{color:var(--primary);font-size:1.5rem;margin-bottom:1rem}
-.pro-card{background:var(--white);border-radius:10px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer}
+.category-card p{margin-bottom:0.8rem;line-height:1.7}
+.category-card p strong{color:var(--primary);display:block;margin-bottom:0.5rem}
+.pro-card{background:var(--white);border-radius:10px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;transition:all 0.3s ease}
 .pro-card:hover{transform:translateY(-3px);border:2px solid var(--primary)}
 .pro-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
 .pro-avatar{width:60px;height:60px;border-radius:50%;background:var(--secondary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--primary);font-weight:bold}
@@ -45,7 +47,7 @@ nav{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:s
 .form-group input,.form-group textarea,.form-group select{width:100%;padding:.8rem;border:2px solid var(--secondary);border-radius:5px;font-size:1rem;font-family:inherit}
 .form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--primary)}
 .form-group textarea{min-height:120px;resize:vertical}
-.submit-button{background:var(--primary);color:var(--white);border:none;padding:1rem 2rem;border-radius:5px;font-size:1.1rem;cursor:pointer;width:100%;font-weight:600}
+.submit-button{background:var(--primary);color:var(--white);border:none;padding:1rem 2rem;border-radius:5px;font-size:1.1rem;cursor:pointer;width:100%;font-weight:600;transition:opacity 0.3s ease}
 .submit-button:hover{opacity:.9}
 footer{background:#6f4545;color:var(--white);text-align:center;padding:2rem}
 @media(max-width:768px){.welcome-content{grid-template-columns:1fr}.welcome-text h2{font-size:2rem}}
@@ -136,14 +138,172 @@ footer{background:#6f4545;color:var(--white);text-align:center;padding:2rem}
 </div>
 
 <div id="accompagnements" class="tab-content">
+<div id="accompagnements-categories">
 <h2 style="color:var(--primary);text-align:center;margin-bottom:2rem">Nos Accompagnements</h2>
 <div class="categories-grid">
-<div class="category-card"><h3>🤝 Accompagnement</h3><p>Doulas et accompagnantes</p></div>
-<div class="category-card"><h3>🔬 PMA & Fertilité</h3></div>
-<div class="category-card"><h3>🤰 Grossesse</h3></div>
-<div class="category-card"><h3>💆‍♀️ Bien-être</h3></div>
-<div class="category-card"><h3>💭 Psychologie</h3></div>
-<div class="category-card"><h3>👶 Post-Partum</h3></div>
+<div class="category-card" onclick="showCategoryArticles('accompagnement')">
+<h3>🤝 Accompagnement</h3>
+<p>Doulas et accompagnantes périnatales</p>
+</div>
+<div class="category-card" onclick="showCategoryArticles('pma')">
+<h3>🔬 PMA & Fertilité</h3>
+<p>Parcours de procréation assistée</p>
+</div>
+<div class="category-card" onclick="showCategoryArticles('grossesse')">
+<h3>🤰 Grossesse</h3>
+<p>Préparation à la naissance</p>
+</div>
+<div class="category-card" onclick="showCategoryArticles('bien-etre')">
+<h3>💆‍♀️ Bien-être</h3>
+<p>Soins et relaxation</p>
+</div>
+<div class="category-card" onclick="showCategoryArticles('psychologie')">
+<h3>💭 Psychologie</h3>
+<p>Soutien psychologique périnatal</p>
+</div>
+<div class="category-card" onclick="showCategoryArticles('post-partum')">
+<h3>👶 Post-Partum</h3>
+<p>Accompagnement après la naissance</p>
+</div>
+</div>
+</div>
+
+<!-- Articles Accompagnement -->
+<div id="articles-accompagnement" class="category-articles" style="display:none">
+<button onclick="backToCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">🤝 Accompagnement - Doulas et accompagnantes</h2>
+<div style="background:var(--secondary);padding:2rem;border-radius:10px;margin-bottom:2rem">
+<p style="font-size:1.1rem;line-height:1.8;margin-bottom:1rem">Un soutien émotionnel et pratique tout au long de votre parcours de parentalité. Les doulas vous accompagnent avec bienveillance pendant la grossesse, l'accouchement et le post-partum, en respectant vos choix et vos besoins.</p>
+</div>
+<div style="display:grid;gap:2rem">
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Qu'est-ce qu'une doula ?</h3>
+<p style="line-height:1.8">Une doula est une professionnelle formée pour accompagner les femmes et les couples tout au long de leur parcours de parentalité. Elle offre un soutien continu, physique, émotionnel et informationnel, sans se substituer au personnel médical.</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Les bénéfices de l'accompagnement</h3>
+<p style="line-height:1.8">✓ Réduction du stress et de l'anxiété<br>✓ Meilleure expérience de l'accouchement<br>✓ Soutien dans vos choix personnels<br>✓ Accompagnement post-partum personnalisé<br>✓ Écoute bienveillante et sans jugement</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Quand consulter ?</h3>
+<p style="line-height:1.8">Vous pouvez faire appel à une doula dès le projet de grossesse, pendant la grossesse, pour l'accouchement et durant le post-partum. Chaque accompagnement est personnalisé selon vos besoins.</p>
+</div>
+</div>
+</div>
+
+<!-- Articles PMA -->
+<div id="articles-pma" class="category-articles" style="display:none">
+<button onclick="backToCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">🔬 PMA & Fertilité</h2>
+<div style="background:var(--secondary);padding:2rem;border-radius:10px;margin-bottom:2rem">
+<p style="font-size:1.1rem;line-height:1.8">Un accompagnement spécialisé pour les couples en parcours PMA. Sophrologie, naturopathie et soutien psychologique pour traverser sereinement les étapes de la conception assistée et gérer le stress lié aux traitements.</p>
+</div>
+<div style="display:grid;gap:2rem">
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Accompagnement du parcours PMA</h3>
+<p style="line-height:1.8">Le parcours de PMA peut être éprouvant physiquement et émotionnellement. Un accompagnement adapté vous aide à mieux vivre chaque étape, des examens aux traitements, en passant par l'attente des résultats.</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Techniques de relaxation</h3>
+<p style="line-height:1.8">✓ Sophrologie pour gérer le stress<br>✓ Méditation et respiration<br>✓ Naturopathie et nutrition<br>✓ Soutien émotionnel pour le couple<br>✓ Préparation mentale aux traitements</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Soutien psychologique</h3>
+<p style="line-height:1.8">Un espace d'écoute pour exprimer vos émotions, vos peurs et vos espoirs. L'accompagnement psychologique vous aide à traverser les moments difficiles et à maintenir l'équilibre dans votre couple.</p>
+</div>
+</div>
+</div>
+
+<!-- Articles Grossesse -->
+<div id="articles-grossesse" class="category-articles" style="display:none">
+<button onclick="backToCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">🤰 Grossesse - Préparation à la naissance</h2>
+<div style="background:var(--secondary);padding:2rem;border-radius:10px;margin-bottom:2rem">
+<p style="font-size:1.1rem;line-height:1.8">Yoga prénatal, sophrologie, haptonomie, chant prénatal... Découvrez différentes approches pour vivre votre grossesse en toute sérénité et préparer l'arrivée de votre bébé de manière douce et naturelle.</p>
+</div>
+<div style="display:grid;gap:2rem">
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Yoga prénatal</h3>
+<p style="line-height:1.8">Le yoga prénatal aide à maintenir souplesse et tonus musculaire, améliore la respiration et favorise la connexion avec votre bébé. Des postures adaptées à chaque trimestre pour vivre votre grossesse en douceur.</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Sophrologie et relaxation</h3>
+<p style="line-height:1.8">✓ Gestion du stress et des émotions<br>✓ Préparation mentale à l'accouchement<br>✓ Techniques de respiration<br>✓ Visualisation positive<br>✓ Confiance en soi et en son corps</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Haptonomie</h3>
+<p style="line-height:1.8">L'haptonomie permet de créer un lien affectif avec votre bébé avant la naissance. Par le toucher et la voix, vous entrez en communication avec votre enfant, le co-parent est pleinement impliqué.</p>
+</div>
+</div>
+</div>
+
+<!-- Articles Bien-être -->
+<div id="articles-bien-etre" class="category-articles" style="display:none">
+<button onclick="backToCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">💆‍♀️ Bien-être - Soins et relaxation</h2>
+<div style="background:var(--secondary);padding:2rem;border-radius:10px;margin-bottom:2rem">
+<p style="font-size:1.1rem;line-height:1.8">Massages prénatals et post-natals, réflexologie, aromathérapie... Des soins adaptés pour prendre soin de vous et de votre corps pendant cette période de transformation.</p>
+</div>
+<div style="display:grid;gap:2rem">
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Massages prénatals</h3>
+<p style="line-height:1.8">Des massages adaptés à votre grossesse pour soulager les tensions, améliorer la circulation et vous offrir un moment de détente profonde. Techniques douces et sécuritaires pour vous et votre bébé.</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Réflexologie plantaire</h3>
+<p style="line-height:1.8">✓ Soulagement des maux de grossesse<br>✓ Réduction du stress et anxiété<br>✓ Amélioration de la circulation<br>✓ Équilibre hormonal<br>✓ Préparation à l'accouchement</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Aromathérapie</h3>
+<p style="line-height:1.8">Utilisation sécuritaire des huiles essentielles pendant la grossesse et le post-partum. Des solutions naturelles pour soulager les petits maux et favoriser votre bien-être général.</p>
+</div>
+</div>
+</div>
+
+<!-- Articles Psychologie -->
+<div id="articles-psychologie" class="category-articles" style="display:none">
+<button onclick="backToCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">💭 Psychologie - Soutien psychologique périnatal</h2>
+<div style="background:var(--secondary);padding:2rem;border-radius:10px;margin-bottom:2rem">
+<p style="font-size:1.1rem;line-height:1.8">Psychologues spécialisés en périnatalité pour vous accompagner dans les moments de doute, d'anxiété ou de difficulté. Un espace d'écoute bienveillant pour vous et votre couple.</p>
+</div>
+<div style="display:grid;gap:2rem">
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Psychologie périnatale</h3>
+<p style="line-height:1.8">Un accompagnement psychologique spécialisé pour toutes les étapes : désir d'enfant, grossesse, accouchement, post-partum. Un espace pour exprimer vos émotions et trouver vos ressources.</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Quand consulter ?</h3>
+<p style="line-height:1.8">✓ Anxiété ou angoisse pendant la grossesse<br>✓ Difficultés après une fausse couche<br>✓ Dépression du post-partum<br>✓ Difficultés dans le couple<br>✓ Troubles du lien mère-enfant</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Thérapie de couple</h3>
+<p style="line-height:1.8">L'arrivée d'un enfant bouleverse l'équilibre du couple. Un accompagnement peut vous aider à communiquer, à partager vos émotions et à renforcer votre lien pendant cette période de transition.</p>
+</div>
+</div>
+</div>
+
+<!-- Articles Post-Partum -->
+<div id="articles-post-partum" class="category-articles" style="display:none">
+<button onclick="backToCategories()" style="background:var(--secondary);border:none;padding:.8rem 1.5rem;border-radius:5px;margin-bottom:2rem;cursor:pointer;color:var(--primary);font-size:1rem">← Retour aux catégories</button>
+<h2 style="color:var(--primary);margin-bottom:2rem">👶 Post-Partum - Accompagnement après la naissance</h2>
+<div style="background:var(--secondary);padding:2rem;border-radius:10px;margin-bottom:2rem">
+<p style="font-size:1.1rem;line-height:1.8">Soutien à l'allaitement, rééducation du périnée, aide à la parentalité, baby blues... Un accompagnement global pour vivre sereinement les premiers mois avec votre bébé.</p>
+</div>
+<div style="display:grid;gap:2rem">
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Soutien à l'allaitement</h3>
+<p style="line-height:1.8">Conseillère en lactation pour vous aider à démarrer et poursuivre votre allaitement. Accompagnement personnalisé pour résoudre les difficultés et vivre sereinement cette expérience.</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Rééducation périnéale</h3>
+<p style="line-height:1.8">✓ Rééducation du périnée<br>✓ Renforcement abdominal<br>✓ Prévention des fuites urinaires<br>✓ Reprise progressive du sport<br>✓ Bien-être corporel</p>
+</div>
+<div style="background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)">
+<h3 style="color:var(--primary);margin-bottom:1rem">Baby blues et dépression</h3>
+<p style="line-height:1.8">Le post-partum peut être difficile. Un accompagnement adapté vous aide à traverser cette période, à identifier les signes de dépression et à trouver le soutien dont vous avez besoin.</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -200,6 +360,24 @@ document.querySelectorAll('.nav-links button').forEach(b=>b.classList.remove('ac
 document.getElementById(tab).classList.add('active');
 const btn=document.getElementById('btn-'+tab);
 if(btn)btn.classList.add('active');
+// Réinitialiser la vue des catégories quand on revient sur Accompagnements
+if(tab === 'accompagnements'){
+document.getElementById('accompagnements-categories').style.display = 'block';
+document.querySelectorAll('.category-articles').forEach(art=>art.style.display='none');
+}
+}
+
+function showCategoryArticles(category){
+document.getElementById('accompagnements-categories').style.display = 'none';
+document.querySelectorAll('.category-articles').forEach(art=>art.style.display='none');
+document.getElementById('articles-'+category).style.display = 'block';
+window.scrollTo(0, 0);
+}
+
+function backToCategories(){
+document.getElementById('accompagnements-categories').style.display = 'block';
+document.querySelectorAll('.category-articles').forEach(art=>art.style.display='none');
+window.scrollTo(0, 0);
 }
 </script>
 </body>
