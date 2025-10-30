@@ -61,7 +61,6 @@
         .sub-category-card:hover{transform:translateY(-3px);border-color:var(--primary);background:white}
         .sub-category-card h4{color:var(--primary);font-size:1.2rem;margin-bottom:.5rem}
         .form-container{max-width:700px;margin:0 auto;background:var(--white);padding:2rem;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.1)}
-        footer{background:#6f4545;color:var(--white);text-align:center;padding:2rem;margin-top:4rem;width:100%;margin-left:0;margin-right:0}
         .form-group{margin-bottom:1.5rem}
         .form-group label{display:block;color:var(--primary);font-weight:600;margin-bottom:.5rem}
         .form-group input,.form-group textarea,.form-group select{width:100%;padding:.8rem;border:2px solid var(--secondary);border-radius:5px;font-size:1rem;font-family:inherit}
@@ -78,8 +77,8 @@
         .shape-bg{position:absolute;background:rgba(139,180,180,0.3);border-radius:50%;z-index:-1}
         .shape-1{width:300px;height:300px;top:-50px;left:-50px}
         .shape-2{width:200px;height:200px;bottom:-30px;right:-30px;background:rgba(232,227,223,0.5)}
-        @media(max-width:768px){.welcome-content{grid-template-columns:1fr;gap:2rem}.welcome-text h2{font-size:2rem}.welcome-image-container img{max-width:100%;margin:0 auto}}
-        @media(max-width:768px){.nav-links button{padding:.5rem;font-size:.85rem}.categories-grid{grid-template-columns:1fr}.hero h1{font-size:2rem}.pro-link{font-size:.8rem;padding:.5rem .8rem}.nav-center{flex:0}}
+        footer{background:#6f4545;color:var(--white);text-align:center;padding:2rem;margin-top:0;width:100%}
+        @media(max-width:768px){.nav-links button{padding:.5rem;font-size:.85rem}.categories-grid{grid-template-columns:1fr}.hero h1{font-size:2rem}.pro-link{font-size:.8rem;padding:.5rem .8rem}.nav-center{flex:0}.welcome-content{grid-template-columns:1fr;gap:2rem}.welcome-text h2{font-size:2rem}.welcome-image-container img{max-width:100%;margin:0 auto}}
     </style>
 </head>
 <body>
@@ -122,65 +121,66 @@
                 </div>
             </div>
             
-            <div style="padding:3rem 2rem">
-            <h3 style="color:#6f4545;font-size:1.8rem;margin-bottom:2rem;text-align:center">⭐ Professionnels populaires</h3>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:800px;margin:0 auto 4rem">
-                <div class="pro-card" onclick="goToPro('helene')" style="border:2px solid var(--primary)">
-                    <div style="background:var(--primary);color:white;padding:.3rem .8rem;border-radius:15px;font-size:.8rem;display:inline-block;margin-bottom:1rem">⭐ Populaire</div>
-                    <div class="pro-header">
-                        <div class="pro-avatar">HP</div>
-                        <div class="pro-info">
-                            <h4>Hélène Poughon</h4>
-                            <div style="color:var(--text-light);font-size:.9rem">Doula - Ôm Doula</div>
+            <div style="padding:3rem 0">
+                <h3 style="color:#6f4545;font-size:1.8rem;margin-bottom:2rem;text-align:center">⭐ Professionnels populaires</h3>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:800px;margin:0 auto 4rem">
+                    <div class="pro-card" onclick="goToPro('helene')" style="border:2px solid var(--primary)">
+                        <div style="background:var(--primary);color:white;padding:.3rem .8rem;border-radius:15px;font-size:.8rem;display:inline-block;margin-bottom:1rem">⭐ Populaire</div>
+                        <div class="pro-header">
+                            <div class="pro-avatar">HP</div>
+                            <div class="pro-info">
+                                <h4>Hélène Poughon</h4>
+                                <div style="color:var(--text-light);font-size:.9rem">Doula - Ôm Doula</div>
+                            </div>
+                        </div>
+                        <p>Accompagne les femmes et couples pour reprendre le pouvoir sur leur parcours de parentalité.</p>
+                        <div class="pro-tags">
+                            <span class="pro-tag">Grossesse</span>
+                            <span class="pro-tag">Post-partum</span>
+                            <span class="pro-tag">📍 Lille</span>
                         </div>
                     </div>
-                    <p>Accompagne les femmes et couples pour reprendre le pouvoir sur leur parcours de parentalité.</p>
-                    <div class="pro-tags">
-                        <span class="pro-tag">Grossesse</span>
-                        <span class="pro-tag">Post-partum</span>
-                        <span class="pro-tag">📍 Lille</span>
-                    </div>
-                </div>
 
-                <div class="pro-card" onclick="goToPro('claire')" style="border:2px solid var(--primary)">
-                    <div style="background:var(--primary);color:white;padding:.3rem .8rem;border-radius:15px;font-size:.8rem;display:inline-block;margin-bottom:1rem">⭐ Populaire</div>
-                    <div class="pro-header">
-                        <div class="pro-avatar">CD</div>
-                        <div class="pro-info">
-                            <h4>Claire Dubois</h4>
-                            <div style="color:var(--text-light);font-size:.9rem">Accompagnante périnatale</div>
+                    <div class="pro-card" onclick="goToPro('claire')" style="border:2px solid var(--primary)">
+                        <div style="background:var(--primary);color:white;padding:.3rem .8rem;border-radius:15px;font-size:.8rem;display:inline-block;margin-bottom:1rem">⭐ Populaire</div>
+                        <div class="pro-header">
+                            <div class="pro-avatar">CD</div>
+                            <div class="pro-info">
+                                <h4>Claire Dubois</h4>
+                                <div style="color:var(--text-light);font-size:.9rem">Accompagnante périnatale</div>
+                            </div>
+                        </div>
+                        <p>Spécialisée en sophrologie et yoga prénatal. 5 ans d'expérience.</p>
+                        <div class="pro-tags">
+                            <span class="pro-tag">Sophrologie</span>
+                            <span class="pro-tag">Yoga</span>
+                            <span class="pro-tag">📍 Lyon</span>
                         </div>
                     </div>
-                    <p>Spécialisée en sophrologie et yoga prénatal. 5 ans d'expérience.</p>
-                    <div class="pro-tags">
-                        <span class="pro-tag">Sophrologie</span>
-                        <span class="pro-tag">Yoga</span>
-                        <span class="pro-tag">📍 Lyon</span>
+                </div>
+                
+                <h3 style="color:#6f4545;font-size:1.8rem;margin-bottom:2rem;text-align:center">📰 Derniers articles</h3>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <h4>La Doula : votre compagne de naissance</h4>
+                        <p>La doula accompagne les futurs parents de manière non médicale avec un soutien continu et bienveillant.</p>
+                        <span class="metier-tag">Doula</span>
                     </div>
-                </div>
-            </div>
-            
-            <h3 style="color:#6f4545;font-size:1.8rem;margin-bottom:2rem;text-align:center">📰 Derniers articles</h3>
-            <div class="articles-grid" style="max-width:1000px;margin:0 auto">
-                <div class="article-card">
-                    <h4>La Doula : votre compagne de naissance</h4>
-                    <p>La doula accompagne les futurs parents de manière non médicale avec un soutien continu et bienveillant.</p>
-                    <span class="metier-tag">Doula</span>
-                </div>
-                <div class="article-card">
-                    <h4>Le quatrième trimestre</h4>
-                    <p>Les 3 premiers mois : transition majeure. Acceptez de l'aide, reposez-vous. Prendre soin de vous est essentiel.</p>
-                    <span class="metier-tag">Post-partum</span>
-                </div>
-                <div class="article-card">
-                    <h4>Le psychologue périnatal</h4>
-                    <p>Accompagne les difficultés émotionnelles avec bienveillance et sans jugement.</p>
-                    <span class="metier-tag">Psychologue</span>
-                </div>
-                <div class="article-card">
-                    <h4>L'ostéopathe périnatal</h4>
-                    <p>Soulage les douleurs de grossesse et accompagne les bébés.</p>
-                    <span class="metier-tag">Ostéopathe</span>
+                    <div class="article-card">
+                        <h4>Le quatrième trimestre</h4>
+                        <p>Les 3 premiers mois : transition majeure. Acceptez de l'aide, reposez-vous.</p>
+                        <span class="metier-tag">Post-partum</span>
+                    </div>
+                    <div class="article-card">
+                        <h4>Le psychologue périnatal</h4>
+                        <p>Accompagne les difficultés émotionnelles avec bienveillance.</p>
+                        <span class="metier-tag">Psychologue</span>
+                    </div>
+                    <div class="article-card">
+                        <h4>L'ostéopathe périnatal</h4>
+                        <p>Soulage les douleurs de grossesse et accompagne les bébés.</p>
+                        <span class="metier-tag">Ostéopathe</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -373,37 +373,6 @@
                             <div class="pro-detail-contact">
                                 <a href="https://omdoula.fr/" target="_blank" class="contact-button">🌐 Site</a>
                                 <a href="mailto:contact@omdoula.fr" class="contact-button">📧 Email</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pro-section">
-                        <h3>Présentation</h3>
-                        <p>J'accompagne les femmes et couples afin qu'ils reprennent le pouvoir sur leur parcours de parentalité. Il me tient à cœur de soutenir la grossesse et le post-partum avec bienveillance.</p>
-                    </div>
-                    <div class="pro-section">
-                        <h3>Services</h3>
-                        <ul>
-                            <li>Accompagnement prénatal</li>
-                            <li>Soutien grossesse</li>
-                            <li>Accompagnement naissance</li>
-                            <li>Soutien post-partum</li>
-                        </ul>
-                    </div>
-                    <div class="pro-section">
-                        <h3>Zone</h3>
-                        <p>Métropole lilloise</p>
-                    </div>
-                </div>
-
-                <div id="detail-sophie" class="pro-detail">
-                    <button class="back-button" onclick="hideProDetail()">← Retour</button>
-                    <div class="pro-detail-header">
-                        <div class="pro-detail-avatar">SM</div>
-                        <div>
-                            <h2>Sophie Martin</h2>
-                            <div style="color:var(--text-light);margin-bottom:.5rem">Doula - 8 ans</div>
-                            <div class="pro-detail-contact">
-                                <a href="mailto:sophie@example.com" class="contact-button">📧 Email</a>
                             </div>
                         </div>
                     </div>
@@ -618,4 +587,35 @@
         }
     </script>
 </body>
-</html>
+</html>3>Présentation</h3>
+                        <p>J'accompagne les femmes et couples afin qu'ils reprennent le pouvoir sur leur parcours de parentalité. Il me tient à cœur de soutenir la grossesse et le post-partum avec bienveillance.</p>
+                    </div>
+                    <div class="pro-section">
+                        <h3>Services</h3>
+                        <ul>
+                            <li>Accompagnement prénatal</li>
+                            <li>Soutien grossesse</li>
+                            <li>Accompagnement naissance</li>
+                            <li>Soutien post-partum</li>
+                        </ul>
+                    </div>
+                    <div class="pro-section">
+                        <h3>Zone</h3>
+                        <p>Métropole lilloise</p>
+                    </div>
+                </div>
+
+                <div id="detail-sophie" class="pro-detail">
+                    <button class="back-button" onclick="hideProDetail()">← Retour</button>
+                    <div class="pro-detail-header">
+                        <div class="pro-detail-avatar">SM</div>
+                        <div>
+                            <h2>Sophie Martin</h2>
+                            <div style="color:var(--text-light);margin-bottom:.5rem">Doula - 8 ans</div>
+                            <div class="pro-detail-contact">
+                                <a href="mailto:sophie@example.com" class="contact-button">📧 Email</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro-section">
+                        <h
