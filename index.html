@@ -39,6 +39,14 @@ nav{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:s
 .pro-avatar{width:60px;height:60px;border-radius:50%;background:var(--secondary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--primary);font-weight:bold}
 .pro-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
 .pro-tag{background:var(--secondary);color:var(--primary);padding:.3rem .8rem;border-radius:15px;font-size:.85rem}
+.form-container{max-width:700px;margin:0 auto;background:var(--white);padding:2rem;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+.form-group{margin-bottom:1.5rem}
+.form-group label{display:block;color:var(--primary);font-weight:600;margin-bottom:.5rem}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:.8rem;border:2px solid var(--secondary);border-radius:5px;font-size:1rem;font-family:inherit}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--primary)}
+.form-group textarea{min-height:120px;resize:vertical}
+.submit-button{background:var(--primary);color:var(--white);border:none;padding:1rem 2rem;border-radius:5px;font-size:1.1rem;cursor:pointer;width:100%;font-weight:600}
+.submit-button:hover{opacity:.9}
 footer{background:#6f4545;color:var(--white);text-align:center;padding:2rem}
 @media(max-width:768px){.welcome-content{grid-template-columns:1fr}.welcome-text h2{font-size:2rem}}
 </style>
@@ -54,7 +62,7 @@ footer{background:#6f4545;color:var(--white);text-align:center;padding:2rem}
 <li><button onclick="showTab('accompagnements')" id="btn-accompagnements">Nos Accompagnements</button></li>
 </ul>
 </div>
-<a href="#" class="pro-link">Vous êtes un professionnel ?</a>
+<a href="#" onclick="showTab('professionnel-form');return false;" class="pro-link">Vous êtes un professionnel ?</a>
 </nav>
 </header>
 
@@ -136,6 +144,49 @@ footer{background:#6f4545;color:var(--white);text-align:center;padding:2rem}
 <div class="category-card"><h3>💆‍♀️ Bien-être</h3></div>
 <div class="category-card"><h3>💭 Psychologie</h3></div>
 <div class="category-card"><h3>👶 Post-Partum</h3></div>
+</div>
+</div>
+
+<div id="professionnel-form" class="tab-content">
+<div style="text-align:center;margin-bottom:2rem">
+<h2 style="color:#6f4545;margin-bottom:1rem">Rejoignez Vianata</h2>
+<p style="color:var(--text);max-width:600px;margin:0 auto">Vous êtes un professionnel de la parentalité ? Inscrivez-vous sur notre plateforme.</p>
+</div>
+
+<div class="form-container">
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<div class="form-group">
+<label for="nom">Nom et Prénom *</label>
+<input type="text" id="nom" name="nom" required>
+</div>
+<div class="form-group">
+<label for="email">Email *</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="telephone">Téléphone *</label>
+<input type="tel" id="telephone" name="telephone" required>
+</div>
+<div class="form-group">
+<label for="metier">Votre métier *</label>
+<select id="metier" name="metier" required>
+<option value="">Sélectionnez</option>
+<option value="Doula">Doula</option>
+<option value="Sage-femme">Sage-femme</option>
+<option value="Accompagnante">Accompagnante périnatale</option>
+<option value="Autre">Autre</option>
+</select>
+</div>
+<div class="form-group">
+<label for="ville">Ville *</label>
+<input type="text" id="ville" name="ville" required>
+</div>
+<div class="form-group">
+<label for="message">Présentation *</label>
+<textarea id="message" name="message" required></textarea>
+</div>
+<button type="submit" class="submit-button">Envoyer ma candidature</button>
+</form>
 </div>
 </div>
 </div>
