@@ -304,7 +304,7 @@
             </div>
 
             <div id="pro-list-accompagnement" class="articles-section">
-                <button class="back-button" onclick="backToProCats()">← Retour</button>
+                <button class="back-button" id="main-back-button" onclick="handleBackButton()">← Retour</button>
                 <h2 class="category-title">Accompagnement</h2>
                 
                 <div id="sub-accompagnement">
@@ -315,7 +315,6 @@
                 </div>
 
                 <div id="pro-cards-doulas" style="display:none">
-                    <button class="back-button" onclick="backToSub()">← Retour</button>
                     <h3 style="color:var(--primary);text-align:center;margin-bottom:1.5rem">Doulas</h3>
                     
                     <div class="articles-grid">
@@ -352,7 +351,6 @@
                 </div>
 
                 <div id="pro-cards-accompagnantes" style="display:none">
-                    <button class="back-button" onclick="backToSub()">← Retour</button>
                     <h3 style="color:var(--primary);text-align:center;margin-bottom:1.5rem">Accompagnantes</h3>
                     
                     <div class="articles-grid">
@@ -374,7 +372,6 @@
                 </div>
 
                 <div id="detail-helene" class="pro-detail">
-                    <button class="back-button" onclick="hideProDetail()">← Retour</button>
                     <div class="pro-detail-header">
                         <div class="pro-detail-avatar">HP</div>
                         <div>
@@ -406,7 +403,6 @@
                 </div>
 
                 <div id="detail-sophie" class="pro-detail">
-                    <button class="back-button" onclick="hideProDetail()">← Retour</button>
                     <div class="pro-detail-header">
                         <div class="pro-detail-avatar">SM</div>
                         <div>
@@ -428,7 +424,6 @@
                 </div>
 
                 <div id="detail-claire" class="pro-detail">
-                    <button class="back-button" onclick="hideProDetail()">← Retour</button>
                     <div class="pro-detail-header">
                         <div class="pro-detail-avatar">CD</div>
                         <div>
@@ -504,6 +499,23 @@
             {id:'claire',name:'Claire Dubois',specialty:'Accompagnante',category:'accompagnement',description:'Sophrologie et yoga',tags:['Sophrologie','Yoga'],location:'Lyon',avatar:'CD'}
         ];
 
+        // Variable pour tracker le niveau de navigation
+        let navigationLevel = 'categories'; // peut être: 'categories', 'subcategories', 'list', 'detail'
+
+        // Fonction pour gérer le bouton retour intelligent
+        function handleBackButton(){
+            if(navigationLevel === 'detail'){
+                hideProDetail();
+                navigationLevel = 'list';
+            } else if(navigationLevel === 'list'){
+                backToSub();
+                navigationLevel = 'subcategories';
+            } else if(navigationLevel === 'subcategories'){
+                backToProCats();
+                navigationLevel = 'categories';
+            }
+        }
+
         function showTab(tab){
             document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
             document.querySelectorAll('.nav-links button').forEach(b=>b.classList.remove('active'));
@@ -542,12 +554,14 @@
             document.getElementById('sub-accompagnement').style.display='block';
             document.getElementById('pro-cards-doulas').style.display='none';
             document.getElementById('pro-cards-accompagnantes').style.display='none';
+            navigationLevel = 'subcategories';
         }
 
         function backToProCats(){
             document.getElementById('pro-categories-view').style.display='block';
             document.getElementById('search-results').style.display='none';
             document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
+            navigationLevel = 'categories';
         }
 
         function showSubCat(subcat){
@@ -555,6 +569,7 @@
             document.getElementById('pro-cards-doulas').style.display='none';
             document.getElementById('pro-cards-accompagnantes').style.display='none';
             document.getElementById('pro-cards-'+subcat).style.display='block';
+            navigationLevel = 'list';
         }
 
         function backToSub(){
@@ -568,6 +583,7 @@
             document.querySelectorAll('.pro-card').forEach(c=>c.style.display='none');
             document.querySelectorAll('.pro-detail').forEach(d=>d.classList.remove('active'));
             document.getElementById('detail-'+id).classList.add('active');
+            navigationLevel = 'detail';
         }
 
         function hideProDetail(){
