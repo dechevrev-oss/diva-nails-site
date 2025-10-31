@@ -56,6 +56,10 @@
         .articles-grid{display:grid;gap:2rem}
         .article-card{background:var(--white);border-radius:10px;padding:2rem;border-left:5px solid var(--primary);box-shadow:0 2px 10px rgba(0,0,0,.08)}
         .article-card h4{color:var(--primary);font-size:1.5rem;margin-bottom:1rem}
+        .article-card-mini{background:var(--white);border-radius:12px;padding:1.5rem;border-left:4px solid var(--primary);box-shadow:0 2px 15px rgba(0,0,0,.06);transition:transform .3s ease,box-shadow .3s ease}
+        .article-card-mini:hover{transform:translateX(5px);box-shadow:0 4px 20px rgba(111,69,69,.15)}
+        .article-card-mini h4{color:var(--primary);font-size:1.1rem;margin-bottom:0.5rem}
+        .article-card-mini p{font-size:0.95rem;line-height:1.5;color:var(--text-light);margin-bottom:0.8rem}
         .metier-tag{display:inline-block;background:var(--primary);color:var(--white);padding:.3rem .8rem;border-radius:20px;font-size:.9rem;margin-top:1rem}
         .pro-card{background:var(--white);border-radius:10px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;transition:all .3s}
         .pro-card:hover{transform:translateY(-3px);border:2px solid var(--primary)}
@@ -99,6 +103,8 @@
         .shape-2{width:200px;height:200px;bottom:-30px;right:-30px;background:rgba(232,227,223,0.5)}
         @media(max-width:768px){.welcome-content{grid-template-columns:1fr;gap:2rem}.welcome-text h2{font-size:2rem}.welcome-image-container img{max-width:100%;margin:0 auto}}
         @media(max-width:768px){.nav-links button{padding:.5rem;font-size:.85rem}.categories-grid{grid-template-columns:1fr}.hero h1{font-size:2rem}.pro-link{font-size:.8rem;padding:.5rem .8rem}.nav-center{flex:0}}
+        .articles-section-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+        @media(max-width:900px){.articles-section-grid{grid-template-columns:1fr !important;gap:2rem !important}.articles-section-grid>div:first-child{order:2}.articles-section-grid>div:last-child{order:1}}
     </style>
 </head>
 <body>
@@ -176,27 +182,38 @@
                 </div>
             </div>
             
-            <h3 style="color:#6f4545;font-size:1.8rem;margin-bottom:2rem;text-align:center">📰 Derniers articles</h3>
-            <div class="articles-grid" style="max-width:1000px;margin:0 auto">
-                <div class="article-card">
-                    <h4>La Doula : votre compagne de naissance</h4>
-                    <p>La doula accompagne les futurs parents de manière non médicale avec un soutien continu et bienveillant.</p>
-                    <span class="metier-tag">Doula</span>
-                </div>
-                <div class="article-card">
-                    <h4>Le quatrième trimestre</h4>
-                    <p>Les 3 premiers mois : transition majeure. Acceptez de l'aide, reposez-vous. Prendre soin de vous est essentiel.</p>
-                    <span class="metier-tag">Post-partum</span>
-                </div>
-                <div class="article-card">
-                    <h4>Le psychologue périnatal</h4>
-                    <p>Accompagne les difficultés émotionnelles avec bienveillance et sans jugement.</p>
-                    <span class="metier-tag">Psychologue</span>
-                </div>
-                <div class="article-card">
-                    <h4>L'ostéopathe périnatal</h4>
-                    <p>Soulage les douleurs de grossesse et accompagne les bébés.</p>
-                    <span class="metier-tag">Ostéopathe</span>
+            <div style="background:linear-gradient(135deg,#fafafa 0%,#fff 100%);padding:4rem 2rem;margin:4rem -2rem 0;border-radius:20px">
+                <h3 style="color:#6f4545;font-size:1.8rem;margin-bottom:3rem;text-align:center">📰 Derniers articles</h3>
+                
+                <div class="articles-section-grid" style="max-width:1100px;margin:0 auto">
+                    <!-- Image à gauche -->
+                    <div style="position:relative">
+                        <img src="articles.jpg" alt="Articles Vianata" style="width:100%;border-radius:20px;box-shadow:0 10px 40px rgba(111,69,69,0.15)">
+                    </div>
+                    
+                    <!-- Articles à droite -->
+                    <div style="display:flex;flex-direction:column;gap:1.5rem">
+                        <div class="article-card-mini">
+                            <h4>La Doula : votre compagne de naissance</h4>
+                            <p>La doula accompagne les futurs parents de manière non médicale avec un soutien continu et bienveillant.</p>
+                            <span class="metier-tag">Doula</span>
+                        </div>
+                        <div class="article-card-mini">
+                            <h4>Le quatrième trimestre</h4>
+                            <p>Les 3 premiers mois : transition majeure. Acceptez de l'aide, reposez-vous. Prendre soin de vous est essentiel.</p>
+                            <span class="metier-tag">Post-partum</span>
+                        </div>
+                        <div class="article-card-mini">
+                            <h4>Le psychologue périnatal</h4>
+                            <p>Accompagne les difficultés émotionnelles avec bienveillance et sans jugement.</p>
+                            <span class="metier-tag">Psychologue</span>
+                        </div>
+                        <div class="article-card-mini">
+                            <h4>L'ostéopathe périnatal</h4>
+                            <p>Soulage les douleurs de grossesse et accompagne les bébés.</p>
+                            <span class="metier-tag">Ostéopathe</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
