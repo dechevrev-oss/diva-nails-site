@@ -559,7 +559,10 @@
             }
             
             if(tab==='accompagnements')backToCategories();
-            if(tab==='professionnels')backToProCats();
+            // Ne réinitialiser la vue professionnels QUE si les résultats de recherche ne sont pas affichés
+            if(tab==='professionnels' && document.getElementById('search-results').style.display !== 'block'){
+                backToProCats();
+            }
         }
 
         function showArticles(cat){
@@ -688,20 +691,31 @@
         function searchFromHome(event){
             if(event&&event.keyCode===13){
                 const term=document.getElementById('searchInputHome').value.toLowerCase().trim();
+                console.log('Terme recherché:', term);
                 if(term===''){alert('Entrez un terme de recherche');return;}
-                document.getElementById('searchInput').value=term;
+                
                 const results=pros.filter(p=>p.name.toLowerCase().includes(term)||p.specialty.toLowerCase().includes(term)||p.location.toLowerCase().includes(term));
-                document.getElementById('pro-categories-view').style.display='none';
-                document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
-                const grid=document.getElementById('search-results-grid');
-                const div=document.getElementById('search-results');
-                div.style.display='block';
-                if(results.length===0){
-                    grid.innerHTML='<div style="text-align:center;color:var(--text-light);padding:3rem">Aucun résultat trouvé pour "'+term+'"</div>';
-                }else{
-                    grid.innerHTML=results.map(p=>`<div class="pro-card" onclick="goToProFromSearch('${p.id}')"><div class="pro-header"><div class="pro-avatar">${p.avatar}</div><div class="pro-info"><h4>${p.name}</h4><div style="color:var(--text-light);font-size:.9rem">${p.specialty}</div></div></div><p>${p.description}</p><div class="pro-tags">${p.tags.map(t=>`<span class="pro-tag">${t}</span>`).join('')}<span class="pro-tag" style="background:var(--primary);color:white">📍 ${p.location}</span></div></div>`).join('');
-                }
+                console.log('Résultats trouvés:', results);
+                console.log('Nombre de résultats:', results.length);
+                
+                // Changer d'onglet AVANT de modifier l'affichage
                 showTab('professionnels');
+                
+                // Attendre que l'onglet soit affiché puis montrer les résultats
+                setTimeout(() => {
+                    document.getElementById('searchInput').value=term;
+                    document.getElementById('pro-categories-view').style.display='none';
+                    document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
+                    const grid=document.getElementById('search-results-grid');
+                    const div=document.getElementById('search-results');
+                    div.style.display='block';
+                    
+                    if(results.length===0){
+                        grid.innerHTML='<div style="text-align:center;color:var(--text-light);padding:3rem">Aucun résultat trouvé pour "'+term+'"</div>';
+                    }else{
+                        grid.innerHTML=results.map(p=>`<div class="pro-card" onclick="goToProFromSearch('${p.id}')"><div class="pro-header"><div class="pro-avatar">${p.avatar}</div><div class="pro-info"><h4>${p.name}</h4><div style="color:var(--text-light);font-size:.9rem">${p.specialty}</div></div></div><p>${p.description}</p><div class="pro-tags">${p.tags.map(t=>`<span class="pro-tag">${t}</span>`).join('')}<span class="pro-tag" style="background:var(--primary);color:white">📍 ${p.location}</span></div></div>`).join('');
+                    }
+                }, 100);
             }
         }
     </script>
