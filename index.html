@@ -23,8 +23,8 @@
         .hero::after{content:'';position:absolute;bottom:-30%;left:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(232,227,223,0.4) 0%,transparent 70%);border-radius:50%;z-index:0}
         .hero-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
         .hero-text{text-align:left}
-        .hero h1{font-size:3.5rem;color:var(--primary);margin-bottom:1.5rem;line-height:1.1;font-weight:700;letter-spacing:-0.02em}
-        .hero p{font-size:1.3rem;color:var(--text-light);margin-bottom:2.5rem;line-height:1.6}
+        .hero h1{font-size:2.8rem;color:var(--primary);margin-bottom:1.5rem;line-height:1.2;font-weight:700;letter-spacing:-0.01em}
+        .hero p{font-size:1.15rem;color:var(--text-light);margin-bottom:2.5rem;line-height:1.6;font-weight:400}
         .hero-image{text-align:center;position:relative}
         .hero-image::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:110%;height:110%;background:linear-gradient(135deg,rgba(111,69,69,0.1) 0%,rgba(232,227,223,0.2) 100%);border-radius:70% 30% 60% 40% / 40% 65% 35% 60%;z-index:-1}
         .hero-image img{max-width:100%;width:450px;border-radius:65% 35% 55% 45% / 45% 60% 40% 55%;transition:transform .3s ease;position:relative;z-index:1}
@@ -39,7 +39,7 @@
         .search-clear:hover{background:var(--primary);color:var(--white)}
         .search-box:not(:placeholder-shown) ~ .search-clear{opacity:1}
         @media(max-width:768px){.search-box{padding:1rem 3.5rem 1rem 3rem;font-size:1rem}}
-        @media(max-width:768px){.hero{padding:3rem 1.5rem 2rem}.hero-content{grid-template-columns:1fr;gap:3rem}.hero h1{font-size:2.5rem;text-align:center}.hero p{text-align:center;font-size:1.1rem}.hero-text{text-align:center}.hero-image img{width:100%;max-width:350px}.hero-image::before{display:none}}
+        @media(max-width:768px){.hero{padding:3rem 1.5rem 2rem}.hero-content{grid-template-columns:1fr;gap:3rem}.hero h1{font-size:2rem;text-align:center}.hero p{text-align:center;font-size:1rem}.hero-text{text-align:center}.hero-image img{width:100%;max-width:350px}.hero-image::before{display:none}}
         footer{background:var(--primary);color:var(--white);text-align:center;padding:2rem;margin-top:4rem}
         footer p{margin:0;font-size:.95rem}
         .container{max-width:1200px;margin:0 auto;padding:3rem 2rem}
@@ -136,8 +136,8 @@
     <section class="hero active" id="hero-banner">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Parcours PMA, grossesse, post-partum, parentalité : vous n'êtes pas seule</h1>
-                <p>Décrivez ce que vous vivez, Via Nata trouve ceux qui peuvent vous aider</p>
+                <h1>Votre accompagnement vers la vie</h1>
+                <p>Découvrez les professionnels de la parentalité qui vous correspondent</p>
                 <div class="search-container">
                     <span class="search-icon">🔍</span>
                     <input type="text" class="search-box" id="searchInputHome" placeholder="Rechercher un professionnel, une ville..." onkeyup="searchFromHome(event)" oninput="toggleClearButton('searchInputHome', 'clearHome')">
