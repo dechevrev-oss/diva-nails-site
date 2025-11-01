@@ -287,10 +287,24 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Accompagnement</h2>
                 <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>La Doula</h4>
-                        <p>Accompagnement bienveillant, soutien continu et respect de vos choix.</p>
+                    <div class="article-card" onclick="showArticleDetail('doula')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:1.5rem">👶</span>
+                        </div>
+                        <h4>La Doula : votre compagne de naissance</h4>
+                        <p>Découvrez le rôle essentiel de la doula dans votre parcours de maternité. Un soutien bienveillant et continu pour vous accompagner.</p>
                         <span class="metier-tag">Doula</span>
+                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
+                    </div>
+                    
+                    <div class="article-card" onclick="showArticleDetail('accompagnante')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:1.5rem">🌸</span>
+                        </div>
+                        <h4>L'accompagnante périnatale</h4>
+                        <p>Accompagnement personnalisé durant la grossesse et le post-partum avec des techniques de bien-être adaptées.</p>
+                        <span class="metier-tag">Accompagnante</span>
+                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
                     </div>
                 </div>
             </div>
@@ -299,10 +313,14 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">PMA & Fertilité</h2>
                 <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>Le gynécologue</h4>
-                        <p>Accompagnement des parcours de fertilité et PMA.</p>
+                    <div class="article-card" onclick="showArticleDetail('gyneco')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:1.5rem">🔬</span>
+                        </div>
+                        <h4>Le gynécologue spécialisé en fertilité</h4>
+                        <p>Comprendre le rôle du gynécologue dans votre parcours PMA et les différentes étapes de l'accompagnement médical.</p>
                         <span class="metier-tag">Gynécologue</span>
+                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
                     </div>
                 </div>
             </div>
@@ -311,10 +329,14 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Grossesse</h2>
                 <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>La sage-femme</h4>
-                        <p>Suivi de grossesse et accompagnement.</p>
+                    <div class="article-card" onclick="showArticleDetail('sagefemme')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:1.5rem">🤰</span>
+                        </div>
+                        <h4>La sage-femme : votre alliée grossesse</h4>
+                        <p>Suivi médical complet de la grossesse, préparation à la naissance et accompagnement personnalisé tout au long de votre parcours.</p>
                         <span class="metier-tag">Sage-femme</span>
+                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
                     </div>
                 </div>
             </div>
@@ -323,10 +345,14 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Bien-être</h2>
                 <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>L'ostéopathe</h4>
-                        <p>Soulagement et bien-être corporel.</p>
+                    <div class="article-card" onclick="showArticleDetail('osteo')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:1.5rem">💆‍♀️</span>
+                        </div>
+                        <h4>L'ostéopathe périnatal</h4>
+                        <p>Soulagement des maux de grossesse et accompagnement corporel pour maman et bébé. Les bienfaits de l'ostéopathie périnatale.</p>
                         <span class="metier-tag">Ostéopathe</span>
+                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
                     </div>
                 </div>
             </div>
@@ -335,10 +361,14 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Psychologie</h2>
                 <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>Le psychologue</h4>
-                        <p>Soutien émotionnel bienveillant.</p>
+                    <div class="article-card" onclick="showArticleDetail('psy')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:1.5rem">💭</span>
+                        </div>
+                        <h4>Le psychologue périnatal</h4>
+                        <p>Accompagnement émotionnel durant la grossesse et le post-partum. Un espace bienveillant pour vos questionnements et difficultés.</p>
                         <span class="metier-tag">Psychologue</span>
+                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
                     </div>
                 </div>
             </div>
@@ -347,12 +377,17 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Post-Partum</h2>
                 <div class="articles-grid">
-                    <div class="article-card">
-                        <h4>La consultante lactation</h4>
-                        <p>Soutien allaitement maternel.</p>
+                    <div class="article-card" onclick="showArticleDetail('lactation')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:1.5rem">🤱</span>
+                        </div>
+                        <h4>La consultante en lactation IBCLC</h4>
+                        <p>Soutien expert pour l'allaitement maternel. Solutions personnalisées aux défis de l'allaitement avec bienveillance.</p>
                         <span class="metier-tag">IBCLC</span>
+                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
 
@@ -644,6 +679,28 @@
         function backToCategories(){
             document.getElementById('categories-view').style.display='block';
             document.querySelectorAll('#accompagnements .articles-section').forEach(s=>s.classList.remove('active'));
+        }
+
+        function showArticleDetail(articleId){
+            // Cacher toutes les sections
+            document.querySelectorAll('#accompagnements .articles-section').forEach(s=>s.classList.remove('active'));
+            // Afficher l'article détaillé
+            const detailId = 'article-detail-' + articleId;
+            const articleSection = document.getElementById(detailId);
+            if(articleSection){
+                articleSection.classList.add('active');
+                // Scroll vers le haut
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        }
+
+        function backToArticlesList(category){
+            // Cacher tous les articles détaillés
+            document.querySelectorAll('#accompagnements .articles-section').forEach(s=>s.classList.remove('active'));
+            // Afficher la liste d'articles de la catégorie
+            document.getElementById('articles-' + category).classList.add('active');
+            // Scroll vers le haut
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
         function showProCat(cat){
