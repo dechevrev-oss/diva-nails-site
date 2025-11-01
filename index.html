@@ -192,80 +192,80 @@
                 <h3 style="color:#6f4545;font-size:2.5rem;margin-bottom:1rem;text-align:center;font-weight:700;position:relative;z-index:1">À la une</h3>
                 <p style="text-align:center;color:var(--text-light);margin-bottom:4rem;font-size:1.1rem;position:relative;z-index:1">Découvrez nos conseils et informations pour votre parcours</p>
                 
-                <div class="articles-section-grid" style="max-width:1200px;margin:0 auto;position:relative;z-index:1">
-                    <!-- Image à gauche avec forme abstraite -->
-                    <div style="position:relative;display:flex;align-items:center;justify-content:center">
-                        <div style="position:absolute;width:110%;height:110%;background:linear-gradient(135deg,rgba(111,69,69,0.12) 0%,rgba(232,227,223,0.25) 100%);border-radius:60% 40% 55% 45% / 45% 60% 40% 55%;z-index:0"></div>
-                        <img src="articles.jpg" alt="Articles Vianata" style="width:100%;max-width:350px;border-radius:65% 35% 55% 45% / 50% 60% 40% 50%;position:relative;z-index:1;transition:transform .3s ease" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                    </div>
-                    
-                    <!-- Carrousel d'articles à droite -->
-                    <div style="position:relative">
-                        <div id="articles-carousel" style="transition:opacity .3s ease">
-                            <!-- Slide 1 - La Doula -->
-                            <div class="carousel-slide active">
-                                <div class="article-card-modern">
-                                    <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
-                                        <span style="font-size:1.5rem">👶</span>
-                                    </div>
-                                    <h4 style="color:var(--primary);font-size:1.1rem;margin-bottom:0.6rem;font-weight:600;line-height:1.3">La Doula</h4>
-                                    <p style="font-size:0.88rem;line-height:1.6;color:var(--text-light);margin-bottom:1rem">Votre compagne de naissance pour un accompagnement bienveillant tout au long de votre parcours de maternité.</p>
-                                    <span class="metier-tag" style="font-size:0.75rem;padding:.25rem .7rem">Doula</span>
+                <!-- Carrousel moderne pleine largeur -->
+                <div style="max-width:900px;margin:0 auto;position:relative;z-index:1">
+                    <div id="articles-carousel" style="position:relative;min-height:300px">
+                        <!-- Slide 1 - La Doula -->
+                        <div class="carousel-slide active" style="position:absolute;width:100%;opacity:1;transform:translateX(0);transition:all .5s ease">
+                            <div class="article-card-modern" style="max-width:700px;margin:0 auto;padding:2.5rem;box-shadow:0 8px 40px rgba(111,69,69,0.12)">
+                                <div style="width:65px;height:65px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 6px 20px rgba(111,69,69,0.25)">
+                                    <span style="font-size:2rem">👶</span>
                                 </div>
-                            </div>
-                            
-                            <!-- Slide 2 - Le 4ème trimestre -->
-                            <div class="carousel-slide" style="display:none">
-                                <div class="article-card-modern">
-                                    <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
-                                        <span style="font-size:1.5rem">🤱</span>
-                                    </div>
-                                    <h4 style="color:var(--primary);font-size:1.1rem;margin-bottom:0.6rem;font-weight:600;line-height:1.3">Le 4ème trimestre</h4>
-                                    <p style="font-size:0.88rem;line-height:1.6;color:var(--text-light);margin-bottom:1rem">Les 3 premiers mois après la naissance : acceptez de l'aide, reposez-vous. Prendre soin de vous est essentiel.</p>
-                                    <span class="metier-tag" style="font-size:0.75rem;padding:.25rem .7rem">Post-partum</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 3 - Psychologue périnatal -->
-                            <div class="carousel-slide" style="display:none">
-                                <div class="article-card-modern">
-                                    <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
-                                        <span style="font-size:1.5rem">💭</span>
-                                    </div>
-                                    <h4 style="color:var(--primary);font-size:1.1rem;margin-bottom:0.6rem;font-weight:600;line-height:1.3">Psychologue périnatal</h4>
-                                    <p style="font-size:0.88rem;line-height:1.6;color:var(--text-light);margin-bottom:1rem">Accompagnement émotionnel bienveillant et sans jugement durant votre parcours de parentalité.</p>
-                                    <span class="metier-tag" style="font-size:0.75rem;padding:.25rem .7rem">Psychologue</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 4 - Ostéopathe périnatal -->
-                            <div class="carousel-slide" style="display:none">
-                                <div class="article-card-modern">
-                                    <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
-                                        <span style="font-size:1.5rem">💆‍♀️</span>
-                                    </div>
-                                    <h4 style="color:var(--primary);font-size:1.1rem;margin-bottom:0.6rem;font-weight:600;line-height:1.3">Ostéopathe périnatal</h4>
-                                    <p style="font-size:0.88rem;line-height:1.6;color:var(--text-light);margin-bottom:1rem">Soulagement des douleurs de grossesse et accompagnement corporel pour vous et votre bébé.</p>
-                                    <span class="metier-tag" style="font-size:0.75rem;padding:.25rem .7rem">Ostéopathe</span>
+                                <h4 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700;line-height:1.3;text-align:center">La Doula</h4>
+                                <p style="font-size:1.05rem;line-height:1.8;color:var(--text-light);margin-bottom:1.5rem;text-align:center">Votre compagne de naissance pour un accompagnement bienveillant tout au long de votre parcours de maternité.</p>
+                                <div style="text-align:center">
+                                    <span class="metier-tag" style="font-size:0.85rem;padding:.4rem 1rem">Doula</span>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Navigation du carrousel -->
-                        <div style="display:flex;justify-content:center;gap:1rem;margin-top:2rem">
-                            <button onclick="prevSlide()" class="carousel-btn" style="background:var(--white);border:2px solid var(--secondary);color:var(--primary);width:45px;height:45px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:all .3s ease;box-shadow:0 2px 10px rgba(0,0,0,0.08)" onmouseover="this.style.background='var(--primary)';this.style.color='white';this.style.borderColor='var(--primary)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--primary)';this.style.borderColor='var(--secondary)'">
-                                ←
-                            </button>
-                            <div style="display:flex;gap:0.5rem;align-items:center">
-                                <span class="carousel-dot active" onclick="goToSlide(0)" style="width:12px;height:12px;border-radius:50%;background:var(--primary);cursor:pointer;transition:all .3s ease"></span>
-                                <span class="carousel-dot" onclick="goToSlide(1)" style="width:12px;height:12px;border-radius:50%;background:var(--secondary);cursor:pointer;transition:all .3s ease"></span>
-                                <span class="carousel-dot" onclick="goToSlide(2)" style="width:12px;height:12px;border-radius:50%;background:var(--secondary);cursor:pointer;transition:all .3s ease"></span>
-                                <span class="carousel-dot" onclick="goToSlide(3)" style="width:12px;height:12px;border-radius:50%;background:var(--secondary);cursor:pointer;transition:all .3s ease"></span>
+                        <!-- Slide 2 - Le 4ème trimestre -->
+                        <div class="carousel-slide" style="position:absolute;width:100%;opacity:0;transform:translateX(100%);transition:all .5s ease;display:none">
+                            <div class="article-card-modern" style="max-width:700px;margin:0 auto;padding:2.5rem;box-shadow:0 8px 40px rgba(111,69,69,0.12)">
+                                <div style="width:65px;height:65px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 6px 20px rgba(111,69,69,0.25)">
+                                    <span style="font-size:2rem">🤱</span>
+                                </div>
+                                <h4 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700;line-height:1.3;text-align:center">Le 4ème trimestre</h4>
+                                <p style="font-size:1.05rem;line-height:1.8;color:var(--text-light);margin-bottom:1.5rem;text-align:center">Les 3 premiers mois après la naissance : acceptez de l'aide, reposez-vous. Prendre soin de vous est essentiel.</p>
+                                <div style="text-align:center">
+                                    <span class="metier-tag" style="font-size:0.85rem;padding:.4rem 1rem">Post-partum</span>
+                                </div>
                             </div>
-                            <button onclick="nextSlide()" class="carousel-btn" style="background:var(--white);border:2px solid var(--secondary);color:var(--primary);width:45px;height:45px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:all .3s ease;box-shadow:0 2px 10px rgba(0,0,0,0.08)" onmouseover="this.style.background='var(--primary)';this.style.color='white';this.style.borderColor='var(--primary)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--primary)';this.style.borderColor='var(--secondary)'">
-                                →
-                            </button>
                         </div>
+                        
+                        <!-- Slide 3 - Psychologue périnatal -->
+                        <div class="carousel-slide" style="position:absolute;width:100%;opacity:0;transform:translateX(100%);transition:all .5s ease;display:none">
+                            <div class="article-card-modern" style="max-width:700px;margin:0 auto;padding:2.5rem;box-shadow:0 8px 40px rgba(111,69,69,0.12)">
+                                <div style="width:65px;height:65px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 6px 20px rgba(111,69,69,0.25)">
+                                    <span style="font-size:2rem">💭</span>
+                                </div>
+                                <h4 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700;line-height:1.3;text-align:center">Psychologue périnatal</h4>
+                                <p style="font-size:1.05rem;line-height:1.8;color:var(--text-light);margin-bottom:1.5rem;text-align:center">Accompagnement émotionnel bienveillant et sans jugement durant votre parcours de parentalité.</p>
+                                <div style="text-align:center">
+                                    <span class="metier-tag" style="font-size:0.85rem;padding:.4rem 1rem">Psychologue</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4 - Ostéopathe périnatal -->
+                        <div class="carousel-slide" style="position:absolute;width:100%;opacity:0;transform:translateX(100%);transition:all .5s ease;display:none">
+                            <div class="article-card-modern" style="max-width:700px;margin:0 auto;padding:2.5rem;box-shadow:0 8px 40px rgba(111,69,69,0.12)">
+                                <div style="width:65px;height:65px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 6px 20px rgba(111,69,69,0.25)">
+                                    <span style="font-size:2rem">💆‍♀️</span>
+                                </div>
+                                <h4 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700;line-height:1.3;text-align:center">Ostéopathe périnatal</h4>
+                                <p style="font-size:1.05rem;line-height:1.8;color:var(--text-light);margin-bottom:1.5rem;text-align:center">Soulagement des douleurs de grossesse et accompagnement corporel pour vous et votre bébé.</p>
+                                <div style="text-align:center">
+                                    <span class="metier-tag" style="font-size:0.85rem;padding:.4rem 1rem">Ostéopathe</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation du carrousel moderne -->
+                    <div style="display:flex;justify-content:center;gap:1.5rem;margin-top:3rem;align-items:center">
+                        <button onclick="prevSlide()" class="carousel-btn" style="background:var(--white);border:2px solid var(--secondary);color:var(--primary);width:50px;height:50px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:all .3s ease;box-shadow:0 4px 15px rgba(0,0,0,0.08);font-weight:bold" onmouseover="this.style.background='var(--primary)';this.style.color='white';this.style.borderColor='var(--primary)';this.style.transform='scale(1.1)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--primary)';this.style.borderColor='var(--secondary)';this.style.transform='scale(1)'">
+                            ‹
+                        </button>
+                        <div style="display:flex;gap:0.6rem;align-items:center">
+                            <span class="carousel-dot active" onclick="goToSlide(0)" style="width:14px;height:14px;border-radius:50%;background:var(--primary);cursor:pointer;transition:all .3s ease;box-shadow:0 2px 8px rgba(111,69,69,0.3)"></span>
+                            <span class="carousel-dot" onclick="goToSlide(1)" style="width:14px;height:14px;border-radius:50%;background:var(--secondary);cursor:pointer;transition:all .3s ease"></span>
+                            <span class="carousel-dot" onclick="goToSlide(2)" style="width:14px;height:14px;border-radius:50%;background:var(--secondary);cursor:pointer;transition:all .3s ease"></span>
+                            <span class="carousel-dot" onclick="goToSlide(3)" style="width:14px;height:14px;border-radius:50%;background:var(--secondary);cursor:pointer;transition:all .3s ease"></span>
+                        </div>
+                        <button onclick="nextSlide()" class="carousel-btn" style="background:var(--white);border:2px solid var(--secondary);color:var(--primary);width:50px;height:50px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:all .3s ease;box-shadow:0 4px 15px rgba(0,0,0,0.08);font-weight:bold" onmouseover="this.style.background='var(--primary)';this.style.color='white';this.style.borderColor='var(--primary)';this.style.transform='scale(1.1)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--primary)';this.style.borderColor='var(--secondary)';this.style.transform='scale(1)'">
+                            ›
+                        </button>
                     </div>
                 </div>
             </div>
@@ -798,9 +798,13 @@
             slides.forEach((slide, i) => {
                 if (i === index) {
                     slide.style.display = 'block';
+                    slide.style.opacity = '1';
+                    slide.style.transform = 'translateX(0)';
                     slide.classList.add('active');
                 } else {
                     slide.style.display = 'none';
+                    slide.style.opacity = '0';
+                    slide.style.transform = i < index ? 'translateX(-100%)' : 'translateX(100%)';
                     slide.classList.remove('active');
                 }
             });
@@ -808,11 +812,13 @@
             dots.forEach((dot, i) => {
                 if (i === index) {
                     dot.style.background = 'var(--primary)';
-                    dot.style.transform = 'scale(1.2)';
+                    dot.style.transform = 'scale(1.3)';
+                    dot.style.boxShadow = '0 2px 8px rgba(111,69,69,0.3)';
                     dot.classList.add('active');
                 } else {
                     dot.style.background = 'var(--secondary)';
                     dot.style.transform = 'scale(1)';
+                    dot.style.boxShadow = 'none';
                     dot.classList.remove('active');
                 }
             });
