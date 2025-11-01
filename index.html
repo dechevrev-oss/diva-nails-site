@@ -46,9 +46,12 @@
         .tab-content{display:none}
         .tab-content.active{display:block}
         .categories-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+        .categories-grid-modern{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;max-width:1000px;margin:0 auto}
         .category-card{background:var(--white);border-radius:10px;padding:2rem;box-shadow:0 4px 15px rgba(0,0,0,.1);cursor:pointer;transition:all .3s;border:3px solid transparent}
         .category-card:hover{transform:translateY(-5px);border-color:var(--primary)}
         .category-card h3{color:var(--primary);font-size:1.5rem;margin-bottom:1rem}
+        .category-card-modern{background:var(--white);border-radius:20px;padding:2rem;box-shadow:0 3px 15px rgba(0,0,0,.08);cursor:pointer;transition:all .35s ease;text-align:center;border:2px solid transparent}
+        .category-card-modern:hover{transform:translateY(-8px);box-shadow:0 8px 30px rgba(111,69,69,.15);border-color:rgba(111,69,69,.1)}
         .articles-section{display:none}
         .articles-section.active{display:block}
         .back-button{background:var(--primary);color:var(--white);border:none;padding:.8rem 1.5rem;border-radius:5px;cursor:pointer;margin-bottom:2rem}
@@ -90,6 +93,8 @@
         .sub-category-card{background:var(--secondary);border-radius:8px;padding:1.5rem;cursor:pointer;transition:all .3s;text-align:center;border:2px solid transparent}
         .sub-category-card:hover{transform:translateY(-3px);border-color:var(--primary);background:white}
         .sub-category-card h4{color:var(--primary);font-size:1.2rem;margin-bottom:.5rem}
+        .sub-category-card-modern{background:var(--white);border-radius:18px;padding:2rem;cursor:pointer;transition:all .35s ease;text-align:center;border:2px solid var(--secondary);box-shadow:0 2px 12px rgba(0,0,0,.06)}
+        .sub-category-card-modern:hover{transform:translateY(-6px);border-color:var(--primary);box-shadow:0 6px 25px rgba(111,69,69,.15)}
         .form-container{max-width:700px;margin:0 auto;background:var(--white);padding:2rem;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.1)}
         .form-group{margin-bottom:1.5rem}
         .form-group label{display:block;color:var(--primary);font-weight:600;margin-bottom:.5rem}
@@ -417,26 +422,73 @@
         </div>
 
         <div id="professionnels" class="tab-content">
-            <div class="search-container" style="margin-bottom:2rem">
-                <span class="search-icon">🔍</span>
-                <input type="text" class="search-box" id="searchInput" placeholder="Rechercher un professionnel, une ville..." onkeyup="searchPros()" oninput="toggleClearButton('searchInput', 'clearPro')">
-                <button class="search-clear" id="clearPro" onclick="clearSearchInput('searchInput', 'clearPro')" style="opacity:0">✕</button>
+            <!-- Barre de recherche modernisée -->
+            <div style="max-width:700px;margin:0 auto 3rem;text-align:center">
+                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1rem;font-weight:700">Trouvez votre professionnel</h2>
+                <p style="color:var(--text-light);margin-bottom:2rem;font-size:1rem">Recherchez par nom, spécialité ou ville</p>
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-box" id="searchInput" placeholder="Rechercher un professionnel, une ville..." onkeyup="searchPros()" oninput="toggleClearButton('searchInput', 'clearPro')">
+                    <button class="search-clear" id="clearPro" onclick="clearSearchInput('searchInput', 'clearPro')" style="opacity:0">✕</button>
+                </div>
             </div>
 
             <div id="search-results" style="display:none">
                 <button class="back-button" onclick="clearSearch()">← Catégories</button>
-                <h2 class="category-title">Résultats</h2>
+                <h2 class="category-title">Résultats de recherche</h2>
                 <div id="search-results-grid" class="articles-grid"></div>
             </div>
 
             <div id="pro-categories-view">
-                <div class="categories-grid">
-                    <div class="category-card" onclick="showProCat('accompagnement')"><h3>🤝 Accompagnement</h3><p>Doulas et accompagnantes.</p></div>
-                    <div class="category-card" onclick="showProCat('pma')"><h3>🔬 PMA</h3></div>
-                    <div class="category-card" onclick="showProCat('grossesse')"><h3>🤰 Grossesse</h3></div>
-                    <div class="category-card" onclick="showProCat('bienetre')"><h3>💆‍♀️ Bien-être</h3></div>
-                    <div class="category-card" onclick="showProCat('psychologie')"><h3>💭 Psychologie</h3></div>
-                    <div class="category-card" onclick="showProCat('postpartum')"><h3>👶 Post-Partum</h3></div>
+                <h3 style="color:var(--primary);font-size:1.5rem;margin-bottom:2rem;text-align:center;font-weight:600">Choisissez une catégorie</h3>
+                <div class="categories-grid-modern">
+                    <div class="category-card-modern" onclick="showProCat('accompagnement')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:2rem">🤝</span>
+                        </div>
+                        <h3 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Accompagnement</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Doulas et accompagnantes</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showProCat('pma')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:2rem">🔬</span>
+                        </div>
+                        <h3 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem;font-weight:600">PMA & Fertilité</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Spécialistes fertilité</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showProCat('grossesse')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:2rem">🤰</span>
+                        </div>
+                        <h3 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Grossesse</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Sages-femmes</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showProCat('bienetre')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:2rem">💆‍♀️</span>
+                        </div>
+                        <h3 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Bien-être</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Ostéopathes, yoga</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showProCat('psychologie')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:2rem">💭</span>
+                        </div>
+                        <h3 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Psychologie</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Psychologues</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showProCat('postpartum')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                            <span style="font-size:2rem">👶</span>
+                        </div>
+                        <h3 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Post-Partum</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Consultantes lactation</p>
+                    </div>
                 </div>
             </div>
 
@@ -445,64 +497,80 @@
                 <h2 class="category-title">Accompagnement</h2>
                 
                 <div id="sub-accompagnement">
-                    <div class="sub-categories">
-                        <div class="sub-category-card" onclick="showSubCat('doulas')"><h4>🤱 Doulas</h4></div>
-                        <div class="sub-category-card" onclick="showSubCat('accompagnantes')"><h4>🌸 Accompagnantes</h4></div>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:700px;margin:0 auto">
+                        <div class="sub-category-card-modern" onclick="showSubCat('doulas')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                                <span style="font-size:1.5rem">🤱</span>
+                            </div>
+                            <h4 style="color:var(--primary);font-size:1.2rem;margin:0">Doulas</h4>
+                        </div>
+                        <div class="sub-category-card-modern" onclick="showSubCat('accompagnantes')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
+                                <span style="font-size:1.5rem">🌸</span>
+                            </div>
+                            <h4 style="color:var(--primary);font-size:1.2rem;margin:0">Accompagnantes</h4>
+                        </div>
                     </div>
                 </div>
 
                 <div id="pro-cards-doulas" style="display:none">
-                    <h3 style="color:var(--primary);text-align:center;margin-bottom:1.5rem">Doulas</h3>
+                    <h3 style="color:var(--primary);text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Doulas</h3>
                     
-                    <div class="articles-grid">
-                        <div class="pro-card" onclick="showProDetail('helene')">
-                            <div class="pro-header">
-                                <div class="pro-avatar">HP</div>
-                                <div class="pro-info">
-                                    <h4>Hélène Poughon</h4>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div class="pro-card-modern" onclick="showProDetail('helene')">
+                            <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem">
+                                <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold;box-shadow:0 4px 15px rgba(111,69,69,0.25);flex-shrink:0">
+                                    HP
+                                </div>
+                                <div>
+                                    <h4 style="color:var(--primary);font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Hélène Poughon</h4>
                                     <div style="color:var(--text-light);font-size:.9rem">Doula - Ôm Doula</div>
                                 </div>
                             </div>
-                            <p>Accompagne les femmes et couples pour reprendre le pouvoir sur leur parcours.</p>
-                            <div class="pro-tags">
-                                <span class="pro-tag">Grossesse</span>
-                                <span class="pro-tag">📍 Lille</span>
+                            <p style="color:var(--text);line-height:1.6;margin-bottom:1.5rem;font-size:.95rem">Accompagne les femmes et couples pour reprendre le pouvoir sur leur parcours.</p>
+                            <div style="display:flex;flex-wrap:wrap;gap:.6rem">
+                                <span class="pro-tag-modern">Grossesse</span>
+                                <span class="pro-tag-modern" style="background:var(--primary);color:white">📍 Lille</span>
                             </div>
                         </div>
 
-                        <div class="pro-card" onclick="showProDetail('sophie')">
-                            <div class="pro-header">
-                                <div class="pro-avatar">SM</div>
-                                <div class="pro-info">
-                                    <h4>Sophie Martin</h4>
+                        <div class="pro-card-modern" onclick="showProDetail('sophie')">
+                            <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem">
+                                <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold;box-shadow:0 4px 15px rgba(111,69,69,0.25);flex-shrink:0">
+                                    SM
+                                </div>
+                                <div>
+                                    <h4 style="color:var(--primary);font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Sophie Martin</h4>
                                     <div style="color:var(--text-light);font-size:.9rem">Doula certifiée</div>
                                 </div>
                             </div>
-                            <p>Accompagnement bienveillant. 8 ans d'expérience.</p>
-                            <div class="pro-tags">
-                                <span class="pro-tag">Grossesse</span>
-                                <span class="pro-tag">📍 Paris</span>
+                            <p style="color:var(--text);line-height:1.6;margin-bottom:1.5rem;font-size:.95rem">Accompagnement bienveillant. 8 ans d'expérience.</p>
+                            <div style="display:flex;flex-wrap:wrap;gap:.6rem">
+                                <span class="pro-tag-modern">Grossesse</span>
+                                <span class="pro-tag-modern" style="background:var(--primary);color:white">📍 Paris</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div id="pro-cards-accompagnantes" style="display:none">
-                    <h3 style="color:var(--primary);text-align:center;margin-bottom:1.5rem">Accompagnantes</h3>
+                    <h3 style="color:var(--primary);text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Accompagnantes</h3>
                     
-                    <div class="articles-grid">
-                        <div class="pro-card" onclick="showProDetail('claire')">
-                            <div class="pro-header">
-                                <div class="pro-avatar">CD</div>
-                                <div class="pro-info">
-                                    <h4>Claire Dubois</h4>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div class="pro-card-modern" onclick="showProDetail('claire')">
+                            <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem">
+                                <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold;box-shadow:0 4px 15px rgba(111,69,69,0.25);flex-shrink:0">
+                                    CD
+                                </div>
+                                <div>
+                                    <h4 style="color:var(--primary);font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Claire Dubois</h4>
                                     <div style="color:var(--text-light);font-size:.9rem">Accompagnante périnatale</div>
                                 </div>
                             </div>
-                            <p>Sophrologie et yoga prénatal.</p>
-                            <div class="pro-tags">
-                                <span class="pro-tag">Yoga</span>
-                                <span class="pro-tag">📍 Lyon</span>
+                            <p style="color:var(--text);line-height:1.6;margin-bottom:1.5rem;font-size:.95rem">Sophrologie et yoga prénatal.</p>
+                            <div style="display:flex;flex-wrap:wrap;gap:.6rem">
+                                <span class="pro-tag-modern">Yoga</span>
+                                <span class="pro-tag-modern" style="background:var(--primary);color:white">📍 Lyon</span>
                             </div>
                         </div>
                     </div>
