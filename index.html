@@ -720,6 +720,8 @@
             document.getElementById('pro-cards-accompagnantes').style.display='none';
             hideProDetail();
             document.getElementById('pro-cards-'+subcat).style.display='block';
+            // Afficher la grille correspondante
+            document.getElementById(subcat+'-grid').style.display='grid';
             navigationLevel = 'list';
         }
 
