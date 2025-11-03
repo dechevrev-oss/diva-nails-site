@@ -347,7 +347,7 @@
 
         <div id="professionnels" class="tab-content">
             <!-- Barre de recherche modernisée -->
-            <div style="max-width:700px;margin:0 auto 3rem;text-align:center">
+            <div id="pro-search-bar" style="max-width:700px;margin:0 auto 3rem;text-align:center">
                 <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1rem;font-weight:700">Trouvez votre professionnel</h2>
                 <p style="color:var(--text-light);margin-bottom:2rem;font-size:1rem">Recherchez par nom, spécialité ou ville</p>
                 <div class="search-container">
@@ -813,6 +813,7 @@
         function backToProCats(){
             document.getElementById('pro-categories-view').style.display='block';
             document.getElementById('search-results').style.display='none';
+            document.getElementById('pro-search-bar').style.display='block';
             document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
             navigationLevel = 'categories';
         }
@@ -836,6 +837,9 @@
         }
 
         function showProDetail(id){
+            // Cacher la barre de recherche
+            document.getElementById('pro-search-bar').style.display='none';
+            
             // Cacher les grilles de cartes
             document.getElementById('doulas-grid').style.display='none';
             document.getElementById('accompagnantes-grid').style.display='none';
@@ -850,6 +854,9 @@
         }
 
         function hideProDetail(){
+            // Réafficher la barre de recherche
+            document.getElementById('pro-search-bar').style.display='block';
+            
             // Réafficher les grilles de cartes
             const doulasContainer = document.getElementById('pro-cards-doulas');
             const accompagnantesContainer = document.getElementById('pro-cards-accompagnantes');
@@ -885,6 +892,7 @@
             setTimeout(()=>{
                 document.getElementById('pro-categories-view').style.display='none';
                 document.getElementById('search-results').style.display='none';
+                document.getElementById('pro-search-bar').style.display='none';
                 
                 document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
                 document.getElementById('pro-list-accompagnement').classList.add('active');
