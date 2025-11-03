@@ -59,10 +59,6 @@
         .articles-grid{display:grid;gap:2rem}
         .article-card{background:var(--white);border-radius:10px;padding:2rem;border-left:5px solid var(--primary);box-shadow:0 2px 10px rgba(0,0,0,.08)}
         .article-card h4{color:var(--primary);font-size:1.5rem;margin-bottom:1rem}
-        .article-card-mini{background:var(--white);border-radius:12px;padding:1.5rem;border-left:4px solid var(--primary);box-shadow:0 2px 15px rgba(0,0,0,.06);transition:transform .3s ease,box-shadow .3s ease}
-        .article-card-mini:hover{transform:translateX(5px);box-shadow:0 4px 20px rgba(111,69,69,.15)}
-        .article-card-mini h4{color:var(--primary);font-size:1.1rem;margin-bottom:0.5rem}
-        .article-card-mini p{font-size:0.95rem;line-height:1.5;color:var(--text-light);margin-bottom:0.8rem}
         .article-card-modern{background:var(--white);border-radius:18px;padding:1.8rem;box-shadow:0 2px 20px rgba(0,0,0,.06);transition:all .35s ease;border:1px solid rgba(111,69,69,.08)}
         .article-card-modern:hover{transform:translateY(-5px);box-shadow:0 8px 30px rgba(111,69,69,.15);border-color:rgba(111,69,69,.15)}
         .metier-tag{display:inline-block;background:var(--primary);color:var(--white);padding:.3rem .8rem;border-radius:20px;font-size:.9rem;margin-top:1rem}
@@ -89,10 +85,6 @@
         .pro-section ul li:before{content:"✓ ";color:var(--primary);font-weight:bold}
         .tarif-item{display:flex;justify-content:space-between;padding:.8rem;background:#f8f8f8;border-radius:5px;margin-bottom:.5rem}
         .tarif-item span:last-child{color:var(--primary);font-weight:bold}
-        .sub-categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:2rem}
-        .sub-category-card{background:var(--secondary);border-radius:8px;padding:1.5rem;cursor:pointer;transition:all .3s;text-align:center;border:2px solid transparent}
-        .sub-category-card:hover{transform:translateY(-3px);border-color:var(--primary);background:white}
-        .sub-category-card h4{color:var(--primary);font-size:1.2rem;margin-bottom:.5rem}
         .sub-category-card-modern{background:var(--white);border-radius:18px;padding:2rem;cursor:pointer;transition:all .35s ease;text-align:center;border:2px solid var(--secondary);box-shadow:0 2px 12px rgba(0,0,0,.06)}
         .sub-category-card-modern:hover{transform:translateY(-6px);border-color:var(--primary);box-shadow:0 6px 25px rgba(111,69,69,.15)}
         .form-container{max-width:700px;margin:0 auto;background:var(--white);padding:2rem;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.1)}
@@ -103,19 +95,7 @@
         .form-group textarea{min-height:120px;resize:vertical}
         .submit-button{background:var(--primary);color:var(--white);border:none;padding:1rem 2rem;border-radius:5px;font-size:1.1rem;cursor:pointer;width:100%;transition:opacity .3s;font-weight:600}
         .submit-button:hover{opacity:.9}
-        .welcome-hero{position:relative;padding:4rem 2rem;overflow:hidden;background:linear-gradient(135deg,#f4e8e7 0%,#fff 100%)}
-        .welcome-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-        .welcome-text h2{font-size:3rem;color:#6f4545;margin-bottom:1.5rem;line-height:1.2}
-        .welcome-text p{font-size:1.2rem;color:var(--text);margin-bottom:2rem}
-        .welcome-image-container{position:relative}
-        .welcome-image-container img{width:100%;max-width:500px;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;box-shadow:0 20px 60px rgba(111,69,69,0.2);display:block}
-        .shape-bg{position:absolute;background:rgba(139,180,180,0.3);border-radius:50%;z-index:-1}
-        .shape-1{width:300px;height:300px;top:-50px;left:-50px}
-        .shape-2{width:200px;height:200px;bottom:-30px;right:-30px;background:rgba(232,227,223,0.5)}
-        @media(max-width:768px){.welcome-content{grid-template-columns:1fr;gap:2rem}.welcome-text h2{font-size:2rem}.welcome-image-container img{max-width:100%;margin:0 auto}}
         @media(max-width:768px){.nav-links button{padding:.5rem;font-size:.85rem}.categories-grid{grid-template-columns:1fr}.hero h1{font-size:2rem}.pro-link{font-size:.8rem;padding:.5rem .8rem}.nav-center{flex:0}}
-        .articles-section-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-        @media(max-width:900px){.articles-section-grid{grid-template-columns:1fr !important;gap:3rem !important}.articles-section-grid>div:first-child{order:2}.articles-section-grid>div:last-child{order:1;grid-template-columns:1fr !important}}
     </style>
 </head>
 <body>
@@ -129,7 +109,7 @@
                     <li><button onclick="showTab('accompagnements')" id="btn-accompagnements">Nos Accompagnements</button></li>
                 </ul>
             </div>
-            <a href="#" onclick="showTab('professionnel-form');return false;" class="pro-link">Vous êtes un professionnel ?</div>
+            <a href="#" onclick="showTab('professionnel-form');return false;" class="pro-link">Vous êtes un professionnel ?</a>
         </nav>
     </header>
 
@@ -164,7 +144,7 @@
                 <p style="text-align:center;color:var(--text-light);margin-bottom:3rem;font-size:1rem;position:relative;z-index:1">Découvrez nos professionnels les plus appréciés</p>
                 
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2.5rem;max-width:900px;margin:0 auto;position:relative;z-index:1">
-                    <div class="pro-card-modern" onclick="goToPro('helene')" style="cursor:pointer">
+                    <div class="pro-card-modern" onclick="goToPro('helene')">
                         <div style="position:absolute;top:-10px;right:15px;background:linear-gradient(135deg,#FFD700 0%,#FFA500 100%);color:#fff;padding:.4rem 1rem;border-radius:20px;font-size:.75rem;font-weight:600;box-shadow:0 4px 12px rgba(255,215,0,0.4);display:flex;align-items:center;gap:.3rem">
                             <span>⭐</span> Populaire
                         </div>
@@ -188,7 +168,7 @@
                         </div>
                     </div>
 
-                    <div class="pro-card-modern" onclick="goToPro('claire')" style="cursor:pointer">
+                    <div class="pro-card-modern" onclick="goToPro('claire')">
                         <div style="position:absolute;top:-10px;right:15px;background:linear-gradient(135deg,#FFD700 0%,#FFA500 100%);color:#fff;padding:.4rem 1rem;border-radius:20px;font-size:.75rem;font-weight:600;box-shadow:0 4px 12px rgba(255,215,0,0.4);display:flex;align-items:center;gap:.3rem">
                             <span>⭐</span> Populaire
                         </div>
@@ -319,25 +299,8 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Accompagnement</h2>
                 <div class="articles-grid">
-                    <div class="article-card" onclick="showArticleDetail('doula')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
-                            <span style="font-size:1.5rem">👶</span>
-                        </div>
-                        <h4>La Doula : votre compagne de naissance</h4>
-                        <p>Découvrez le rôle essentiel de la doula dans votre parcours de maternité. Un soutien bienveillant et continu pour vous accompagner.</p>
-                        <span class="metier-tag">Doula</span>
-                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
-                    </div>
-                    
-                    <div class="article-card" onclick="showArticleDetail('accompagnante')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
-                            <span style="font-size:1.5rem">🌸</span>
-                        </div>
-                        <h4>L'accompagnante périnatale</h4>
-                        <p>Accompagnement personnalisé durant la grossesse et le post-partum avec des techniques de bien-être adaptées.</p>
-                        <span class="metier-tag">Accompagnante</span>
-                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
-                    </div>
+                    <div class="article-card"><h4>La Doula</h4><p>Votre compagne de naissance.</p></div>
+                    <div class="article-card"><h4>L'accompagnante périnatale</h4><p>Accompagnement personnalisé.</p></div>
                 </div>
             </div>
 
@@ -345,15 +308,7 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">PMA & Fertilité</h2>
                 <div class="articles-grid">
-                    <div class="article-card" onclick="showArticleDetail('gyneco')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
-                            <span style="font-size:1.5rem">🔬</span>
-                        </div>
-                        <h4>Le gynécologue spécialisé en fertilité</h4>
-                        <p>Comprendre le rôle du gynécologue dans votre parcours PMA et les différentes étapes de l'accompagnement médical.</p>
-                        <span class="metier-tag">Gynécologue</span>
-                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
-                    </div>
+                    <div class="article-card"><h4>Le gynécologue spécialisé</h4><p>Parcours PMA.</p></div>
                 </div>
             </div>
 
@@ -361,15 +316,7 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Grossesse</h2>
                 <div class="articles-grid">
-                    <div class="article-card" onclick="showArticleDetail('sagefemme')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
-                            <span style="font-size:1.5rem">🤰</span>
-                        </div>
-                        <h4>La sage-femme : votre alliée grossesse</h4>
-                        <p>Suivi médical complet de la grossesse, préparation à la naissance et accompagnement personnalisé tout au long de votre parcours.</p>
-                        <span class="metier-tag">Sage-femme</span>
-                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
-                    </div>
+                    <div class="article-card"><h4>La sage-femme</h4><p>Votre alliée grossesse.</p></div>
                 </div>
             </div>
 
@@ -377,15 +324,7 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Bien-être</h2>
                 <div class="articles-grid">
-                    <div class="article-card" onclick="showArticleDetail('osteo')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
-                            <span style="font-size:1.5rem">💆‍♀️</span>
-                        </div>
-                        <h4>L'ostéopathe périnatal</h4>
-                        <p>Soulagement des maux de grossesse et accompagnement corporel pour maman et bébé. Les bienfaits de l'ostéopathie périnatale.</p>
-                        <span class="metier-tag">Ostéopathe</span>
-                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
-                    </div>
+                    <div class="article-card"><h4>L'ostéopathe périnatal</h4><p>Soulagement des maux.</p></div>
                 </div>
             </div>
 
@@ -393,15 +332,7 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Psychologie</h2>
                 <div class="articles-grid">
-                    <div class="article-card" onclick="showArticleDetail('psy')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
-                            <span style="font-size:1.5rem">💭</span>
-                        </div>
-                        <h4>Le psychologue périnatal</h4>
-                        <p>Accompagnement émotionnel durant la grossesse et le post-partum. Un espace bienveillant pour vos questionnements et difficultés.</p>
-                        <span class="metier-tag">Psychologue</span>
-                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
-                    </div>
+                    <div class="article-card"><h4>Le psychologue périnatal</h4><p>Accompagnement émotionnel.</p></div>
                 </div>
             </div>
 
@@ -409,17 +340,8 @@
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
                 <h2 class="category-title">Post-Partum</h2>
                 <div class="articles-grid">
-                    <div class="article-card" onclick="showArticleDetail('lactation')" style="cursor:pointer;transition:transform .3s ease" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
-                            <span style="font-size:1.5rem">🤱</span>
-                        </div>
-                        <h4>La consultante en lactation IBCLC</h4>
-                        <p>Soutien expert pour l'allaitement maternel. Solutions personnalisées aux défis de l'allaitement avec bienveillance.</p>
-                        <span class="metier-tag">IBCLC</span>
-                        <div style="margin-top:1rem;color:var(--primary);font-size:0.9rem;font-weight:600">Lire l'article →</div>
-                    </div>
+                    <div class="article-card"><h4>La consultante en lactation</h4><p>Soutien allaitement.</p></div>
                 </div>
-            </div>
             </div>
         </div>
 
@@ -519,7 +441,7 @@
                     <h3 style="color:var(--primary);text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Doulas</h3>
                     
                     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
-                        <div class="pro-card-modern" onclick="goToPro('helene')" style="cursor:pointer">
+                        <div class="pro-card-modern" onclick="showProDetail('helene')">
                             <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem">
                                 <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold;box-shadow:0 4px 15px rgba(111,69,69,0.25);flex-shrink:0">
                                     HP
@@ -536,7 +458,7 @@
                             </div>
                         </div>
 
-                        <div class="pro-card-modern" onclick="goToPro('sophie')" style="cursor:pointer">
+                        <div class="pro-card-modern" onclick="showProDetail('sophie')">
                             <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem">
                                 <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold;box-shadow:0 4px 15px rgba(111,69,69,0.25);flex-shrink:0">
                                     SM
@@ -559,7 +481,7 @@
                     <h3 style="color:var(--primary);text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Accompagnantes</h3>
                     
                     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
-                        <div class="pro-card-modern" onclick="goToPro('claire')" style="cursor:pointer">
+                        <div class="pro-card-modern" onclick="showProDetail('claire')">
                             <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem">
                                 <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold;box-shadow:0 4px 15px rgba(111,69,69,0.25);flex-shrink:0">
                                     CD
@@ -585,8 +507,8 @@
                             <h2>Hélène Poughon</h2>
                             <div style="color:var(--text-light);margin-bottom:.5rem">Doula - Ôm Doula Lille</div>
                             <div class="pro-detail-contact">
-                                <a href="https://omdoula.fr/"  class="contact-button">🌐 Site</div>
-                                <a href="mailto:contact@omdoula.fr" class="contact-button">📧 Email</div>
+                                <a href="https://omdoula.fr/" target="_blank" class="contact-button">🌐 Site</a>
+                                <a href="mailto:contact@omdoula.fr" class="contact-button">📧 Email</a>
                             </div>
                         </div>
                     </div>
@@ -616,7 +538,7 @@
                             <h2>Sophie Martin</h2>
                             <div style="color:var(--text-light);margin-bottom:.5rem">Doula - 8 ans</div>
                             <div class="pro-detail-contact">
-                                <a href="mailto:sophie@example.com" class="contact-button">📧 Email</div>
+                                <a href="mailto:sophie@example.com" class="contact-button">📧 Email</a>
                             </div>
                         </div>
                     </div>
@@ -637,7 +559,7 @@
                             <h2>Claire Dubois</h2>
                             <div style="color:var(--text-light);margin-bottom:.5rem">Accompagnante - Sophrologue</div>
                             <div class="pro-detail-contact">
-                                <a href="mailto:claire@example.com" class="contact-button">📧 Email</div>
+                                <a href="mailto:claire@example.com" class="contact-button">📧 Email</a>
                             </div>
                         </div>
                     </div>
@@ -706,10 +628,8 @@
             {id:'claire',name:'Claire Dubois',specialty:'Accompagnante',category:'accompagnement',description:'Sophrologie et yoga',tags:['Sophrologie','Yoga'],location:'Lyon',avatar:'CD'}
         ];
 
-        // Variable pour tracker le niveau de navigation
-        let navigationLevel = 'categories'; // peut être: 'categories', 'subcategories', 'list', 'detail'
+        let navigationLevel = 'categories';
 
-        // Fonction pour afficher/masquer le bouton clear
         function toggleClearButton(inputId, buttonId){
             const input = document.getElementById(inputId);
             const button = document.getElementById(buttonId);
@@ -720,7 +640,6 @@
             }
         }
 
-        // Fonction pour effacer le champ de recherche
         function clearSearchInput(inputId, buttonId){
             document.getElementById(inputId).value = '';
             document.getElementById(buttonId).style.opacity = '0';
@@ -729,7 +648,6 @@
             }
         }
 
-        // Fonction pour gérer le bouton retour intelligent
         function handleBackButton(){
             if(navigationLevel === 'detail'){
                 hideProDetail();
@@ -750,7 +668,6 @@
             const btn=document.getElementById('btn-'+tab);
             if(btn)btn.classList.add('active');
             
-            // Gérer l'affichage du bandeau hero
             const heroBanner = document.getElementById('hero-banner');
             if(tab === 'accueil') {
                 heroBanner.classList.add('active');
@@ -759,7 +676,6 @@
             }
             
             if(tab==='accompagnements')backToCategories();
-            // Ne réinitialiser la vue professionnels QUE si les résultats de recherche ne sont pas affichés
             if(tab==='professionnels' && document.getElementById('search-results').style.display !== 'block'){
                 backToProCats();
             }
@@ -774,28 +690,6 @@
         function backToCategories(){
             document.getElementById('categories-view').style.display='block';
             document.querySelectorAll('#accompagnements .articles-section').forEach(s=>s.classList.remove('active'));
-        }
-
-        function showArticleDetail(articleId){
-            // Cacher toutes les sections
-            document.querySelectorAll('#accompagnements .articles-section').forEach(s=>s.classList.remove('active'));
-            // Afficher l'article détaillé
-            const detailId = 'article-detail-' + articleId;
-            const articleSection = document.getElementById(detailId);
-            if(articleSection){
-                articleSection.classList.add('active');
-                // Scroll vers le haut
-                window.scrollTo({top: 0, behavior: 'smooth'});
-            }
-        }
-
-        function backToArticlesList(category){
-            // Cacher tous les articles détaillés
-            document.querySelectorAll('#accompagnements .articles-section').forEach(s=>s.classList.remove('active'));
-            // Afficher la liste d'articles de la catégorie
-            document.getElementById('articles-' + category).classList.add('active');
-            // Scroll vers le haut
-            window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
         function showProCat(cat){
@@ -859,23 +753,18 @@
         }
 
         function goToProFromSearch(id){
-            // Naviguer directement vers le détail depuis la recherche
             showTab('professionnels');
             setTimeout(()=>{
-                // Masquer les catégories et les résultats de recherche
                 document.getElementById('pro-categories-view').style.display='none';
                 document.getElementById('search-results').style.display='none';
                 
-                // Afficher la section accompagnement
                 document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
                 document.getElementById('pro-list-accompagnement').classList.add('active');
                 
-                // Masquer les sous-catégories et les listes
                 document.getElementById('sub-accompagnement').style.display='none';
                 document.getElementById('pro-cards-doulas').style.display='none';
                 document.getElementById('pro-cards-accompagnantes').style.display='none';
                 
-                // Afficher uniquement le détail
                 document.querySelectorAll('.pro-card').forEach(c=>c.style.display='none');
                 document.querySelectorAll('.pro-detail').forEach(d=>d.classList.remove('active'));
                 document.getElementById('detail-'+id).classList.add('active');
@@ -913,14 +802,10 @@
         function searchFromHome(event){
             if(event&&event.keyCode===13){
                 const term=document.getElementById('searchInputHome').value.toLowerCase().trim();
-                console.log('Terme recherché:', term);
                 if(term===''){alert('Entrez un terme de recherche');return;}
                 
                 const results=pros.filter(p=>p.name.toLowerCase().includes(term)||p.specialty.toLowerCase().includes(term)||p.location.toLowerCase().includes(term));
-                console.log('Résultats trouvés:', results);
-                console.log('Nombre de résultats:', results.length);
                 
-                // Préparer tout l'affichage AVANT de changer d'onglet
                 document.getElementById('searchInput').value=term;
                 const grid=document.getElementById('search-results-grid');
                 const div=document.getElementById('search-results');
@@ -931,17 +816,14 @@
                     grid.innerHTML=results.map(p=>`<div class="pro-card" onclick="goToProFromSearch('${p.id}')"><div class="pro-header"><div class="pro-avatar">${p.avatar}</div><div class="pro-info"><h4>${p.name}</h4><div style="color:var(--text-light);font-size:.9rem">${p.specialty}</div></div></div><p>${p.description}</p><div class="pro-tags">${p.tags.map(t=>`<span class="pro-tag">${t}</span>`).join('')}<span class="pro-tag" style="background:var(--primary);color:white">📍 ${p.location}</span></div></div>`).join('');
                 }
                 
-                // Forcer l'affichage des résultats
                 div.style.display='block';
                 document.getElementById('pro-categories-view').style.display='none';
                 document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
                 
-                // Maintenant changer d'onglet - tout est déjà prêt
                 showTab('professionnels');
             }
         }
 
-        // Fonctions pour le carrousel d'articles
         let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-slide');
         const dots = document.querySelectorAll('.carousel-dot');
@@ -991,7 +873,6 @@
             showSlide(currentSlide);
         }
 
-        // Auto-défilement toutes les 5 secondes
         setInterval(nextSlide, 5000);
     </script>
 </body>
