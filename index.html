@@ -459,6 +459,23 @@
                             </div>
                         </div>
 
+                        <div class="pro-card-modern" onclick="showProDetail('melanie')">
+                            <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem">
+                                <div style="width:60px;height:60px;border-radius:50%;background:none;overflow:hidden;flex-shrink:0;box-shadow:0 4px 15px rgba(111,69,69,0.25)">
+                                    <img src="melanie.jpg" alt="Mélanie Lesage" style="width:100%;height:100%;object-fit:cover">
+                                </div>
+                                <div>
+                                    <h4 style="color:var(--primary);font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Mélanie Lesage</h4>
+                                    <div style="color:var(--text-light);font-size:.9rem">Doula - Ham doula</div>
+                                </div>
+                            </div>
+                            <p style="color:var(--text);line-height:1.6;margin-bottom:1.5rem;font-size:.95rem">La plus belle femme au monde.</p>
+                            <div style="display:flex;flex-wrap:wrap;gap:.6rem">
+                                <span class="pro-tag-modern">Grossesse</span>
+                                <span class="pro-tag-modern" style="background:var(--primary);color:white">📍 Marcq en Baroeul</span>
+                            </div>
+                        </div>
+                        
                         <div class="pro-card-modern" onclick="showProDetail('sophie')">
                             <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem">
                                 <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold;box-shadow:0 4px 15px rgba(111,69,69,0.25);flex-shrink:0">
@@ -585,91 +602,26 @@
                         
                         <div class="pro-section">
                             <h3>📍 Zone d'intervention</h3>
-                            <p style="font-size:1.05rem;margin-bottom:2rem">Je propose mes accompagnements sur toute la <strong>métropole lilloise</strong> et ses environs</p>
-                            
-                            <!-- Design ultra moderne avec effet carte -->
-                            <div style="background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);border-radius:25px;padding:3rem;position:relative;overflow:hidden;box-shadow:0 10px 40px rgba(111,69,69,0.3)">
-                                <!-- Cercles décoratifs -->
-                                <div style="position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.1);z-index:0"></div>
-                                <div style="position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,0.08);z-index:0"></div>
-                                
-                                <div style="position:relative;z-index:1">
-                                    <!-- En-tête -->
-                                    <div style="text-align:center;margin-bottom:2.5rem">
-                                        <div style="display:inline-flex;align-items:center;gap:1rem;background:rgba(255,255,255,0.15);padding:1rem 2rem;border-radius:50px;backdrop-filter:blur(10px)">
-                                            <div style="width:40px;height:40px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;font-size:1.3rem">
-                                                📍
-                                            </div>
-                                            <h4 style="color:white;font-size:1.4rem;margin:0;font-weight:600">Métropole Lilloise</h4>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Grille des villes avec design carte moderne -->
-                                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.2rem;margin-bottom:2rem">
-                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
-                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
-                                                🏙️
-                                            </div>
-                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Lille</p>
-                                        </div>
-                                        
-                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
-                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
-                                                🏘️
-                                            </div>
-                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Roubaix</p>
-                                        </div>
-                                        
-                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
-                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
-                                                🏘️
-                                            </div>
-                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Tourcoing</p>
-                                        </div>
-                                        
-                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
-                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
-                                                🌳
-                                            </div>
-                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Villeneuve-d'Ascq</p>
-                                        </div>
-                                        
-                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
-                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
-                                                🏡
-                                            </div>
-                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Marcq-en-Barœul</p>
-                                        </div>
-                                        
-                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
-                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
-                                                🏡
-                                            </div>
-                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Lambersart</p>
-                                        </div>
-                                        
-                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
-                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
-                                                🏡
-                                            </div>
-                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">La Madeleine</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Message d'information -->
-                                    <div style="background:rgba(255,255,255,0.95);padding:1.5rem;border-radius:15px;text-align:center;backdrop-filter:blur(10px)">
-                                        <p style="margin:0;color:var(--primary);font-size:1rem;line-height:1.6">
-                                            <strong style="font-size:1.1rem">💬 Autre commune ?</strong><br>
-                                            <span style="font-size:0.95rem">N'hésitez pas à me contacter pour vérifier si je peux intervenir dans votre ville</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <p style="font-size:1.05rem">Je propose mes accompagnements sur toute la <strong>métropole lilloise</strong> et ses environs, incluant :</p>
+                            <ul style="margin-top:1rem">
+                                <li>Lille et ses quartiers</li>
+                                <li>Roubaix, Tourcoing</li>
+                                <li>Villeneuve-d'Ascq, Marcq-en-Barœul</li>
+                                <li>Lambersart, La Madeleine</li>
+                                <li>Communes limitrophes (nous consulter)</li>
+                            </ul>
                         </div>
-                    </div>
-                    
-                    <!-- Séparateur visuel -->
-                    <div style="margin:4rem 0;text-align:center">
+                        
+                        <div class="pro-section">
+                            <h3>🤝 Qu'est-ce qu'une doula ?</h3>
+                            <p>Une doula est une accompagnante à la naissance qui offre un soutien continu, physique, émotionnel et informationnel aux femmes enceintes et aux couples, avant, pendant et après l'accouchement.</p>
+                            <p style="margin-top:1rem;padding:1rem;background:#f0f8ff;border-left:4px solid var(--primary);border-radius:5px">
+                                <strong>Important :</strong> La doula ne remplace pas le personnel médical. Elle complète l'équipe médicale en apportant une présence continue et un soutien personnalisé centré sur vos besoins émotionnels et votre bien-être.
+                            </p>
+                        </div>
+                        
+                        <!-- Séparateur visuel -->
+                        <div style="margin:4rem 0;text-align:center">
                             <div style="display:inline-block;padding:0.8rem 2rem;background:var(--primary);color:white;border-radius:50px;font-size:1.2rem;font-weight:600;box-shadow:0 4px 15px rgba(111,69,69,0.2)">
                                 🎓 Mon parcours
                             </div>
@@ -682,47 +634,60 @@
                         </div>
                         
                         <div class="pro-section">
-                            <h3>🎓 Formation & Expérience</h3>
+                            <h3>🎓 Formation et certifications</h3>
+                            <div style="display:grid;gap:1.5rem;margin-top:1.5rem">
+                                <div style="display:flex;gap:1.5rem;align-items:start;padding:1.5rem;background:#f8f8f8;border-radius:10px;border-left:4px solid var(--primary)">
+                                    <div style="min-width:50px;height:50px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0">
+                                        🎓
+                                    </div>
+                                    <div>
+                                        <h4 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem">Formation de doula</h4>
+                                        <p style="color:var(--text-light);margin-bottom:.5rem">Certification reconnue</p>
+                                        <p>Formation complète aux pratiques et éthique de la doula, incluant l'accompagnement prénatal, périnatal et postnatal.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="display:flex;gap:1.5rem;align-items:start;padding:1.5rem;background:#f8f8f8;border-radius:10px;border-left:4px solid var(--primary)">
+                                    <div style="min-width:50px;height:50px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0">
+                                        💆‍♀️
+                                    </div>
+                                    <div>
+                                        <h4 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem">Techniques de bien-être</h4>
+                                        <p style="color:var(--text-light);margin-bottom:.5rem">Formations complémentaires</p>
+                                        <p>Massage périnatal, techniques de relaxation, gestion de la douleur, positions physiologiques pour l'accouchement.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="display:flex;gap:1.5rem;align-items:start;padding:1.5rem;background:#f8f8f8;border-radius:10px;border-left:4px solid var(--primary)">
+                                    <div style="min-width:50px;height:50px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0">
+                                        📚
+                                    </div>
+                                    <div>
+                                        <h4 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem">Formation continue</h4>
+                                        <p style="color:var(--text-light);margin-bottom:.5rem">Mise à jour régulière des compétences</p>
+                                        <p>Participation régulière à des formations, ateliers et conférences pour enrichir ma pratique et rester à jour sur les dernières recherches en périnatalité.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-section">
+                            <h3>💼 Mon expérience</h3>
                             <div style="background:linear-gradient(135deg,#fff 0%,#fafafa 100%);padding:2rem;border-radius:15px;border:2px solid var(--secondary);margin-top:1.5rem">
                                 <div style="display:grid;gap:1.5rem">
-                                    <div style="display:flex;gap:1rem;align-items:start">
-                                        <div style="min-width:40px;height:40px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">
-                                            🎓
-                                        </div>
-                                        <div>
-                                            <h4 style="color:var(--primary);font-size:1.1rem;margin-bottom:.5rem">Doula certifiée</h4>
-                                            <p>Formation complète aux pratiques et éthique de la doula • Techniques de bien-être périnatal • Formation continue régulière</p>
-                                        </div>
+                                    <div>
+                                        <h4 style="color:var(--primary);font-size:1.1rem;margin-bottom:.8rem">🤱 Accompagnements réalisés</h4>
+                                        <p>J'ai eu le privilège d'accompagner de nombreuses familles dans leur parcours de parentalité, chacune avec son histoire unique et ses besoins spécifiques. Ces expériences ont enrichi ma pratique et renforcé ma conviction de l'importance du soutien continu.</p>
                                     </div>
                                     
-                                    <div style="display:flex;gap:1rem;align-items:start">
-                                        <div style="min-width:40px;height:40px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">
-                                            🤱
-                                        </div>
-                                        <div>
-                                            <h4 style="color:var(--primary);font-size:1.1rem;margin-bottom:.5rem">Accompagnements réalisés</h4>
-                                            <p>Nombreuses familles accompagnées dans leur parcours de parentalité, chacune avec son histoire unique</p>
-                                        </div>
+                                    <div>
+                                        <h4 style="color:var(--primary);font-size:1.1rem;margin-bottom:.8rem">🏥 Collaboration avec les professionnels de santé</h4>
+                                        <p>Je travaille en étroite collaboration avec les sages-femmes, obstétriciens et autres professionnels de la périnatalité de la région lilloise, dans le respect du rôle de chacun.</p>
                                     </div>
                                     
-                                    <div style="display:flex;gap:1rem;align-items:start">
-                                        <div style="min-width:40px;height:40px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">
-                                            🏥
-                                        </div>
-                                        <div>
-                                            <h4 style="color:var(--primary);font-size:1.1rem;margin-bottom:.5rem">Collaboration professionnelle</h4>
-                                            <p>Travail en étroite collaboration avec les sages-femmes et professionnels de la périnatalité de la région lilloise</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div style="display:flex;gap:1rem;align-items:start">
-                                        <div style="min-width:40px;height:40px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">
-                                            🌐
-                                        </div>
-                                        <div>
-                                            <h4 style="color:var(--primary);font-size:1.1rem;margin-bottom:.5rem">Réseau et communauté</h4>
-                                            <p>Membre active du réseau des doulas • Groupes de supervision et d'échange de pratiques</p>
-                                        </div>
+                                    <div>
+                                        <h4 style="color:var(--primary);font-size:1.1rem;margin-bottom:.8rem">🌐 Réseau et communauté</h4>
+                                        <p>Membre active du réseau des doulas de la région, je participe régulièrement à des groupes de supervision et d'échange de pratiques pour garantir la meilleure qualité d'accompagnement.</p>
                                     </div>
                                 </div>
                             </div>
