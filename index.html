@@ -587,53 +587,80 @@
                             <h3>📍 Zone d'intervention</h3>
                             <p style="font-size:1.05rem;margin-bottom:2rem">Je propose mes accompagnements sur toute la <strong>métropole lilloise</strong> et ses environs</p>
                             
-                            <!-- Design moderne type map -->
-                            <div style="background:linear-gradient(135deg,#f0f8ff 0%,#fff 100%);border-radius:20px;padding:2.5rem;border:2px solid var(--secondary);position:relative;overflow:hidden">
-                                <!-- Icône map en arrière-plan -->
-                                <div style="position:absolute;top:-20px;right:-20px;font-size:8rem;opacity:0.05;z-index:0">📍</div>
+                            <!-- Design ultra moderne avec effet carte -->
+                            <div style="background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);border-radius:25px;padding:3rem;position:relative;overflow:hidden;box-shadow:0 10px 40px rgba(111,69,69,0.3)">
+                                <!-- Cercles décoratifs -->
+                                <div style="position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.1);z-index:0"></div>
+                                <div style="position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,0.08);z-index:0"></div>
                                 
                                 <div style="position:relative;z-index:1">
-                                    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem">
-                                        <div style="width:50px;height:50px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 15px rgba(111,69,69,0.3)">
-                                            📍
-                                        </div>
-                                        <h4 style="color:var(--primary);font-size:1.3rem;margin:0;font-weight:600">Métropole Lilloise</h4>
-                                    </div>
-                                    
-                                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem">
-                                        <div style="background:white;padding:1rem 1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);display:flex;align-items:center;gap:0.8rem;transition:transform .2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                                            <span style="color:var(--primary);font-size:1.2rem">•</span>
-                                            <span style="color:var(--text);font-weight:500">Lille</span>
-                                        </div>
-                                        <div style="background:white;padding:1rem 1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);display:flex;align-items:center;gap:0.8rem;transition:transform .2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                                            <span style="color:var(--primary);font-size:1.2rem">•</span>
-                                            <span style="color:var(--text);font-weight:500">Roubaix</span>
-                                        </div>
-                                        <div style="background:white;padding:1rem 1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);display:flex;align-items:center;gap:0.8rem;transition:transform .2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                                            <span style="color:var(--primary);font-size:1.2rem">•</span>
-                                            <span style="color:var(--text);font-weight:500">Tourcoing</span>
-                                        </div>
-                                        <div style="background:white;padding:1rem 1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);display:flex;align-items:center;gap:0.8rem;transition:transform .2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                                            <span style="color:var(--primary);font-size:1.2rem">•</span>
-                                            <span style="color:var(--text);font-weight:500">Villeneuve-d'Ascq</span>
-                                        </div>
-                                        <div style="background:white;padding:1rem 1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);display:flex;align-items:center;gap:0.8rem;transition:transform .2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                                            <span style="color:var(--primary);font-size:1.2rem">•</span>
-                                            <span style="color:var(--text);font-weight:500">Marcq-en-Barœul</span>
-                                        </div>
-                                        <div style="background:white;padding:1rem 1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);display:flex;align-items:center;gap:0.8rem;transition:transform .2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                                            <span style="color:var(--primary);font-size:1.2rem">•</span>
-                                            <span style="color:var(--text);font-weight:500">Lambersart</span>
-                                        </div>
-                                        <div style="background:white;padding:1rem 1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);display:flex;align-items:center;gap:0.8rem;transition:transform .2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                                            <span style="color:var(--primary);font-size:1.2rem">•</span>
-                                            <span style="color:var(--text);font-weight:500">La Madeleine</span>
+                                    <!-- En-tête -->
+                                    <div style="text-align:center;margin-bottom:2.5rem">
+                                        <div style="display:inline-flex;align-items:center;gap:1rem;background:rgba(255,255,255,0.15);padding:1rem 2rem;border-radius:50px;backdrop-filter:blur(10px)">
+                                            <div style="width:40px;height:40px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;font-size:1.3rem">
+                                                📍
+                                            </div>
+                                            <h4 style="color:white;font-size:1.4rem;margin:0;font-weight:600">Métropole Lilloise</h4>
                                         </div>
                                     </div>
                                     
-                                    <div style="margin-top:1.5rem;padding:1rem;background:white;border-radius:10px;border-left:4px solid var(--primary)">
-                                        <p style="margin:0;color:var(--text);font-size:0.95rem">
-                                            <strong>💬 Autre commune ?</strong> N'hésitez pas à me contacter pour vérifier si je peux intervenir dans votre ville
+                                    <!-- Grille des villes avec design carte moderne -->
+                                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.2rem;margin-bottom:2rem">
+                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
+                                                🏙️
+                                            </div>
+                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Lille</p>
+                                        </div>
+                                        
+                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
+                                                🏘️
+                                            </div>
+                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Roubaix</p>
+                                        </div>
+                                        
+                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
+                                                🏘️
+                                            </div>
+                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Tourcoing</p>
+                                        </div>
+                                        
+                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
+                                                🌳
+                                            </div>
+                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Villeneuve-d'Ascq</p>
+                                        </div>
+                                        
+                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
+                                                🏡
+                                            </div>
+                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Marcq-en-Barœul</p>
+                                        </div>
+                                        
+                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
+                                                🏡
+                                            </div>
+                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">Lambersart</p>
+                                        </div>
+                                        
+                                        <div style="background:white;padding:1.2rem;border-radius:15px;text-align:center;transition:all .3s;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.1)" onmouseover="this.style.transform='translateY(-5px) scale(1.05)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                                            <div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#6f4545 0%,#9a6b6b 100%);margin:0 auto 0.8rem;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;box-shadow:0 4px 12px rgba(111,69,69,0.3)">
+                                                🏡
+                                            </div>
+                                            <p style="color:var(--primary);font-weight:600;margin:0;font-size:1rem">La Madeleine</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Message d'information -->
+                                    <div style="background:rgba(255,255,255,0.95);padding:1.5rem;border-radius:15px;text-align:center;backdrop-filter:blur(10px)">
+                                        <p style="margin:0;color:var(--primary);font-size:1rem;line-height:1.6">
+                                            <strong style="font-size:1.1rem">💬 Autre commune ?</strong><br>
+                                            <span style="font-size:0.95rem">N'hésitez pas à me contacter pour vérifier si je peux intervenir dans votre ville</span>
                                         </p>
                                     </div>
                                 </div>
