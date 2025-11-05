@@ -307,12 +307,59 @@
             </div>
 
             <div id="articles-pma" class="articles-section">
-                <button class="back-button" onclick="backToCategories()">← Retour</button>
-                <h2 class="category-title">PMA & Fertilité</h2>
-                <div class="articles-grid">
-                    <div class="article-card"><h4>Le gynécologue spécialisé</h4><p>Parcours PMA.</p></div>
+    <button class="back-button" onclick="backToCategories()">← Retour</button>
+    
+    <!-- Vue liste des articles -->
+    <div id="pma-articles-list">
+        <h2 class="category-title">PMA & Fertilité</h2>
+        
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:1000px;margin:2rem auto">
+            <!-- Carte article PMA Lille -->
+            <div class="article-card-modern" onclick="showPmaArticle('pma-lille')" style="cursor:pointer;transition:all .3s" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 12px 40px rgba(111,69,69,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 20px rgba(0,0,0,0.06)'">
+                <div style="position:relative;width:100%;height:200px;border-radius:15px 15px 0 0;overflow:hidden;margin:-1.8rem -1.8rem 1.5rem -1.8rem">
+                    <img src="articlepma.png" alt="PMA à Lille" style="width:100%;height:100%;object-fit:cover">
+                    <div style="position:absolute;top:10px;right:10px;background:var(--primary);color:white;padding:0.4rem 1rem;border-radius:20px;font-size:0.85rem;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,0.2)">
+                        📖 Guide complet
+                    </div>
+                </div>
+                <h4 style="color:var(--primary);font-size:1.4rem;margin-bottom:1rem;font-weight:700;line-height:1.3">🧬 PMA à Lille : par où commencer ?</h4>
+                <p style="color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;font-size:0.95rem">
+                    Vous vous interrogez sur la procréation médicalement assistée à Lille ? Découvrez à qui s'adresser, quels centres consulter, et comment démarrer votre parcours PMA dans la métropole lilloise.
+                </p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1rem">
+                    <span style="background:var(--secondary);color:var(--primary);padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">CHU Lille</span>
+                    <span style="background:var(--secondary);color:var(--primary);padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">Cliniques</span>
+                    <span style="background:var(--secondary);color:var(--primary);padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">Accompagnement</span>
+                </div>
+                <div style="text-align:right;color:var(--primary);font-weight:600;font-size:0.95rem">
+                    Lire l'article →
                 </div>
             </div>
+            
+            <!-- Vous pouvez ajouter d'autres cartes d'articles ici -->
+        </div>
+    </div>
+    
+    <!-- Article complet PMA Lille (caché par défaut) -->
+    <div id="pma-article-pma-lille" style="display:none">
+        <button class="back-button" onclick="backToPmaList()">← Retour aux articles</button>
+        
+        <article style="max-width:900px;margin:0 auto">
+            <!-- Tout le contenu de l'article que j'ai créé précédemment -->
+            <!-- En-tête avec image -->
+            <div style="position:relative;margin-bottom:3rem;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(111,69,69,0.15)">
+                <img src="articlepma.png" alt="PMA à Lille - Procréation médicalement assistée" style="width:100%;height:400px;object-fit:cover">
+                <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(111,69,69,0.95) 0%,transparent 100%);padding:3rem 2rem 2rem">
+                    <h1 style="color:white;font-size:2.5rem;font-weight:700;margin-bottom:0.5rem;line-height:1.2">🧬 PMA à Lille : par où commencer ?</h1>
+                    <p style="color:rgba(255,255,255,0.9);font-size:1.1rem;margin:0">À qui s'adresser pour débuter votre parcours de procréation médicalement assistée</p>
+                </div>
+            </div>
+            
+            <!-- ... Tout le reste du contenu de l'article ... -->
+            <!-- (Je ne recopie pas tout pour la lisibilité, mais gardez tout le contenu) -->
+        </article>
+    </div>
+</div>
 
             <div id="articles-grossesse" class="articles-section">
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
@@ -1018,7 +1065,19 @@
             document.querySelectorAll('#accompagnements .articles-section').forEach(s=>s.classList.remove('active'));
             document.getElementById('articles-'+cat).classList.add('active');
         }
+function showPmaArticle(articleId) {
+    document.getElementById('pma-articles-list').style.display = 'none';
+    document.getElementById('pma-article-' + articleId).style.display = 'block';
+    window.scrollTo(0, 0);
+}
 
+function backToPmaList() {
+    document.getElementById('pma-articles-list').style.display = 'block';
+    document.querySelectorAll('[id^="pma-article-"]').forEach(article => {
+        article.style.display = 'none';
+    });
+    window.scrollTo(0, 0);
+}
         function backToCategories(){
             document.getElementById('categories-view').style.display='block';
             document.querySelectorAll('#accompagnements .articles-section').forEach(s=>s.classList.remove('active'));
