@@ -1282,6 +1282,21 @@ function backToPmaList() {
     });
     window.scrollTo(0, 0);
 }
+
+function showPmaArticle(articleId) {
+    document.getElementById('pma-articles-list').style.display = 'none';
+    document.getElementById('pma-article-' + articleId).style.display = 'block';
+    window.scrollTo(0, 0);
+}
+
+function backToPmaList() {
+    document.getElementById('pma-articles-list').style.display = 'block';
+    document.querySelectorAll('[id^="pma-article-"]').forEach(article => {
+        article.style.display = 'none';
+    });
+    window.scrollTo(0, 0);
+}
+        
         function backToCategories(){
             document.getElementById('categories-view').style.display='block';
             document.querySelectorAll('#accompagnements .articles-section').forEach(s=>s.classList.remove('active'));
