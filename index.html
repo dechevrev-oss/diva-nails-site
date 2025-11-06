@@ -271,25 +271,6 @@
                                     <span class="metier-tag" style="font-size:0.85rem;padding:.4rem 1rem">Ostéopathe</span>
                                 </div>
                             </div>
-                            <!-- Slide 5 - PMA à Lille -->
-                                <div class="carousel-slide" style="position:absolute;width:100%;opacity:0;transform:translateX(100%);transition:all .5s ease;display:none">
-                                    <div class="article-card-modern" onclick="showPmaArticleFromCarousel()" style="max-width:700px;margin:0 auto;padding:2.5rem;box-shadow:0 8px 40px rgba(111,69,69,0.12);cursor:pointer">
-                                        <div style="position:relative;width:100%;height:200px;border-radius:15px 15px 0 0;overflow:hidden;margin:-2.5rem -2.5rem 1.5rem -2.5rem">
-                                            <img src="articlepma.jpg" alt="PMA à Lille" style="width:100%;height:100%;object-fit:cover">
-                                            <div style="position:absolute;top:10px;right:10px;background:var(--primary);color:white;padding:0.4rem 1rem;border-radius:20px;font-size:0.85rem;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,0.2)">
-                                                📖 Guide complet
-                                            </div>
-                                        </div>
-                                        <div style="width:65px;height:65px;background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 6px 20px rgba(111,69,69,0.25)">
-                                            <span style="font-size:2rem">🧬</span>
-                                        </div>
-                                        <h4 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700;line-height:1.3;text-align:center">PMA à Lille : par où commencer ?</h4>
-                                        <p style="font-size:1.05rem;line-height:1.8;color:var(--text-light);margin-bottom:1.5rem;text-align:center">Guide complet pour débuter votre parcours de procréation médicalement assistée dans la métropole lilloise.</p>
-                                        <div style="text-align:center">
-                                            <span class="metier-tag" style="font-size:0.85rem;padding:.4rem 1rem">PMA & Fertilité</span>
-                                        </div>
-                                    </div>
-                                </div>
                         </div>
                     </div>
                 </div>
@@ -301,7 +282,6 @@
                 <span class="carousel-dot" onclick="goToSlide(1)" style="width:12px;height:12px;border-radius:50%;background:var(--secondary);cursor:pointer;transition:all .3s ease"></span>
                 <span class="carousel-dot" onclick="goToSlide(2)" style="width:12px;height:12px;border-radius:50%;background:var(--secondary);cursor:pointer;transition:all .3s ease"></span>
                 <span class="carousel-dot" onclick="goToSlide(3)" style="width:12px;height:12px;border-radius:50%;background:var(--secondary);cursor:pointer;transition:all .3s ease"></span>
-                <span class="carousel-dot" onclick="goToSlide(4)" style="width:12px;height:12px;border-radius:50%;background:var(--secondary);cursor:pointer;transition:all .3s ease"></span>
             </div>
         </div>
 
@@ -1524,23 +1504,6 @@ function backToPmaList() {
             activeButton.style.color = 'var(--primary)';
             activeButton.style.borderBottom = '3px solid var(--primary)';
         }
-
-        // Fonction pour ouvrir l'article PMA depuis le carrousel
-function showPmaArticleFromCarousel() {
-    // Aller dans l'onglet Accompagnements
-    showTab('accompagnements');
-    
-    // Attendre un peu puis ouvrir la section PMA
-    setTimeout(() => {
-        showArticles('pma');
-        
-        // Attendre encore un peu puis afficher l'article
-        setTimeout(() => {
-            showPmaArticle('pma-lille');
-            window.scrollTo(0, 0);
-        }, 100);
-    }, 100);
-}
     </script>
 </body>
 </html>
