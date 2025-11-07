@@ -335,229 +335,232 @@
                     Lire l'article →
                 </div>
             </div>
-            
-            <!-- Vous pouvez ajouter d'autres cartes d'articles ici -->
         </div>
     </div>
     
-    <article style="max-width:900px;margin:0 auto">
-    <!-- En-tête avec image -->
-    <div style="position:relative;margin-bottom:3rem;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(111,69,69,0.15)">
-        <img src="articlepma.jpg" alt="PMA à Lille - Procréation médicalement assistée" style="width:100%;height:400px;object-fit:cover">
-        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(111,69,69,0.95) 0%,transparent 100%);padding:3rem 2rem 2rem">
-            <h1 style="color:white;font-size:2.5rem;font-weight:700;margin-bottom:0.5rem;line-height:1.2">🧬 PMA à Lille : par où commencer ?</h1>
-            <p style="color:rgba(255,255,255,0.9);font-size:1.1rem;margin:0">À qui s'adresser pour débuter votre parcours de procréation médicalement assistée</p>
-        </div>
-    </div>
-    
-    <!-- Introduction -->
-    <div style="background:linear-gradient(135deg,#fafafa 0%,#fff 100%);padding:2rem;border-radius:15px;margin-bottom:2rem">
-        <p style="font-size:1.1rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
-            Vous vivez à Lille ou dans la métropole lilloise et vous vous interrogez sur la procréation médicalement assistée (PMA) ?
-        </p>
-        <p style="font-size:1.1rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
-            Que ce soit en couple ou en solo, entamer un parcours PMA peut sembler complexe au début : à qui parler ? Où aller ? Comment se déroule le premier rendez-vous ?
-        </p>
-        <p style="font-size:1.1rem;line-height:1.8;color:var(--text);margin:0">
-            Ce guide vous aide à y voir plus clair, avec un focus sur les structures, spécialistes et accompagnements disponibles à Lille.
-        </p>
-    </div>
-
-    <!-- Section 1 -->
-    <div style="margin-bottom:3rem">
-        <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
-            🔹 1. Comprendre ce qu'est la PMA
-        </h2>
-        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
-            La procréation médicalement assistée (PMA) regroupe plusieurs techniques destinées à aider à la conception d'un enfant. Les plus courantes sont :
-        </p>
-        <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);margin-bottom:1.5rem">
-            <ul style="list-style:none;padding:0">
-                <li style="margin-bottom:1rem;padding-left:2rem;position:relative">
-                    <span style="position:absolute;left:0;color:var(--primary);font-weight:bold">•</span>
-                    <strong style="color:var(--primary)">L'insémination intra-utérine (IIU)</strong> : dépôt de sperme dans l'utérus au moment de l'ovulation.
-                </li>
-                <li style="margin-bottom:1rem;padding-left:2rem;position:relative">
-                    <span style="position:absolute;left:0;color:var(--primary);font-weight:bold">•</span>
-                    <strong style="color:var(--primary)">La fécondation in vitro (FIV)</strong> : fécondation de l'ovule et du spermatozoïde en laboratoire, avant transfert dans l'utérus.
-                </li>
-                <li style="padding-left:2rem;position:relative">
-                    <span style="position:absolute;left:0;color:var(--primary);font-weight:bold">•</span>
-                    <strong style="color:var(--primary)">Le don de gamètes</strong> (ovocytes ou spermatozoïdes) : pour les couples infertiles ou les femmes seules.
-                </li>
-            </ul>
-        </div>
-        <p style="font-size:1.05rem;line-height:1.8;color:var(--text)">
-            Chaque parcours débute par un bilan de fertilité, réalisé par un médecin spécialisé. Ce bilan oriente la stratégie médicale adaptée à chaque situation.
-        </p>
-    </div>
-
-    <!-- Section 2 -->
-    <div style="margin-bottom:3rem">
-        <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
-            🔹 2. À qui s'adresser pour commencer un parcours PMA à Lille ?
-        </h2>
+    <!-- Article complet PMA Lille (caché par défaut) -->
+    <div id="pma-article-pma-lille" style="display:none">
+        <button class="back-button" onclick="backToPmaList()">← Retour aux articles</button>
         
-        <h3 style="color:var(--primary);font-size:1.4rem;margin-bottom:1rem;font-weight:600">
-            👩‍⚕️ Votre gynécologue
-        </h3>
-        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:2rem">
-            C'est souvent le premier contact. Il peut vous prescrire les premiers examens (dosages hormonaux, échographie, spermogramme, hystérosalpingographie) et vous orienter vers un centre de PMA agréé si nécessaire.
-        </p>
-
-        <h3 style="color:var(--primary);font-size:1.4rem;margin-bottom:1.5rem;font-weight:600">
-            🏥 Les centres de PMA à Lille
-        </h3>
-        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
-            Plusieurs structures prennent en charge les parcours PMA dans la métropole :
-        </p>
-
-        <div style="display:grid;gap:1.5rem;margin-bottom:2rem">
-            <!-- CHU de Lille -->
-            <div style="background:white;padding:2rem;border-radius:15px;box-shadow:0 4px 15px rgba(111,69,69,0.1);border-left:5px solid var(--primary)">
-                <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:1rem;font-weight:600">
-                    CHU de Lille – Hôpital Jeanne de Flandre
-                </h4>
-                <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
-                    Centre public de référence régional, avec une équipe complète (médecins, biologistes, psychologues).
+        <article style="max-width:900px;margin:0 auto">
+            <!-- En-tête avec image -->
+            <div style="position:relative;margin-bottom:3rem;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(111,69,69,0.15)">
+                <img src="articlepma.jpg" alt="PMA à Lille - Procréation médicalement assistée" style="width:100%;height:400px;object-fit:cover">
+                <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(111,69,69,0.95) 0%,transparent 100%);padding:3rem 2rem 2rem">
+                    <h1 style="color:white;font-size:2.5rem;font-weight:700;margin-bottom:0.5rem;line-height:1.2">🧬 PMA à Lille : par où commencer ?</h1>
+                    <p style="color:rgba(255,255,255,0.9);font-size:1.1rem;margin:0">À qui s'adresser pour débuter votre parcours de procréation médicalement assistée</p>
+                </div>
+            </div>
+            
+            <!-- Introduction -->
+            <div style="background:linear-gradient(135deg,#fafafa 0%,#fff 100%);padding:2rem;border-radius:15px;margin-bottom:2rem">
+                <p style="font-size:1.1rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
+                    Vous vivez à Lille ou dans la métropole lilloise et vous vous interrogez sur la procréation médicalement assistée (PMA) ?
                 </p>
-                <p style="font-size:1rem;color:var(--text-light);margin-bottom:0.5rem">
-                    📍 2 avenue Oscar Lambret, Lille
+                <p style="font-size:1.1rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
+                    Que ce soit en couple ou en solo, entamer un parcours PMA peut sembler complexe au début : à qui parler ? Où aller ? Comment se déroule le premier rendez-vous ?
                 </p>
-                <p style="font-size:1rem;color:var(--primary);font-weight:600">
-                    ✓ Prise en charge 100 % par la Sécurité sociale (jusqu'à 43 ans)
+                <p style="font-size:1.1rem;line-height:1.8;color:var(--text);margin:0">
+                    Ce guide vous aide à y voir plus clair, avec un focus sur les structures, spécialistes et accompagnements disponibles à Lille.
                 </p>
             </div>
 
-            <!-- Clinique du Bois -->
-            <div style="background:white;padding:2rem;border-radius:15px;box-shadow:0 4px 15px rgba(111,69,69,0.1);border-left:5px solid var(--primary)">
-                <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:1rem;font-weight:600">
-                    Clinique du Bois – Lambersart
-                </h4>
-                <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
-                    Structure privée réputée pour sa disponibilité et son accompagnement humain. Délais souvent plus courts que dans le public.
+            <!-- Section 1 -->
+            <div style="margin-bottom:3rem">
+                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
+                    🔹 1. Comprendre ce qu'est la PMA
+                </h2>
+                <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
+                    La procréation médicalement assistée (PMA) regroupe plusieurs techniques destinées à aider à la conception d'un enfant. Les plus courantes sont :
                 </p>
-            </div>
-
-            <!-- Polyclinique -->
-            <div style="background:white;padding:2rem;border-radius:15px;box-shadow:0 4px 15px rgba(111,69,69,0.1);border-left:5px solid var(--primary)">
-                <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:1rem;font-weight:600">
-                    Polyclinique de Marcq-en-Barœul
-                </h4>
+                <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);margin-bottom:1.5rem">
+                    <ul style="list-style:none;padding:0">
+                        <li style="margin-bottom:1rem;padding-left:2rem;position:relative">
+                            <span style="position:absolute;left:0;color:var(--primary);font-weight:bold">•</span>
+                            <strong style="color:var(--primary)">L'insémination intra-utérine (IIU)</strong> : dépôt de sperme dans l'utérus au moment de l'ovulation.
+                        </li>
+                        <li style="margin-bottom:1rem;padding-left:2rem;position:relative">
+                            <span style="position:absolute;left:0;color:var(--primary);font-weight:bold">•</span>
+                            <strong style="color:var(--primary)">La fécondation in vitro (FIV)</strong> : fécondation de l'ovule et du spermatozoïde en laboratoire, avant transfert dans l'utérus.
+                        </li>
+                        <li style="padding-left:2rem;position:relative">
+                            <span style="position:absolute;left:0;color:var(--primary);font-weight:bold">•</span>
+                            <strong style="color:var(--primary)">Le don de gamètes</strong> (ovocytes ou spermatozoïdes) : pour les couples infertiles ou les femmes seules.
+                        </li>
+                    </ul>
+                </div>
                 <p style="font-size:1.05rem;line-height:1.8;color:var(--text)">
-                    Centre à taille humaine avec suivi personnalisé et travail en réseau avec des laboratoires partenaires.
+                    Chaque parcours débute par un bilan de fertilité, réalisé par un médecin spécialisé. Ce bilan oriente la stratégie médicale adaptée à chaque situation.
                 </p>
             </div>
-        </div>
 
-        <h3 style="color:var(--primary);font-size:1.4rem;margin-bottom:1rem;font-weight:600">
-            🔬 Les laboratoires d'analyses
-        </h3>
-        <p style="font-size:1.05rem;line-height:1.8;color:var(--text)">
-            Avant le démarrage de la PMA, plusieurs examens biologiques sont nécessaires. À Lille, vous trouverez des laboratoires spécialisés en biologie de la reproduction à Lille-Centre, Villeneuve-d'Ascq, Marcq-en-Barœul et Wasquehal.
-        </p>
-    </div>
+            <!-- Section 2 -->
+            <div style="margin-bottom:3rem">
+                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
+                    🔹 2. À qui s'adresser pour commencer un parcours PMA à Lille ?
+                </h2>
+                
+                <h3 style="color:var(--primary);font-size:1.4rem;margin-bottom:1rem;font-weight:600">
+                    👩‍⚕️ Votre gynécologue
+                </h3>
+                <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:2rem">
+                    C'est souvent le premier contact. Il peut vous prescrire les premiers examens (dosages hormonaux, échographie, spermogramme, hystérosalpingographie) et vous orienter vers un centre de PMA agréé si nécessaire.
+                </p>
 
-    <!-- Section 3 -->
-    <div style="margin-bottom:3rem">
-        <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
-            🔹 3. Comment se déroule le début du parcours PMA ?
-        </h2>
-        <div style="background:linear-gradient(135deg,#fafafa 0%,#fff 100%);padding:2rem;border-radius:15px">
-            <ol style="padding-left:1.5rem">
-                <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
-                    <strong style="color:var(--primary)">Consultation initiale</strong> : évaluation de la fertilité du couple ou de la patiente seule.
-                </li>
-                <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
-                    <strong style="color:var(--primary)">Examens complémentaires</strong> : analyses sanguines, échographie, spermogramme, examens hormonaux.
-                </li>
-                <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
-                    <strong style="color:var(--primary)">Réunion pluridisciplinaire</strong> : l'équipe médicale propose la meilleure stratégie (insémination, FIV, don, etc.).
-                </li>
-                <li style="font-size:1.05rem;line-height:1.8">
-                    <strong style="color:var(--primary)">Démarrage du traitement</strong> : injections hormonales, stimulation ovarienne, puis prélèvements ou inséminations selon le protocole.
-                </li>
-            </ol>
-        </div>
-        <div style="background:var(--primary);color:white;padding:1.5rem;border-radius:10px;margin-top:1.5rem">
-            <p style="font-size:1.05rem;line-height:1.8;margin:0">
-                <strong>💡 Bon à savoir :</strong> Les démarches administratives (formulaires, consentements, examens préalables) prennent du temps — mieux vaut anticiper et garder une copie de tous vos résultats.
-            </p>
-        </div>
-    </div>
+                <h3 style="color:var(--primary);font-size:1.4rem;margin-bottom:1.5rem;font-weight:600">
+                    🏥 Les centres de PMA à Lille
+                </h3>
+                <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
+                    Plusieurs structures prennent en charge les parcours PMA dans la métropole :
+                </p>
 
-    <!-- Section 4 -->
-    <div style="margin-bottom:3rem">
-        <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
-            🔹 4. Être accompagné pendant son parcours PMA à Lille
-        </h2>
-        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
-            La PMA ne se résume pas à la technique médicale. Elle implique une forte charge émotionnelle, des périodes d'attente, parfois des déceptions. À Lille, de nombreux professionnels proposent un accompagnement complémentaire :
-        </p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-bottom:1.5rem">
-            <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
-                <div style="font-size:2rem;margin-bottom:0.5rem">💭</div>
-                <strong style="color:var(--primary)">Psychologues spécialisés</strong>
-                <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Lille, La Madeleine, Villeneuve-d'Ascq</p>
-            </div>
-            <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
-                <div style="font-size:2rem;margin-bottom:0.5rem">👶</div>
-                <strong style="color:var(--primary)">Sages-femmes libérales</strong>
-                <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Soutien pendant les traitements</p>
-            </div>
-            <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
-                <div style="font-size:2rem;margin-bottom:0.5rem">💆‍♀️</div>
-                <strong style="color:var(--primary)">Médecines douces</strong>
-                <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Sophro, ostéo, acupuncture</p>
-            </div>
-            <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
-                <div style="font-size:2rem;margin-bottom:0.5rem">🤝</div>
-                <strong style="color:var(--primary)">Associations</strong>
-                <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Les Cigognes de l'Espoir, MAIA Nord</p>
-            </div>
-        </div>
-        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);font-style:italic">
-            Ces soutiens ne remplacent pas le suivi médical, mais peuvent améliorer le vécu global du parcours.
-        </p>
-    </div>
+                <div style="display:grid;gap:1.5rem;margin-bottom:2rem">
+                    <!-- CHU de Lille -->
+                    <div style="background:white;padding:2rem;border-radius:15px;box-shadow:0 4px 15px rgba(111,69,69,0.1);border-left:5px solid var(--primary)">
+                        <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:1rem;font-weight:600">
+                            CHU de Lille – Hôpital Jeanne de Flandre
+                        </h4>
+                        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
+                            Centre public de référence régional, avec une équipe complète (médecins, biologistes, psychologues).
+                        </p>
+                        <p style="font-size:1rem;color:var(--text-light);margin-bottom:0.5rem">
+                            📍 2 avenue Oscar Lambret, Lille
+                        </p>
+                        <p style="font-size:1rem;color:var(--primary);font-weight:600">
+                            ✓ Prise en charge 100 % par la Sécurité sociale (jusqu'à 43 ans)
+                        </p>
+                    </div>
 
-    <!-- Section 5 -->
-    <div style="margin-bottom:3rem">
-        <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
-            🔹 5. PMA à Lille : coûts, délais et prise en charge
-        </h2>
-        <div style="display:grid;gap:1.5rem">
-            <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid var(--primary)">
-                <strong style="color:var(--primary);font-size:1.1rem">💳 Prise en charge</strong>
-                <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-top:0.5rem">
-                    La PMA est remboursée à 100 % par l'Assurance Maladie jusqu'à 43 ans (quatre tentatives de FIV ou six d'insémination).
+                    <!-- Clinique du Bois -->
+                    <div style="background:white;padding:2rem;border-radius:15px;box-shadow:0 4px 15px rgba(111,69,69,0.1);border-left:5px solid var(--primary)">
+                        <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:1rem;font-weight:600">
+                            Clinique du Bois – Lambersart
+                        </h4>
+                        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
+                            Structure privée réputée pour sa disponibilité et son accompagnement humain. Délais souvent plus courts que dans le public.
+                        </p>
+                    </div>
+
+                    <!-- Polyclinique -->
+                    <div style="background:white;padding:2rem;border-radius:15px;box-shadow:0 4px 15px rgba(111,69,69,0.1);border-left:5px solid var(--primary)">
+                        <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:1rem;font-weight:600">
+                            Polyclinique de Marcq-en-Barœul
+                        </h4>
+                        <p style="font-size:1.05rem;line-height:1.8;color:var(--text)">
+                            Centre à taille humaine avec suivi personnalisé et travail en réseau avec des laboratoires partenaires.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 style="color:var(--primary);font-size:1.4rem;margin-bottom:1rem;font-weight:600">
+                    🔬 Les laboratoires d'analyses
+                </h3>
+                <p style="font-size:1.05rem;line-height:1.8;color:var(--text)">
+                    Avant le démarrage de la PMA, plusieurs examens biologiques sont nécessaires. À Lille, vous trouverez des laboratoires spécialisés en biologie de la reproduction à Lille-Centre, Villeneuve-d'Ascq, Marcq-en-Barœul et Wasquehal.
                 </p>
             </div>
-            <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid var(--primary)">
-                <strong style="color:var(--primary);font-size:1.1rem">⏱️ Délais</strong>
-                <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-top:0.5rem">
-                    Comptez environ 3 à 6 mois pour une première consultation au CHU, moins en clinique privée.
-                </p>
-            </div>
-            <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid var(--primary)">
-                <strong style="color:var(--primary);font-size:1.1rem">🌿 Accompagnement complémentaire</strong>
-                <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-top:0.5rem">
-                    Certaines patientes choisissent de commencer un accompagnement paramédical (ostéo, sophro, acupuncture) dès la phase d'attente.
-                </p>
-            </div>
-        </div>
-    </div>
 
-    <!-- Conclusion -->
-    <div style="background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);color:white;padding:2.5rem;border-radius:20px;text-align:center">
-        <h2 style="color:white;font-size:1.8rem;margin-bottom:1rem;font-weight:700">
-            🔹 En résumé
-        </h2>
-        <p style="font-size:1.1rem;line-height:1.8;margin:0">
-            Commencer un parcours PMA à Lille, c'est avant tout oser poser les premières questions. Les structures locales offrent un accompagnement complet, du diagnostic au suivi, avec des équipes engagées. Ne restez pas seul(e) : la première étape, c'est d'en parler à un professionnel de confiance.
-        </p>
+            <!-- Section 3 -->
+            <div style="margin-bottom:3rem">
+                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
+                    🔹 3. Comment se déroule le début du parcours PMA ?
+                </h2>
+                <div style="background:linear-gradient(135deg,#fafafa 0%,#fff 100%);padding:2rem;border-radius:15px">
+                    <ol style="padding-left:1.5rem">
+                        <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
+                            <strong style="color:var(--primary)">Consultation initiale</strong> : évaluation de la fertilité du couple ou de la patiente seule.
+                        </li>
+                        <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
+                            <strong style="color:var(--primary)">Examens complémentaires</strong> : analyses sanguines, échographie, spermogramme, examens hormonaux.
+                        </li>
+                        <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
+                            <strong style="color:var(--primary)">Réunion pluridisciplinaire</strong> : l'équipe médicale propose la meilleure stratégie (insémination, FIV, don, etc.).
+                        </li>
+                        <li style="font-size:1.05rem;line-height:1.8">
+                            <strong style="color:var(--primary)">Démarrage du traitement</strong> : injections hormonales, stimulation ovarienne, puis prélèvements ou inséminations selon le protocole.
+                        </li>
+                    </ol>
+                </div>
+                <div style="background:var(--primary);color:white;padding:1.5rem;border-radius:10px;margin-top:1.5rem">
+                    <p style="font-size:1.05rem;line-height:1.8;margin:0">
+                        <strong>💡 Bon à savoir :</strong> Les démarches administratives (formulaires, consentements, examens préalables) prennent du temps — mieux vaut anticiper et garder une copie de tous vos résultats.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div style="margin-bottom:3rem">
+                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
+                    🔹 4. Être accompagné pendant son parcours PMA à Lille
+                </h2>
+                <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
+                    La PMA ne se résume pas à la technique médicale. Elle implique une forte charge émotionnelle, des périodes d'attente, parfois des déceptions. À Lille, de nombreux professionnels proposent un accompagnement complémentaire :
+                </p>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-bottom:1.5rem">
+                    <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
+                        <div style="font-size:2rem;margin-bottom:0.5rem">💭</div>
+                        <strong style="color:var(--primary)">Psychologues spécialisés</strong>
+                        <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Lille, La Madeleine, Villeneuve-d'Ascq</p>
+                    </div>
+                    <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
+                        <div style="font-size:2rem;margin-bottom:0.5rem">👶</div>
+                        <strong style="color:var(--primary)">Sages-femmes libérales</strong>
+                        <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Soutien pendant les traitements</p>
+                    </div>
+                    <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
+                        <div style="font-size:2rem;margin-bottom:0.5rem">💆‍♀️</div>
+                        <strong style="color:var(--primary)">Médecines douces</strong>
+                        <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Sophro, ostéo, acupuncture</p>
+                    </div>
+                    <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
+                        <div style="font-size:2rem;margin-bottom:0.5rem">🤝</div>
+                        <strong style="color:var(--primary)">Associations</strong>
+                        <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Les Cigognes de l'Espoir, MAIA Nord</p>
+                    </div>
+                </div>
+                <p style="font-size:1.05rem;line-height:1.8;color:var(--text);font-style:italic">
+                    Ces soutiens ne remplacent pas le suivi médical, mais peuvent améliorer le vécu global du parcours.
+                </p>
+            </div>
+
+            <!-- Section 5 -->
+            <div style="margin-bottom:3rem">
+                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
+                    🔹 5. PMA à Lille : coûts, délais et prise en charge
+                </h2>
+                <div style="display:grid;gap:1.5rem">
+                    <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid var(--primary)">
+                        <strong style="color:var(--primary);font-size:1.1rem">💳 Prise en charge</strong>
+                        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-top:0.5rem">
+                            La PMA est remboursée à 100 % par l'Assurance Maladie jusqu'à 43 ans (quatre tentatives de FIV ou six d'insémination).
+                        </p>
+                    </div>
+                    <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid var(--primary)">
+                        <strong style="color:var(--primary);font-size:1.1rem">⏱️ Délais</strong>
+                        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-top:0.5rem">
+                            Comptez environ 3 à 6 mois pour une première consultation au CHU, moins en clinique privée.
+                        </p>
+                    </div>
+                    <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid var(--primary)">
+                        <strong style="color:var(--primary);font-size:1.1rem">🌿 Accompagnement complémentaire</strong>
+                        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-top:0.5rem">
+                            Certaines patientes choisissent de commencer un accompagnement paramédical (ostéo, sophro, acupuncture) dès la phase d'attente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusion -->
+            <div style="background:linear-gradient(135deg,var(--primary) 0%,#9a6b6b 100%);color:white;padding:2.5rem;border-radius:20px;text-align:center">
+                <h2 style="color:white;font-size:1.8rem;margin-bottom:1rem;font-weight:700">
+                    🔹 En résumé
+                </h2>
+                <p style="font-size:1.1rem;line-height:1.8;margin:0">
+                    Commencer un parcours PMA à Lille, c'est avant tout oser poser les premières questions. Les structures locales offrent un accompagnement complet, du diagnostic au suivi, avec des équipes engagées. Ne restez pas seul(e) : la première étape, c'est d'en parler à un professionnel de confiance.
+                </p>
+            </div>
+        </article>
     </div>
-</article>
 </div>
             <div id="articles-grossesse" class="articles-section">
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
