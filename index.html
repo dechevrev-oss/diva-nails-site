@@ -677,10 +677,238 @@
 </div>
             <div id="articles-grossesse" class="articles-section">
                 <button class="back-button" onclick="backToCategories()">← Retour</button>
-                <h2 class="category-title">Grossesse</h2>
-                <div class="articles-grid">
-                    <div class="article-card"><h4>La Doula</h4><p>Votre compagne de naissance pour un accompagnement bienveillant.</p></div>
-                    <div class="article-card"><h4>La sage-femme</h4><p>Professionnelle de santé spécialisée en périnatalité.</p></div>
+                
+                <!-- Vue liste des articles -->
+                <div id="grossesse-articles-list">
+                    <h2 class="category-title">Grossesse</h2>
+                    
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:1000px;margin:2rem auto">
+                        <!-- Carte article Doula -->
+                        <div class="article-card-modern" onclick="showGrossesseArticle('doula')" style="cursor:pointer;transition:all .3s" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 12px 40px rgba(134,37,38,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 20px rgba(0,0,0,0.06)'">
+                            <div style="position:relative;width:100%;height:200px;border-radius:15px 15px 0 0;overflow:hidden;margin:-1.8rem -1.8rem 1.5rem -1.8rem">
+                                <img src="articledoula.png" alt="Doula" style="width:100%;height:100%;object-fit:cover">
+                                <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(134,37,38,0.9) 0%,transparent 100%);padding:1rem">
+                                    <div style="color:white;font-size:1.5rem;font-weight:700">Qu'est-ce qu'une Doula ?</div>
+                                </div>
+                                <div style="position:absolute;top:10px;right:10px;background:white;color:#862526;padding:0.4rem 1rem;border-radius:20px;font-size:0.85rem;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,0.2)">
+                                    📖 Guide complet
+                                </div>
+                            </div>
+                            <h4 style="color:#862526;font-size:1.4rem;margin-bottom:1rem;font-weight:700;line-height:1.3">🤱 La Doula : Votre compagne de naissance</h4>
+                            <p style="color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;font-size:0.95rem">
+                                Découvrez le rôle de la doula, cette accompagnante bienveillante qui vous soutient pendant la grossesse, l'accouchement et le post-partum. Un accompagnement humain, émotionnel et sans jugement.
+                            </p>
+                            <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1rem">
+                                <span style="background:var(--secondary);color:#862526;padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">Grossesse</span>
+                                <span style="background:var(--secondary);color:#862526;padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">Naissance</span>
+                                <span style="background:var(--secondary);color:#862526;padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">Post-partum</span>
+                            </div>
+                            <div style="text-align:right;color:#862526;font-weight:600;font-size:0.95rem">
+                                Lire l'article →
+                            </div>
+                        </div>
+
+                        <!-- Carte article Sage-femme -->
+                        <div class="article-card-modern" style="cursor:pointer;transition:all .3s;opacity:0.6" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 12px 40px rgba(134,37,38,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 20px rgba(0,0,0,0.06)'">
+                            <div style="position:relative;width:100%;height:200px;border-radius:15px 15px 0 0;overflow:hidden;margin:-1.8rem -1.8rem 1.5rem -1.8rem;background:linear-gradient(135deg,#862526 0%,#a83739 100%)">
+                                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:5rem;opacity:0.2">🩺</div>
+                                <div style="position:absolute;bottom:15px;left:15px;color:white;font-size:1.5rem;font-weight:700">La Sage-femme</div>
+                                <div style="position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.3);color:white;padding:0.4rem 1rem;border-radius:20px;font-size:0.85rem;font-weight:600">
+                                    Bientôt disponible
+                                </div>
+                            </div>
+                            <h4 style="color:#862526;font-size:1.4rem;margin-bottom:1rem;font-weight:700;line-height:1.3">🩺 La Sage-femme</h4>
+                            <p style="color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;font-size:0.95rem">
+                                Article en cours de rédaction. Découvrez bientôt le rôle essentiel de la sage-femme dans votre parcours périnatal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Article complet Doula (caché par défaut) -->
+                <div id="grossesse-article-doula" style="display:none">
+                    <button class="back-button" onclick="backToGrossesseList()">← Retour aux articles</button>
+                    
+                    <article style="max-width:900px;margin:0 auto">
+                        <!-- En-tête avec image -->
+                        <div style="position:relative;margin-bottom:3rem;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(134,37,38,0.15)">
+                            <img src="articledoula.png" alt="Qu'est-ce qu'une Doula" style="width:100%;height:400px;object-fit:cover">
+                            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(134,37,38,0.95) 0%,transparent 100%);padding:3rem 2rem 2rem">
+                                <h1 style="color:white;font-size:2.5rem;font-weight:700;margin-bottom:0.5rem;line-height:1.2">Qu'est-ce qu'une Doula ?</h1>
+                                <p style="color:rgba(255,255,255,0.9);font-size:1.1rem;margin:0">Votre compagne de naissance pour un accompagnement bienveillant</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Introduction -->
+                        <div style="background:linear-gradient(135deg,#fafafa 0%,#fff 100%);padding:2rem;border-radius:15px;margin-bottom:2rem">
+                            <p style="font-size:1.1rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
+                                Le mot <strong>doula</strong> vient du grec ancien et signifie « celle qui sert ». Aujourd'hui, il désigne une personne formée pour accompagner les parents dans leur parcours de grossesse, de naissance et de post-partum.
+                            </p>
+                            <p style="font-size:1.1rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
+                                Contrairement à une sage-femme, la doula n'a pas de rôle médical : elle ne pratique aucun acte clinique. Son rôle est avant tout <strong style="color:#862526">émotionnel, informatif et humain</strong>.
+                            </p>
+                            <p style="font-size:1.1rem;line-height:1.8;color:var(--text);margin:0">
+                                Elle offre une présence douce et sécurisante, permettant aux futurs parents de vivre la grossesse et la naissance avec plus de confiance et de sérénité.
+                            </p>
+                        </div>
+
+                        <!-- Section 1 -->
+                        <div style="margin-bottom:3rem">
+                            <h2 style="color:#862526;font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid #862526;padding-left:1rem">
+                                🤰 Le rôle de la doula pendant la grossesse
+                            </h2>
+                            <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
+                                Durant la grossesse, la doula accompagne les parents dans toutes les étapes de la préparation à la naissance.
+                            </p>
+                            <div style="background:white;padding:2rem;border-radius:15px;box-shadow:0 4px 15px rgba(134,37,38,0.1);border-left:5px solid #862526">
+                                <h3 style="color:#862526;font-size:1.3rem;margin-bottom:1rem;font-weight:600">Elle aide à :</h3>
+                                <ul style="padding-left:1.5rem;margin:0">
+                                    <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
+                                        <strong style="color:#862526">Construire un projet de naissance personnalisé</strong>, adapté à vos souhaits et valeurs
+                                    </li>
+                                    <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
+                                        <strong style="color:#862526">Mieux comprendre les options médicales et physiologiques</strong>, sans jugement
+                                    </li>
+                                    <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
+                                        <strong style="color:#862526">Gérer les émotions et les craintes</strong> liées à l'accouchement
+                                    </li>
+                                    <li style="font-size:1.05rem;line-height:1.8">
+                                        <strong style="color:#862526">Impliquer le co-parent</strong> dans le processus
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="background:#862526;color:white;padding:1.5rem;border-radius:10px;margin-top:1.5rem">
+                                <p style="font-size:1.05rem;line-height:1.8;margin:0">
+                                    <strong>💡 À savoir :</strong> Les rencontres prénatales avec une doula sont des moments de partage, d'écoute et de soutien, sans jugement ni pression.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Section 2 -->
+                        <div style="margin-bottom:3rem">
+                            <h2 style="color:#862526;font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid #862526;padding-left:1rem">
+                                👶 L'accompagnement à la naissance
+                            </h2>
+                            <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
+                                Certaines doulas sont présentes le jour de l'accouchement, si cela est accepté par la maternité ou la sage-femme.
+                            </p>
+                            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:1.5rem">
+                                <div style="background:white;padding:1.8rem;border-radius:15px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center;border:2px solid var(--secondary)">
+                                    <div style="font-size:2.5rem;margin-bottom:0.8rem">🫁</div>
+                                    <strong style="color:#862526;font-size:1.1rem">Respiration & relaxation</strong>
+                                    <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Techniques douces pour gérer la douleur</p>
+                                </div>
+                                <div style="background:white;padding:1.8rem;border-radius:15px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center;border:2px solid var(--secondary)">
+                                    <div style="font-size:2.5rem;margin-bottom:0.8rem">💆‍♀️</div>
+                                    <strong style="color:#862526;font-size:1.1rem">Massages & positions</strong>
+                                    <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Favorisant le confort et la progression</p>
+                                </div>
+                                <div style="background:white;padding:1.8rem;border-radius:15px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center;border:2px solid var(--secondary)">
+                                    <div style="font-size:2.5rem;margin-bottom:0.8rem">🤝</div>
+                                    <strong style="color:#862526;font-size:1.1rem">Présence continue</strong>
+                                    <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Rassurante et bienveillante</p>
+                                </div>
+                            </div>
+                            <p style="font-size:1.05rem;line-height:1.8;color:var(--text);font-style:italic">
+                                ⚠️ La doula ne remplace jamais les professionnels de santé, mais complète leur action en apportant chaleur humaine et continuité émotionnelle.
+                            </p>
+                        </div>
+
+                        <!-- Section 3 -->
+                        <div style="margin-bottom:3rem">
+                            <h2 style="color:#862526;font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid #862526;padding-left:1rem">
+                                🌸 Le post-partum : un accompagnement essentiel
+                            </h2>
+                            <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
+                                Le post-partum est une période de grands bouleversements. La doula aide les jeunes parents à vivre cette transition avec douceur.
+                            </p>
+                            <div style="background:linear-gradient(135deg,#fff 0%,#fafafa 100%);padding:2rem;border-radius:15px">
+                                <h3 style="color:#862526;font-size:1.3rem;margin-bottom:1rem;font-weight:600">Son accompagnement peut inclure :</h3>
+                                <ul style="padding-left:1.5rem;margin:0">
+                                    <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
+                                        <strong style="color:#862526">Soutien moral et émotionnel</strong> dans cette période sensible
+                                    </li>
+                                    <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
+                                        <strong style="color:#862526">Aide pratique</strong> (préparation de repas, organisation, repos)
+                                    </li>
+                                    <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
+                                        <strong style="color:#862526">Conseils autour de l'allaitement</strong> ou du lien parent-bébé
+                                    </li>
+                                    <li style="font-size:1.05rem;line-height:1.8">
+                                        <strong style="color:#862526">Rituels de fermeture</strong> ou soins rebozo pour honorer la naissance
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="background:#862526;color:white;padding:1.5rem;border-radius:10px;margin-top:1.5rem;text-align:center">
+                                <p style="font-size:1.1rem;line-height:1.8;margin:0">
+                                    <strong>💝</strong> La doula offre un espace d'écoute bienveillante où chaque émotion a sa place.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Section 4 -->
+                        <div style="margin-bottom:3rem">
+                            <h2 style="color:#862526;font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid #862526;padding-left:1rem">
+                                🎓 Comment devenir doula ?
+                            </h2>
+                            <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
+                                Le métier de doula n'est pas réglementé en France, mais plusieurs organismes proposent des formations reconnues dans le milieu périnatal.
+                            </p>
+                            <div style="display:grid;gap:1.5rem">
+                                <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid #862526">
+                                    <strong style="color:#862526;font-size:1.1rem">📚 Ces formations abordent :</strong>
+                                    <ul style="padding-left:1.5rem;margin-top:1rem">
+                                        <li style="margin-bottom:0.5rem">La physiologie de la grossesse et de la naissance</li>
+                                        <li style="margin-bottom:0.5rem">La psychologie parentale</li>
+                                        <li style="margin-bottom:0.5rem">La communication bienveillante</li>
+                                        <li>Les besoins du post-partum</li>
+                                    </ul>
+                                </div>
+                                <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid #862526">
+                                    <strong style="color:#862526;font-size:1.1rem">🏫 Organismes de formation :</strong>
+                                    <p style="font-size:1rem;color:var(--text);margin-top:0.5rem">Doulas de France, Doula School France, L'Académie de la Doula forment chaque année des accompagnantes passionnées et engagées.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 5 -->
+                        <div style="margin-bottom:3rem">
+                            <h2 style="color:#862526;font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid #862526;padding-left:1rem">
+                                ❤️ Pourquoi faire appel à une doula ?
+                            </h2>
+                            <div style="display:grid;gap:1.5rem">
+                                <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid #862526">
+                                    <strong style="color:#862526;font-size:1.1rem">✨ Un accompagnement personnalisé</strong>
+                                    <p style="font-size:1rem;color:var(--text);margin-top:0.5rem">Adapté à vos besoins, vos valeurs et votre situation unique</p>
+                                </div>
+                                <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid #862526">
+                                    <strong style="color:#862526;font-size:1.1rem">🤗 Une écoute sans jugement</strong>
+                                    <p style="font-size:1rem;color:var(--text);margin-top:0.5rem">Un espace bienveillant où toutes vos émotions sont accueillies</p>
+                                </div>
+                                <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid #862526">
+                                    <strong style="color:#862526;font-size:1.1rem">⏰ Un soutien continu</strong>
+                                    <p style="font-size:1rem;color:var(--text);margin-top:0.5rem">Avant, pendant et après la naissance</p>
+                                </div>
+                                <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid #862526">
+                                    <strong style="color:#862526;font-size:1.1rem">🌟 Un lien humain rassurant</strong>
+                                    <p style="font-size:1rem;color:var(--text);margin-top:0.5rem">Dans une période parfois bouleversante</p>
+                                </div>
+                            </div>
+                            <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-top:1.5rem;font-style:italic">
+                                La doula complète le suivi médical en apportant une dimension <strong style="color:#862526">émotionnelle, spirituelle et sociale</strong> à la naissance.
+                            </p>
+                        </div>
+
+                        <!-- Conclusion -->
+                        <div style="background:linear-gradient(135deg,#862526 0%,#a83739 100%);color:white;padding:2.5rem;border-radius:20px;text-align:center">
+                            <h2 style="color:white;font-size:1.8rem;margin-bottom:1rem;font-weight:700">
+                                💬 En résumé
+                            </h2>
+                            <p style="font-size:1.1rem;line-height:1.8;margin:0">
+                                La doula est une alliée précieuse pour les familles. Elle accompagne avec bienveillance, respect et authenticité, et permet aux parents de vivre la naissance dans toute sa dimension humaine. Dans une société où la maternité peut parfois être source de stress, la doula ramène au cœur de l'expérience <strong>la confiance, la douceur et le lien</strong>.
+                            </p>
+                        </div>
+                    </article>
                 </div>
             </div>
 
@@ -1403,6 +1631,28 @@ function showPmaArticle(articleId) {
 function backToPmaList() {
     document.getElementById('pma-articles-list').style.display = 'block';
     document.querySelectorAll('[id^="pma-article-"]').forEach(article => {
+        article.style.display = 'none';
+    });
+    window.scrollTo(0, 0);
+}
+
+        function backToPmaList() {
+    document.getElementById('pma-articles-list').style.display = 'block';
+    document.querySelectorAll('[id^="pma-article-"]').forEach(article => {
+        article.style.display = 'none';
+    });
+    window.scrollTo(0, 0);
+}
+
+function showGrossesseArticle(articleId) {
+    document.getElementById('grossesse-articles-list').style.display = 'none';
+    document.getElementById('grossesse-article-' + articleId).style.display = 'block';
+    window.scrollTo(0, 0);
+}
+
+function backToGrossesseList() {
+    document.getElementById('grossesse-articles-list').style.display = 'block';
+    document.querySelectorAll('[id^="grossesse-article-"]').forEach(article => {
         article.style.display = 'none';
     });
     window.scrollTo(0, 0);
