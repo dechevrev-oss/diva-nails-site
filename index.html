@@ -1386,19 +1386,28 @@ function backToPmaList() {
             clearSearch();
             document.getElementById('pro-categories-view').style.display='none';
             document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
-            document.getElementById('pro-list-'+cat).classList.add('active');
+            
+            const listElement = document.getElementById('pro-list-'+cat);
+            if(listElement) {
+                listElement.classList.add('active');
+            }
             
             if(cat === 'grossesse'){
-                document.getElementById('sub-grossesse').style.display='block';
-                document.getElementById('pro-cards-doulas').style.display='none';
-                document.getElementById('pro-cards-sagesfemmes').style.display='none';
+                const subGrossesse = document.getElementById('sub-grossesse');
+                if(subGrossesse) subGrossesse.style.display='block';
+                
+                const cardDoulas = document.getElementById('pro-cards-doulas');
+                if(cardDoulas) cardDoulas.style.display='none';
+                
+                const cardSagesfemmes = document.getElementById('pro-cards-sagesfemmes');
+                if(cardSagesfemmes) cardSagesfemmes.style.display='none';
+                
                 hideProDetail();
                 navigationLevel = 'subcategories';
             } else {
                 navigationLevel = 'categories';
             }
         }
-
         function backToProCats(){
             document.getElementById('pro-categories-view').style.display='block';
             document.getElementById('search-results').style.display='none';
@@ -1419,9 +1428,15 @@ function backToPmaList() {
         }
 
         function backToSub(){
-            document.getElementById('sub-grossesse').style.display='block';
-            document.getElementById('pro-cards-doulas').style.display='none';
-            document.getElementById('pro-cards-sagesfemmes').style.display='none';
+            const subGrossesse = document.getElementById('sub-grossesse');
+            if(subGrossesse) subGrossesse.style.display='block';
+            
+            const cardDoulas = document.getElementById('pro-cards-doulas');
+            if(cardDoulas) cardDoulas.style.display='none';
+            
+            const cardSagesfemmes = document.getElementById('pro-cards-sagesfemmes');
+            if(cardSagesfemmes) cardSagesfemmes.style.display='none';
+            
             hideProDetail();
         }
 
@@ -1443,19 +1458,23 @@ function backToPmaList() {
         }
 
         function hideProDetail(){
-            // Réafficher la barre de recherche
-            document.getElementById('pro-search-bar').style.display='block';
+            const searchBar = document.getElementById('pro-search-bar');
+            if(searchBar) searchBar.style.display='block';
             
-            // Réafficher les grilles de cartes
             const doulasContainer = document.getElementById('pro-cards-doulas');
             const sagesfemmesContainer = document.getElementById('pro-cards-sagesfemmes');
-
-            if(doulasContainer.style.display === 'block'){
-                document.getElementById('doulas-grid').style.display='grid';
+            
+            if(doulasContainer && doulasContainer.style.display === 'block'){
+                const doulasGrid = document.getElementById('doulas-grid');
+                if(doulasGrid) doulasGrid.style.display='grid';
             }
-            if(sagesfemmesContainer.style.display === 'block'){
-                document.getElementById('sagesfemmes-grid').style.display='grid';
+            if(sagesfemmesContainer && sagesfemmesContainer.style.display === 'block'){
+                const sagesfemmesGrid = document.getElementById('sagesfemmes-grid');
+                if(sagesfemmesGrid) sagesfemmesGrid.style.display='grid';
             }
+            
+            document.querySelectorAll('.pro-detail').forEach(d=>d.classList.remove('active'));
+        }
 
         function goToPro(id){
             showTab('professionnels');
