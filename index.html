@@ -15,7 +15,8 @@
         body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:var(--text);background:var(--white)}
         header{background:#862526;padding:0.05rem 0;box-shadow:0 2px 10px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}
         nav{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
-        .logo img{height:120px;cursor:pointer}
+        .logo img{height:120px;cursor:pointer;transition:transform .3s ease}
+        .logo img:hover{transform:scale(1.05)}
         .nav-center{flex:1;display:flex;justify-content:center}
         .nav-links{display:flex;gap:1rem;list-style:none}
         .nav-links button{background:none;border:none;color:ffffff;font-size:0.95rem;cursor:pointer;padding:.4rem .9rem;border-radius:5px;transition:background .3s}
@@ -126,7 +127,6 @@
             <div class="logo"><img src="logo1.png" alt="Vianata" onclick="showTab('accueil')"></div>
             <div class="nav-center">
                 <ul class="nav-links">
-                    <li><button onclick="showTab('accueil')" class="active" id="btn-accueil">Accueil</button></li>
                     <li><button onclick="showTab('professionnels')" id="btn-professionnels">Trouver un Professionnel</button></li>
                     <li><button onclick="showTab('accompagnements')" id="btn-accompagnements">Nos Accompagnements</button></li>
                 </ul>
