@@ -381,11 +381,39 @@
 
         <div id="accompagnements" class="tab-content">
             <div id="categories-view">
-                <div class="categories-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));max-width:900px;margin:0 auto">
-                    <div class="category-card" onclick="showArticles('pma')"><h3>🔬 PMA & Fertilité</h3><p>Spécialistes en fertilité</p></div>
-                    <div class="category-card" onclick="showArticles('grossesse')"><h3>🤰 Grossesse</h3><p>Doulas, sages-femmes</p></div>
-                    <div class="category-card" onclick="showArticles('postpartum')"><h3>👶 Post-Partum</h3><p>Consultantes lactation</p></div>
-                    <div class="category-card" onclick="showArticles('parentalite')"><h3>👨‍👩‍👧 Parentalité</h3><p>Accompagnement parental</p></div>
+                <h3 style="color:#862526;font-size:1.5rem;margin-bottom:2rem;text-align:center;font-weight:600">Choisissez une catégorie</h3>
+                <div class="categories-grid-modern" style="max-width:1000px;grid-template-columns:repeat(4,1fr);margin:0 auto">
+                    <div class="category-card-modern" onclick="showArticles('pma')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
+                            <span style="font-size:2rem">🔬</span>
+                        </div>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">PMA & Fertilité</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Spécialistes en fertilité</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showArticles('grossesse')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
+                            <span style="font-size:2rem">🤰</span>
+                        </div>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Grossesse</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Doulas, sages-femmes</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showArticles('postpartum')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
+                            <span style="font-size:2rem">👶</span>
+                        </div>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Post-Partum</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Consultantes lactation</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showArticles('parentalite')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
+                            <span style="font-size:2rem">👨‍👩‍👧</span>
+                        </div>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Parentalité</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Accompagnement parental</p>
+                    </div>
                 </div>
             </div>
 
