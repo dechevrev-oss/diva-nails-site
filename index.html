@@ -692,58 +692,57 @@
             <div id="pro-categories-view">
                 <h3 style="color:var(--primary);font-size:1.5rem;margin-bottom:2rem;text-align:center;font-weight:600">Choisissez une catégorie</h3>
                 <div class="categories-grid-modern" style="max-width:1000px;grid-template-columns:repeat(4,1fr)">
-                    <div class="category-card-modern" onclick="showProCat('accompagnement')">
-                        <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
-                            <span style="font-size:2rem">🤝</span>
-                        </div>
-                        <h3 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Accompagnement</h3>
-                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Doulas et accompagnantes</p>
-                    </div>
-                    
                     <div class="category-card-modern" onclick="showProCat('pma')">
                         <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
                             <span style="font-size:2rem">🔬</span>
                         </div>
-                        <h3 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem;font-weight:600">PMA & Fertilité</h3>
-                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Spécialistes fertilité</p>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">PMA & Fertilité</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Spécialistes en fertilité</p>
                     </div>
                     
                     <div class="category-card-modern" onclick="showProCat('grossesse')">
                         <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
                             <span style="font-size:2rem">🤰</span>
                         </div>
-                        <h3 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Grossesse</h3>
-                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Sages-femmes</p>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Grossesse</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Doulas, sages-femmes</p>
                     </div>
-                    
                     
                     <div class="category-card-modern" onclick="showProCat('postpartum')">
                         <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
                             <span style="font-size:2rem">👶</span>
                         </div>
-                        <h3 style="color:var(--primary);font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Post-Partum</h3>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Post-Partum</h3>
                         <p style="color:var(--text-light);font-size:.9rem;margin:0">Consultantes lactation</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showProCat('parentalite')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
+                            <span style="font-size:2rem">👨‍👩‍👧</span>
+                        </div>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Parentalité</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Accompagnement parental</p>
                     </div>
                 </div>
             </div>
 
-            <div id="pro-list-accompagnement" class="articles-section">
+            <div id="pro-list-grossesse" class="articles-section">
                 <button class="back-button" id="main-back-button" onclick="handleBackButton()">← Retour</button>
-                <h2 class="category-title">Accompagnement</h2>
+                <h2 class="category-title">Grossesse</h2>
                 
-                <div id="sub-accompagnement">
+                <div id="sub-grossesse">
                     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:700px;margin:0 auto">
                         <div class="sub-category-card-modern" onclick="showSubCat('doulas')">
                             <div style="width:50px;height:50px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
                                 <span style="font-size:1.5rem">🤱</span>
                             </div>
-                            <h4 style="color:var(--primary);font-size:1.2rem;margin:0">Doulas</h4>
+                            <h4 style="color:#862526;font-size:1.2rem;margin:0">Doulas</h4>
                         </div>
-                        <div class="sub-category-card-modern" onclick="showSubCat('accompagnantes')">
+                        <div class="sub-category-card-modern" onclick="showSubCat('sagesfemmes')">
                             <div style="width:50px;height:50px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
-                                <span style="font-size:1.5rem">🌸</span>
+                                <span style="font-size:1.5rem">🩺</span>
                             </div>
-                            <h4 style="color:var(--primary);font-size:1.2rem;margin:0">Accompagnantes</h4>
+                            <h4 style="color:#862526;font-size:1.2rem;margin:0">Sages-femmes</h4>
                         </div>
                     </div>
                 </div>
@@ -805,10 +804,10 @@
                     </div>
                 </div>
 
-                <div id="pro-cards-accompagnantes" style="display:none">
-                    <h3 style="color:var(--primary);text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Accompagnantes</h3>
+                <div id="pro-cards-sagesfemmes" style="display:none">
+                    <h3 style="color:#862526;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Sages-femmes</h3>
                     
-                    <div id="accompagnantes-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                    <div id="sagesfemmes-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
                         <div class="pro-card-modern" onclick="showProDetail('claire')">
                             <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem">
                                 <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#862526 0%,#a83739 100%);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold;box-shadow:0 4px 15px rgba(134,37,38,0.25);flex-shrink:0">
@@ -1244,6 +1243,14 @@
                     </div>
                 </div>
             </div>
+            <div id="pro-list-parentalite" class="articles-section">
+                <button class="back-button" id="main-back-button" onclick="handleBackButton()">← Retour</button>
+                <h2 class="category-title">Parentalité</h2>
+                
+                <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                    <p style="font-size:1.1rem">Section en construction - Professionnels à venir</p>
+                </div>
+            </div>
         </div>
 
         <div id="professionnel-form" class="tab-content">
@@ -1380,11 +1387,16 @@ function backToPmaList() {
             document.getElementById('pro-categories-view').style.display='none';
             document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
             document.getElementById('pro-list-'+cat).classList.add('active');
-            document.getElementById('sub-accompagnement').style.display='block';
-            document.getElementById('pro-cards-doulas').style.display='none';
-            document.getElementById('pro-cards-accompagnantes').style.display='none';
-            hideProDetail();
-            navigationLevel = 'subcategories';
+            
+            if(cat === 'grossesse'){
+                document.getElementById('sub-grossesse').style.display='block';
+                document.getElementById('pro-cards-doulas').style.display='none';
+                document.getElementById('pro-cards-sagesfemmes').style.display='none';
+                hideProDetail();
+                navigationLevel = 'subcategories';
+            } else {
+                navigationLevel = 'categories';
+            }
         }
 
         function backToProCats(){
@@ -1407,9 +1419,9 @@ function backToPmaList() {
         }
 
         function backToSub(){
-            document.getElementById('sub-accompagnement').style.display='block';
+            document.getElementById('sub-grossesse').style.display='block';
             document.getElementById('pro-cards-doulas').style.display='none';
-            document.getElementById('pro-cards-accompagnantes').style.display='none';
+            document.getElementById('pro-cards-sagesfemmes').style.display='none';
             hideProDetail();
         }
 
@@ -1436,28 +1448,24 @@ function backToPmaList() {
             
             // Réafficher les grilles de cartes
             const doulasContainer = document.getElementById('pro-cards-doulas');
-            const accompagnantesContainer = document.getElementById('pro-cards-accompagnantes');
-            
+            const sagesfemmesContainer = document.getElementById('pro-cards-sagesfemmes');
+
             if(doulasContainer.style.display === 'block'){
                 document.getElementById('doulas-grid').style.display='grid';
             }
-            if(accompagnantesContainer.style.display === 'block'){
-                document.getElementById('accompagnantes-grid').style.display='grid';
+            if(sagesfemmesContainer.style.display === 'block'){
+                document.getElementById('sagesfemmes-grid').style.display='grid';
             }
-            
-            // Cacher toutes les fiches détail
-            document.querySelectorAll('.pro-detail').forEach(d=>d.classList.remove('active'));
-        }
 
         function goToPro(id){
             showTab('professionnels');
             setTimeout(()=>{
-                showProCat('accompagnement');
+                showProCat('grossesse');
                 setTimeout(()=>{
-                    if(id==='helene'||id==='sophie'){
+                    if(id==='helene'||id==='sophie'||id==='melanie'){
                         showSubCat('doulas');
                     }else{
-                        showSubCat('accompagnantes');
+                        showSubCat('sagesfemmes');
                     }
                     setTimeout(()=>showProDetail(id),100);
                 },100);
@@ -1472,11 +1480,11 @@ function backToPmaList() {
                 document.getElementById('pro-search-bar').style.display='none';
                 
                 document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
-                document.getElementById('pro-list-accompagnement').classList.add('active');
+                document.getElementById('pro-list-grossesse').classList.add('active');
                 
-                document.getElementById('sub-accompagnement').style.display='none';
+                document.getElementById('sub-grossesse').style.display='none';
                 document.getElementById('pro-cards-doulas').style.display='none';
-                document.getElementById('pro-cards-accompagnantes').style.display='none';
+                document.getElementById('pro-cards-sagesfemmes').style.display='none';
                 
                 // Cacher les grilles
                 document.getElementById('doulas-grid').style.display='none';
