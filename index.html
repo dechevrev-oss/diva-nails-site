@@ -1453,17 +1453,29 @@ function backToPmaList() {
 
         function showProDetail(id){
             // Cacher la barre de recherche
-            document.getElementById('pro-search-bar').style.display='none';
+            const searchBar = document.getElementById('pro-search-bar');
+            if(searchBar) searchBar.style.display='none';
             
             // Cacher les grilles de cartes
-            document.getElementById('doulas-grid').style.display='none';
-            document.getElementById('accompagnantes-grid').style.display='none';
+            const doulasGrid = document.getElementById('doulas-grid');
+            if(doulasGrid) doulasGrid.style.display='none';
+            
+            const sagesfemmesGrid = document.getElementById('sagesfemmes-grid');
+            if(sagesfemmesGrid) sagesfemmesGrid.style.display='none';
             
             // Cacher toutes les fiches détail
             document.querySelectorAll('.pro-detail').forEach(d=>d.classList.remove('active'));
             
             // Afficher uniquement la fiche détail demandée
-            document.getElementById('detail-'+id).classList.add('active');
+            const detailElement = document.getElementById('detail-'+id);
+            if(detailElement) {
+                detailElement.classList.add('active');
+                
+                // Si c'est la fiche d'Hélène, afficher l'onglet Présentation par défaut
+                if(id === 'helene'){
+                    showHeleneTab('presentation');
+                }
+            }
             
             navigationLevel = 'detail';
         }
