@@ -1417,13 +1417,24 @@ function backToPmaList() {
         }
 
         function showSubCat(subcat){
-            document.getElementById('sub-accompagnement').style.display='none';
-            document.getElementById('pro-cards-doulas').style.display='none';
-            document.getElementById('pro-cards-accompagnantes').style.display='none';
+            const subGrossesse = document.getElementById('sub-grossesse');
+            if(subGrossesse) subGrossesse.style.display='none';
+            
+            const cardDoulas = document.getElementById('pro-cards-doulas');
+            if(cardDoulas) cardDoulas.style.display='none';
+            
+            const cardSagesfemmes = document.getElementById('pro-cards-sagesfemmes');
+            if(cardSagesfemmes) cardSagesfemmes.style.display='none';
+            
             hideProDetail();
-            document.getElementById('pro-cards-'+subcat).style.display='block';
+            
+            const targetCard = document.getElementById('pro-cards-'+subcat);
+            if(targetCard) targetCard.style.display='block';
+            
             // Afficher la grille correspondante
-            document.getElementById(subcat+'-grid').style.display='grid';
+            const targetGrid = document.getElementById(subcat+'-grid');
+            if(targetGrid) targetGrid.style.display='grid';
+            
             navigationLevel = 'list';
         }
 
