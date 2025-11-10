@@ -80,6 +80,7 @@
         .articles-grid{display:grid;gap:2rem}
         .article-card{background:var(--white);border-radius:10px;padding:2rem;border-left:5px solid var(--primary);box-shadow:0 2px 10px rgba(0,0,0,.08)}
         .article-card h4{color:var(--primary);font-size:1.5rem;margin-bottom:1rem}
+        .article-card-modern:hover [style*="Lire l'article"]{background:linear-gradient(135deg,rgba(134,37,38,0.15) 0%,rgba(134,37,38,0.2) 100%)!important}
         .article-card-modern:hover span:last-child{transform:translateX(5px)}
         .article-card-modern{background:var(--white);border-radius:18px;padding:1.8rem;box-shadow:0 2px 20px rgba(0,0,0,.06);transition:all .35s ease;border:1px solid rgba(134,37,38,.08)}
         .article-card-modern:hover{transform:translateY(-5px);box-shadow:0 8px 30px rgba(134,37,38,.15);border-color:rgba(134,37,38,.15)}
@@ -684,38 +685,65 @@
                     <h2 class="category-title">Grossesse</h2>
                     
                     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:1000px;margin:2rem auto">
-                        <!-- Carte article Doula -->
-                        <div class="article-card-modern" onclick="showGrossesseArticle('doula')" style="cursor:pointer;transition:all .3s;overflow:hidden" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 12px 40px rgba(134,37,38,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 20px rgba(0,0,0,0.06)'">
-                            <!-- Image de la carte avec badge -->
-                            <div style="position:relative;width:calc(100% + 3.6rem);height:220px;margin:-1.8rem -1.8rem 1.5rem -1.8rem;overflow:hidden;border-radius:18px 18px 0 0">
-                                <img src="articledoula.png" alt="Doula" style="width:100%;height:100%;object-fit:contain;object-position:center;background:linear-gradient(135deg,#fafafa 0%,#fff 100%)">
-                                <div style="position:absolute;top:15px;right:15px;background:white;color:#862526;padding:0.5rem 1.2rem;border-radius:25px;font-size:0.85rem;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:flex;align-items:center;gap:0.4rem">
-                                    <span>📖</span> Guide complet
+                       <!-- Carte article Doula -->
+                        <div class="article-card-modern" onclick="showGrossesseArticle('doula')" style="cursor:pointer;transition:all .3s;overflow:hidden;position:relative" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 12px 40px rgba(134,37,38,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 20px rgba(0,0,0,0.06)'">
+                            
+                            <!-- Container image avec design moderne -->
+                            <div style="position:relative;width:calc(100% + 3.6rem);height:260px;margin:-1.8rem -1.8rem 0 -1.8rem;overflow:hidden;background:linear-gradient(135deg,#fafafa 0%,#fff 50%,#f5f5f5 100%)">
+                                <!-- Formes décoratives en arrière-plan -->
+                                <div style="position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(134,37,38,0.08) 0%,transparent 70%);border-radius:50%"></div>
+                                <div style="position:absolute;bottom:-30px;left:-30px;width:150px;height:150px;background:radial-gradient(circle,rgba(232,227,223,0.6) 0%,transparent 70%);border-radius:50%"></div>
+                                
+                                <!-- Image centrée et stylisée -->
+                                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:350px;height:85%;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(134,37,38,0.15);border:3px solid white">
+                                    <img src="articledoula.png" alt="Doula" style="width:100%;height:100%;object-fit:cover;object-position:center">
+                                </div>
+                                
+                                <!-- Badge moderne flottant -->
+                                <div style="position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);color:#862526;padding:0.6rem 1.3rem;border-radius:30px;font-size:0.85rem;font-weight:700;box-shadow:0 4px 20px rgba(134,37,38,0.25);display:flex;align-items:center;gap:0.5rem;border:2px solid rgba(134,37,38,0.1)">
+                                    <span style="font-size:1.1rem">📖</span> Guide complet
                                 </div>
                             </div>
                             
                             <!-- Contenu de la carte -->
-                            <div style="padding:0 0.5rem">
-                                <h4 style="color:#862526;font-size:1.5rem;margin-bottom:1rem;font-weight:700;line-height:1.3;display:flex;align-items:center;gap:0.5rem">
-                                    <span style="font-size:1.8rem">🤱</span> La Doula : Votre compagne de naissance
-                                </h4>
-                                <p style="color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;font-size:1rem">
-                                    Découvrez le rôle de la doula, cette accompagnante bienveillante qui vous soutient pendant la grossesse, l'accouchement et le post-partum. Un accompagnement humain, émotionnel et sans jugement.
-                                </p>
-                                
-                                <!-- Tags -->
-                                <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.5rem">
-                                    <span style="background:linear-gradient(135deg,#862526 0%,#a83739 100%);color:white;padding:0.4rem 1rem;border-radius:20px;font-size:0.85rem;font-weight:500;box-shadow:0 2px 8px rgba(134,37,38,0.2)">Grossesse</span>
-                                    <span style="background:var(--secondary);color:#862526;padding:0.4rem 1rem;border-radius:20px;font-size:0.85rem;font-weight:500">Naissance</span>
-                                    <span style="background:var(--secondary);color:#862526;padding:0.4rem 1rem;border-radius:20px;font-size:0.85rem;font-weight:500">Post-partum</span>
+                            <div style="padding:2rem 1.2rem 1.8rem">
+                                <!-- Titre avec emoji -->
+                                <div style="display:flex;align-items:start;gap:0.8rem;margin-bottom:1rem">
+                                    <div style="flex-shrink:0;width:45px;height:45px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 12px rgba(134,37,38,0.2)">
+                                        🤱
+                                    </div>
+                                    <h4 style="color:#862526;font-size:1.4rem;font-weight:700;line-height:1.3;margin:0;flex:1">
+                                        La Doula : Votre compagne de naissance
+                                    </h4>
                                 </div>
                                 
-                                <!-- Bouton call-to-action -->
-                                <div style="text-align:center;padding-top:1rem;border-top:2px solid var(--secondary)">
-                                    <span style="color:#862526;font-weight:700;font-size:1rem;display:flex;align-items:center;justify-content:center;gap:0.5rem">
-                                        Lire l'article 
-                                        <span style="display:inline-block;transition:transform .3s">→</span>
+                                <!-- Description -->
+                                <p style="color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;font-size:0.98rem">
+                                    Découvrez le rôle de la doula, cette accompagnante bienveillante qui vous soutient pendant la grossesse, l'accouchement et le post-partum.
+                                </p>
+                                
+                                <!-- Tags modernisés -->
+                                <div style="display:flex;flex-wrap:wrap;gap:0.7rem;margin-bottom:1.5rem">
+                                    <span style="background:linear-gradient(135deg,#862526 0%,#a83739 100%);color:white;padding:0.5rem 1.1rem;border-radius:25px;font-size:0.85rem;font-weight:600;box-shadow:0 3px 10px rgba(134,37,38,0.25)">
+                                        ✨ Grossesse
                                     </span>
+                                    <span style="background:white;border:2px solid var(--secondary);color:#862526;padding:0.5rem 1.1rem;border-radius:25px;font-size:0.85rem;font-weight:600">
+                                        Naissance
+                                    </span>
+                                    <span style="background:white;border:2px solid var(--secondary);color:#862526;padding:0.5rem 1.1rem;border-radius:25px;font-size:0.85rem;font-weight:600">
+                                        Post-partum
+                                    </span>
+                                </div>
+                                
+                                <!-- Séparateur décoratif -->
+                                <div style="height:2px;background:linear-gradient(90deg,transparent 0%,var(--secondary) 50%,transparent 100%);margin-bottom:1.5rem"></div>
+                                
+                                <!-- Call-to-action -->
+                                <div style="text-align:center">
+                                    <div style="display:inline-flex;align-items:center;gap:0.6rem;color:#862526;font-weight:700;font-size:1.05rem;padding:0.8rem 1.8rem;background:linear-gradient(135deg,rgba(134,37,38,0.08) 0%,rgba(134,37,38,0.12) 100%);border-radius:30px;transition:all .3s">
+                                        <span>Lire l'article</span>
+                                        <span style="display:inline-block;transition:transform .3s;font-size:1.2rem">→</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
