@@ -1829,29 +1829,17 @@ function backToGrossesseList() {
             const cardSagesfemmes = document.getElementById('pro-cards-sagesfemmes');
             if(cardSagesfemmes) cardSagesfemmes.style.display='none';
             
-            function hideProDetail(){
-    const searchBar = document.getElementById('pro-search-bar');
-    if(searchBar) searchBar.style.display='block';
-    
-    const doulasContainer = document.getElementById('pro-cards-doulas');
-    const sagesfemmesContainer = document.getElementById('pro-cards-sagesfemmes');
-    const acupuncteursContainer = document.getElementById('pro-cards-acupuncteurs');
-    
-    if(doulasContainer && doulasContainer.style.display === 'block'){
-        const doulasGrid = document.getElementById('doulas-grid');
-        if(doulasGrid) doulasGrid.style.display='grid';
-    }
-    if(sagesfemmesContainer && sagesfemmesContainer.style.display === 'block'){
-        const sagesfemmesGrid = document.getElementById('sagesfemmes-grid');
-        if(sagesfemmesGrid) sagesfemmesGrid.style.display='grid';
-    }
-    if(acupuncteursContainer && acupuncteursContainer.style.display === 'block'){
-        const acupuncteursGrid = document.getElementById('acupuncteurs-grid');
-        if(acupuncteursGrid) acupuncteursGrid.style.display='grid';
-    }
-    
-    document.querySelectorAll('.pro-detail').forEach(d=>d.classList.remove('active'));
-}
+            hideProDetail();
+            
+            const targetCard = document.getElementById('pro-cards-'+subcat);
+            if(targetCard) targetCard.style.display='block';
+            
+            // Afficher la grille correspondante
+            const targetGrid = document.getElementById(subcat+'-grid');
+            if(targetGrid) targetGrid.style.display='grid';
+            
+            navigationLevel = 'list';
+        }
 
         function backToSub(){
             const subGrossesse = document.getElementById('sub-grossesse');
