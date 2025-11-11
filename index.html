@@ -204,6 +204,76 @@
             <div style="text-align:center;margin-top:2rem">
                 <p style="max-width:800px;margin:0 auto 3rem;color:var(--text);font-size:1.1rem">Vianata est votre plateforme de référence pour découvrir et contacter les professionnels de la parentalité près de chez vous.</p>
             </div>
+
+            <!-- Section Problématiques Fréquentes -->
+            <div style="padding:4rem 2rem;margin:3rem -2rem 4rem;position:relative">
+                <div style="text-align:center;margin-bottom:3rem">
+                    <h3 style="color:#862526;font-size:2.2rem;margin-bottom:1rem;font-weight:700;font-family:'Inter',sans-serif">💭 Problématiques fréquentes</h3>
+                    <p style="color:var(--text-light);font-size:1.05rem;max-width:700px;margin:0 auto">Vous n'êtes pas seul·e face à ces questionnements. Nos professionnels sont là pour vous accompagner.</p>
+                </div>
+                
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1200px;margin:0 auto">
+                    <!-- Désir d'enfant -->
+                    <div style="background:white;border-radius:20px;padding:2rem;box-shadow:0 4px 20px rgba(134,37,38,0.08);border-left:5px solid #862526;transition:all .3s;cursor:pointer" onclick="showTab('professionnels');setTimeout(function(){showProCat('pma')},200)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 8px 30px rgba(134,37,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(134,37,38,0.08)'">
+                        <div style="width:55px;height:55px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;box-shadow:0 4px 12px rgba(134,37,38,0.2)">
+                            <span style="font-size:1.8rem">💫</span>
+                        </div>
+                        <h4 style="color:#862526;font-size:1.3rem;margin-bottom:1rem;font-weight:600;font-family:'Inter',sans-serif">Désir d'enfant</h4>
+                        <p style="color:var(--text);line-height:1.7;font-size:0.98rem;margin-bottom:1.5rem">
+                            Trouver de l'aide pour concevoir, vivre une PMA ou gérer l'attente.
+                        </p>
+                        <div style="display:flex;align-items:center;gap:0.5rem;color:#862526;font-weight:600;font-size:0.95rem">
+                            <span>Trouver un professionnel</span>
+                            <span style="transition:transform .3s">→</span>
+                        </div>
+                    </div>
+
+                    <!-- Grossesse -->
+                    <div style="background:white;border-radius:20px;padding:2rem;box-shadow:0 4px 20px rgba(134,37,38,0.08);border-left:5px solid #862526;transition:all .3s;cursor:pointer" onclick="showTab('professionnels');setTimeout(function(){showProCat('grossesse')},200)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 8px 30px rgba(134,37,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(134,37,38,0.08)'">
+                        <div style="width:55px;height:55px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;box-shadow:0 4px 12px rgba(134,37,38,0.2)">
+                            <span style="font-size:1.8rem">🤰</span>
+                        </div>
+                        <h4 style="color:#862526;font-size:1.3rem;margin-bottom:1rem;font-weight:600;font-family:'Inter',sans-serif">Grossesse</h4>
+                        <p style="color:var(--text);line-height:1.7;font-size:0.98rem;margin-bottom:1.5rem">
+                            Être accompagné·e physiquement et émotionnellement pendant la grossesse.
+                        </p>
+                        <div style="display:flex;align-items:center;gap:0.5rem;color:#862526;font-weight:600;font-size:0.95rem">
+                            <span>Trouver un professionnel</span>
+                            <span style="transition:transform .3s">→</span>
+                        </div>
+                    </div>
+
+                    <!-- Post-Partum -->
+                    <div style="background:white;border-radius:20px;padding:2rem;box-shadow:0 4px 20px rgba(134,37,38,0.08);border-left:5px solid #862526;transition:all .3s;cursor:pointer" onclick="showTab('professionnels');setTimeout(function(){showProCat('postpartum')},200)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 8px 30px rgba(134,37,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(134,37,38,0.08)'">
+                        <div style="width:55px;height:55px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;box-shadow:0 4px 12px rgba(134,37,38,0.2)">
+                            <span style="font-size:1.8rem">👶</span>
+                        </div>
+                        <h4 style="color:#862526;font-size:1.3rem;margin-bottom:1rem;font-weight:600;font-family:'Inter',sans-serif">Post-Partum</h4>
+                        <p style="color:var(--text);line-height:1.7;font-size:0.98rem;margin-bottom:1.5rem">
+                            Surmonter la fatigue, les douleurs, les doutes des premiers mois.
+                        </p>
+                        <div style="display:flex;align-items:center;gap:0.5rem;color:#862526;font-weight:600;font-size:0.95rem">
+                            <span>Trouver un professionnel</span>
+                            <span style="transition:transform .3s">→</span>
+                        </div>
+                    </div>
+
+                    <!-- Parentalité -->
+                    <div style="background:white;border-radius:20px;padding:2rem;box-shadow:0 4px 20px rgba(134,37,38,0.08);border-left:5px solid #862526;transition:all .3s;cursor:pointer" onclick="showTab('professionnels');setTimeout(function(){showProCat('parentalite')},200)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 8px 30px rgba(134,37,38,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(134,37,38,0.08)'">
+                        <div style="width:55px;height:55px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;box-shadow:0 4px 12px rgba(134,37,38,0.2)">
+                            <span style="font-size:1.8rem">👨‍👩‍👧</span>
+                        </div>
+                        <h4 style="color:#862526;font-size:1.3rem;margin-bottom:1rem;font-weight:600;font-family:'Inter',sans-serif">Parentalité</h4>
+                        <p style="color:var(--text);line-height:1.7;font-size:0.98rem;margin-bottom:1.5rem">
+                            Mieux comprendre son bébé, gérer les émotions, trouver un équilibre.
+                        </p>
+                        <div style="display:flex;align-items:center;gap:0.5rem;color:#862526;font-weight:600;font-size:0.95rem">
+                            <span>Trouver un professionnel</span>
+                            <span style="transition:transform .3s">→</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <!-- Section Professionnels Populaires Modernisée -->
             <div style="background:linear-gradient(135deg,#fafafa 0%,#fff 100%);padding:4rem 2rem;margin:3rem -2rem;border-radius:20px;position:relative;overflow:hidden">
