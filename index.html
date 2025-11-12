@@ -2097,18 +2097,16 @@ function backToGrossesseList() {
     const targetCard = document.getElementById('pro-cards-'+subcat);
     if(targetCard) {
         targetCard.style.display='block';
-        console.log('Affichage de pro-cards-' + subcat); // Pour déboguer
-    } else {
-        console.error('Element pro-cards-' + subcat + ' non trouvé'); // Pour déboguer
     }
     
     // Afficher la grille correspondante
     const targetGrid = document.getElementById(subcat+'-grid');
     if(targetGrid) {
         targetGrid.style.display='grid';
-        console.log('Affichage de ' + subcat + '-grid'); // Pour déboguer
-    } else {
-        console.error('Element ' + subcat + '-grid nonRéessayer
+    }
+    
+    navigationLevel = 'list';
+}
 
         function backToSub(){
             const subGrossesse = document.getElementById('sub-grossesse');
