@@ -11,9 +11,9 @@
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     
     <style>
-        :root{--primary:#A8B99A;--secondary:#A8B99A;--header-bg:#862526;--white:#FFF;--text:#862526;--text-light:#8A7A70}
+        :root{--primary:#A8B99A;--secondary:#A8B99A;--header-bg:#862526;--white:#FFF;--text:#862526;--text-light:#333333}
     <style>
-        :root{--primary:#A8B99A;--secondary:#A8B99A;--header-bg:#862526;--white:#FFF;--text:#862526;--text-light:#8A7A70}
+        :root{--primary:#A8B99A;--secondary:#A8B99A;--header-bg:#862526;--white:#FFF;--text:#862526;--text-light:#333333}
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Roboto',sans-serif;line-height:1.6;color:var(--text);background:var(--white)}
         header{background:var(--header-bg);padding:1.50rem 0;box-shadow:0 2px 10px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}
@@ -34,7 +34,7 @@
         .hero::after{content:'';position:absolute;bottom:-30%;left:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(168,185,154,0.4) 0%,transparent 70%);border-radius:50%;z-index:0}
         .hero-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
         .hero-text{text-align:left}
-        .hero h1{font-size:3.5rem;color:var(--primary);margin-bottom:1.5rem;line-height:1.2;font-weight:700;letter-spacing:-0.01em}
+        .hero h1{font-size:3.5rem;color:#000000;margin-bottom:1.5rem;line-height:1.2;font-weight:700;letter-spacing:-0.01em}
         .hero p{font-size:1.3rem;color:var(--text-light);margin-bottom:2.5rem;line-height:1.6;font-weight:400}
         .hero-image{text-align:center;position:relative}
         .hero-image::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:110%;height:110%;background:linear-gradient(135deg,rgba(168,185,154,0.1) 0%,rgba(168,185,154,0.2) 100%);border-radius:70% 30% 60% 40% / 40% 65% 35% 60%;z-index:-1}
@@ -42,11 +42,11 @@
         .hero-image img:hover{transform:scale(1.02)}
         .search-container{max-width:100%;margin:2rem 0 0;position:relative}
         .search-box{width:100%;padding:1.2rem 4.5rem 1.2rem 3.5rem;border:2px solid var(--secondary);border-radius:50px;font-size:1.05rem;background:var(--white);transition:all .3s ease;outline:none;font-family:inherit}
-        .search-box:focus{border-color:var(--primary);background:var(--white);transform:translateY(-2px)}
+        .search-box:focus{border-color:#000000;background:var(--white);transform:translateY(-2px)}
         .search-box::placeholder{color:var(--text-light);opacity:0.6;font-weight:400}
         .search-icon{position:absolute;left:1.5rem;top:50%;transform:translateY(-50%);font-size:1.3rem;color:var(--text-light);pointer-events:none;transition:color .3s ease}
-        .search-container:focus-within .search-icon{color:var(--primary)}
-        .search-clear{position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);background:var(--secondary);color:var(--primary);border:none;width:35px;height:35px;border-radius:50%;cursor:pointer;opacity:0;transition:all .3s ease;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:bold}
+        .search-container:focus-within .search-icon{color:#000000}
+        .search-clear{position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);background:var(--secondary);color:#000000;border:none;width:35px;height:35px;border-radius:50%;cursor:pointer;opacity:0;transition:all .3s ease;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:bold}
         .search-clear:hover{background:var(--primary);color:var(--white)}
         .search-box:not(:placeholder-shown) ~ .search-clear{opacity:1}
         @media(max-width:768px){.search-box{padding:1rem 3.5rem 1rem 3rem;font-size:1rem}}
@@ -72,17 +72,17 @@
         .categories-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
         .categories-grid-modern{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;max-width:1000px;margin:0 auto}
         .category-card{background:var(--white);border-radius:10px;padding:2rem;box-shadow:0 4px 15px rgba(0,0,0,.1);cursor:pointer;transition:all .3s;border:3px solid transparent}
-        .category-card:hover{transform:translateY(-5px);border-color:var(--primary)}
-        .category-card h3{color:var(--primary);font-size:1.5rem;margin-bottom:1rem}
+        .category-card:hover{transform:translateY(-5px);border-color:#000000}
+        .category-card h3{color:#000000;font-size:1.5rem;margin-bottom:1rem}
         .category-card-modern{background:var(--white);border-radius:20px;padding:2rem;box-shadow:0 3px 15px rgba(0,0,0,.08);cursor:pointer;transition:all .35s ease;text-align:center;border:2px solid transparent}
         .category-card-modern:hover{transform:translateY(-8px);box-shadow:0 8px 30px rgba(168,185,154,.15);border-color:rgba(168,185,154,.1)}
         .articles-section{display:none}
         .articles-section.active{display:block}
         .back-button{background:var(--primary);color:var(--white);border:none;padding:.8rem 1.5rem;border-radius:5px;cursor:pointer;margin-bottom:2rem}
-        .category-title{font-size:2rem;color:var(--primary);margin-bottom:2rem;text-align:center}
+        .category-title{font-size:2rem;color:#000000;margin-bottom:2rem;text-align:center}
         .articles-grid{display:grid;gap:2rem}
         .article-card{background:var(--white);border-radius:10px;padding:2rem;border-left:5px solid var(--primary);box-shadow:0 2px 10px rgba(0,0,0,.08)}
-        .article-card h4{color:var(--primary);font-size:1.5rem;margin-bottom:1rem}
+        .article-card h4{color:#000000;font-size:1.5rem;margin-bottom:1rem}
         .article-card-modern:hover [style*="Lire l'article"]{background:linear-gradient(135deg,rgba(168,185,154,0.15) 0%,rgba(168,185,154,0.2) 100%)!important}
         .article-card-modern:hover span:last-child{transform:translateX(5px)}
         .article-card-modern{background:var(--white);border-radius:18px;padding:1.8rem;box-shadow:0 2px 20px rgba(0,0,0,.06);transition:all .35s ease;border:1px solid rgba(168,185,154,.08)}
@@ -92,32 +92,32 @@
         .pro-card:hover{transform:translateY(-3px);border:2px solid var(--primary)}
         .pro-card-modern{background:var(--white);border-radius:20px;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,.08);cursor:pointer;transition:all .35s ease;position:relative;border:2px solid transparent}
         .pro-card-modern:hover{transform:translateY(-8px);box-shadow:0 8px 35px rgba(168,185,154,.2);border-color:rgba(168,185,154,.15)}
-        .pro-tag-modern{background:var(--secondary);color:var(--primary);padding:.35rem .9rem;border-radius:20px;font-size:.85rem;font-weight:500;transition:all .3s ease}
+        .pro-tag-modern{background:var(--secondary);color:#000000;padding:.35rem .9rem;border-radius:20px;font-size:.85rem;font-weight:500;transition:all .3s ease}
         .pro-card-modern:hover .pro-tag-modern{background:rgba(168,185,154,.1)}
         .pro-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
-        .pro-avatar{width:60px;height:60px;border-radius:50%;background:var(--secondary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--primary);font-weight:bold}
-        .pro-info h4{color:var(--primary);font-size:1.2rem}
+        .pro-avatar{width:60px;height:60px;border-radius:50%;background:var(--secondary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#000000;font-weight:bold}
+        .pro-info h4{color:#000000;font-size:1.2rem}
         .pro-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
-        .pro-tag{background:var(--secondary);color:var(--primary);padding:.3rem .8rem;border-radius:15px;font-size:.85rem}
+        .pro-tag{background:var(--secondary);color:#000000;padding:.3rem .8rem;border-radius:15px;font-size:.85rem}
         .pro-detail{display:none}
         .pro-detail.active{display:block}
         .pro-detail-header{display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:2px solid var(--secondary)}
-        .pro-detail-avatar{width:100px;height:100px;border-radius:50%;background:var(--secondary);display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:var(--primary);font-weight:bold}
+        .pro-detail-avatar{width:100px;height:100px;border-radius:50%;background:var(--secondary);display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:#000000;font-weight:bold}
         .pro-detail-contact{display:flex;gap:1rem;margin-top:1rem}
         .contact-button{background:var(--primary);color:var(--white);padding:.6rem 1.2rem;border-radius:5px;text-decoration:none}
         .pro-section{background:var(--white);padding:1.5rem;border-radius:10px;margin-bottom:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.05)}
-        .pro-section h3{color:var(--primary);font-size:1.4rem;margin-bottom:1rem;border-left:4px solid var(--primary);padding-left:1rem}
+        .pro-section h3{color:#000000;font-size:1.4rem;margin-bottom:1rem;border-left:4px solid var(--primary);padding-left:1rem}
         .pro-section ul{list-style:none;padding-left:1.5rem}
-        .pro-section ul li:before{content:"✓ ";color:var(--primary);font-weight:bold}
+        .pro-section ul li:before{content:"✓ ";color:#000000;font-weight:bold}
         .tarif-item{display:flex;justify-content:space-between;padding:.8rem;background:#f8f8f8;border-radius:5px;margin-bottom:.5rem}
-        .tarif-item span:last-child{color:var(--primary);font-weight:bold}
+        .tarif-item span:last-child{color:#000000;font-weight:bold}
         .sub-category-card-modern{background:var(--white);border-radius:18px;padding:2rem;cursor:pointer;transition:all .35s ease;text-align:center;border:2px solid var(--secondary);box-shadow:0 2px 12px rgba(0,0,0,.06)}
-        .sub-category-card-modern:hover{transform:translateY(-6px);border-color:var(--primary);box-shadow:0 6px 25px rgba(168,185,154,.15)}
+        .sub-category-card-modern:hover{transform:translateY(-6px);border-color:#000000;box-shadow:0 6px 25px rgba(168,185,154,.15)}
         .form-container{max-width:700px;margin:0 auto;background:var(--white);padding:2rem;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.1)}
         .form-group{margin-bottom:1.5rem}
-        .form-group label{display:block;color:var(--primary);font-weight:600;margin-bottom:.5rem}
+        .form-group label{display:block;color:#000000;font-weight:600;margin-bottom:.5rem}
         .form-group input,.form-group textarea,.form-group select{width:100%;padding:.8rem;border:2px solid var(--secondary);border-radius:5px;font-size:1rem;font-family:inherit}
-        .form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--primary)}
+        .form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:#000000}
         .form-group textarea{min-height:120px;resize:vertical}
         .submit-button{background:var(--primary);color:var(--white);border:none;padding:1rem 2rem;border-radius:5px;font-size:1.1rem;cursor:pointer;width:100%;transition:opacity .3s;font-weight:600}
         .submit-button:hover{opacity:.9}
@@ -146,7 +146,7 @@
         <div class="hero-content" style="display:flex;align-items:center;gap:4rem;max-width:1300px;margin:0 auto;padding:0 2rem">
             <!-- Bloc texte + recherche à gauche -->
             <div class="hero-text" style="flex:1;max-width:650px">
-                <div style="display:inline-block;background:rgba(168,185,154,0.1);color:var(--primary);padding:0.5rem 1.2rem;border-radius:30px;font-size:0.9rem;font-weight:600;margin-bottom:1.5rem">
+                <div style="display:inline-block;background:rgba(168,185,154,0.1);color:#000000;padding:0.5rem 1.2rem;border-radius:30px;font-size:0.9rem;font-weight:600;margin-bottom:1.5rem">
                     Votre plateforme d'accompagnement périnatal
                 </div>
                <h1 style="font-family:'Inter',sans-serif;font-size:3.2rem;line-height:1.2;margin-bottom:1.5rem;color:#000000;font-weight:500;letter-spacing:-1px">
@@ -158,7 +158,7 @@
                 
                 <!-- Barre de recherche modernisée -->
                 <div class="search-container" style="position:relative;margin-bottom:2rem">
-                    <span class="search-icon" style="position:absolute;left:1.8rem;top:50%;transform:translateY(-50%);font-size:1.4rem;color:var(--primary);z-index:1">🔍</span>
+                    <span class="search-icon" style="position:absolute;left:1.8rem;top:50%;transform:translateY(-50%);font-size:1.4rem;color:#000000;z-index:1">🔍</span>
                     <input type="text" class="search-box" id="searchInputHome" placeholder="Rechercher un professionnel, une ville..." onkeyup="searchFromHome(event)" oninput="toggleClearButton('searchInputHome', 'clearHome')" style="width:100%;padding:1.4rem 11rem 1.4rem 4.2rem;border:3px solid var(--secondary);border-radius:60px;font-size:1.05rem;background:white;transition:all .3s ease;box-shadow:0 4px 20px rgba(168,185,154,0.08)">
                     
                     <!-- Bouton Rechercher -->
@@ -167,15 +167,15 @@
                     </button>
                     
                     <!-- Bouton clear (caché par défaut) -->
-                    <button class="search-clear" id="clearHome" onclick="clearSearchInput('searchInputHome', 'clearHome')" style="position:absolute;right:10.5rem;top:50%;transform:translateY(-50%);background:var(--secondary);color:var(--primary);border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;opacity:0;transition:all .3s ease;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:bold;z-index:2" onmouseover="this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.background='var(--secondary)';this.style.color='var(--primary)'">✕</button>
+                    <button class="search-clear" id="clearHome" onclick="clearSearchInput('searchInputHome', 'clearHome')" style="position:absolute;right:10.5rem;top:50%;transform:translateY(-50%);background:var(--secondary);color:#000000;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;opacity:0;transition:all .3s ease;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:bold;z-index:2" onmouseover="this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.background='var(--secondary)';this.style.color='var(--primary)'">✕</button>
                 </div>
                 
                 <!-- Tags populaires -->
                 <div style="display:flex;gap:0.8rem;flex-wrap:wrap;align-items:center">
                     <span style="font-size:0.9rem;color:var(--text-light);font-weight:500">Recherches populaires :</span>
-                    <span style="background:white;border:2px solid var(--secondary);color:var(--primary);padding:0.4rem 1rem;border-radius:25px;font-size:0.85rem;cursor:pointer;transition:all .3s" onclick="document.getElementById('searchInputHome').value='Doula';searchFromHome({keyCode:13})" onmouseover="this.style.borderColor='var(--primary)';this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.borderColor='var(--secondary)';this.style.background='white';this.style.color='var(--primary)'">Doula</span>
-                    <span style="background:white;border:2px solid var(--secondary);color:var(--primary);padding:0.4rem 1rem;border-radius:25px;font-size:0.85rem;cursor:pointer;transition:all .3s" onclick="document.getElementById('searchInputHome').value='Lille';searchFromHome({keyCode:13})" onmouseover="this.style.borderColor='var(--primary)';this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.borderColor='var(--secondary)';this.style.background='white';this.style.color='var(--primary)'">Lille</span>
-                    <span style="background:white;border:2px solid var(--secondary);color:var(--primary);padding:0.4rem 1rem;border-radius:25px;font-size:0.85rem;cursor:pointer;transition:all .3s" onclick="document.getElementById('searchInputHome').value='Grossesse';searchFromHome({keyCode:13})" onmouseover="this.style.borderColor='var(--primary)';this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.borderColor='var(--secondary)';this.style.background='white';this.style.color='var(--primary)'">Grossesse</span>
+                    <span style="background:white;border:2px solid var(--secondary);color:#000000;padding:0.4rem 1rem;border-radius:25px;font-size:0.85rem;cursor:pointer;transition:all .3s" onclick="document.getElementById('searchInputHome').value='Doula';searchFromHome({keyCode:13})" onmouseover="this.style.borderColor='var(--primary)';this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.borderColor='var(--secondary)';this.style.background='white';this.style.color='var(--primary)'">Doula</span>
+                    <span style="background:white;border:2px solid var(--secondary);color:#000000;padding:0.4rem 1rem;border-radius:25px;font-size:0.85rem;cursor:pointer;transition:all .3s" onclick="document.getElementById('searchInputHome').value='Lille';searchFromHome({keyCode:13})" onmouseover="this.style.borderColor='var(--primary)';this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.borderColor='var(--secondary)';this.style.background='white';this.style.color='var(--primary)'">Lille</span>
+                    <span style="background:white;border:2px solid var(--secondary);color:#000000;padding:0.4rem 1rem;border-radius:25px;font-size:0.85rem;cursor:pointer;transition:all .3s" onclick="document.getElementById('searchInputHome').value='Grossesse';searchFromHome({keyCode:13})" onmouseover="this.style.borderColor='var(--primary)';this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.borderColor='var(--secondary)';this.style.background='white';this.style.color='var(--primary)'">Grossesse</span>
                 </div>
             </div>
             
@@ -300,7 +300,7 @@
                                 <img src="helene.jpg" alt="Hélène Poughon" style="width:100%;height:100%;object-fit:cover">
                             </div>
                             <div>
-                                <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:.3rem;font-weight:600">Ôm Doula</h4>
+                                <h4 style="color:#000000;font-size:1.3rem;margin-bottom:.3rem;font-weight:600">Ôm Doula</h4>
                                 <div style="color:var(--text-light);font-size:.95rem">Doula -Hélène Poughon</div>
                             </div>
                         </div>
@@ -311,7 +311,7 @@
                             <span class="pro-tag-modern" style="background:var(--primary);color:white">📍 Lille</span>
                         </div>
                         <div style="text-align:center;padding-top:1rem;border-top:1px solid var(--secondary)">
-                            <span style="color:var(--primary);font-weight:600;font-size:.9rem">Voir le profil →</span>
+                            <span style="color:#000000;font-weight:600;font-size:.9rem">Voir le profil →</span>
                         </div>
                     </div>
 
@@ -324,7 +324,7 @@
                                 CD
                             </div>
                             <div>
-                                <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:.3rem;font-weight:600">Claire Dubois</h4>
+                                <h4 style="color:#000000;font-size:1.3rem;margin-bottom:.3rem;font-weight:600">Claire Dubois</h4>
                                 <div style="color:var(--text-light);font-size:.95rem">Accompagnante périnatale</div>
                             </div>
                         </div>
@@ -335,7 +335,7 @@
                             <span class="pro-tag-modern" style="background:var(--primary);color:white">📍 Lyon</span>
                         </div>
                         <div style="text-align:center;padding-top:1rem;border-top:1px solid var(--secondary)">
-                            <span style="color:var(--primary);font-weight:600;font-size:.9rem">Voir le profil →</span>
+                            <span style="color:#000000;font-weight:600;font-size:.9rem">Voir le profil →</span>
                         </div>
                     </div>
                 </div>
@@ -352,12 +352,12 @@
                 <!-- Carrousel moderne avec flèches sur les côtés -->
                 <div style="max-width:1100px;margin:0 auto;position:relative;z-index:1">
                     <!-- Flèche gauche -->
-                    <button onclick="prevSlide()" class="carousel-arrow-side" style="position:absolute;left:-50px;top:50%;transform:translateY(-50%);background:var(--white);border:2px solid var(--secondary);color:var(--primary);width:45px;height:45px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;transition:all .3s ease;box-shadow:0 3px 12px rgba(0,0,0,0.08);z-index:10;font-weight:bold" onmouseover="this.style.background='var(--primary)';this.style.color='white';this.style.borderColor='var(--primary)';this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--primary)';this.style.borderColor='var(--secondary)';this.style.transform='translateY(-50%) scale(1)'">
+                    <button onclick="prevSlide()" class="carousel-arrow-side" style="position:absolute;left:-50px;top:50%;transform:translateY(-50%);background:var(--white);border:2px solid var(--secondary);color:#000000;width:45px;height:45px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;transition:all .3s ease;box-shadow:0 3px 12px rgba(0,0,0,0.08);z-index:10;font-weight:bold" onmouseover="this.style.background='var(--primary)';this.style.color='white';this.style.borderColor='var(--primary)';this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--primary)';this.style.borderColor='var(--secondary)';this.style.transform='translateY(-50%) scale(1)'">
                         ‹
                     </button>
                     
                     <!-- Flèche droite -->
-                    <button onclick="nextSlide()" class="carousel-arrow-side" style="position:absolute;right:-50px;top:50%;transform:translateY(-50%);background:var(--white);border:2px solid var(--secondary);color:var(--primary);width:45px;height:45px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;transition:all .3s ease;box-shadow:0 3px 12px rgba(0,0,0,0.08);z-index:10;font-weight:bold" onmouseover="this.style.background='var(--primary)';this.style.color='white';this.style.borderColor='var(--primary)';this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--primary)';this.style.borderColor='var(--secondary)';this.style.transform='translateY(-50%) scale(1)'">
+                    <button onclick="nextSlide()" class="carousel-arrow-side" style="position:absolute;right:-50px;top:50%;transform:translateY(-50%);background:var(--white);border:2px solid var(--secondary);color:#000000;width:45px;height:45px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;transition:all .3s ease;box-shadow:0 3px 12px rgba(0,0,0,0.08);z-index:10;font-weight:bold" onmouseover="this.style.background='var(--primary)';this.style.color='white';this.style.borderColor='var(--primary)';this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='var(--white)';this.style.color='var(--primary)';this.style.borderColor='var(--secondary)';this.style.transform='translateY(-50%) scale(1)'">
                         ›
                     </button>
                     
@@ -398,7 +398,7 @@
                                 <div style="width:65px;height:65px;background:linear-gradient(135deg,#A8B99A 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 6px 20px rgba(168,185,154,0.25)">
                                     <span style="font-size:2rem">🤱</span>
                                 </div>
-                                <h4 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700;line-height:1.3;text-align:center">Le 4ème trimestre</h4>
+                                <h4 style="color:#000000;font-size:1.8rem;margin-bottom:1rem;font-weight:700;line-height:1.3;text-align:center">Le 4ème trimestre</h4>
                                 <p style="font-size:1.05rem;line-height:1.8;color:var(--text-light);margin-bottom:1.5rem;text-align:center">Les 3 premiers mois après la naissance : acceptez de l'aide, reposez-vous. Prendre soin de vous est essentiel.</p>
                                 <div style="text-align:center">
                                     <span class="metier-tag" style="font-size:0.85rem;padding:.4rem 1rem">Post-partum</span>
@@ -412,7 +412,7 @@
                                 <div style="width:65px;height:65px;background:linear-gradient(135deg,#A8B99A 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 6px 20px rgba(168,185,154,0.25)">
                                     <span style="font-size:2rem">💭</span>
                                 </div>
-                                <h4 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700;line-height:1.3;text-align:center">Psychologue périnatal</h4>
+                                <h4 style="color:#000000;font-size:1.8rem;margin-bottom:1rem;font-weight:700;line-height:1.3;text-align:center">Psychologue périnatal</h4>
                                 <p style="font-size:1.05rem;line-height:1.8;color:var(--text-light);margin-bottom:1.5rem;text-align:center">Accompagnement émotionnel bienveillant et sans jugement durant votre parcours de parentalité.</p>
                                 <div style="text-align:center">
                                     <span class="metier-tag" style="font-size:0.85rem;padding:.4rem 1rem">Psychologue</span>
@@ -426,7 +426,7 @@
                                 <div style="width:65px;height:65px;background:linear-gradient(135deg,#A8B99A 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 6px 20px rgba(168,185,154,0.25)">
                                     <span style="font-size:2rem">💆‍♀️</span>
                                 </div>
-                                <h4 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700;line-height:1.3;text-align:center">Ostéopathe périnatal</h4>
+                                <h4 style="color:#000000;font-size:1.8rem;margin-bottom:1rem;font-weight:700;line-height:1.3;text-align:center">Ostéopathe périnatal</h4>
                                 <p style="font-size:1.05rem;line-height:1.8;color:var(--text-light);margin-bottom:1.5rem;text-align:center">Soulagement des douleurs de grossesse et accompagnement corporel pour vous et votre bébé.</p>
                                 <div style="text-align:center">
                                     <span class="metier-tag" style="font-size:0.85rem;padding:.4rem 1rem">Ostéopathe</span>
@@ -452,7 +452,7 @@
                                         <div style="width:55px;height:55px;background:linear-gradient(135deg,#A8B99A 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
                                             <span style="font-size:1.7rem">🧬</span>
                                         </div>
-                                        <h4 style="color:var(--primary);font-size:1.6rem;margin-bottom:0.8rem;font-weight:700;line-height:1.2">PMA à Lille : par où commencer ?</h4>
+                                        <h4 style="color:#000000;font-size:1.6rem;margin-bottom:0.8rem;font-weight:700;line-height:1.2">PMA à Lille : par où commencer ?</h4>
                                         <p style="font-size:0.95rem;line-height:1.6;color:var(--text-light);margin:0">À qui s'adresser pour débuter votre parcours de procréation médicalement assistée.</p>
                                     </div>
                                 </div>
@@ -533,16 +533,16 @@
                         📖 Guide complet
                     </div>
                 </div>
-                <h4 style="color:var(--primary);font-size:1.4rem;margin-bottom:1rem;font-weight:700;line-height:1.3">🧬 PMA à Lille : par où commencer ?</h4>
+                <h4 style="color:#000000;font-size:1.4rem;margin-bottom:1rem;font-weight:700;line-height:1.3">🧬 PMA à Lille : par où commencer ?</h4>
                 <p style="color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;font-size:0.95rem">
                     Vous vous interrogez sur la procréation médicalement assistée à Lille ? Découvrez à qui s'adresser, quels centres consulter, et comment démarrer votre parcours PMA dans la métropole lilloise.
                 </p>
                 <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1rem">
-                    <span style="background:var(--secondary);color:var(--primary);padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">CHU Lille</span>
-                    <span style="background:var(--secondary);color:var(--primary);padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">Cliniques</span>
-                    <span style="background:var(--secondary);color:var(--primary);padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">Accompagnement</span>
+                    <span style="background:var(--secondary);color:#000000;padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">CHU Lille</span>
+                    <span style="background:var(--secondary);color:#000000;padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">Cliniques</span>
+                    <span style="background:var(--secondary);color:#000000;padding:0.3rem 0.8rem;border-radius:15px;font-size:0.85rem">Accompagnement</span>
                 </div>
-                <div style="text-align:right;color:var(--primary);font-weight:600;font-size:0.95rem">
+                <div style="text-align:right;color:#000000;font-weight:600;font-size:0.95rem">
                     Lire l'article →
                 </div>
             </div>
@@ -578,7 +578,7 @@
 
             <!-- Section 1 -->
             <div style="margin-bottom:3rem">
-                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
+                <h2 style="color:#000000;font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
                     🔹 1. Comprendre ce qu'est la PMA
                 </h2>
                 <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
@@ -587,16 +587,16 @@
                 <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);margin-bottom:1.5rem">
                     <ul style="list-style:none;padding:0">
                         <li style="margin-bottom:1rem;padding-left:2rem;position:relative">
-                            <span style="position:absolute;left:0;color:var(--primary);font-weight:bold">•</span>
-                            <strong style="color:var(--primary)">L'insémination intra-utérine (IIU)</strong> : dépôt de sperme dans l'utérus au moment de l'ovulation.
+                            <span style="position:absolute;left:0;color:#000000;font-weight:bold">•</span>
+                            <strong style="color:#000000">L'insémination intra-utérine (IIU)</strong> : dépôt de sperme dans l'utérus au moment de l'ovulation.
                         </li>
                         <li style="margin-bottom:1rem;padding-left:2rem;position:relative">
-                            <span style="position:absolute;left:0;color:var(--primary);font-weight:bold">•</span>
-                            <strong style="color:var(--primary)">La fécondation in vitro (FIV)</strong> : fécondation de l'ovule et du spermatozoïde en laboratoire, avant transfert dans l'utérus.
+                            <span style="position:absolute;left:0;color:#000000;font-weight:bold">•</span>
+                            <strong style="color:#000000">La fécondation in vitro (FIV)</strong> : fécondation de l'ovule et du spermatozoïde en laboratoire, avant transfert dans l'utérus.
                         </li>
                         <li style="padding-left:2rem;position:relative">
-                            <span style="position:absolute;left:0;color:var(--primary);font-weight:bold">•</span>
-                            <strong style="color:var(--primary)">Le don de gamètes</strong> (ovocytes ou spermatozoïdes) : pour les couples infertiles ou les femmes seules.
+                            <span style="position:absolute;left:0;color:#000000;font-weight:bold">•</span>
+                            <strong style="color:#000000">Le don de gamètes</strong> (ovocytes ou spermatozoïdes) : pour les couples infertiles ou les femmes seules.
                         </li>
                     </ul>
                 </div>
@@ -607,18 +607,18 @@
 
             <!-- Section 2 -->
             <div style="margin-bottom:3rem">
-                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
+                <h2 style="color:#000000;font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
                     🔹 2. À qui s'adresser pour commencer un parcours PMA à Lille ?
                 </h2>
                 
-                <h3 style="color:var(--primary);font-size:1.4rem;margin-bottom:1rem;font-weight:600">
+                <h3 style="color:#000000;font-size:1.4rem;margin-bottom:1rem;font-weight:600">
                     👩‍⚕️ Votre gynécologue
                 </h3>
                 <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:2rem">
                     C'est souvent le premier contact. Il peut vous prescrire les premiers examens (dosages hormonaux, échographie, spermogramme, hystérosalpingographie) et vous orienter vers un centre de PMA agréé si nécessaire.
                 </p>
 
-                <h3 style="color:var(--primary);font-size:1.4rem;margin-bottom:1.5rem;font-weight:600">
+                <h3 style="color:#000000;font-size:1.4rem;margin-bottom:1.5rem;font-weight:600">
                     🏥 Les centres de PMA à Lille
                 </h3>
                 <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
@@ -628,7 +628,7 @@
                 <div style="display:grid;gap:1.5rem;margin-bottom:2rem">
                     <!-- CHU de Lille -->
                     <div style="background:white;padding:2rem;border-radius:15px;box-shadow:0 4px 15px rgba(168,185,154,0.1);border-left:5px solid var(--primary)">
-                        <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:1rem;font-weight:600">
+                        <h4 style="color:#000000;font-size:1.3rem;margin-bottom:1rem;font-weight:600">
                             CHU de Lille – Hôpital Jeanne de Flandre
                         </h4>
                         <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
@@ -637,14 +637,14 @@
                         <p style="font-size:1rem;color:var(--text-light);margin-bottom:0.5rem">
                             📍 2 avenue Oscar Lambret, Lille
                         </p>
-                        <p style="font-size:1rem;color:var(--primary);font-weight:600">
+                        <p style="font-size:1rem;color:#000000;font-weight:600">
                             ✓ Prise en charge 100 % par la Sécurité sociale (jusqu'à 43 ans)
                         </p>
                     </div>
 
                     <!-- Clinique du Bois -->
                     <div style="background:white;padding:2rem;border-radius:15px;box-shadow:0 4px 15px rgba(168,185,154,0.1);border-left:5px solid var(--primary)">
-                        <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:1rem;font-weight:600">
+                        <h4 style="color:#000000;font-size:1.3rem;margin-bottom:1rem;font-weight:600">
                             Clinique du Bois – Lambersart
                         </h4>
                         <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1rem">
@@ -654,7 +654,7 @@
 
                     <!-- Polyclinique -->
                     <div style="background:white;padding:2rem;border-radius:15px;box-shadow:0 4px 15px rgba(168,185,154,0.1);border-left:5px solid var(--primary)">
-                        <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:1rem;font-weight:600">
+                        <h4 style="color:#000000;font-size:1.3rem;margin-bottom:1rem;font-weight:600">
                             Polyclinique de Marcq-en-Barœul
                         </h4>
                         <p style="font-size:1.05rem;line-height:1.8;color:var(--text)">
@@ -663,7 +663,7 @@
                     </div>
                 </div>
 
-                <h3 style="color:var(--primary);font-size:1.4rem;margin-bottom:1rem;font-weight:600">
+                <h3 style="color:#000000;font-size:1.4rem;margin-bottom:1rem;font-weight:600">
                     🔬 Les laboratoires d'analyses
                 </h3>
                 <p style="font-size:1.05rem;line-height:1.8;color:var(--text)">
@@ -673,22 +673,22 @@
 
             <!-- Section 3 -->
             <div style="margin-bottom:3rem">
-                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
+                <h2 style="color:#000000;font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
                     🔹 3. Comment se déroule le début du parcours PMA ?
                 </h2>
                 <div style="background:linear-gradient(135deg,#fafafa 0%,#fff 100%);padding:2rem;border-radius:15px">
                     <ol style="padding-left:1.5rem">
                         <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
-                            <strong style="color:var(--primary)">Consultation initiale</strong> : évaluation de la fertilité du couple ou de la patiente seule.
+                            <strong style="color:#000000">Consultation initiale</strong> : évaluation de la fertilité du couple ou de la patiente seule.
                         </li>
                         <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
-                            <strong style="color:var(--primary)">Examens complémentaires</strong> : analyses sanguines, échographie, spermogramme, examens hormonaux.
+                            <strong style="color:#000000">Examens complémentaires</strong> : analyses sanguines, échographie, spermogramme, examens hormonaux.
                         </li>
                         <li style="margin-bottom:1rem;font-size:1.05rem;line-height:1.8">
-                            <strong style="color:var(--primary)">Réunion pluridisciplinaire</strong> : l'équipe médicale propose la meilleure stratégie (insémination, FIV, don, etc.).
+                            <strong style="color:#000000">Réunion pluridisciplinaire</strong> : l'équipe médicale propose la meilleure stratégie (insémination, FIV, don, etc.).
                         </li>
                         <li style="font-size:1.05rem;line-height:1.8">
-                            <strong style="color:var(--primary)">Démarrage du traitement</strong> : injections hormonales, stimulation ovarienne, puis prélèvements ou inséminations selon le protocole.
+                            <strong style="color:#000000">Démarrage du traitement</strong> : injections hormonales, stimulation ovarienne, puis prélèvements ou inséminations selon le protocole.
                         </li>
                     </ol>
                 </div>
@@ -701,7 +701,7 @@
 
             <!-- Section 4 -->
             <div style="margin-bottom:3rem">
-                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
+                <h2 style="color:#000000;font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
                     🔹 4. Être accompagné pendant son parcours PMA à Lille
                 </h2>
                 <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
@@ -710,22 +710,22 @@
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-bottom:1.5rem">
                     <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
                         <div style="font-size:2rem;margin-bottom:0.5rem">💭</div>
-                        <strong style="color:var(--primary)">Psychologues spécialisés</strong>
+                        <strong style="color:#000000">Psychologues spécialisés</strong>
                         <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Lille, La Madeleine, Villeneuve-d'Ascq</p>
                     </div>
                     <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
                         <div style="font-size:2rem;margin-bottom:0.5rem">👶</div>
-                        <strong style="color:var(--primary)">Sages-femmes libérales</strong>
+                        <strong style="color:#000000">Sages-femmes libérales</strong>
                         <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Soutien pendant les traitements</p>
                     </div>
                     <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
                         <div style="font-size:2rem;margin-bottom:0.5rem">💆‍♀️</div>
-                        <strong style="color:var(--primary)">Médecines douces</strong>
+                        <strong style="color:#000000">Médecines douces</strong>
                         <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Sophro, ostéo, acupuncture</p>
                     </div>
                     <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);text-align:center">
                         <div style="font-size:2rem;margin-bottom:0.5rem">🤝</div>
-                        <strong style="color:var(--primary)">Associations</strong>
+                        <strong style="color:#000000">Associations</strong>
                         <p style="font-size:0.95rem;color:var(--text-light);margin-top:0.5rem">Les Cigognes de l'Espoir, MAIA Nord</p>
                     </div>
                 </div>
@@ -736,24 +736,24 @@
 
             <!-- Section 5 -->
             <div style="margin-bottom:3rem">
-                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
+                <h2 style="color:#000000;font-size:2rem;margin-bottom:1.5rem;font-weight:700;border-left:5px solid var(--primary);padding-left:1rem">
                     🔹 5. PMA à Lille : coûts, délais et prise en charge
                 </h2>
                 <div style="display:grid;gap:1.5rem">
                     <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid var(--primary)">
-                        <strong style="color:var(--primary);font-size:1.1rem">💳 Prise en charge</strong>
+                        <strong style="color:#000000;font-size:1.1rem">💳 Prise en charge</strong>
                         <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-top:0.5rem">
                             La PMA est remboursée à 100 % par l'Assurance Maladie jusqu'à 43 ans (quatre tentatives de FIV ou six d'insémination).
                         </p>
                     </div>
                     <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid var(--primary)">
-                        <strong style="color:var(--primary);font-size:1.1rem">⏱️ Délais</strong>
+                        <strong style="color:#000000;font-size:1.1rem">⏱️ Délais</strong>
                         <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-top:0.5rem">
                             Comptez environ 3 à 6 mois pour une première consultation au CHU, moins en clinique privée.
                         </p>
                     </div>
                     <div style="background:white;padding:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-left:4px solid var(--primary)">
-                        <strong style="color:var(--primary);font-size:1.1rem">🌿 Accompagnement complémentaire</strong>
+                        <strong style="color:#000000;font-size:1.1rem">🌿 Accompagnement complémentaire</strong>
                         <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-top:0.5rem">
                             Certaines patientes choisissent de commencer un accompagnement paramédical (ostéo, sophro, acupuncture) dès la phase d'attente.
                         </p>
@@ -1068,7 +1068,7 @@
         <div id="professionnels" class="tab-content">
             <!-- Barre de recherche modernisée -->
             <div id="pro-search-bar" style="max-width:700px;margin:0 auto 3rem;text-align:center">
-                <h2 style="color:var(--primary);font-size:2rem;margin-bottom:1rem;font-weight:700">Trouvez votre professionnel</h2>
+                <h2 style="color:#000000;font-size:2rem;margin-bottom:1rem;font-weight:700">Trouvez votre professionnel</h2>
                 <p style="color:var(--text-light);margin-bottom:2rem;font-size:1rem">Recherchez par nom, spécialité ou ville</p>
                 <div class="search-container">
                     <span class="search-icon">🔍</span>
@@ -1086,7 +1086,7 @@
 
             <!-- Vue principale avec 2 boutons -->
             <div id="pro-main-view">
-                <h3 style="color:var(--primary);font-size:1.8rem;margin-bottom:3rem;text-align:center;font-weight:600;font-family:'Inter',sans-serif">Comment souhaitez-vous chercher ?</h3>
+                <h3 style="color:#000000;font-size:1.8rem;margin-bottom:3rem;text-align:center;font-weight:600;font-family:'Inter',sans-serif">Comment souhaitez-vous chercher ?</h3>
                 
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:3rem;max-width:900px;margin:0 auto">
                     <!-- Carte Par problème -->
@@ -1094,10 +1094,10 @@
                         <div style="width:100px;height:100px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;box-shadow:0 8px 25px rgba(168,185,154,0.3);transition:transform .3s" onmouseover="this.style.transform='scale(1.1) rotate(5deg)'" onmouseout="this.style.transform='scale(1) rotate(0deg)'">
                             <span style="font-size:3.5rem">🔍</span>
                         </div>
-                        <h3 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700;font-family:'Inter',sans-serif">Par problème</h3>
+                        <h3 style="color:#000000;font-size:1.8rem;margin-bottom:1rem;font-weight:700;font-family:'Inter',sans-serif">Par problème</h3>
                         <p style="color:var(--text-light);font-size:1.05rem;line-height:1.7;margin:0">Je cherche un professionnel pour m'accompagner sur une problématique spécifique</p>
                         <div style="margin-top:2rem;padding-top:2rem;border-top:2px solid var(--secondary)">
-                            <span style="color:var(--primary);font-weight:600;font-size:1.05rem">Parcourir par besoin →</span>
+                            <span style="color:#000000;font-weight:600;font-size:1.05rem">Parcourir par besoin →</span>
                         </div>
                     </div>
 
@@ -1106,10 +1106,10 @@
                         <div style="width:100px;height:100px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;box-shadow:0 8px 25px rgba(168,185,154,0.3);transition:transform .3s" onmouseover="this.style.transform='scale(1.1) rotate(-5deg)'" onmouseout="this.style.transform='scale(1) rotate(0deg)'">
                             <span style="font-size:3.5rem">👥</span>
                         </div>
-                        <h3 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700;font-family:'Inter',sans-serif">Par professionnel</h3>
+                        <h3 style="color:#000000;font-size:1.8rem;margin-bottom:1rem;font-weight:700;font-family:'Inter',sans-serif">Par professionnel</h3>
                         <p style="color:var(--text-light);font-size:1.05rem;line-height:1.7;margin:0">Je sais quel type de professionnel je recherche (doula, sage-femme...)</p>
                         <div style="margin-top:2rem;padding-top:2rem;border-top:2px solid var(--secondary)">
-                            <span style="color:var(--primary);font-weight:600;font-size:1.05rem">Parcourir par métier →</span>
+                            <span style="color:#000000;font-weight:600;font-size:1.05rem">Parcourir par métier →</span>
                         </div>
                     </div>
                 </div>
@@ -1118,7 +1118,7 @@
             <!-- Vue Par problème -->
             <div id="pro-probleme-view" style="display:none">
                 <button class="back-button" onclick="backToMainProView()">← Retour</button>
-                <h3 style="color:var(--primary);font-size:1.8rem;margin-bottom:3rem;text-align:center;font-weight:600;font-family:'Inter',sans-serif">Quelle est votre problématique ?</h3>
+                <h3 style="color:#000000;font-size:1.8rem;margin-bottom:3rem;text-align:center;font-weight:600;font-family:'Inter',sans-serif">Quelle est votre problématique ?</h3>
                 <div class="categories-grid-modern" style="max-width:1000px;grid-template-columns:repeat(4,1fr)">
                     <div class="category-card-modern" onclick="showProCat('pma')">
                         <div style="width:60px;height:60px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
@@ -1157,7 +1157,7 @@
             <!-- Vue Par professionnel -->
             <div id="pro-professionnel-view" style="display:none">
                 <button class="back-button" onclick="backToMainProView()">← Retour</button>
-                <h3 style="color:var(--primary);font-size:1.8rem;margin-bottom:3rem;text-align:center;font-weight:600;font-family:'Inter',sans-serif">Quel type de professionnel cherchez-vous ?</h3>
+                <h3 style="color:#000000;font-size:1.8rem;margin-bottom:3rem;text-align:center;font-weight:600;font-family:'Inter',sans-serif">Quel type de professionnel cherchez-vous ?</h3>
                 <div class="categories-grid-modern" style="max-width:1000px;grid-template-columns:repeat(4,1fr)">
                     <div class="category-card-modern" onclick="showProCat('pma')">
                         <div style="width:60px;height:60px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
@@ -1214,7 +1214,7 @@
                 </div>
 
                 <div id="pro-cards-doulas" style="display:none">
-                    <h3 style="color:var(--primary);text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Doulas</h3>
+                    <h3 style="color:#000000;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Doulas</h3>
                     
                     <div id="doulas-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
                         <div class="pro-card-modern" onclick="showProDetail('helene')">
@@ -1223,7 +1223,7 @@
                                     <img src="helene.jpg" alt="Hélène Poughon" style="width:100%;height:100%;object-fit:cover">
                                 </div>
                                 <div>
-                                    <h4 style="color:var(--primary);font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Ôm Doula</h4>
+                                    <h4 style="color:#000000;font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Ôm Doula</h4>
                                     <div style="color:var(--text-light);font-size:.9rem">Doula - Hélène Poughon</div>
                                 </div>
                             </div>
@@ -1240,7 +1240,7 @@
                                     <img src="melanie.jpg" alt="Mélanie Lesage" style="width:100%;height:100%;object-fit:cover">
                                 </div>
                                 <div>
-                                    <h4 style="color:var(--primary);font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Mélanie Lesage</h4>
+                                    <h4 style="color:#000000;font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Mélanie Lesage</h4>
                                     <div style="color:var(--text-light);font-size:.9rem">Doula - Ham doula</div>
                                 </div>
                             </div>
@@ -1257,7 +1257,7 @@
                                     SM
                                 </div>
                                 <div>
-                                    <h4 style="color:var(--primary);font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Sophie Martin</h4>
+                                    <h4 style="color:#000000;font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Sophie Martin</h4>
                                     <div style="color:var(--text-light);font-size:.9rem">Doula certifiée</div>
                                 </div>
                             </div>
@@ -1280,7 +1280,7 @@
                                     CD
                                 </div>
                                 <div>
-                                    <h4 style="color:var(--primary);font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Claire Dubois</h4>
+                                    <h4 style="color:#000000;font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Claire Dubois</h4>
                                     <div style="color:var(--text-light);font-size:.9rem">Accompagnante périnatale</div>
                                 </div>
                             </div>
@@ -1312,7 +1312,7 @@
                     
                     <!-- Navigation par onglets -->
                     <div style="display:flex;gap:1rem;margin-bottom:2rem;border-bottom:2px solid var(--secondary);padding-bottom:0;overflow-x:auto">
-                        <button onclick="showHeleneTab('presentation')" id="helene-tab-presentation" style="background:none;border:none;padding:1rem 1.5rem;font-size:1.05rem;font-weight:600;cursor:pointer;color:var(--primary);border-bottom:3px solid var(--primary);transition:all .3s;white-space:nowrap">
+                        <button onclick="showHeleneTab('presentation')" id="helene-tab-presentation" style="background:none;border:none;padding:1rem 1.5rem;font-size:1.05rem;font-weight:600;cursor:pointer;color:#000000;border-bottom:3px solid var(--primary);transition:all .3s;white-space:nowrap">
                             👤 Présentation & Parcours
                         </button>
                         <button onclick="showHeleneTab('prestations')" id="helene-tab-prestations" style="background:none;border:none;padding:1rem 1.5rem;font-size:1.05rem;font-weight:600;cursor:pointer;color:var(--text-light);border-bottom:3px solid transparent;transition:all .3s;white-space:nowrap">
@@ -1335,7 +1335,7 @@
                                 <p style="font-size:0.75rem;color:var(--text-light);margin-top:0.5rem;text-align:right;font-style:italic">Photo : Louve des bois</p>
                             </div>
                             <div>
-                                <h3 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700">Bienvenue chez Ôm Doula</h3>
+                                <h3 style="color:#000000;font-size:1.8rem;margin-bottom:1rem;font-weight:700">Bienvenue chez Ôm Doula</h3>
                                 <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
                                     Je suis Hélène, doula passionnée et dévouée, installée sur la métropole lilloise. Mon objectif : vous accompagner avec bienveillance dans votre parcours unique de parentalité.
                                 </p>
@@ -1364,13 +1364,13 @@
                                 <p style="font-size:1.1rem;color:var(--text);max-width:600px;margin:0 auto">Métropole lilloise et environs</p>
                             </div>
                             <div style="display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center;max-width:700px;margin:0 auto">
-                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:var(--primary);box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Lille</span>
-                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:var(--primary);box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Roubaix</span>
-                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:var(--primary);box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Tourcoing</span>
-                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:var(--primary);box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Villeneuve-d'Ascq</span>
-                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:var(--primary);box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Marcq-en-Barœul</span>
-                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:var(--primary);box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Lambersart</span>
-                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:var(--primary);box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">La Madeleine</span>
+                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:#000000;box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Lille</span>
+                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:#000000;box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Roubaix</span>
+                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:#000000;box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Tourcoing</span>
+                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:#000000;box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Villeneuve-d'Ascq</span>
+                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:#000000;box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Marcq-en-Barœul</span>
+                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:#000000;box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">Lambersart</span>
+                                <span style="background:white;padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:#000000;box-shadow:0 2px 8px rgba(168,185,154,0.1);border:1px solid var(--secondary)">La Madeleine</span>
                                 <span style="background:var(--primary);padding:0.6rem 1.2rem;border-radius:25px;font-size:0.95rem;color:white;box-shadow:0 2px 8px rgba(168,185,154,0.2)">+ Environs</span>
                             </div>
                         </div>
@@ -1386,11 +1386,11 @@
                             <h3>🎓 Mon parcours & formations</h3>
                             <div style="background:linear-gradient(135deg,#fff 0%,#fafafa 100%);padding:2rem;border-radius:15px;border:2px solid var(--secondary);margin-top:1.5rem">
                                 <ul style="list-style:none;padding:0">
-                                    <li style="margin-bottom:1rem;padding-left:0"><strong style="color:var(--primary)">2021-2022</strong> • Formation Cybèle Doula et coach périnatal en présentiel</li>
-                                    <li style="margin-bottom:1rem;padding-left:0"><strong style="color:var(--primary)">2021</strong> • Séminaire Physiologie de la naissance avec Michel Odent et Liliana Lammers (Paramana Doula)</li>
-                                    <li style="margin-bottom:1rem;padding-left:0"><strong style="color:var(--primary)">2019</strong> • Formation HACCP - Lille</li>
-                                    <li style="margin-bottom:1rem;padding-left:0"><strong style="color:var(--primary)">2013</strong> • Diplôme de sociologie de la délinquance - ULB</li>
-                                    <li style="padding-left:0"><strong style="color:var(--primary)">Expérience</strong> • Gérante de Supercyclo : restauration bio, zéro déchet, distribuée en triporteur</li>
+                                    <li style="margin-bottom:1rem;padding-left:0"><strong style="color:#000000">2021-2022</strong> • Formation Cybèle Doula et coach périnatal en présentiel</li>
+                                    <li style="margin-bottom:1rem;padding-left:0"><strong style="color:#000000">2021</strong> • Séminaire Physiologie de la naissance avec Michel Odent et Liliana Lammers (Paramana Doula)</li>
+                                    <li style="margin-bottom:1rem;padding-left:0"><strong style="color:#000000">2019</strong> • Formation HACCP - Lille</li>
+                                    <li style="margin-bottom:1rem;padding-left:0"><strong style="color:#000000">2013</strong> • Diplôme de sociologie de la délinquance - ULB</li>
+                                    <li style="padding-left:0"><strong style="color:#000000">Expérience</strong> • Gérante de Supercyclo : restauration bio, zéro déchet, distribuée en triporteur</li>
                                 </ul>
                             </div>
                         </div>
@@ -1431,7 +1431,7 @@
                                 <img src="helenepro.jpg" alt="Hélène Poughon - Doula" style="width:100%;height:auto;border-radius:15px;position:relative;z-index:1;box-shadow:0 8px 30px rgba(168,185,154,0.15)">
                             </div>
                             <div>
-                                <h3 style="color:var(--primary);font-size:1.8rem;margin-bottom:1rem;font-weight:700">Un accompagnement sur mesure</h3>
+                                <h3 style="color:#000000;font-size:1.8rem;margin-bottom:1rem;font-weight:700">Un accompagnement sur mesure</h3>
                                 <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.5rem">
                                     Chaque parcours de parentalité est unique. C'est pourquoi je propose des accompagnements personnalisés, adaptés à vos besoins, vos valeurs et votre situation.
                                 </p>
@@ -1443,11 +1443,11 @@
                         
                         <!-- Mes Prestations & Tarifs -->
                         <div style="max-width:1000px;margin:0 auto">
-                            <h3 style="color:var(--primary);font-size:2rem;text-align:center;margin-bottom:3rem;font-weight:700">Mes Prestations & Tarifs</h3>
+                            <h3 style="color:#000000;font-size:2rem;text-align:center;margin-bottom:3rem;font-weight:700">Mes Prestations & Tarifs</h3>
                             
                             <!-- Section Accompagnement -->
                             <div style="margin-bottom:3rem">
-                                <h4 style="color:var(--primary);font-size:1.6rem;margin-bottom:2rem;text-align:center;font-weight:600">🤝 Accompagnement</h4>
+                                <h4 style="color:#000000;font-size:1.6rem;margin-bottom:2rem;text-align:center;font-weight:600">🤝 Accompagnement</h4>
                                 
                                 <div style="display:grid;gap:1.5rem">
                                     <!-- Appel découverte -->
@@ -1467,11 +1467,11 @@
                                     <div style="background:white;border-radius:18px;padding:2rem;box-shadow:0 4px 20px rgba(168,185,154,0.08);border:2px solid var(--secondary);transition:all .3s" onmouseover="this.style.borderColor='var(--primary)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--secondary)';this.style.transform='translateY(0)'">
                                         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
                                             <div>
-                                                <h5 style="color:var(--primary);font-size:1.3rem;font-weight:600;margin-bottom:0.3rem">🏠 Rencontre à domicile</h5>
+                                                <h5 style="color:#000000;font-size:1.3rem;font-weight:600;margin-bottom:0.3rem">🏠 Rencontre à domicile</h5>
                                                 <p style="color:var(--text-light);font-size:0.95rem;margin:0">1h30 d'accompagnement personnalisé</p>
                                             </div>
                                             <div style="text-align:right">
-                                                <div style="font-size:2rem;font-weight:700;color:var(--primary)">80€</div>
+                                                <div style="font-size:2rem;font-weight:700;color:#000000">80€</div>
                                                 <div style="font-size:0.85rem;color:var(--text-light)">~72€ après crédit d'impôt</div>
                                             </div>
                                         </div>
@@ -1481,11 +1481,11 @@
                                     <div style="background:white;border-radius:18px;padding:2rem;box-shadow:0 4px 20px rgba(168,185,154,0.08);border:2px solid var(--secondary);transition:all .3s" onmouseover="this.style.borderColor='var(--primary)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--secondary)';this.style.transform='translateY(0)'">
                                         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
                                             <div>
-                                                <h5 style="color:var(--primary);font-size:1.3rem;font-weight:600;margin-bottom:0.3rem">🌟 Suivi long terme</h5>
+                                                <h5 style="color:#000000;font-size:1.3rem;font-weight:600;margin-bottom:0.3rem">🌟 Suivi long terme</h5>
                                                 <p style="color:var(--text-light);font-size:0.95rem;margin:0">Accompagnement global personnalisé (grossesse, naissance, post-partum)</p>
                                             </div>
                                             <div style="text-align:right">
-                                                <div style="font-size:1.5rem;font-weight:600;color:var(--primary)">Sur devis</div>
+                                                <div style="font-size:1.5rem;font-weight:600;color:#000000">Sur devis</div>
                                                 <div style="font-size:0.85rem;color:var(--text-light)">Me contacter</div>
                                             </div>
                                         </div>
@@ -1495,61 +1495,61 @@
 
                             <!-- Section Soins -->
                             <div style="margin-bottom:3rem">
-                                <h4 style="color:var(--primary);font-size:1.6rem;margin-bottom:2rem;text-align:center;font-weight:600">💆‍♀️ Soins</h4>
+                                <h4 style="color:#000000;font-size:1.6rem;margin-bottom:2rem;text-align:center;font-weight:600">💆‍♀️ Soins</h4>
                                 
                                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
                                     <!-- Polarités -->
                                     <div style="background:white;border-radius:18px;padding:2rem;box-shadow:0 4px 20px rgba(168,185,154,0.08);border:2px solid var(--secondary);transition:all .3s" onmouseover="this.style.borderColor='var(--primary)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--secondary)';this.style.transform='translateY(0)'">
-                                        <h5 style="color:var(--primary);font-size:1.2rem;font-weight:600;margin-bottom:0.5rem">✨ Polarités de Gordon</h5>
+                                        <h5 style="color:#000000;font-size:1.2rem;font-weight:600;margin-bottom:0.5rem">✨ Polarités de Gordon</h5>
                                         <p style="color:var(--text-light);font-size:0.9rem;margin-bottom:1rem">Soin énergétique (1h)</p>
-                                        <div style="font-size:1.8rem;font-weight:700;color:var(--primary)">70€</div>
+                                        <div style="font-size:1.8rem;font-weight:700;color:#000000">70€</div>
                                     </div>
 
                                     <!-- Enveloppement Rebozo -->
                                     <div style="background:white;border-radius:18px;padding:2rem;box-shadow:0 4px 20px rgba(168,185,154,0.08);border:2px solid var(--secondary);transition:all .3s" onmouseover="this.style.borderColor='var(--primary)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--secondary)';this.style.transform='translateY(0)'">
-                                        <h5 style="color:var(--primary);font-size:1.2rem;font-weight:600;margin-bottom:0.5rem">🌸 Enveloppement Rebozo</h5>
+                                        <h5 style="color:#000000;font-size:1.2rem;font-weight:600;margin-bottom:0.5rem">🌸 Enveloppement Rebozo</h5>
                                         <p style="color:var(--text-light);font-size:0.9rem;margin-bottom:1rem">+ Polarités (1h30)</p>
-                                        <div style="font-size:1.8rem;font-weight:700;color:var(--primary)">90€</div>
+                                        <div style="font-size:1.8rem;font-weight:700;color:#000000">90€</div>
                                     </div>
 
                                     <!-- Serrage bassin -->
                                     <div style="background:white;border-radius:18px;padding:2rem;box-shadow:0 4px 20px rgba(168,185,154,0.08);border:2px solid var(--secondary);transition:all .3s" onmouseover="this.style.borderColor='var(--primary)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--secondary)';this.style.transform='translateY(0)'">
-                                        <h5 style="color:var(--primary);font-size:1.2rem;font-weight:600;margin-bottom:0.5rem">🤱 Serrage de bassin</h5>
+                                        <h5 style="color:#000000;font-size:1.2rem;font-weight:600;margin-bottom:0.5rem">🤱 Serrage de bassin</h5>
                                         <p style="color:var(--text-light);font-size:0.9rem;margin-bottom:1rem">Postnatal (45min)</p>
-                                        <div style="font-size:1.8rem;font-weight:700;color:var(--primary)">60€</div>
+                                        <div style="font-size:1.8rem;font-weight:700;color:#000000">60€</div>
                                     </div>
 
                                     <!-- Soin Rebozo complet -->
                                     <div style="background:white;border-radius:18px;padding:2rem;box-shadow:0 4px 20px rgba(168,185,154,0.08);border:2px solid var(--secondary);transition:all .3s" onmouseover="this.style.borderColor='var(--primary)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--secondary)';this.style.transform='translateY(0)'">
-                                        <h5 style="color:var(--primary);font-size:1.2rem;font-weight:600;margin-bottom:0.5rem">🌺 Soin Rebozo</h5>
+                                        <h5 style="color:#000000;font-size:1.2rem;font-weight:600;margin-bottom:0.5rem">🌺 Soin Rebozo</h5>
                                         <p style="color:var(--text-light);font-size:0.9rem;margin-bottom:1rem">Ouverture ou fermeture (1h30-2h)</p>
-                                        <div style="font-size:1.8rem;font-weight:700;color:var(--primary)">100€</div>
+                                        <div style="font-size:1.8rem;font-weight:700;color:#000000">100€</div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Section Honorer -->
                             <div style="margin-bottom:3rem">
-                                <h4 style="color:var(--primary);font-size:1.6rem;margin-bottom:2rem;text-align:center;font-weight:600">💝 Honorer</h4>
+                                <h4 style="color:#000000;font-size:1.6rem;margin-bottom:2rem;text-align:center;font-weight:600">💝 Honorer</h4>
                                 
                                 <div style="display:grid;gap:1.5rem">
                                     <!-- Rituel Rebozo à 4 mains -->
                                     <div style="background:linear-gradient(135deg,#fff 0%,#fafafa 100%);border-radius:18px;padding:2.5rem;box-shadow:0 4px 20px rgba(168,185,154,0.08);border:2px solid var(--primary);position:relative">
                                         <div style="position:absolute;top:15px;right:15px;background:var(--primary);color:white;padding:0.4rem 1rem;border-radius:20px;font-size:0.8rem;font-weight:600">À 4 mains</div>
-                                        <h5 style="color:var(--primary);font-size:1.4rem;font-weight:600;margin-bottom:1rem">🙌 Rituel Rebozo à 4 mains</h5>
+                                        <h5 style="color:#000000;font-size:1.4rem;font-weight:600;margin-bottom:1rem">🙌 Rituel Rebozo à 4 mains</h5>
                                         <p style="color:var(--text);font-size:1rem;line-height:1.7;margin-bottom:1.5rem">
                                             Soin réservé aux femmes issu des traditions mexicaines, pratiqué en binôme à la Maison des Doulas à Lille. 
                                             Massage à 4 mains, hammam, serrage en 7 points avec les Rebozo.
                                         </p>
                                         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
-                                            <div style="font-size:2.2rem;font-weight:700;color:var(--primary)">280€</div>
+                                            <div style="font-size:2.2rem;font-weight:700;color:#000000">280€</div>
                                             <a href="mailto:helene.omdoula@gmail.com" style="background:var(--primary);color:white;padding:0.8rem 1.5rem;border-radius:25px;text-decoration:none;font-size:0.95rem;transition:opacity .3s" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">📧 Réserver par email</a>
                                         </div>
                                     </div>
 
                                     <!-- Célébrer la femme enceinte -->
                                     <div style="background:white;border-radius:18px;padding:2.5rem;box-shadow:0 4px 20px rgba(168,185,154,0.08);border:2px solid var(--secondary);transition:all .3s" onmouseover="this.style.borderColor='var(--primary)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--secondary)';this.style.transform='translateY(0)'">
-                                        <h5 style="color:var(--primary);font-size:1.4rem;font-weight:600;margin-bottom:1rem">🎉 Célébrer la femme enceinte</h5>
+                                        <h5 style="color:#000000;font-size:1.4rem;font-weight:600;margin-bottom:1rem">🎉 Célébrer la femme enceinte</h5>
                                         <p style="color:var(--text);font-size:1rem;line-height:1.7;margin-bottom:1rem">
                                             Mama blessing, blessing way, organisation du meal train ou préparation entre amies de plats pour le postpartum.
                                         </p>
@@ -1557,14 +1557,14 @@
                                             Un moment de douceur, de sororité, de rituels à votre image. Organisation, préparation logistique, présence (3h).
                                         </p>
                                         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
-                                            <div style="font-size:2.2rem;font-weight:700;color:var(--primary)">350€</div>
+                                            <div style="font-size:2.2rem;font-weight:700;color:#000000">350€</div>
                                             <a href="mailto:helene.omdoula@gmail.com" style="background:var(--primary);color:white;padding:0.8rem 1.5rem;border-radius:25px;text-decoration:none;font-size:0.95rem;transition:opacity .3s" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">📧 Réserver par email</a>
                                         </div>
                                     </div>
 
                                     <!-- Autre rituel -->
                                     <div style="background:white;border-radius:18px;padding:2rem;box-shadow:0 4px 20px rgba(168,185,154,0.08);border:2px solid var(--secondary);transition:all .3s" onmouseover="this.style.borderColor='var(--primary)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--secondary)';this.style.transform='translateY(0)'">
-                                        <h5 style="color:var(--primary);font-size:1.3rem;font-weight:600;margin-bottom:1rem">✨ Autre rituel sur mesure</h5>
+                                        <h5 style="color:#000000;font-size:1.3rem;font-weight:600;margin-bottom:1rem">✨ Autre rituel sur mesure</h5>
                                         <p style="color:var(--text);font-size:1rem;line-height:1.7;margin-bottom:1rem">
                                             Je peux vous créer sur mesure un rituel pour honorer, célébrer un passage, un moment de votre vie de femme.
                                         </p>
@@ -1577,23 +1577,23 @@
 
                             <!-- Section Service de cuisine -->
                             <div style="margin-bottom:3rem">
-                                <h4 style="color:var(--primary);font-size:1.6rem;margin-bottom:2rem;text-align:center;font-weight:600">🍳 Service de cuisine</h4>
+                                <h4 style="color:#000000;font-size:1.6rem;margin-bottom:2rem;text-align:center;font-weight:600">🍳 Service de cuisine</h4>
                                 
                                 <div style="background:white;border-radius:18px;padding:2.5rem;box-shadow:0 4px 20px rgba(168,185,154,0.08);border:2px solid var(--secondary);transition:all .3s" onmouseover="this.style.borderColor='var(--primary)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--secondary)';this.style.transform='translateY(0)'">
                                     <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:1.5rem">
                                         <div style="flex:1;min-width:250px">
-                                            <h5 style="color:var(--primary);font-size:1.3rem;font-weight:600;margin-bottom:1rem">👩‍🍳 Batchcooking à domicile</h5>
+                                            <h5 style="color:#000000;font-size:1.3rem;font-weight:600;margin-bottom:1rem">👩‍🍳 Batchcooking à domicile</h5>
                                             <p style="color:var(--text);font-size:1rem;line-height:1.7;margin-bottom:1rem">
                                                 3h de cuisine à domicile pour vous préparer les plats de la semaine.
                                             </p>
                                             <div style="background:#fafafa;padding:1rem;border-radius:10px;margin-top:1rem">
                                                 <p style="color:var(--text-light);font-size:0.9rem;margin:0">
-                                                    💡 Ce service peut être payé via le <strong style="color:var(--primary)">CESU</strong> (49€ brut/heure)
+                                                    💡 Ce service peut être payé via le <strong style="color:#000000">CESU</strong> (49€ brut/heure)
                                                 </p>
                                             </div>
                                         </div>
                                         <div style="text-align:right">
-                                            <div style="font-size:2.2rem;font-weight:700;color:var(--primary)">150€</div>
+                                            <div style="font-size:2.2rem;font-weight:700;color:#000000">150€</div>
                                             <div style="font-size:0.9rem;color:var(--text-light);margin-top:0.3rem">3 heures</div>
                                         </div>
                                     </div>
@@ -1604,30 +1604,30 @@
                         <!-- Informations pratiques -->
                         <div style="max-width:900px;margin:3rem auto 0">
                             <div style="background:linear-gradient(135deg,#fafafa 0%,#fff 100%);padding:2rem;border-radius:20px;border:2px solid var(--secondary)">
-                                <h4 style="color:var(--primary);font-size:1.3rem;margin-bottom:1.5rem;text-align:center">ℹ️ Informations pratiques</h4>
+                                <h4 style="color:#000000;font-size:1.3rem;margin-bottom:1.5rem;text-align:center">ℹ️ Informations pratiques</h4>
                                 <div style="display:grid;gap:1rem">
                                     <div style="display:flex;gap:1rem;align-items:start">
                                         <span style="font-size:1.3rem">💳</span>
                                         <div>
-                                            <strong style="color:var(--primary)">Paiement :</strong> Espèces, virement, chèque • Eligible CESU pour certains services • Crédit d'impôt de 10% applicable
+                                            <strong style="color:#000000">Paiement :</strong> Espèces, virement, chèque • Eligible CESU pour certains services • Crédit d'impôt de 10% applicable
                                         </div>
                                     </div>
                                     <div style="display:flex;gap:1rem;align-items:start">
                                         <span style="font-size:1.3rem">🎁</span>
                                         <div>
-                                            <strong style="color:var(--primary)">Liste de naissance :</strong> Mes accompagnements peuvent être ajoutés à votre liste de naissance
+                                            <strong style="color:#000000">Liste de naissance :</strong> Mes accompagnements peuvent être ajoutés à votre liste de naissance
                                         </div>
                                     </div>
                                     <div style="display:flex;gap:1rem;align-items:start">
                                         <span style="font-size:1.3rem">🤝</span>
                                         <div>
-                                            <strong style="color:var(--primary)">Sur mesure :</strong> Toutes les prestations sont adaptables selon vos besoins. N'hésitez pas à me contacter pour en discuter
+                                            <strong style="color:#000000">Sur mesure :</strong> Toutes les prestations sont adaptables selon vos besoins. N'hésitez pas à me contacter pour en discuter
                                         </div>
                                     </div>
                                     <div style="display:flex;gap:1rem;align-items:start">
                                         <span style="font-size:1.3rem">☕</span>
                                         <div>
-                                            <strong style="color:var(--primary)">Premier contact :</strong> Appel découverte gratuit de 20 minutes pour faire connaissance
+                                            <strong style="color:#000000">Premier contact :</strong> Appel découverte gratuit de 20 minutes pour faire connaissance
                                         </div>
                                     </div>
                                 </div>
@@ -1638,7 +1638,7 @@
                                 <h3 style="text-align:center;border:none;padding:0">📞 Prête à démarrer l'aventure ?</h3>
                                 <p style="font-size:1.05rem;line-height:1.8;margin-bottom:1.5rem;text-align:center">N'hésitez pas à me contacter pour toute question ou pour prendre rendez-vous. Je vous propose un appel découverte gratuit de 20 minutes.</p>
                                 <div style="text-align:center;margin-top:2rem;padding:2rem;background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px solid var(--secondary)">
-                                    <p style="font-size:1.2rem;color:var(--primary);font-weight:600;margin-bottom:1.5rem">Prenons contact !</p>
+                                    <p style="font-size:1.2rem;color:#000000;font-weight:600;margin-bottom:1.5rem">Prenons contact !</p>
                                     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
                                         <a href="https://omdoula.fr/" target="_blank" class="contact-button" style="font-size:1rem">🌐 Visiter mon site</a>
                                         <a href="mailto:helene.omdoula@gmail.com" class="contact-button" style="font-size:1rem">📧 M'écrire</a>
@@ -1652,7 +1652,7 @@
                     <!-- Contenu Prendre RDV -->
                     <div id="helene-content-rdv" class="helene-tab-content" style="display:none">
                         <div style="text-align:center;margin-bottom:2rem">
-                            <h3 style="color:var(--primary);font-size:2rem;margin-bottom:1rem;font-weight:700">📅 Réserver un rendez-vous</h3>
+                            <h3 style="color:#000000;font-size:2rem;margin-bottom:1rem;font-weight:700">📅 Réserver un rendez-vous</h3>
                             <p style="color:var(--text-light);font-size:1.1rem;max-width:700px;margin:0 auto">
                                 Choisissez un créneau qui vous convient pour échanger ensemble. L'appel découverte de 20 minutes est gratuit et sans engagement.
                             </p>
@@ -1666,10 +1666,10 @@
                         <!-- Informations complémentaires -->
                         <div style="max-width:700px;margin:2rem auto 0;text-align:center;padding:1.5rem;background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px solid var(--secondary)">
                             <p style="color:var(--text);font-size:1rem;line-height:1.7;margin-bottom:1rem">
-                                <strong style="color:var(--primary)">💡 Vous préférez m'écrire ?</strong>
+                                <strong style="color:#000000">💡 Vous préférez m'écrire ?</strong>
                             </p>
                             <p style="color:var(--text-light);font-size:0.95rem;margin:0">
-                                Contactez-moi par email : <a href="mailto:helene.omdoula@gmail.com" style="color:var(--primary);font-weight:600;text-decoration:none">helene.omdoula@gmail.com</a>
+                                Contactez-moi par email : <a href="mailto:helene.omdoula@gmail.com" style="color:#000000;font-weight:600;text-decoration:none">helene.omdoula@gmail.com</a>
                             </p>
                         </div>
                     </div>
