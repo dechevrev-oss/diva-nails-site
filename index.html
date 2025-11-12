@@ -2057,26 +2057,47 @@ function backToGrossesseList() {
         }
 
         function showSubCat(subcat){
-            const subGrossesse = document.getElementById('sub-grossesse');
-            if(subGrossesse) subGrossesse.style.display='none';
-            
-            const cardDoulas = document.getElementById('pro-cards-doulas');
-            if(cardDoulas) cardDoulas.style.display='none';
-            
-            const cardSagesfemmes = document.getElementById('pro-cards-sagesfemmes');
-            if(cardSagesfemmes) cardSagesfemmes.style.display='none';
-            
-            hideProDetail();
-            
-            const targetCard = document.getElementById('pro-cards-'+subcat);
-            if(targetCard) targetCard.style.display='block';
-            
-            // Afficher la grille correspondante
-            const targetGrid = document.getElementById(subcat+'-grid');
-            if(targetGrid) targetGrid.style.display='grid';
-            
-            navigationLevel = 'list';
-        }
+    // Pour Grossesse
+    const subGrossesse = document.getElementById('sub-grossesse');
+    if(subGrossesse) subGrossesse.style.display='none';
+    
+    const cardDoulas = document.getElementById('pro-cards-doulas');
+    if(cardDoulas) cardDoulas.style.display='none';
+    
+    const cardSagesfemmes = document.getElementById('pro-cards-sagesfemmes');
+    if(cardSagesfemmes) cardSagesfemmes.style.display='none';
+    
+    // Pour PMA
+    const subPma = document.getElementById('sub-pma');
+    if(subPma) subPma.style.display='none';
+    
+    const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
+    if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
+    
+    const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
+    if(cardNaturopathes) cardNaturopathes.style.display='none';
+    
+    const cardSophrologues = document.getElementById('pro-cards-sophrologues');
+    if(cardSophrologues) cardSophrologues.style.display='none';
+    
+    hideProDetail();
+    
+    // Afficher la carte correspondante
+    const targetCard = document.getElementById('pro-cards-'+subcat);
+    if(targetCard) {
+        targetCard.style.display='block';
+        console.log('Affichage de pro-cards-' + subcat); // Pour déboguer
+    } else {
+        console.error('Element pro-cards-' + subcat + ' non trouvé'); // Pour déboguer
+    }
+    
+    // Afficher la grille correspondante
+    const targetGrid = document.getElementById(subcat+'-grid');
+    if(targetGrid) {
+        targetGrid.style.display='grid';
+        console.log('Affichage de ' + subcat + '-grid'); // Pour déboguer
+    } else {
+        console.error('Element ' + subcat + '-grid nonRéessayer
 
         function backToSub(){
             const subGrossesse = document.getElementById('sub-grossesse');
