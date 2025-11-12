@@ -1233,6 +1233,44 @@
                     </div>
                 </div>
             </div>
+            <!-- Vue Par Professionnel (ancien pro-categories-view) -->
+            <div id="pro-professionnel-view" style="display:none">
+                <button class="back-button" onclick="backToMainProView()">← Retour</button>
+                <h3 style="color:var(--primary);font-size:1.8rem;margin-bottom:3rem;text-align:center;font-weight:600;font-family:'Inter',sans-serif">Choisissez un type de professionnel</h3>
+                <div class="categories-grid-modern" style="max-width:1000px;grid-template-columns:repeat(4,1fr)">
+                    <div class="category-card-modern" onclick="showProCat('pma')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
+                            <span style="font-size:2rem">💫</span>
+                        </div>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Désir d'enfant</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Accompagnement fertilité</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showProCat('grossesse')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
+                            <span style="font-size:2rem">🤰</span>
+                        </div>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Grossesse</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Doulas, sages-femmes</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showProCat('postpartum')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
+                            <span style="font-size:2rem">👶</span>
+                        </div>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Post-Partum</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Consultantes lactation</p>
+                    </div>
+                    
+                    <div class="category-card-modern" onclick="showProCat('parentalite')">
+                        <div style="width:60px;height:60px;background:linear-gradient(135deg,#862526 0%,#a83739 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(134,37,38,0.2)">
+                            <span style="font-size:2rem">👨‍👩‍👧</span>
+                        </div>
+                        <h3 style="color:#862526;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Parentalité</h3>
+                        <p style="color:var(--text-light);font-size:.9rem;margin:0">Accompagnement parental</p>
+                    </div>
+                </div>
+            </div>
 
             <div id="pro-list-grossesse" class="articles-section">
                 <button class="back-button" id="main-back-button" onclick="handleBackButton()">← Retour</button>
@@ -2069,7 +2107,7 @@ function backToGrossesseList() {
             document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
             navigationLevel = 'categories';
         }
-function showProView(view){
+        function showProView(view){
             document.getElementById('pro-main-view').style.display='none';
             document.getElementById('pro-probleme-view').style.display='none';
             document.getElementById('pro-professionnel-view').style.display='none';
@@ -2079,6 +2117,15 @@ function showProView(view){
             } else if(view === 'professionnel'){
                 document.getElementById('pro-professionnel-view').style.display='block';
             }
+        }
+
+        function backToMainProView(){
+            document.getElementById('pro-main-view').style.display='block';
+            document.getElementById('pro-probleme-view').style.display='none';
+            document.getElementById('pro-professionnel-view').style.display='none';
+            document.getElementById('search-results').style.display='none';
+            document.getElementById('pro-search-bar').style.display='block';
+            document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
         }
 
         function backToMainProView(){
