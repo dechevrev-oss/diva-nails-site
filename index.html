@@ -1734,108 +1734,31 @@
                 <button class="back-button" id="main-back-button" onclick="handleBackButton()">← Retour</button>
                 <h2 class="category-title">Désir d'enfant</h2>
                 
-                <!-- Sous-catégories PMA -->
+                <!-- Sous-catégorie PMA -->
                 <div id="sub-pma">
-                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:900px;margin:0 auto">
-                        <div class="sub-category-card-modern" onclick="showSubCat('acupuncteurs')">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:600px;margin:0 auto">
+                        <div class="sub-category-card-modern" onclick="showSubCat('soutien-pma')">
                             <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
-                                <span style="font-size:1.5rem">💉</span>
+                                <span style="font-size:1.5rem">💝</span>
                             </div>
-                            <h4 style="color:#A8B99A;font-size:1.2rem;margin:0">Acupuncteurs</h4>
-                        </div>
-                        <div class="sub-category-card-modern" onclick="showSubCat('naturopathes')">
-                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
-                                <span style="font-size:1.5rem">🌿</span>
-                            </div>
-                            <h4 style="color:#A8B99A;font-size:1.2rem;margin:0">Naturopathes</h4>
-                        </div>
-                        <div class="sub-category-card-modern" onclick="showSubCat('sophrologues')">
-                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
-                                <span style="font-size:1.5rem">🧘‍♀️</span>
-                            </div>
-                            <h4 style="color:#A8B99A;font-size:1.2rem;margin:0">Sophrologues</h4>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Soutien PMA</h4>
+                            <p style="color:var(--text-light);font-size:0.85rem;margin:0;line-height:1.4">Gestion de l'attente, de l'épuisement et soutien psychologique adapté</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Cartes Acupuncteurs -->
-                <div id="pro-cards-acupuncteurs" style="display:none">
+                <!-- Cartes Soutien PMA -->
+                <div id="pro-cards-soutien-pma" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Soutien PMA</h3>
                     
-                    <div id="acupuncteurs-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
-                        <!-- Exemple de carte professionnel -->
-                        <div class="pro-card-modern" onclick="showProDetail('acupuncteur1')">
-                            <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem">
-                                <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold;box-shadow:0 4px 15px rgba(168,185,154,0.25);flex-shrink:0">
-                                    AC
-                                </div>
-                                <div>
-                                    <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Nom de l'Acupuncteur</h4>
-                                    <div style="color:var(--text-light);font-size:.9rem">Acupuncteur spécialisé fertilité</div>
-                                </div>
-                            </div>
-                            <p style="color:var(--text);line-height:1.6;margin-bottom:1.5rem;font-size:.95rem">Accompagnement en médecine traditionnelle chinoise pour optimiser votre fertilité.</p>
-                            <div style="display:flex;flex-wrap:wrap;gap:.6rem">
-                                <span class="pro-tag-modern">Fertilité</span>
-                                <span class="pro-tag-modern">Acupuncture</span>
-                                <span class="pro-tag-modern" style="background:#A8B99A;color:white">📍 Ville</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Vous pouvez ajouter d'autres acupuncteurs ici -->
-                    </div>
-                </div>
-                <!-- Cartes Naturopathes -->
-                <div id="pro-cards-naturopathes" style="display:none">
-                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Naturopathes spécialisés en fertilité</h3>
-                    
-                    <div id="naturopathes-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                    <div id="soutien-pma-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <!-- Vous pourrez ajouter ici vos professionnels de soutien PMA -->
                         <div style="text-align:center;padding:3rem;color:var(--text-light)">
                             <p style="font-size:1.1rem">Professionnels à venir</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Cartes Sophrologues -->
-                <div id="pro-cards-sophrologues" style="display:none">
-                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Sophrologues spécialisés en fertilité</h3>
-                    
-                    <div id="sophrologues-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
-                        <div style="text-align:center;padding:3rem;color:var(--text-light)">
-                            <p style="font-size:1.1rem">Professionnels à venir</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Fiche détail acupuncteur -->
-                <div id="detail-acupuncteur1" class="pro-detail">
-                    <div class="pro-detail-header">
-                        <div class="pro-detail-avatar">AC</div>
-                        <div>
-                            <h2>Nom de l'Acupuncteur</h2>
-                            <div style="color:var(--text-light);margin-bottom:.5rem">Acupuncteur spécialisé fertilité</div>
-                            <div style="color:var(--text-light);font-size:.9rem;margin-bottom:.5rem">📍 Ville</div>
-                            <div class="pro-detail-contact">
-                                <a href="mailto:contact@example.com" class="contact-button">📧 Contact</a>
-                                <a href="tel:+33000000000" class="contact-button">📱 Appeler</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pro-section">
-                        <h3>Présentation</h3>
-                        <p>Acupuncteur spécialisé en médecine traditionnelle chinoise, j'accompagne les personnes dans leur parcours de fertilité avec des méthodes douces et naturelles. Mon approche vise à rééquilibrer l'organisme pour optimiser les chances de conception.</p>
-                    </div>
-                    <div class="pro-section">
-                        <h3>Spécialités</h3>
-                        <ul>
-                            <li>Fertilité féminine et masculine</li>
-                            <li>Préparation à la PMA</li>
-                            <li>Gestion du stress lié à l'infertilité</li>
-                            <li>Soutien pendant les traitements de fertilité</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div id="pro-list-parentalite" class="articles-section">
                 <button class="back-button" id="main-back-button" onclick="handleBackButton()">← Retour</button>
                 <h2 class="category-title">Parentalité</h2>
@@ -2036,14 +1959,8 @@ function backToGrossesseList() {
                 const subPma = document.getElementById('sub-pma');
                 if(subPma) subPma.style.display='block';
                 
-                const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
-                if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
-                
-                const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
-                if(cardNaturopathes) cardNaturopathes.style.display='none';
-                
-                const cardSophrologues = document.getElementById('pro-cards-sophrologues');
-                if(cardSophrologues) cardSophrologues.style.display='none';
+                const cardSoutienPma = document.getElementById('pro-cards-soutien-pma');
+                if(cardSoutienPma) cardSoutienPma.style.display='none';
                 
                 hideProDetail();
                 navigationLevel = 'subcategories';
@@ -2102,14 +2019,8 @@ function backToGrossesseList() {
     const subPma = document.getElementById('sub-pma');
     if(subPma) subPma.style.display='none';
     
-    const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
-    if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
-    
-    const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
-    if(cardNaturopathes) cardNaturopathes.style.display='none';
-    
-    const cardSophrologues = document.getElementById('pro-cards-sophrologues');
-    if(cardSophrologues) cardSophrologues.style.display='none';
+    const cardSoutienPma = document.getElementById('pro-cards-soutien-pma');
+    if(cardSoutienPma) cardSoutienPma.style.display='none';
     
     hideProDetail();
     
@@ -2141,14 +2052,8 @@ function backToGrossesseList() {
             const cardSagesfemmes = document.getElementById('pro-cards-sagesfemmes');
             if(cardSagesfemmes) cardSagesfemmes.style.display='none';
             
-            const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
-            if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
-            
-            const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
-            if(cardNaturopathes) cardNaturopathes.style.display='none';
-            
-            const cardSophrologues = document.getElementById('pro-cards-sophrologues');
-            if(cardSophrologues) cardSophrologues.style.display='none';
+            const cardSoutienPma = document.getElementById('pro-cards-soutien-pma');
+            if(cardSoutienPma) cardSoutienPma.style.display='none';
             
             hideProDetail();
         }
