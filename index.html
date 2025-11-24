@@ -2070,30 +2070,36 @@ function backToGrossesseList() {
     } 
     // NOUVEAU : Gestion de la catégorie PMA selon la source
     else if(cat === 'pma'){
-        if(source === 'probleme'){
-            // Version "Par problème" : afficher seulement "Soutien PMA"
-            const subPmaProbleme = document.getElementById('sub-pma-probleme');
-            if(subPmaProbleme) subPmaProbleme.style.display='block';
-            
-            const cardSoutienPma = document.getElementById('pro-cards-soutien-pma');
-            if(cardSoutienPma) cardSoutienPma.style.display='none';
-        } else if(source === 'professionnel'){
-            // Version "Par professionnel" : afficher les 3 sous-catégories
-            const subPmaProfessionnel = document.getElementById('sub-pma-professionnel');
-            if(subPmaProfessionnel) subPmaProfessionnel.style.display='block';
-            
-            const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
-            if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
-            
-            const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
-            if(cardNaturopathes) cardNaturopathes.style.display='none';
-            
-            const cardSophrologues = document.getElementById('pro-cards-sophrologues');
-            if(cardSophrologues) cardSophrologues.style.display='none';
-        }
-        
-        hideProDetail();
-        navigationLevel = 'subcategories';
+    // Cacher d'abord toutes les sections PMA
+    const subPmaProbleme = document.getElementById('sub-pma-probleme');
+    const subPmaProfessionnel = document.getElementById('sub-pma-professionnel');
+    const cardSoutienPma = document.getElementById('pro-cards-soutien-pma');
+    const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
+    const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
+    const cardSophrologues = document.getElementById('pro-cards-sophrologues');
+    
+    if(subPmaProbleme) subPmaProbleme.style.display='none';
+    if(subPmaProfessionnel) subPmaProfessionnel.style.display='none';
+    if(cardSoutienPma) cardSoutienPma.style.display='none';
+    if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
+    if(cardNaturopathes) cardNaturopathes.style.display='none';
+    if(cardSophrologues) cardSophrologues.style.display='none';
+    
+    // Afficher la bonne version selon la source
+    if(source === 'probleme'){
+        // Version "Par problème" : afficher seulement "Soutien PMA"
+        if(subPmaProbleme) subPmaProbleme.style.display='block';
+    } else if(source === 'professionnel'){
+        // Version "Par professionnel" : afficher les 3 sous-catégories
+        if(subPmaProfessionnel) subPmaProfessionnel.style.display='block';
+    } else {
+        // Par défaut (page d'accueil sans source précise) : afficher version professionnel
+        if(subPmaProfessionnel) subPmaProfessionnel.style.display='block';
+    }
+    
+    hideProDetail();
+    navigationLevel = 'subcategories';
+}
     } else {
         navigationLevel = 'categories';
     }
