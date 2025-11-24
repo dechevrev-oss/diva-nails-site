@@ -2025,9 +2025,6 @@ function backToGrossesseList() {
         }
 
         function showProCat(cat, source){
-    // Cette ligne permet de savoir si on vient de "Par problème" ou "Par professionnel"
-    // source sera soit 'probleme' soit 'professionnel'
-    
     clearSearch();
     document.getElementById('pro-main-view').style.display='none';
     document.getElementById('pro-probleme-view').style.display='none';
@@ -2036,17 +2033,15 @@ function backToGrossesseList() {
     
     let listElement;
     
-    // NOUVEAU : Détecter quelle version de PMA afficher
+    // Détecter quelle version de PMA afficher
     if(cat === 'pma'){
         if(source === 'probleme'){
-            // Afficher la version "Soutien PMA"
             listElement = document.getElementById('pro-list-pma-probleme');
-        } else if(source === 'professionnel'){
-            // Afficher la version avec les 3 sous-catégories
+        } else {
+            // Par défaut ou si source === 'professionnel'
             listElement = document.getElementById('pro-list-pma-professionnel');
         }
     } else {
-        // Pour les autres catégories (grossesse, postpartum, etc.), rien ne change
         listElement = document.getElementById('pro-list-'+cat);
     }
     
@@ -2054,7 +2049,6 @@ function backToGrossesseList() {
         listElement.classList.add('active');
     }
     
-    // Gestion de la catégorie GROSSESSE (ne change pas)
     if(cat === 'grossesse'){
         const subGrossesse = document.getElementById('sub-grossesse');
         if(subGrossesse) subGrossesse.style.display='block';
@@ -2067,38 +2061,35 @@ function backToGrossesseList() {
         
         hideProDetail();
         navigationLevel = 'subcategories';
-    } 
-    // NOUVEAU : Gestion de la catégorie PMA selon la source
-    else if(cat === 'pma'){
-    // Cacher d'abord toutes les sections PMA
-    const subPmaProbleme = document.getElementById('sub-pma-probleme');
-    const subPmaProfessionnel = document.getElementById('sub-pma-professionnel');
-    const cardSoutienPma = document.getElementById('pro-cards-soutien-pma');
-    const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
-    const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
-    const cardSophrologues = document.getElementById('pro-cards-sophrologues');
-    
-    if(subPmaProbleme) subPmaProbleme.style.display='none';
-    if(subPmaProfessionnel) subPmaProfessionnel.style.display='none';
-    if(cardSoutienPma) cardSoutienPma.style.display='none';
-    if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
-    if(cardNaturopathes) cardNaturopathes.style.display='none';
-    if(cardSophrologues) cardSophrologues.style.display='none';
-    
-    // Afficher la bonne version selon la source
-    if(source === 'probleme'){
-        // Version "Par problème" : afficher seulement "Soutien PMA"
-        if(subPmaProbleme) subPmaProbleme.style.display='block';
-    } else if(source === 'professionnel'){
-        // Version "Par professionnel" : afficher les 3 sous-catégories
-        if(subPmaProfessionnel) subPmaProfessionnel.style.display='block';
+    } else if(cat === 'pma'){
+        // Cacher toutes les sections PMA d'abord
+        const subPmaProbleme = document.getElementById('sub-pma-probleme');
+        const subPmaProfessionnel = document.getElementById('sub-pma-professionnel');
+        const cardSoutienPma = document.getElementById('pro-cards-soutien-pma');
+        const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
+        const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
+        const cardSophrologues = document.getElementById('pro-cards-sophrologues');
+        
+        if(subPmaProbleme) subPmaProbleme.style.display='none';
+        if(subPmaProfessionnel) subPmaProfessionnel.style.display='none';
+        if(cardSoutienPma) cardSoutienPma.style.display='none';
+        if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
+        if(cardNaturopathes) cardNaturopathes.style.display='none';
+        if(cardSophrologues) cardSophrologues.style.display='none';
+        
+        // Afficher la bonne version
+        if(source === 'probleme'){
+            if(subPmaProbleme) subPmaProbleme.style.display='block';
+        } else {
+            // Par défaut : version professionnel
+            if(subPmaProfessionnel) subPmaProfessionnel.style.display='block';
+        }
+        
+        hideProDetail();
+        navigationLevel = 'subcategories';
     } else {
-        // Par défaut (page d'accueil sans source précise) : afficher version professionnel
-        if(subPmaProfessionnel) subPmaProfessionnel.style.display='block';
+        navigationLevel = 'categories';
     }
-    
-    hideProDetail();
-    navigationLevel = 'subcategories';
 }
     } else {
         navigationLevel = 'categories';
