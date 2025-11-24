@@ -1139,7 +1139,7 @@
                 <button class="back-button" onclick="backToMainProView()">← Retour</button>
                 <h3 style="color:#000000;font-size:1.8rem;margin-bottom:3rem;text-align:center;font-weight:600;font-family:'Inter',sans-serif">Quelle est votre problématique ?</h3>
                 <div class="categories-grid-modern" style="max-width:1000px;grid-template-columns:repeat(4,1fr)">
-                    <div class="category-card-modern" onclick="showProCat('pma')">
+                    <div class="category-card-modern" onclick="showProCat('pma', 'probleme')">
                         <div style="width:60px;height:60px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
                             <span style="font-size:2rem">💫</span>
                         </div>
@@ -1178,7 +1178,7 @@
                 <button class="back-button" onclick="backToMainProView()">← Retour</button>
                 <h3 style="color:#000000;font-size:1.8rem;margin-bottom:3rem;text-align:center;font-weight:600;font-family:'Inter',sans-serif">Quel type de professionnel cherchez-vous ?</h3>
                 <div class="categories-grid-modern" style="max-width:1000px;grid-template-columns:repeat(4,1fr)">
-                    <div class="category-card-modern" onclick="showProCat('pma')">
+                    <div class="category-card-modern" onclick="showProCat('pma', 'professionnel')">
                         <div style="width:60px;height:60px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
                             <span style="font-size:2rem">💫</span>
                         </div>
@@ -1730,82 +1730,98 @@
                 </div>
             </div>
 
-            <div id="pro-list-pma" class="articles-section">
-                <button class="back-button" id="main-back-button" onclick="handleBackButton()">← Retour</button>
-                <h2 class="category-title">Désir d'enfant</h2>
-                
-                <!-- Sous-catégories PMA -->
-                <div id="sub-pma">
-                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:900px;margin:0 auto">
-                        <div class="sub-category-card-modern" onclick="showSubCat('acupuncteurs')">
-                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
-                                <span style="font-size:1.5rem">💉</span>
-                            </div>
-                            <h4 style="color:#A8B99A;font-size:1.2rem;margin:0">Acupuncteurs</h4>
-                        </div>
-                        <div class="sub-category-card-modern" onclick="showSubCat('naturopathes')">
-                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
-                                <span style="font-size:1.5rem">🌿</span>
-                            </div>
-                            <h4 style="color:#A8B99A;font-size:1.2rem;margin:0">Naturopathes</h4>
-                        </div>
-                        <div class="sub-category-card-modern" onclick="showSubCat('sophrologues')">
-                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
-                                <span style="font-size:1.5rem">🧘‍♀️</span>
-                            </div>
-                            <h4 style="color:#A8B99A;font-size:1.2rem;margin:0">Sophrologues</h4>
-                        </div>
-                    </div>
+            <!-- Version PAR PROBLÈME -->
+<div id="pro-list-pma-probleme" class="articles-section">
+    <button class="back-button" onclick="handleBackButton()">← Retour</button>
+    <h2 class="category-title">Désir d'enfant</h2>
+    
+    <!-- Sous-catégorie unique pour "Par problème" -->
+    <div id="sub-pma-probleme">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:600px;margin:0 auto">
+            <div class="sub-category-card-modern" onclick="showSubCat('soutien-pma')">
+                <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                    <span style="font-size:1.5rem">💝</span>
                 </div>
+                <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Soutien PMA</h4>
+                <p style="color:var(--text-light);font-size:0.85rem;margin:0;line-height:1.4">Gestion de l'attente, de l'épuisement et soutien psychologique adapté</p>
+            </div>
+        </div>
+    </div>
 
-                <!-- Cartes Acupuncteurs -->
-                <div id="pro-cards-acupuncteurs" style="display:none">
-                    
-                    <div id="acupuncteurs-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
-                        <!-- Exemple de carte professionnel -->
-                        <div class="pro-card-modern" onclick="showProDetail('acupuncteur1')">
-                            <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem">
-                                <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold;box-shadow:0 4px 15px rgba(168,185,154,0.25);flex-shrink:0">
-                                    AC
-                                </div>
-                                <div>
-                                    <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:.3rem;font-weight:600">Nom de l'Acupuncteur</h4>
-                                    <div style="color:var(--text-light);font-size:.9rem">Acupuncteur spécialisé fertilité</div>
-                                </div>
-                            </div>
-                            <p style="color:var(--text);line-height:1.6;margin-bottom:1.5rem;font-size:.95rem">Accompagnement en médecine traditionnelle chinoise pour optimiser votre fertilité.</p>
-                            <div style="display:flex;flex-wrap:wrap;gap:.6rem">
-                                <span class="pro-tag-modern">Fertilité</span>
-                                <span class="pro-tag-modern">Acupuncture</span>
-                                <span class="pro-tag-modern" style="background:#A8B99A;color:white">📍 Ville</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Vous pouvez ajouter d'autres acupuncteurs ici -->
-                    </div>
-                </div>
-                <!-- Cartes Naturopathes -->
-                <div id="pro-cards-naturopathes" style="display:none">
-                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Naturopathes spécialisés en fertilité</h3>
-                    
-                    <div id="naturopathes-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
-                        <div style="text-align:center;padding:3rem;color:var(--text-light)">
-                            <p style="font-size:1.1rem">Professionnels à venir</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Cartes Soutien PMA -->
+    <div id="pro-cards-soutien-pma" style="display:none">
+        <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Soutien PMA</h3>
+        
+        <div id="soutien-pma-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+            <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                <p style="font-size:1.1rem">Professionnels à venir</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-                <!-- Cartes Sophrologues -->
-                <div id="pro-cards-sophrologues" style="display:none">
-                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Sophrologues spécialisés en fertilité</h3>
-                    
-                    <div id="sophrologues-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
-                        <div style="text-align:center;padding:3rem;color:var(--text-light)">
-                            <p style="font-size:1.1rem">Professionnels à venir</p>
-                        </div>
+    <!-- Version PAR PROFESSIONNEL -->
+    <div id="pro-list-pma-professionnel" class="articles-section">
+        <button class="back-button" onclick="handleBackButton()">← Retour</button>
+        <h2 class="category-title">Désir d'enfant</h2>
+        
+        <!-- Sous-catégories pour "Par professionnel" (les 3 originales) -->
+        <div id="sub-pma-professionnel">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                <div class="sub-category-card-modern" onclick="showSubCat('acupuncteurs')">
+                    <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                        <span style="font-size:1.5rem">💉</span>
                     </div>
+                    <h4 style="color:#A8B99A;font-size:1.2rem;margin:0">Acupuncteurs</h4>
                 </div>
-
+                <div class="sub-category-card-modern" onclick="showSubCat('naturopathes')">
+                    <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                        <span style="font-size:1.5rem">🌿</span>
+                    </div>
+                    <h4 style="color:#A8B99A;font-size:1.2rem;margin:0">Naturopathes</h4>
+                </div>
+                <div class="sub-category-card-modern" onclick="showSubCat('sophrologues')">
+                    <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                        <span style="font-size:1.5rem">🧘‍♀️</span>
+                    </div>
+                    <h4 style="color:#A8B99A;font-size:1.2rem;margin:0">Sophrologues</h4>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Cartes Acupuncteurs -->
+        <div id="pro-cards-acupuncteurs" style="display:none">
+            <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Acupuncteurs spécialisés en fertilité</h3>
+            
+            <div id="acupuncteurs-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                    <p style="font-size:1.1rem">Professionnels à venir</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cartes Naturopathes -->
+        <div id="pro-cards-naturopathes" style="display:none">
+            <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Naturopathes spécialisés en fertilité</h3>
+            
+            <div id="naturopathes-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                    <p style="font-size:1.1rem">Professionnels à venir</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Cartes Sophrologues -->
+        <div id="pro-cards-sophrologues" style="display:none">
+            <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Sophrologues spécialisés en fertilité</h3>
+            
+            <div id="sophrologues-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                    <p style="font-size:1.1rem">Professionnels à venir</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
                 <!-- Fiche détail acupuncteur -->
                 <div id="detail-acupuncteur1" class="pro-detail">
@@ -2008,49 +2024,80 @@ function backToGrossesseList() {
             document.querySelectorAll('#accompagnements .articles-section').forEach(s=>s.classList.remove('active'));
         }
 
-        function showProCat(cat){
-            clearSearch();
-            document.getElementById('pro-main-view').style.display='none';
-            document.getElementById('pro-probleme-view').style.display='none';
-            document.getElementById('pro-professionnel-view').style.display='none';
-            document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
-            
-            const listElement = document.getElementById('pro-list-'+cat);
-            if(listElement) {
-                listElement.classList.add('active');
-            }
-            
-            if(cat === 'grossesse'){
-                const subGrossesse = document.getElementById('sub-grossesse');
-                if(subGrossesse) subGrossesse.style.display='block';
-                
-                const cardDoulas = document.getElementById('pro-cards-doulas');
-                if(cardDoulas) cardDoulas.style.display='none';
-                
-                const cardSagesfemmes = document.getElementById('pro-cards-sagesfemmes');
-                if(cardSagesfemmes) cardSagesfemmes.style.display='none';
-                
-                hideProDetail();
-                navigationLevel = 'subcategories';
-            } else if(cat === 'pma'){
-                const subPma = document.getElementById('sub-pma');
-                if(subPma) subPma.style.display='block';
-                
-                const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
-                if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
-                
-                const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
-                if(cardNaturopathes) cardNaturopathes.style.display='none';
-                
-                const cardSophrologues = document.getElementById('pro-cards-sophrologues');
-                if(cardSophrologues) cardSophrologues.style.display='none';
-                
-                hideProDetail();
-                navigationLevel = 'subcategories';
-            } else {
-                navigationLevel = 'categories';
-            }
+        function showProCat(cat, source){
+    // Cette ligne permet de savoir si on vient de "Par problème" ou "Par professionnel"
+    // source sera soit 'probleme' soit 'professionnel'
+    
+    clearSearch();
+    document.getElementById('pro-main-view').style.display='none';
+    document.getElementById('pro-probleme-view').style.display='none';
+    document.getElementById('pro-professionnel-view').style.display='none';
+    document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
+    
+    let listElement;
+    
+    // NOUVEAU : Détecter quelle version de PMA afficher
+    if(cat === 'pma'){
+        if(source === 'probleme'){
+            // Afficher la version "Soutien PMA"
+            listElement = document.getElementById('pro-list-pma-probleme');
+        } else if(source === 'professionnel'){
+            // Afficher la version avec les 3 sous-catégories
+            listElement = document.getElementById('pro-list-pma-professionnel');
         }
+    } else {
+        // Pour les autres catégories (grossesse, postpartum, etc.), rien ne change
+        listElement = document.getElementById('pro-list-'+cat);
+    }
+    
+    if(listElement) {
+        listElement.classList.add('active');
+    }
+    
+    // Gestion de la catégorie GROSSESSE (ne change pas)
+    if(cat === 'grossesse'){
+        const subGrossesse = document.getElementById('sub-grossesse');
+        if(subGrossesse) subGrossesse.style.display='block';
+        
+        const cardDoulas = document.getElementById('pro-cards-doulas');
+        if(cardDoulas) cardDoulas.style.display='none';
+        
+        const cardSagesfemmes = document.getElementById('pro-cards-sagesfemmes');
+        if(cardSagesfemmes) cardSagesfemmes.style.display='none';
+        
+        hideProDetail();
+        navigationLevel = 'subcategories';
+    } 
+    // NOUVEAU : Gestion de la catégorie PMA selon la source
+    else if(cat === 'pma'){
+        if(source === 'probleme'){
+            // Version "Par problème" : afficher seulement "Soutien PMA"
+            const subPmaProbleme = document.getElementById('sub-pma-probleme');
+            if(subPmaProbleme) subPmaProbleme.style.display='block';
+            
+            const cardSoutienPma = document.getElementById('pro-cards-soutien-pma');
+            if(cardSoutienPma) cardSoutienPma.style.display='none';
+        } else if(source === 'professionnel'){
+            // Version "Par professionnel" : afficher les 3 sous-catégories
+            const subPmaProfessionnel = document.getElementById('sub-pma-professionnel');
+            if(subPmaProfessionnel) subPmaProfessionnel.style.display='block';
+            
+            const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
+            if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
+            
+            const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
+            if(cardNaturopathes) cardNaturopathes.style.display='none';
+            
+            const cardSophrologues = document.getElementById('pro-cards-sophrologues');
+            if(cardSophrologues) cardSophrologues.style.display='none';
+        }
+        
+        hideProDetail();
+        navigationLevel = 'subcategories';
+    } else {
+        navigationLevel = 'categories';
+    }
+}
         function backToProCats(){
             document.getElementById('pro-categories-view').style.display='block';
             document.getElementById('search-results').style.display='none';
