@@ -2085,6 +2085,20 @@ function backToGrossesseList() {
         
         hideProDetail();
         navigationLevel = 'subcategories';
+    } else if(cat === 'postpartum'){
+        navigationLevel = 'categories';
+    } else if(cat === 'parentalite'){
+        navigationLevel = 'categories';
+    } else {
+        navigationLevel = 'categories';
+    }
+}
+            // Par défaut : version professionnel
+            if(subPmaProfessionnel) subPmaProfessionnel.style.display='block';
+        }
+        
+        hideProDetail();
+        navigationLevel = 'subcategories';
     } else {
         navigationLevel = 'categories';
     }
