@@ -1735,9 +1735,11 @@
                 <button class="back-button" id="main-back-button" onclick="handleBackButton()">← Retour</button>
                 <h2 class="category-title">Désir d'enfant</h2>
                 
-                <!-- Sous-catégorie unique pour "Par problème" -->
+                <!-- Sous-catégories pour "Par problème" -->
                 <div id="sub-pma-probleme">
-                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:500px;margin:0 auto">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1200px;margin:0 auto">
+                        
+                        <!-- Soutien PMA -->
                         <div class="sub-category-card-modern" onclick="showSubCat('soutien-pma')">
                             <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
                                 <span style="font-size:1.5rem">💝</span>
@@ -1745,20 +1747,152 @@
                             <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Soutien PMA</h4>
                             <p style="color:var(--text-light);font-size:0.9rem;margin:0">Gestion de l'attente, de l'épuisement et soutien psychologique adapté</p>
                         </div>
+                
+                        <!-- Gestion du stress et anxiété -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('stress-anxiete')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">🧘‍♀️</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Gestion du stress et anxiété</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Sophrologie, hypnose et technique de relaxation</p>
+                        </div>
+                
+                        <!-- Deuil périnatal -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('deuil-perinatal')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">🕊️</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Deuil périnatal et fausses couches répétées</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Soutien psychologique et accompagnement du deuil</p>
+                        </div>
+                
+                        <!-- Endométriose -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('endometriose')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">🌺</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Endométriose</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Accompagnement des symptômes et de l'inflammation</p>
+                        </div>
+                
+                        <!-- SOPK -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('sopk')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">⚖️</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">SOPK</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Rééquilibrage hormonal et soutien du cycle</p>
+                        </div>
+                
+                        <!-- Difficulté à concevoir -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('difficulte-concevoir')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">🤰</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Difficulté à concevoir</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Aide à la conception</p>
+                        </div>
+                
+                        <!-- Optimisation fertilité -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('optimisation-fertilite')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">🥗</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Optimisation de la fertilité et de la santé</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Nutrition, naturopathie et bilan de santé</p>
+                        </div>
+                
+                        <!-- Sevrage tabac/alcool -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('sevrage-tabac-alcool')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">🚭</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Sevrage tabac/alcool</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Accompagnement spécialisé avec conception</p>
+                        </div>
+                
                     </div>
                 </div>
             
-                <!-- Cartes Soutien PMA -->
+                <!-- Cartes Soutien PMA (déjà existante) -->
                 <div id="pro-cards-soutien-pma" style="display:none">
                     <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Professionnels Soutien PMA</h3>
-                    
                     <div id="soutien-pma-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
                         <div style="text-align:center;padding:3rem;color:var(--text-light)">
                             <p style="font-size:1.1rem">Professionnels à venir</p>
                         </div>
                     </div>
                 </div>
-            </div>
+                
+                <!-- Cartes Stress et anxiété -->
+                <div id="pro-cards-stress-anxiete" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Gestion du stress et anxiété</h3>
+                    <div id="stress-anxiete-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                            <p style="font-size:1.1rem">Professionnels à venir</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cartes Deuil périnatal -->
+                <div id="pro-cards-deuil-perinatal" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Deuil périnatal et fausses couches répétées</h3>
+                    <div id="deuil-perinatal-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                            <p style="font-size:1.1rem">Professionnels à venir</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cartes Endométriose -->
+                <div id="pro-cards-endometriose" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Endométriose</h3>
+                    <div id="endometriose-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                            <p style="font-size:1.1rem">Professionnels à venir</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cartes SOPK -->
+                <div id="pro-cards-sopk" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">SOPK</h3>
+                    <div id="sopk-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                            <p style="font-size:1.1rem">Professionnels à venir</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cartes Difficulté à concevoir -->
+                <div id="pro-cards-difficulte-concevoir" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Difficulté à concevoir</h3>
+                    <div id="difficulte-concevoir-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                            <p style="font-size:1.1rem">Professionnels à venir</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cartes Optimisation fertilité -->
+                <div id="pro-cards-optimisation-fertilite" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Optimisation de la fertilité et de la santé</h3>
+                    <div id="optimisation-fertilite-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                            <p style="font-size:1.1rem">Professionnels à venir</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cartes Sevrage tabac/alcool -->
+                <div id="pro-cards-sevrage-tabac-alcool" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Sevrage tabac/alcool</h3>
+                    <div id="sevrage-tabac-alcool-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="text-align:center;padding:3rem;color:var(--text-light)">
+                            <p style="font-size:1.1rem">Professionnels à venir</p>
+                        </div>
+                    </div>
+                </div>
             
             <!-- VERSION PAR PROFESSIONNEL -->
             <div id="pro-list-pma-professionnel" class="articles-section">
@@ -2151,24 +2285,24 @@ function backToGrossesseList() {
     const cardSagesfemmes = document.getElementById('pro-cards-sagesfemmes');
     if(cardSagesfemmes) cardSagesfemmes.style.display='none';
     
-    // Pour PMA
+    // Pour PMA - Cacher toutes les sections
     const subPmaProbleme = document.getElementById('sub-pma-probleme');
     if(subPmaProbleme) subPmaProbleme.style.display='none';
     
     const subPmaProfessionnel = document.getElementById('sub-pma-professionnel');
     if(subPmaProfessionnel) subPmaProfessionnel.style.display='none';
     
-    const cardSoutienPma = document.getElementById('pro-cards-soutien-pma');
-    if(cardSoutienPma) cardSoutienPma.style.display='none';
+    // Cacher toutes les cartes PMA
+    const pmaCards = [
+        'soutien-pma', 'stress-anxiete', 'deuil-perinatal', 'endometriose', 
+        'sopk', 'difficulte-concevoir', 'optimisation-fertilite', 'sevrage-tabac-alcool',
+        'acupuncteurs', 'naturopathes', 'sophrologues'
+    ];
     
-    const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
-    if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
-    
-    const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
-    if(cardNaturopathes) cardNaturopathes.style.display='none';
-    
-    const cardSophrologues = document.getElementById('pro-cards-sophrologues');
-    if(cardSophrologues) cardSophrologues.style.display='none';
+    pmaCards.forEach(cardId => {
+        const card = document.getElementById('pro-cards-' + cardId);
+        if(card) card.style.display='none';
+    });
     
     hideProDetail();
     
