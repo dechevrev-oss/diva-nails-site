@@ -1147,7 +1147,7 @@
                         <p style="color:var(--text-light);font-size:.9rem;margin:0">Accompagnement fertilité</p>
                     </div>
                     
-                    <div class="category-card-modern" onclick="showProCat('grossesse')">
+                    <div class="category-card-modern" onclick="showProCat('grossesse', 'probleme')">
                         <div style="width:60px;height:60px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
                             <span style="font-size:2rem">🤰</span>
                         </div>
@@ -1208,6 +1208,180 @@
                         </div>
                         <h3 style="color:#A8B99A;font-size:1.2rem;margin-bottom:.5rem;font-weight:600">Parentalité</h3>
                         <p style="color:var(--text-light);font-size:.9rem;margin:0">Accompagnement parental</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VERSION GROSSESSE PAR PROBLÈME -->
+            <div id="pro-list-grossesse-probleme" class="articles-section">
+                <button class="back-button" id="main-back-button" onclick="handleBackButton()">← Retour</button>
+                <h2 class="category-title">Grossesse</h2>
+                
+                <!-- Sous-catégories pour "Par problème" -->
+                <div id="sub-grossesse-probleme">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1200px;margin:0 auto">
+                        
+                        <!-- Suivi et préparation à la naissance -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('suivi-preparation-naissance')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">👶</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Suivi et préparation à la naissance</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Cours de préparation, suivi régulier et conseil</p>
+                        </div>
+            
+                        <!-- Accompagnement du couple et post-partum -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('accompagnement-couple-postpartum')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">💑</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Accompagnement du couple et Post-partum</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Préparer la relation, la logistique et l'arrivée du bébé avec une Doula</p>
+                        </div>
+            
+                        <!-- Douleurs et inconforts physiques -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('douleurs-inconforts')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">💆‍♀️</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Douleurs et inconforts physiques</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Soulagement des sciatiques, douleurs du bassin</p>
+                        </div>
+            
+                        <!-- Nausées, sommeil et troubles légers -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('nausees-sommeil-troubles')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">🌿</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Nausées, sommeil et troubles légers</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Acupuncture, Naturopathie et techniques douces pour le confort</p>
+                        </div>
+            
+                        <!-- Anxiété, peurs et préparation mentale -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('anxiete-peurs-preparation')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">🧘‍♀️</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Anxiété, peurs et préparation mentale</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Gestion du stress, hypnose et sérénité face à l'accouchement</p>
+                        </div>
+            
+                        <!-- Grossesse à risque -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('grossesse-risque')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">⚕️</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Grossesse à risque</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Soutien spécialisé pour le diabète, l'hypertension ou grossesses alitées</p>
+                        </div>
+            
+                        <!-- Grossesses gémellaires et multiples -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('grossesses-gemellaires')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">👶👶</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Grossesses gémellaires et multiples</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Soutien logistique et émotionnel spécifique aux naissances multiples</p>
+                        </div>
+            
+                        <!-- Annonce de mauvaise nouvelle -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('annonce-mauvaise-nouvelle')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">💔</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Annonce de mauvaise nouvelle</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Accompagnement psychologique immédiat après une mauvaise nouvelle</p>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Cartes professionnels pour chaque sous-catégorie -->
+                <div id="pro-cards-suivi-preparation-naissance" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Suivi et préparation à la naissance</h3>
+                    <div id="suivi-preparation-naissance-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-accompagnement-couple-postpartum" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Accompagnement du couple et Post-partum</h3>
+                    <div id="accompagnement-couple-postpartum-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-douleurs-inconforts" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Douleurs et inconforts physiques</h3>
+                    <div id="douleurs-inconforts-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-nausees-sommeil-troubles" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Nausées, sommeil et troubles légers</h3>
+                    <div id="nausees-sommeil-troubles-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-anxiete-peurs-preparation" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Anxiété, peurs et préparation mentale</h3>
+                    <div id="anxiete-peurs-preparation-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-grossesse-risque" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Grossesse à risque</h3>
+                    <div id="grossesse-risque-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-grossesses-gemellaires" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Grossesses gémellaires et multiples</h3>
+                    <div id="grossesses-gemellaires-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-annonce-mauvaise-nouvelle" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Annonce de mauvaise nouvelle</h3>
+                    <div id="annonce-mauvaise-nouvelle-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2268,6 +2442,84 @@ function backToGrossesseList() {
                 navigationLevel = 'categories';
             }
         }
+
+        function showProCat(cat, source){
+    clearSearch();
+    document.getElementById('pro-main-view').style.display='none';
+    document.getElementById('pro-probleme-view').style.display='none';
+    document.getElementById('pro-professionnel-view').style.display='none';
+    document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
+    
+    let listElement;
+    
+    if(cat === 'pma'){
+        if(source === 'probleme'){
+            listElement = document.getElementById('pro-list-pma-probleme');
+        } else {
+            listElement = document.getElementById('pro-list-pma-professionnel');
+        }
+    } else if(cat === 'grossesse'){
+        // AJOUT POUR GROSSESSE
+        if(source === 'probleme'){
+            listElement = document.getElementById('pro-list-grossesse-probleme');
+        } else {
+            listElement = document.getElementById('pro-list-grossesse');
+        }
+    } else {
+        listElement = document.getElementById('pro-list-'+cat);
+    }
+    
+    if(listElement) {
+        listElement.classList.add('active');
+    }
+    
+    if(cat === 'pma'){
+        const subPmaProbleme = document.getElementById('sub-pma-probleme');
+        const subPmaProfessionnel = document.getElementById('sub-pma-professionnel');
+        const cardSoutienPma = document.getElementById('pro-cards-soutien-pma');
+        const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
+        const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
+        const cardSophrologues = document.getElementById('pro-cards-sophrologues');
+        
+        if(subPmaProbleme) subPmaProbleme.style.display='none';
+        if(subPmaProfessionnel) subPmaProfessionnel.style.display='none';
+        if(cardSoutienPma) cardSoutienPma.style.display='none';
+        if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
+        if(cardNaturopathes) cardNaturopathes.style.display='none';
+        if(cardSophrologues) cardSophrologues.style.display='none';
+        
+        if(source === 'probleme'){
+            if(subPmaProbleme) subPmaProbleme.style.display='block';
+        } else {
+            if(subPmaProfessionnel) subPmaProfessionnel.style.display='block';
+        }
+        
+        hideProDetail();
+        navigationLevel = 'subcategories';
+    } else if(cat === 'grossesse'){
+        // GESTION POUR GROSSESSE
+        const subGrossesseProbleme = document.getElementById('sub-grossesse-probleme');
+        const subGrossesse = document.getElementById('sub-grossesse');
+        
+        if(subGrossesseProbleme) subGrossesseProbleme.style.display='none';
+        if(subGrossesse) subGrossesse.style.display='none';
+        
+        if(source === 'probleme'){
+            if(subGrossesseProbleme) subGrossesseProbleme.style.display='block';
+        } else {
+            if(subGrossesse) subGrossesse.style.display='block';
+        }
+        
+        hideProDetail();
+        navigationLevel = 'subcategories';
+    } else if(cat === 'postpartum'){
+        navigationLevel = 'categories';
+    } else if(cat === 'parentalite'){
+        navigationLevel = 'categories';
+    } else {
+        navigationLevel = 'categories';
+    }
+}
         function backToProCats(){
             document.getElementById('pro-categories-view').style.display='block';
             document.getElementById('search-results').style.display='none';
@@ -2343,6 +2595,58 @@ function backToGrossesseList() {
     }
     
     // Afficher la grille correspondante
+    const targetGrid = document.getElementById(subcat+'-grid');
+    if(targetGrid) {
+        targetGrid.style.display='grid';
+    }
+    
+    navigationLevel = 'list';
+}
+        function showSubCat(subcat){
+    // Cacher toutes les sections Grossesse
+    const subGrossesse = document.getElementById('sub-grossesse');
+    if(subGrossesse) subGrossesse.style.display='none';
+    
+    const subGrossesseProbleme = document.getElementById('sub-grossesse-probleme');
+    if(subGrossesseProbleme) subGrossesseProbleme.style.display='none';
+    
+    const cardDoulas = document.getElementById('pro-cards-doulas');
+    if(cardDoulas) cardDoulas.style.display='none';
+    
+    const cardSagesfemmes = document.getElementById('pro-cards-sagesfemmes');
+    if(cardSagesfemmes) cardSagesfemmes.style.display='none';
+    
+    // Cacher toutes les sections PMA
+    const subPmaProbleme = document.getElementById('sub-pma-probleme');
+    if(subPmaProbleme) subPmaProbleme.style.display='none';
+    
+    const subPmaProfessionnel = document.getElementById('sub-pma-professionnel');
+    if(subPmaProfessionnel) subPmaProfessionnel.style.display='none';
+    
+    // Cacher toutes les cartes
+    const pmaCards = [
+        'soutien-pma', 'stress-anxiete', 'deuil-perinatal', 'endometriose', 
+        'sopk', 'difficulte-concevoir', 'optimisation-fertilite', 'sevrage-tabac-alcool',
+        'acupuncteurs', 'naturopathes', 'sophrologues',
+        // AJOUT DES NOUVELLES CARTES GROSSESSE
+        'suivi-preparation-naissance', 'accompagnement-couple-postpartum', 'douleurs-inconforts',
+        'nausees-sommeil-troubles', 'anxiete-peurs-preparation', 'grossesse-risque',
+        'grossesses-gemellaires', 'annonce-mauvaise-nouvelle',
+        'doulas', 'sagesfemmes'
+    ];
+    
+    pmaCards.forEach(cardId => {
+        const card = document.getElementById('pro-cards-' + cardId);
+        if(card) card.style.display='none';
+    });
+    
+    hideProDetail();
+    
+    const targetCard = document.getElementById('pro-cards-'+subcat);
+    if(targetCard) {
+        targetCard.style.display='block';
+    }
+    
     const targetGrid = document.getElementById(subcat+'-grid');
     if(targetGrid) {
         targetGrid.style.display='grid';
