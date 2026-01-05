@@ -1155,7 +1155,7 @@
                         <p style="color:var(--text-light);font-size:.9rem;margin:0">Doulas, sages-femmes</p>
                     </div>
                     
-                    <div class="category-card-modern" onclick="showProCat('postpartum')">
+                    <div class="category-card-modern" onclick="showProCat('postpartum', 'probleme')">
                         <div style="width:60px;height:60px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
                             <span style="font-size:2rem">👶</span>
                         </div>
@@ -1377,6 +1377,139 @@
                 <div id="pro-cards-annonce-mauvaise-nouvelle" style="display:none">
                     <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Annonce de mauvaise nouvelle</h3>
                     <div id="annonce-mauvaise-nouvelle-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- VERSION POST-PARTUM PAR PROBLÈME -->
+            <div id="pro-list-postpartum-probleme" class="articles-section">
+                <button class="back-button" id="main-back-button" onclick="handleBackButton()">← Retour</button>
+                <h2 class="category-title">Post-partum</h2>
+                
+                <!-- Sous-catégories pour "Par problème" -->
+                <div id="sub-postpartum-probleme">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1200px;margin:0 auto">
+                        
+                        <!-- Charge mentale et burn-out parental -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('charge-mentale-burnout')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">🔥</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Charge mentale et Burn-Out Parental</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Gestion du stress, organisation domestique et prévention de l'épuisement</p>
+                        </div>
+            
+                        <!-- Problèmes de sommeil -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('problemes-sommeil')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">😴</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Problèmes de sommeil du bébé et des parents</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Rythme du sommeil du bébé et récupération des parents</p>
+                        </div>
+            
+                        <!-- Dépression et baby blues -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('depression-baby-blues')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">💙</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Dépression, gestion des émotions et Baby Blues</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Soutien psychologique périnatal pour la dépression et l'anxiété post-natale</p>
+                        </div>
+            
+                        <!-- Vie de couple et parentalité solo -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('vie-couple-solo')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">💑</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Vie de couple, parentalité solo</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Soutien de la parentalité, communication et thérapie de couple post-naissance</p>
+                        </div>
+            
+                        <!-- Allaitement et difficultés d'alimentation -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('allaitement-alimentation')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">🍼</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Allaitement et difficultés d'alimentation</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Conseils en lactation (IBCLC) et sur les problèmes digestifs (RGO)</p>
+                        </div>
+            
+                        <!-- Corps post-accouchement -->
+                        <div class="sub-category-card-modern" onclick="showSubCat('corps-post-accouchement')">
+                            <div style="width:50px;height:50px;background:linear-gradient(135deg,#A8B99A 0%,#92a385 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 15px rgba(168,185,154,0.2)">
+                                <span style="font-size:1.5rem">💪</span>
+                            </div>
+                            <h4 style="color:#A8B99A;font-size:1.2rem;margin-bottom:0.5rem">Corps Post-accouchement et séquelles</h4>
+                            <p style="color:var(--text-light);font-size:0.9rem;margin:0">Rééducation du périnée, conseil pour la perte de poids et l'image corporelle</p>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Cartes professionnels pour chaque sous-catégorie -->
+                <div id="pro-cards-charge-mentale-burnout" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Charge mentale et Burn-Out Parental</h3>
+                    <div id="charge-mentale-burnout-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-problemes-sommeil" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Problèmes de sommeil du bébé et des parents</h3>
+                    <div id="problemes-sommeil-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-depression-baby-blues" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Dépression, gestion des émotions et Baby Blues</h3>
+                    <div id="depression-baby-blues-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-vie-couple-solo" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Vie de couple, parentalité solo</h3>
+                    <div id="vie-couple-solo-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-allaitement-alimentation" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Allaitement et difficultés d'alimentation</h3>
+                    <div id="allaitement-alimentation-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
+                        <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
+                            <div style="font-size:3rem;margin-bottom:1rem">👥</div>
+                            <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
+                            <p style="font-size:1rem;margin:0">Nous travaillons à référencer des professionnels spécialisés dans votre région.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="pro-cards-corps-post-accouchement" style="display:none">
+                    <h3 style="color:#A8B99A;text-align:center;margin-bottom:2rem;font-size:1.8rem;font-weight:600">Corps Post-accouchement et séquelles</h3>
+                    <div id="corps-post-accouchement-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;max-width:900px;margin:0 auto">
                         <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-light);background:linear-gradient(135deg,#fafafa 0%,#fff 100%);border-radius:15px;border:2px dashed var(--secondary)">
                             <div style="font-size:3rem;margin-bottom:1rem">👥</div>
                             <h4 style="color:#000000;font-size:1.3rem;margin-bottom:0.5rem;font-weight:600">Professionnels à venir</h4>
@@ -2520,6 +2653,102 @@ function backToGrossesseList() {
         navigationLevel = 'categories';
     }
 }
+        function showProCat(cat, source){
+    clearSearch();
+    document.getElementById('pro-main-view').style.display='none';
+    document.getElementById('pro-probleme-view').style.display='none';
+    document.getElementById('pro-professionnel-view').style.display='none';
+    document.querySelectorAll('#professionnels .articles-section').forEach(s=>s.classList.remove('active'));
+    
+    let listElement;
+    
+    if(cat === 'pma'){
+        if(source === 'probleme'){
+            listElement = document.getElementById('pro-list-pma-probleme');
+        } else {
+            listElement = document.getElementById('pro-list-pma-professionnel');
+        }
+    } else if(cat === 'grossesse'){
+        if(source === 'probleme'){
+            listElement = document.getElementById('pro-list-grossesse-probleme');
+        } else {
+            listElement = document.getElementById('pro-list-grossesse');
+        }
+    } else if(cat === 'postpartum'){
+        // AJOUT POUR POST-PARTUM
+        if(source === 'probleme'){
+            listElement = document.getElementById('pro-list-postpartum-probleme');
+        } else {
+            listElement = document.getElementById('pro-list-postpartum');
+        }
+    } else {
+        listElement = document.getElementById('pro-list-'+cat);
+    }
+    
+    if(listElement) {
+        listElement.classList.add('active');
+    }
+    
+    if(cat === 'pma'){
+        const subPmaProbleme = document.getElementById('sub-pma-probleme');
+        const subPmaProfessionnel = document.getElementById('sub-pma-professionnel');
+        const cardSoutienPma = document.getElementById('pro-cards-soutien-pma');
+        const cardAcupuncteurs = document.getElementById('pro-cards-acupuncteurs');
+        const cardNaturopathes = document.getElementById('pro-cards-naturopathes');
+        const cardSophrologues = document.getElementById('pro-cards-sophrologues');
+        
+        if(subPmaProbleme) subPmaProbleme.style.display='none';
+        if(subPmaProfessionnel) subPmaProfessionnel.style.display='none';
+        if(cardSoutienPma) cardSoutienPma.style.display='none';
+        if(cardAcupuncteurs) cardAcupuncteurs.style.display='none';
+        if(cardNaturopathes) cardNaturopathes.style.display='none';
+        if(cardSophrologues) cardSophrologues.style.display='none';
+        
+        if(source === 'probleme'){
+            if(subPmaProbleme) subPmaProbleme.style.display='block';
+        } else {
+            if(subPmaProfessionnel) subPmaProfessionnel.style.display='block';
+        }
+        
+        hideProDetail();
+        navigationLevel = 'subcategories';
+    } else if(cat === 'grossesse'){
+        const subGrossesseProbleme = document.getElementById('sub-grossesse-probleme');
+        const subGrossesse = document.getElementById('sub-grossesse');
+        
+        if(subGrossesseProbleme) subGrossesseProbleme.style.display='none';
+        if(subGrossesse) subGrossesse.style.display='none';
+        
+        if(source === 'probleme'){
+            if(subGrossesseProbleme) subGrossesseProbleme.style.display='block';
+        } else {
+            if(subGrossesse) subGrossesse.style.display='block';
+        }
+        
+        hideProDetail();
+        navigationLevel = 'subcategories';
+    } else if(cat === 'postpartum'){
+        // GESTION POUR POST-PARTUM
+        const subPostpartumProbleme = document.getElementById('sub-postpartum-probleme');
+        const subPostpartum = document.getElementById('sub-postpartum');
+        
+        if(subPostpartumProbleme) subPostpartumProbleme.style.display='none';
+        if(subPostpartum) subPostpartum.style.display='none';
+        
+        if(source === 'probleme'){
+            if(subPostpartumProbleme) subPostpartumProbleme.style.display='block';
+        } else {
+            if(subPostpartum) subPostpartum.style.display='block';
+        }
+        
+        hideProDetail();
+        navigationLevel = 'subcategories';
+    } else if(cat === 'parentalite'){
+        navigationLevel = 'categories';
+    } else {
+        navigationLevel = 'categories';
+    }
+}
         function backToProCats(){
             document.getElementById('pro-categories-view').style.display='block';
             document.getElementById('search-results').style.display='none';
@@ -2636,6 +2865,63 @@ function backToGrossesseList() {
     ];
     
     pmaCards.forEach(cardId => {
+        const card = document.getElementById('pro-cards-' + cardId);
+        if(card) card.style.display='none';
+    });
+    
+    hideProDetail();
+    
+    const targetCard = document.getElementById('pro-cards-'+subcat);
+    if(targetCard) {
+        targetCard.style.display='block';
+    }
+    
+    const targetGrid = document.getElementById(subcat+'-grid');
+    if(targetGrid) {
+        targetGrid.style.display='grid';
+    }
+    
+    navigationLevel = 'list';
+}
+        function showSubCat(subcat){
+    // Cacher toutes les sections Grossesse
+    const subGrossesse = document.getElementById('sub-grossesse');
+    if(subGrossesse) subGrossesse.style.display='none';
+    
+    const subGrossesseProbleme = document.getElementById('sub-grossesse-probleme');
+    if(subGrossesseProbleme) subGrossesseProbleme.style.display='none';
+    
+    // Cacher toutes les sections Post-partum
+    const subPostpartum = document.getElementById('sub-postpartum');
+    if(subPostpartum) subPostpartum.style.display='none';
+    
+    const subPostpartumProbleme = document.getElementById('sub-postpartum-probleme');
+    if(subPostpartumProbleme) subPostpartumProbleme.style.display='none';
+    
+    // Cacher toutes les sections PMA
+    const subPmaProbleme = document.getElementById('sub-pma-probleme');
+    if(subPmaProbleme) subPmaProbleme.style.display='none';
+    
+    const subPmaProfessionnel = document.getElementById('sub-pma-professionnel');
+    if(subPmaProfessionnel) subPmaProfessionnel.style.display='none';
+    
+    // Cacher toutes les cartes
+    const allCards = [
+        // PMA
+        'soutien-pma', 'stress-anxiete', 'deuil-perinatal', 'endometriose', 
+        'sopk', 'difficulte-concevoir', 'optimisation-fertilite', 'sevrage-tabac-alcool',
+        'acupuncteurs', 'naturopathes', 'sophrologues',
+        // Grossesse
+        'suivi-preparation-naissance', 'accompagnement-couple-postpartum', 'douleurs-inconforts',
+        'nausees-sommeil-troubles', 'anxiete-peurs-preparation', 'grossesse-risque',
+        'grossesses-gemellaires', 'annonce-mauvaise-nouvelle',
+        'doulas', 'sagesfemmes',
+        // Post-partum AJOUT ICI
+        'charge-mentale-burnout', 'problemes-sommeil', 'depression-baby-blues',
+        'vie-couple-solo', 'allaitement-alimentation', 'corps-post-accouchement'
+    ];
+    
+    allCards.forEach(cardId => {
         const card = document.getElementById('pro-cards-' + cardId);
         if(card) card.style.display='none';
     });
